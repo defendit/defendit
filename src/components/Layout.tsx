@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import { Logo } from "./Icons";
 import React, { ReactNode } from "react";
 import { ThemeToggle } from "./ThemeToggler";
+import Link from "next/link";
 
 
 
@@ -18,7 +19,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     >
       <Navbar />
       <ThemeToggle/>
-      <Logo className="w-96 h-96 mb-4  text-gray-800 dark:text-slate-300 glow transition-all duration-700 animate-fade-in " />
+      <Link href="/">
+      <Logo className="w-96 h-96 mb-4  text-gray-800 dark:text-sky-400  glow transition-all duration-700 animate-fade-in " />
+      </Link>
 
       <div
       className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-7 pointer-events-none z-0"

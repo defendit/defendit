@@ -106,7 +106,7 @@ export default function Navbar() {
 
   return (
     <nav className="py-1 px-5 w-full flex flex-wrap md:flex-row md:sticky-top justify-between items-center md:border-b md:border-gray-300 md:dark:border-gray-800 md:p-4">
-      <p>{name}</p>
+      <Link href={'/'} className="hover:text-blue-600 dark:hover:text-blue-400 font-semibold text-glow">{name}</Link>
       <DesktopBar pathname={pathname} />
       <MobileBar pathname={pathname} />
     </nav>
