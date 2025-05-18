@@ -1,9 +1,46 @@
-import type { NextConfig } from "next";
+// next.config.js
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  reactStrictMode: true,
-  devIndicators:false
+/** @type {import('next').NextConfig} */
+const cspHeader = `
+  default-src 'self';
+  img-src 'self';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval';
+  script-src-elem 'self' 'unsafe-inline' 'unsafe-eval';
+  style-src 'self' 'unsafe-inline';
+  frame-src 'self';
+  font-src 'self';
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'self';
+`
+  .replace(/\n/g, "")
+  .trim();
+
+const nextConfig = {
+  // reactStrictMode: true,
+  devIndicators: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
+    ],
+  },
+  headers: async () => {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: cspHeader,
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

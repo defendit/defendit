@@ -5,7 +5,7 @@ import companyInfo from "../../data/company-info.json";
 const { copy } = companyInfo;
 const Footer: React.FC = () => {
   return (
-    <footer className="p-4 mt-8 text-gray-400 dark:text-gray-500 text-xs md:text-sm shrink-0">
+    <footer className="p-4 mt-24 text-gray-400 dark:text-gray-500 text-xs md:text-sm shrink-0">
       <div className="max-w-7xl mx-auto text-center">
         {copy.map((item, index) => (
           <p key={index}>{item}</p>

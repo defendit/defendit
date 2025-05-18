@@ -15,12 +15,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <section
       id="main-scroll-container"
-      className="relative flex flex-col items-center justify-start z-10 "
+      className="relative flex flex-col items-center justify-start z-10 min-w-[300px]"
     >
       <Navbar />
       <ThemeToggle/>
       <Link href="/">
-      <Logo className="w-96 h-96 mb-4  text-gray-800 dark:text-sky-400  glow transition-all duration-700 animate-fade-in " />
+      <Logo className="w-64 h-64 md:w-96 md:h-96 mb-4 text-gray-800 dark:text-sky-400  glow transition-all duration-700 animate-fade-in " />
       </Link>
 
       <div

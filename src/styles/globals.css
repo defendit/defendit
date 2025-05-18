@@ -8,7 +8,7 @@
   }
 
   .glow{
-    @apply drop-shadow-[0_0_80px_rgba(59,130,246,0.4)] dark:drop-shadow-[0_0_80px_rgba(14,165,233,0.3)];
+    @apply drop-shadow-[0_0_90px_rgba(59,130,246,0.36)] dark:drop-shadow-[0_0_80px_rgba(14,165,233,0.3)];
   }
 
 }
