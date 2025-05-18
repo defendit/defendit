@@ -1,0 +1,234 @@
+{
+  "name": "Defend I.T. Solutions™",
+  "tagline": "Your Local Cyber & IT Experts",
+  "slogan": "Love I.T. — Defend I.T.™",
+  "description": "Defend I.T. Solutions™ provides on-site cybersecurity and tech support tailored to businesses and individuals in The Villages and surrounding areas.",
+  "services": {
+    "business": [
+      {
+        "title": "Cybersecurity",
+        "description": "Comprehensive protection from cyber threats, tailored for business environments.",
+        "tags": ["security", "featured"],
+        "featured": true
+      },
+      {
+        "title": "Networking",
+        "description": "Design and implementation of secure, efficient business networks.",
+        "tags": ["infrastructure"],
+        "featured": false
+      },
+      {
+        "title": "Web & Software Development",
+        "description": "Custom-built web and software solutions to support business operations.",
+        "tags": ["development"],
+        "featured": false
+      },
+      {
+        "title": "Data Recovery",
+        "description": "Recovery of lost or damaged data from servers, drives, and cloud systems.",
+        "tags": ["data"],
+        "featured": false
+      },
+      {
+        "title": "Threat Analysis",
+        "description": "In-depth analysis to identify vulnerabilities and prevent attacks before they happen.",
+        "tags": ["security"],
+        "featured": false
+      },
+      {
+        "title": "Incident Response",
+        "description": "Rapid reaction to breaches and security incidents to minimize impact.",
+        "tags": ["security", "response"],
+        "featured": true
+      },
+      {
+        "title": "Penetration Testing",
+        "description": "Simulated attacks to test the strength of your current security systems.",
+        "tags": ["security", "testing"],
+        "featured": false
+      },
+      {
+        "title": "Secure Code Review",
+        "description": "Analysis of your codebase to identify and remediate security flaws.",
+        "tags": ["development", "security"],
+        "featured": false
+      },
+      {
+        "title": "Firewall Configuration",
+        "description": "Setup and optimization of business-grade firewalls for strong perimeter defense.",
+        "tags": ["firewall", "network"],
+        "featured": false
+      },
+      {
+        "title": "Email Security & Anti-Phishing",
+        "description": "Protect business communication from spoofing, phishing, and malware.",
+        "tags": ["email", "security"],
+        "featured": false
+      },
+      {
+        "title": "Security Awareness Training",
+        "description": "Educating staff to recognize threats and follow secure practices.",
+        "tags": ["training", "compliance"],
+        "featured": false
+      },
+      {
+        "title": "IT Consulting",
+        "description": "Expert guidance to align your technology with your business goals.",
+        "tags": ["consulting"],
+        "featured": false
+      },
+      {
+        "title": "Cloud Migration & Management",
+        "description": "Seamless migration to cloud platforms and ongoing management for scalability and security.",
+        "tags": ["cloud", "infrastructure"],
+        "featured": false
+      },
+      {
+        "title": "Compliance & Regulatory Consulting",
+        "description": "Assistance with meeting industry-specific compliance requirements such as HIPAA, PCI-DSS, or GDPR.",
+        "tags": ["compliance"],
+        "featured": false
+      },
+      {
+        "title": "Business Continuity & Disaster Recovery Planning",
+        "description": "Developing strategies and solutions to ensure your business can recover quickly from disruptions.",
+        "tags": ["recovery", "strategy"],
+        "featured": false
+      }
+    ],
+    "residential": [
+      {
+        "title": "Computer Repair",
+        "description": "We come to you to fix hardware or software problems on laptops and desktops — fast and frustration-free.",
+        "tags": ["repair", "on-site"],
+        "featured": true
+      },
+      {
+        "title": "Wi-Fi & Home Network Setup",
+        "description": "Improve your home internet with stronger Wi-Fi, better coverage, and secure connections — all set up in person.",
+        "tags": ["network", "on-site"],
+        "featured": true
+      },
+      {
+        "title": "Home Network Security Audit",
+        "description": "We assess your home network for risks and tighten security to keep hackers and snoops out.",
+        "tags": ["security", "audit"],
+        "featured": false
+      },
+      {
+        "title": "Firewall Installation & Privacy Hardening",
+        "description": "We install tools to block tracking, secure your devices, and give your household more privacy online.",
+        "tags": ["firewall", "privacy"],
+        "featured": false
+      },
+      {
+        "title": "Ad & Tracker Blocking",
+        "description": "Faster browsing, fewer ads, and less spying — we install a system that filters junk at the network level.",
+        "tags": ["privacy", "network"],
+        "featured": false
+      },
+      {
+        "title": "VPN Setup",
+        "description": "Protect your privacy while online with a secure connection — we handle the setup and explain how it works.",
+        "tags": ["privacy", "vpn"],
+        "featured": false
+      },
+      {
+        "title": "Personal Cybersecurity Consulting",
+        "description": "One-on-one, in-home help to protect your identity, finances, and devices from online threats.",
+        "tags": ["consulting", "security"],
+        "featured": false
+      },
+      {
+        "title": "Password Management Setup",
+        "description": "We help you securely manage your passwords across devices using trusted tools — no more sticky notes.",
+        "tags": ["security", "passwords"],
+        "featured": false
+      },
+      {
+        "title": "Smart Home & IoT Security",
+        "description": "We secure your smart TVs, thermostats, cameras, doorbells, and other connected devices to prevent spying or hijacking.",
+        "tags": ["iot", "security"],
+        "featured": false
+      },
+      {
+        "title": "Smart Device Configuration",
+        "description": "We set up your smart home tech so it works smoothly and safely — all done on-site and explained clearly.",
+        "tags": ["iot", "on-site"],
+        "featured": false
+      },
+      {
+        "title": "Parental Controls & Safe Browsing",
+        "description": "Protect kids and guests online with age-appropriate filters and content restrictions — configured for your home.",
+        "tags": ["family", "privacy"],
+        "featured": false
+      },
+      {
+        "title": "Data Backup Solutions",
+        "description": "We help you set up automatic backups of important files, so you never lose your memories or documents.",
+        "tags": ["data", "backup"],
+        "featured": false
+      },
+      {
+        "title": "Remote Support",
+        "description": "Need help but can’t bring the device anywhere? We offer secure remote support sessions at your convenience.",
+        "tags": ["support", "remote"],
+        "featured": false
+      },
+      {
+        "title": "Virus & Malware Removal",
+        "description": "We clean your systems of harmful software and strengthen defenses to prevent future infections.",
+        "tags": ["security", "repair"],
+        "featured": false
+      },
+      {
+        "title": "Home Office Setup",
+        "description": "We design and install reliable, secure work-from-home tech setups — perfect for remote work or personal productivity.",
+        "tags": ["setup", "work-from-home"],
+        "featured": false
+      },
+      {
+        "title": "Digital Estate Planning",
+        "description": "We help you organize and protect digital assets — passwords, accounts, and backups — for your family’s future peace of mind.",
+        "tags": ["planning", "family"],
+        "featured": false
+      },
+      {
+        "title": "Wired Network Upgrades (Ethernet / 10G)",
+        "description": "We professionally run Ethernet wiring for ultra-fast, stable internet — perfect for gaming, streaming, or future-proofing your home.",
+        "tags": ["network", "infrastructure"],
+        "featured": false
+      }
+    ]
+  },
+  "contact": {
+    "email": "info@wedefendit.com",
+    "phone": "+1 (352) 709-3931",
+    "address": {
+      "street": "3035 SE Maricamp Rd, Unit 104-205",
+      "city": "Ocala",
+      "state": "FL",
+      "zip": "34471",
+      "type": "mailing"
+    }
+  },
+  "services_cta": {
+    "headline": "Need local IT help you can trust?",
+    "subtext": "We come to you — fast, friendly, and secure. Book your free consultation today.",
+    "buttons": [
+      {
+        "text": "Schedule a Consultation",
+        "link": "/schedule"
+      },
+      {
+        "text": "View Services",
+        "link": "/services"
+      }
+     ]
+    
+  },
+  "copy": [
+    "© 2025 Defend I.T. Solutions LLC. All rights reserved.",
+    "Defend I.T.™, Defend I.T. Solutions™, and Love I.T. — Defend I.T.™ are trademarks of Defend I.T. Solutions LLC."
+  ]
+}
