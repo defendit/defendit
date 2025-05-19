@@ -187,7 +187,7 @@ export default function Privacy() {
         </h2>
         <p>
           This Privacy Policy may change. Updates will be noted by updating the
-          &quote;Effective Date.&quote; Users should review it periodically.
+          &quot;Effective Date.&quot; Users should review it periodically.
         </p>
 
         <h2 className="text-xl font-bold uppercase border-b my-4">Contact</h2>
