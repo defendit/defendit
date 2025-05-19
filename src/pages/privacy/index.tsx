@@ -1,10 +1,9 @@
+import {LegalPage} from "@/components"
+
 export default function Privacy() {
   return (
-    <main
-      className={`font-sans relative min-h-full flex flex-col items-center justify-start p-24 gap-12`}
-    >
-      <section className="max-w-5xl mx-auto px-6 py-12 bg-white/60 dark:bg-slate-900 rounded-md text-gray-900 dark:text-gray-100 font-serif text-justify leading-relaxed">
-        <h1 className="text-3xl font-bold text-center border-b pb-4 mb-6 uppercase tracking-wider">
+   <LegalPage>
+        <h1 className="text-xl sm:text-3xl font-bold text-center border-b pb-4 mb-6 uppercase tracking-wider">
           www.wedefendit.com Privacy Policy
         </h1>
 
@@ -204,11 +203,6 @@ export default function Privacy() {
           <br />
           3035 SE MARICAMP RD UNIT 104-205, Ocala, FL 34471
         </p>
-
-        <footer className="pt-8 border-t mt-8 text-sm text-center text-gray-500">
-          Prepared by: &copy; 2002-2025 LawDepot.com&reg;
-        </footer>
-      </section>
-    </main>
+    </LegalPage>
   );
 }

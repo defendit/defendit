@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en" className=" bg-gray-100 dark:bg-gray-900 text-black dark:text-gray-300">
+    <Html lang="en" className=" bg-gray-100 dark:bg-gray-900 text-black dark:text-gray-300 w-screen min-h-screen overflow-x-hidden overflow-y-auto ">
       <Head>
         <link rel="shortcut icon" href="favicon.svg" type="image/svg" />
         {/* BASIC META */}
@@ -27,7 +27,7 @@ export default function Document() {
         <meta name="twitter:description" content="Local Cybersecurity and IT Services in The Villages & Ocala, FL" />
         <meta name="twitter:image" content="https://www.wedefendit.com/og-image.jpg" />
       </Head>
-      <body className="antialiased">
+      <body className="antialiased w-full h-ful">
         <Main />
         <NextScript />
       </body>
