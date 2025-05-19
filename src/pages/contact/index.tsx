@@ -28,12 +28,14 @@ export default function ContactPage() {
           </p>
         </section>
 
-        <section className="flex flex-col items-center w-full space-y-10">
+        <section className="w-full space-y-10 sm:space-y-12">
           {/* Phone */}
-          <div className="text-center space-y-1">
-            <div className="flex items-center justify-center gap-2 text-base font-medium text-gray-900 dark:text-white">
+          <div className="text-center space-y-2">
+            <div className="flex flex-col items-center gap-1">
               <Phone className="w-5 h-5 text-blue-500 dark:text-sky-400" />
-              Call or Text
+              <span className="text-xl font-medium text-gray-900 dark:text-white">
+                Call or Text
+              </span>
             </div>
             <a
               id="phone"
@@ -45,10 +47,12 @@ export default function ContactPage() {
           </div>
 
           {/* Email */}
-          <div className="text-center space-y-1">
-            <div className="flex items-center justify-center gap-2 text-base font-medium text-gray-900 dark:text-white">
+          <div className="text-center space-y-2">
+            <div className="flex flex-col items-center gap-1">
               <Mail className="w-5 h-5 text-blue-500 dark:text-sky-400" />
-              Standard Email
+              <span className="text-xl font-medium text-gray-900 dark:text-white">
+                Standard Email
+              </span>
             </div>
             <a
               href={`mailto:${email}`}
@@ -58,65 +62,76 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <hr className="border-t border-gray-300 dark:border-gray-600 w-2/3" />
+          <hr className="border-t border-gray-300 dark:border-gray-600 w-3/4 mx-auto" />
 
           {/* PGP */}
-          <div className="text-center space-y-3">
-            <div className="flex items-center justify-center gap-2 text-base font-medium text-gray-900 dark:text-white">
+          <div className="text-center space-y-4">
+            <div className="flex flex-col items-center gap-1">
               <ShieldCheck className="w-5 h-5 text-blue-500 dark:text-sky-400" />
-              Encrypted Communication (PGP)
+              <span className="text-xl font-medium text-gray-900 dark:text-white">
+                Encrypted Communication (PGP)
+              </span>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+
+            <p className="text-md text-gray-600 dark:text-gray-400">
               For sensitive inquiries, you may email us securely.
             </p>
+
             <a
               href={`mailto:${secure_email}`}
-              className="text-blue-600 dark:text-sky-400 hover:underline text-sm"
+              className="text-blue-600 dark:text-sky-400 hover:underline "
             >
               {secure_email}
             </a>
+
             <p>
               <a
                 href={key_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 download
-                className="inline-block px-3 py-1 rounded bg-blue-600 dark:bg-sky-500 text-white font-medium text-xs shadow hover:bg-blue-700 dark:hover:bg-sky-600 transition"
+                className="inline-block px-3 py-1 rounded bg-blue-600 dark:bg-sky-500 text-white font-medium mt-4 shadow hover:bg-blue-700 dark:hover:bg-sky-600 transition"
               >
                 Download Public PGP Key
               </a>
             </p>
-            <p className="text-xs">
+
+            <p className="text-base">
               <strong>Key ID:</strong>{" "}
               <code className="select-all text-gray-600 dark:text-gray-400">
                 {key_id}
               </code>
             </p>
-            <div className="flex justify-center items-center gap-2 text-xs">
-              <Fingerprint className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-              <code className="break-all">{fingerprint}</code>
-            </div>
-            <div className="text-xs mt-2 text-gray-500 dark:text-gray-400">
-              Full Fingerprint:
-              <br />
-              <code className="break-all select-all">
-                {fingerprint.replace(/\s+/g, "")}
-              </code>
+
+            <div className="flex flex-col items-center gap-1 text-base text-gray-500 dark:text-gray-400">
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-2 wrap-normal">
+                <Fingerprint className="w-4 h-4" />
+                <code className="break-all">{fingerprint}</code>
+              </div>
+              <div className="text-sm mt-2 text-gray-500 dark:text-gray-400 break-words">
+                Full Fingerprint:
+                <br />
+                <code className="break-all select-all">
+                  {fingerprint.replace(/\s+/g, "")}
+                </code>
+              </div>
             </div>
           </div>
 
-          <hr className="border-t border-gray-300 dark:border-gray-600 w-2/3" />
+          <hr className="border-t border-gray-300 dark:border-gray-600 w-3/4 mx-auto" />
 
           {/* Address */}
-          <div className="text-center space-y-1">
-            <div className="flex items-center justify-center gap-2 text-base font-medium text-gray-900 dark:text-white">
+          <div className="text-center space-y-2">
+            <div className="flex flex-col items-center gap-1">
               <MapPin className="w-5 h-5 text-blue-500 dark:text-sky-400" />
-              Mailing Address
+              <span className="text-xl font-medium text-gray-900 dark:text-white">
+                Mailing Address
+              </span>
             </div>
-            <p className="text-xs text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               This is a mailing address only. We operate on-site or remotely.
             </p>
-            <p className="text-sm mt-1 select-all">
+            <p className="text-base mt-1 select-all leading-tight">
               <strong>{name}</strong>
               <br />
               {street}

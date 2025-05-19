@@ -30,7 +30,6 @@ function ServiceCard({ title, description, icons }: Service) {
               .join("");
             // eslint-disable-next-line
             const LucideIcon = (Icons as any)[formattedName];
-            console.log({ LucideIcon });
             return LucideIcon ? (
               <LucideIcon
                 key={idx}
