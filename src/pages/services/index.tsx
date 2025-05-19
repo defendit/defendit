@@ -1,13 +1,6 @@
 import * as Icons from "lucide-react";
-import { PageContainer } from "@/components";
+import { BookOnline, PageContainer } from "@/components";
 import companyInfo from "../../../data/company-info.json";
-
-// type Service = {
-//   title: string;
-//   description: string;
-//   tags: string[];
-//   featured: boolean;
-// };
 
 type SectionProps = {
   title: string;
@@ -53,6 +46,7 @@ function ServiceCard({ title, description, icons }: Service) {
     </div>
   );
 }
+
 function ServiceSection({ title, services }: SectionProps) {
   return (
     <section className="mb-10">
@@ -66,12 +60,34 @@ function ServiceSection({ title, services }: SectionProps) {
   );
 }
 
+const { residential, business } = companyInfo.services;
+
+const featuredResidential = residential.filter((s) => s.featured);
+const remainingResidential = residential.filter((s) => !s.featured);
+
+const sections = [
+  {
+    title: "Popular Home Services",
+    services: featuredResidential,
+  },
+  {
+    title: "All Home Services",
+    services: remainingResidential,
+  },
+  {
+    title: "Business Services",
+    services: business,
+  },
+];
+const renderSections = sections.map((section, index) => (
+  <ServiceSection
+    key={index}
+    title={section.title}
+    services={section.services}
+  />
+));
+
 export default function ServicesPage() {
-  const { residential, business } = companyInfo.services;
-
-  const featuredResidential = residential.filter((s) => s.featured);
-  const remainingResidential = residential.filter((s) => !s.featured);
-
   return (
     <PageContainer>
       <div className="max-w-6xl mx-auto px-4 py-10 space-y-12">
@@ -83,29 +99,15 @@ export default function ServicesPage() {
           </p>
         </header>
 
-        <ServiceSection
-          title="Popular Home Services"
-          services={featuredResidential}
-        />
-        <ServiceSection
-          title="All Home Services"
-          services={remainingResidential}
-        />
-
-        <details className="mt-12">
-          <summary className="cursor-pointer text-lg font-semibold text-blue-600 dark:text-sky-400 mb-4">
-            Show Business Services
-          </summary>
-          <div className="mt-4">
-            <ServiceSection title="Business Services" services={business} />
-          </div>
-        </details>
+        <div className="space-y-10">{renderSections}</div>
 
         <p className="text-center text-sm text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-8">
           Don&apos;t see exactly what you need? We offer a wide range of custom
           tech solutions tailored to your situation. Just reach out and
           we&apos;ll make it happen.
         </p>
+
+        <BookOnline />
       </div>
     </PageContainer>
   );

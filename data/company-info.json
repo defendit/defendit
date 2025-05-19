@@ -45,7 +45,7 @@
         "description": "Rapid reaction to breaches and security incidents to minimize impact.",
         "tags": ["security", "response"],
         "featured": true,
-        "icons": ["shield-alert", "activity", "alarm-warning"]
+        "icons": ["shield-alert", "activity", "siren"]
       },
       {
         "title": "Penetration Testing",
@@ -66,7 +66,7 @@
         "description": "Setup and optimization of business-grade firewalls for strong perimeter defense.",
         "tags": ["firewall", "network"],
         "featured": false,
-        "icons": ["firewall", "settings", "lock"]
+        "icons": ["brick-wall-fire", "settings", "lock"]
       },
       {
         "title": "Email Security & Anti-Phishing",
@@ -88,27 +88,6 @@
         "tags": ["consulting"],
         "featured": false,
         "icons": ["message-circle", "lightbulb", "brain"]
-      },
-      {
-        "title": "Cloud Migration & Management",
-        "description": "Seamless migration to cloud platforms and ongoing management for scalability and security.",
-        "tags": ["cloud", "infrastructure"],
-        "featured": false,
-        "icons": ["cloud-upload", "server", "cloud-cog"]
-      },
-      {
-        "title": "Compliance & Regulatory Consulting",
-        "description": "Assistance with meeting industry-specific compliance requirements such as HIPAA, PCI-DSS, or GDPR.",
-        "tags": ["compliance"],
-        "featured": false,
-        "icons": ["check-square", "file-text", "scale"]
-      },
-      {
-        "title": "Business Continuity & Disaster Recovery Planning",
-        "description": "Developing strategies and solutions to ensure your business can recover quickly from disruptions.",
-        "tags": ["recovery", "strategy"],
-        "featured": false,
-        "icons": ["refresh-ccw", "file-clock", "database"]
       }
     ],
     "residential": [
@@ -120,6 +99,13 @@
         "icons": ["cable", "ethernet-port", "house-wifi"]
       },
       {
+        "title": "Advanced Data Recovery",
+        "description": "Lost family photos? Corrupt drives? We recover important files from failing hard drives, USBs, and even some deleted data — right from your home or securely offsite.",
+        "tags": ["data", "recovery", "featured"],
+        "featured": true,
+        "icons": ["hard-drive", "file-search", "alert-triangle"]
+      },
+      {
         "title": "Smart Home Security & IoT Lockdown",
         "description": "From cameras to speakers, we secure every device connected to your network. We block outside access, limit tracking, and protect your data across your smart home.",
         "tags": ["iot", "security", "privacy", "featured"],
@@ -128,9 +114,9 @@
       },
       {
         "title": "Computer Repair",
-        "description": "We provide expert diagnosis and repair for laptops and desktops. Resolving hardware failures, software issues, slow performance, and more. Our on-site service ensures your devices are restored quickly and reliably, with clear communication and no technical jargon.",
+        "description": "We diagnose and repair laptops and desktops — fixing hardware, software, and performance issues. Fast, reliable, and explained in plain English.",
         "tags": ["repair", "on-site"],
-        "featured": true,
+        "featured": false,
         "icons": ["pc-case", "monitor-smartphone", "wrench"]
       },
       {
@@ -166,7 +152,7 @@
         "description": "We install tools to block tracking, secure your devices, and give your household more privacy online.",
         "tags": ["firewall", "privacy"],
         "featured": false,
-        "icons": ["shield-check", "firewall", "lock"]
+        "icons": ["shield-check", "brick-wall-fire", "lock"]
       },
       {
         "title": "Ad & Tracker Blocking",
@@ -194,14 +180,7 @@
         "description": "We help you securely manage your passwords across devices using trusted tools — no more sticky notes.",
         "tags": ["security", "passwords"],
         "featured": false,
-        "icons": ["file-lock", "rectangle-ellipses", "rotate-ccw-key"]
-      },
-      {
-        "title": "Smart Home & IoT Security",
-        "description": "We secure your smart TVs, thermostats, cameras, doorbells, and other connected devices to prevent spying or hijacking.",
-        "tags": ["iot", "security"],
-        "featured": false,
-        "icons": ["house-plus", "cctv", "door-closed-locked"]
+        "icons": ["file-lock", "square-asterisk", "rotate-ccw-key"]
       },
       {
         "title": "Smart Device Configuration",
@@ -270,6 +249,12 @@
       "state": "FL",
       "zip": "34471",
       "type": "mailing"
+    },
+    "gpg": {
+      "key_id": "9E222548BDFEF72F",
+      "secure_email": "secure@wedefendit.com",
+      "key_url": "https://wedefendit.com/gpg-key.asc",
+      "fingerprint": "0389 252C E469 874D 7DBB ADCA 9E22 2548 BDFE F72F"
     }
   },
   "services_cta": {
@@ -278,7 +263,7 @@
     "buttons": [
       {
         "text": "Schedule Consultation",
-        "link": "/schedule"
+        "link": "/contact#phone"
       },
       {
         "text": "View Services",
