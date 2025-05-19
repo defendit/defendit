@@ -253,7 +253,7 @@
     "gpg": {
       "key_id": "9E222548BDFEF72F",
       "secure_email": "secure@wedefendit.com",
-      "key_url": "https://wedefendit.com/gpg-key.asc",
+      "key_url": "https://wedefendit.com/defendit-publickey.asc",
       "fingerprint": "0389 252C E469 874D 7DBB ADCA 9E22 2548 BDFE F72F"
     }
   },
