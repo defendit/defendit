@@ -26,7 +26,7 @@ export function BookOnline() {
               href="mailto:service@wedefendit.com"
               className="hover:underline text-blue-600 dark:text-sky-400"
             >
-              contact@wedefendit.com
+              service@wedefendit.com
             </a>
           </li>
         </ul>
@@ -38,11 +38,11 @@ export function BookOnline() {
           <div className="mt-3 border-t border-gray-300 dark:border-gray-600 pt-3 space-y-3 text-sm">
             <p>
               You&apos;ll be redirected to Calendly to pick a time that works
-              for you. By continuing, you agree to Calendly’s terms and privacy
-              policy.
+              for you. By continuing, you agree to Calendly&pos;s terms and
+              privacy policy.
             </p>
             <a
-              href="https://calendly.com/wedefendit/30min"
+              href="https://calendly.com/wedefendit/service"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 dark:bg-sky-500 dark:hover:bg-sky-600 transition font-medium"
