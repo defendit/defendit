@@ -6,8 +6,8 @@
   "services": {
     "business": [
       {
-        "title": "Cybersecurity",
-        "description": "Comprehensive protection from cyber threats, tailored for business environments.",
+        "title": "Cybersecurity Consulting",
+        "description": "Expert guidance and solutions to safeguard your business from cyber threats, ensuring compliance and peace of mind.",
         "tags": ["security", "featured"],
         "featured": true,
         "icons": ["shield-check", "key-round", "scan-line"]
@@ -41,11 +41,18 @@
         "icons": ["search-check", "radar", "alert-octagon"]
       },
       {
-        "title": "Incident Response",
-        "description": "Rapid reaction to breaches and security incidents to minimize impact.",
-        "tags": ["security", "response"],
-        "featured": true,
-        "icons": ["shield-alert", "activity", "siren"]
+        "title": "Cloud Solutions",
+        "description": "Secure cloud storage and services to enhance business flexibility and scalability.",
+        "tags": ["cloud", "storage"],
+        "featured": false,
+        "icons": ["cloud-upload", "server", "lock"]
+      },
+      {
+        "title": "IT Support & Maintenance",
+        "description": "Ongoing support and maintenance to keep your IT systems running smoothly.",
+        "tags": ["support", "maintenance"],
+        "featured": false,
+        "icons": ["headset", "wrench", "cog"]
       },
       {
         "title": "Penetration Testing",
@@ -100,7 +107,7 @@
       },
       {
         "title": "Advanced Data Recovery",
-        "description": "Lost family photos? Corrupt drives? We recover important files from failing hard drives, USBs, and even some deleted data — right from your home or securely offsite.",
+        "description": "Lost family photos? Corrupt drives? We recover important files from failing hard drives, USBs, and even some deleted data. From your home or securely offsite.",
         "tags": ["data", "recovery", "featured"],
         "featured": true,
         "icons": ["hard-drive", "file-search", "alert-triangle"]
@@ -142,7 +149,7 @@
       },
       {
         "title": "Wi-Fi & Home Network Setup",
-        "description": "Improve your home internet with stronger Wi-Fi, better coverage, and secure connections — all set up in person.",
+        "description": "Improve your home internet with stronger Wi-Fi, better coverage, and secure connections.",
         "tags": ["network", "on-site"],
         "featured": false,
         "icons": ["house-wifi", "router", "cable"]
@@ -156,14 +163,14 @@
       },
       {
         "title": "Ad & Tracker Blocking",
-        "description": "Faster browsing, fewer ads, and less spying — we install a system that filters junk at the network level.",
+        "description": "Faster browsing, fewer ads, and less spying. We install a system that filters junk at the network level.",
         "tags": ["privacy", "network"],
         "featured": false,
         "icons": ["shield-check", "earth-lock", "house-wifi"]
       },
       {
         "title": "VPN Setup",
-        "description": "Protect your privacy while online with a secure connection — we handle the setup and explain how it works.",
+        "description": "Protect your privacy while online with a secure connection. We handle the setup and explain how it works.",
         "tags": ["privacy", "vpn"],
         "featured": false,
         "icons": ["shield-check", "earth-lock", "Waypoints"]
@@ -177,21 +184,21 @@
       },
       {
         "title": "Password Management Setup",
-        "description": "We help you securely manage your passwords across devices using trusted tools — no more sticky notes.",
+        "description": "We help you securely manage your passwords across devices using trusted tools. No more sticky notes.",
         "tags": ["security", "passwords"],
         "featured": false,
         "icons": ["file-lock", "square-asterisk", "rotate-ccw-key"]
       },
       {
         "title": "Smart Device Configuration",
-        "description": "We set up your smart home tech so it works smoothly and safely — all done on-site and explained clearly.",
+        "description": "We set up your smart home tech so it works smoothly and safely. Done on-site and explained clearly.",
         "tags": ["iot", "on-site"],
         "featured": false,
         "icons": ["house-wifi", "monitor-cog", "lightbulb"]
       },
       {
         "title": "Parental Controls & Safe Browsing",
-        "description": "Protect kids and guests online with age-appropriate filters and content restrictions — configured for your home.",
+        "description": "Protect kids and guests online with age-appropriate filters and content restrictions.",
         "tags": ["family", "privacy"],
         "featured": false,
         "icons": ["shield-check", "house-wifi", "users"]
@@ -219,7 +226,7 @@
       },
       {
         "title": "Home Office Setup",
-        "description": "We design and install reliable, secure work-from-home tech setups — perfect for remote work or personal productivity.",
+        "description": "We design and install reliable, secure work-from-home tech setups. Perfect for remote work or personal productivity.",
         "tags": ["setup", "work-from-home"],
         "featured": false,
         "icons": ["house-plug", "printer-check", "ethernet-port"]
@@ -233,7 +240,7 @@
       },
       {
         "title": "Wired Network Upgrades (Ethernet / 10G)",
-        "description": "We professionally run Ethernet wiring for ultra-fast, stable internet — perfect for gaming, streaming, or future-proofing your home.",
+        "description": "We professionally run Ethernet wiring for ultra-fast, stable internet. Perfect for gaming, streaming, or future-proofing your home.",
         "tags": ["network", "infrastructure"],
         "featured": false,
         "icons": ["cable", "ethernet-port", "network"]
@@ -255,7 +262,8 @@
       "secure_email": "secure@wedefendit.com",
       "key_url": "https://wedefendit.com/defendit-publickey.asc",
       "fingerprint": "0389 252C E469 874D 7DBB ADCA 9E22 2548 BDFE F72F"
-    }
+    },
+    "service_email": "service@wedefendit.com"
   },
   "services_cta": {
     "headline": "Need local IT help you can trust?",
@@ -263,7 +271,7 @@
     "buttons": [
       {
         "text": "Schedule Consultation",
-        "link": "/contact#phone"
+        "link": "/contact#schedule-service"
       },
       {
         "text": "View Services",

@@ -20,14 +20,6 @@ export default function ContactPage() {
           </p>
         </header>
 
-        <section className="mt-12 text-center">
-          <h2 className="text-4xl font-semibold mb-2">Our Service Area</h2>
-          <p className="text-md text-gray-600 dark:text-gray-400 mb-4">
-            We provide on-site and remote support across Ocala, Belleview, The
-            Villages, and surrounding Central Florida communities.
-          </p>
-        </section>
-
         <section className="w-full space-y-10 sm:space-y-12">
           {/* Phone */}
           <div className="text-center space-y-2">
@@ -141,7 +133,15 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <BookOnline />
+        <section className="mt-12 text-center">
+          <h2 className="text-4xl font-semibold mb-2">Our Service Area</h2>
+          <p className="text-md text-gray-600 dark:text-gray-400 mb-4">
+            We provide on-site and remote support across Ocala, Belleview, The
+            Villages, and surrounding Central Florida communities.
+          </p>
+
+          <BookOnline />
+        </section>
       </div>
     </PageContainer>
   );

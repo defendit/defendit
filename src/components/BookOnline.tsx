@@ -2,7 +2,10 @@ import { Phone, Mail } from "lucide-react";
 
 export function BookOnline() {
   return (
-    <section className="max-w-xl mx-auto my-12 px-4 space-y-6 text-sm text-gray-700 dark:text-gray-300">
+    <section
+      id="schedule-service"
+      className="max-w-xl mx-auto my-12 px-4 space-y-6 text-sm text-gray-700 dark:text-gray-300"
+    >
       <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-md border border-gray-200 dark:border-gray-700 space-y-3">
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
           Need to schedule service?
@@ -31,14 +34,14 @@ export function BookOnline() {
           </li>
         </ul>
 
-        <details className="group mt-4">
-          <summary className="cursor-pointer text-blue-600 dark:text-sky-400 hover:underline">
+        <details className="group -mt-2">
+          <summary className="cursor-pointer text-blue-600 dark:text-sky-400 hover:underline text-left">
             Book online with Calendly
           </summary>
           <div className="mt-3 border-t border-gray-300 dark:border-gray-600 pt-3 space-y-3 text-sm">
             <p>
               You&apos;ll be redirected to Calendly to pick a time that works
-              for you. By continuing, you agree to Calendly&pos;s terms and
+              for you. By continuing, you agree to Calendly&apos;s terms and
               privacy policy.
             </p>
             <a

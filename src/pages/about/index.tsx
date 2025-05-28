@@ -28,12 +28,14 @@ type ValueItemProps = {
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 };
 
-function ValueItem ({ title, description, Icon }: ValueItemProps) {
+function ValueItem({ title, description, Icon }: ValueItemProps) {
   return (
     <article className="flex flex-col items-start justify-center gap-4">
       <header className="flex flex-wrap flex-row items-center justify-start gap-4 w-full ">
         <Icon className="w-7 h-7 md:w-10 md:h-10 text-blue-500 dark:text-sky-400" />
-        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mt-1 -ml-2">{title}</h3>
+        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mt-1 -ml-2">
+          {title}
+        </h3>
       </header>
       <p className="text-gray-700 dark:text-gray-400 -mt-3 pl-9 md:pl-12">
         {description}
@@ -78,7 +80,9 @@ export default function About() {
         </p>
 
         <div className="flex flex-col items-start justify-center ">
-          <h2 className="text-2xl md:txt-3xl font-semibold mb-4">What We Stand For</h2>
+          <h2 className="text-2xl md:txt-3xl font-semibold mb-4">
+            What We Stand For
+          </h2>
           <RenderValues />
         </div>
 
