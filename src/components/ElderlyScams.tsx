@@ -17,7 +17,7 @@ export const ElderlyScamsList: React.FC = () => {
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3 ">
         {elderly.map(
-          ({ icon: Icon, title, description, prevention, source }, index) => {
+          ({ icon: Icon, title, description, prevention }, index) => {
             const formattedName = Icon.split("-")
               .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
               .join("");
@@ -58,18 +58,6 @@ export const ElderlyScamsList: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-auto">
-                  Source:{" "}
-                  <a
-                    href={source}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline hover:text-blue-600 dark:hover:text-sky-400"
-                  >
-                    {source.replace(/^https?:\/\//, "").split("/")[0]}
-                  </a>
-                </p>
               </article>
             );
           }
