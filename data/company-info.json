@@ -263,7 +263,8 @@
       "key_url": "https://wedefendit.com/defendit-publickey.asc",
       "fingerprint": "0389 252C E469 874D 7DBB ADCA 9E22 2548 BDFE F72F"
     },
-    "service_email": "service@wedefendit.com"
+    "service_email": "service@wedefendit.com",
+    "privacy_email": "privacy@wedefendit.com"
   },
   "services_cta": {
     "headline": "Need local IT help you can trust?",
@@ -277,8 +278,10 @@
         "text": "View Services",
         "link": "/services"
       }
-    ]
+    ],
+    "booking_link": "https://calendly.com/wedefendit/service"
   },
+
   "copy": [
     "© 2025 Defend I.T. Solutions LLC. All rights reserved.",
     "Defend I.T.™, Defend I.T. Solutions™, and Love I.T. — Defend I.T.™ are trademarks of Defend I.T. Solutions LLC."

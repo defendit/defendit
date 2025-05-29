@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import companyInfo from "../../data/company-info.json";
 
-
 const { name } = companyInfo;
 
 const navItems = [
@@ -11,6 +10,7 @@ const navItems = [
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Contact", href: "/contact" },
+  { name: "Awareness", href: "/awareness" },
 ];
 
 function RenderNavItems({
@@ -37,7 +37,7 @@ function DesktopBar({ pathname }: Readonly<{ pathname: string }>) {
   return (
     <ul
       id="desktop-bar"
-      className="hidden md:flex space-x-24 text-lg w-auto m-0 lg:mr-16 "
+      className="hidden md:flex space-x-24 text-lg w-auto m-0 lg:mr-16 md:mx-auto"
     >
       <RenderNavItems navItems={navItems} pathname={pathname} />
     </ul>
@@ -92,7 +92,7 @@ function MobileBar({ pathname }: Readonly<{ pathname: string }>) {
           </button>
 
           {/* Navigation Links */}
-          <ul className="flex flex-col space-y-6 p-4 text-white z-30">
+          <ul className="flex flex-col space-y-6 p-4 text-white z-30 ">
             <RenderNavItems navItems={navItems} pathname={pathname} />
           </ul>
         </div>
@@ -101,12 +101,17 @@ function MobileBar({ pathname }: Readonly<{ pathname: string }>) {
   );
 }
 
-export  function Navbar() {
+export function Navbar() {
   const { pathname } = useRouter();
 
   return (
     <nav className="py-1 px-5 w-screen flex flex-wrap md:flex-row md:sticky-top justify-between items-center md:border-b md:border-gray-300 md:dark:border-gray-800 md:p-4">
-      <Link href={'/'} className="hover:text-blue-600 dark:hover:text-blue-400 font-semibold text-glow">{name}&trade;</Link>
+      <Link
+        href={"/"}
+        className="hover:text-blue-600 dark:hover:text-blue-400 font-semibold text-glow"
+      >
+        {name}&trade;
+      </Link>
       <DesktopBar pathname={pathname} />
       <MobileBar pathname={pathname} />
     </nav>

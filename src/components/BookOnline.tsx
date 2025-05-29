@@ -1,4 +1,5 @@
 import { Phone, Mail } from "lucide-react";
+import { contact, services_cta } from "../../data/company-info.json";
 
 export function BookOnline() {
   return (
@@ -17,19 +18,21 @@ export function BookOnline() {
           <li className="flex items-center gap-2">
             <Phone className="w-4 h-4 text-blue-500 dark:text-sky-400" />
             <a
-              href="tel:+13527093931"
+              href={`tel:+${contact.phone.replace(/[^0-9]/g, "")}`}
               className="hover:underline text-blue-600 dark:text-sky-400"
             >
-              (352) 709-3931
+              {contact.phone.replace("+1", "")}
             </a>
           </li>
           <li className="flex items-center gap-2">
             <Mail className="w-4 h-4 text-blue-500 dark:text-sky-400" />
             <a
-              href="mailto:service@wedefendit.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`mailto:${contact.service_email}`}
               className="hover:underline text-blue-600 dark:text-sky-400"
             >
-              service@wedefendit.com
+              {contact.service_email}
             </a>
           </li>
         </ul>
@@ -39,15 +42,15 @@ export function BookOnline() {
             Book online with Calendly
           </summary>
           <div className="mt-3 border-t border-gray-300 dark:border-gray-600 pt-3 space-y-3 text-sm">
-            <p>
+            <p className="text-left">
               You&apos;ll be redirected to Calendly to pick a time that works
               for you. By continuing, you agree to Calendly&apos;s terms and
               privacy policy.
             </p>
             <a
-              href="https://calendly.com/wedefendit/service"
               target="_blank"
               rel="noopener noreferrer"
+              href={services_cta.booking_link}
               className="inline-block px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 dark:bg-sky-500 dark:hover:bg-sky-600 transition font-medium"
             >
               Continue to Booking

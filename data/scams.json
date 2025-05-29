@@ -1,0 +1,160 @@
+{
+  "elderly": [
+    {
+      "title": "The Grandparent Scam",
+      "description": "Scammers impersonate a grandchild in distress to solicit money, often using emotional manipulation and even AI-generated voices. They may also pretend to be police or medical personnel, and ask for gift cards or wire transfers.",
+      "prevention": [
+        "Verify the caller's identity by calling them on a number you know or contacting other family members.",
+        "Never send money or gift cards to anyone you haven’t confirmed.",
+        "Be suspicious of urgent requests or threats.",
+        "Use Call blocking technology to filter out suspicious calls and thwart Caller ID spoofing.",
+        "Report suspicious calls to the FTC or local authorities."
+      ],
+      "source": "https://www.fcc.gov/consumers/scam-alert/grandparent-scams-get-more-sophisticated",
+      "icon": "user-check"
+    },
+    {
+      "title": "Home Repair and Contractor Fraud",
+      "description": "Scammers pose as contractors offering urgent or discounted home repairs—especially after storms. They may demand large upfront payments, use high-pressure sales tactics, or disappear after partial or no work. In Florida, unlicensed contracting is a criminal offense.",
+      "prevention": [
+        "Verify contractor licenses through the Florida Department of Business and Professional Regulation (DBPR).",
+        "Avoid paying large sums upfront—never pay in full before work begins.",
+        "Be skeptical of door-to-door repair offers, especially after natural disasters.",
+        "Get written contracts and multiple quotes before agreeing to any work.",
+        "Report unlicensed activity to the DBPR or local law enforcement."
+      ],
+      "source": "https://www.myfloridalicense.com/intentions-to-defraud/",
+      "icon": "hammer"
+    },
+    {
+      "title": "Account Takeover Scams",
+      "description": "Cyber-criminals gain unauthorized access to your online accounts. Often through phishing, credential stuffing, or malware. Once in, they may change passwords, steal financial information, or impersonate you to defraud others.",
+      "prevention": [
+        "Enable multi-factor authentication (MFA) on all critical accounts (email, banking, health portals).",
+        "Use a password manager to create and store strong, unique passwords.",
+        "Monitor account activity regularly for suspicious logins or transactions.",
+        "Avoid reusing passwords across multiple sites.",
+        "Run antivirus scans regularly and keep all software up to date.",
+        "Report compromised accounts to the provider and to www.ic3.gov."
+      ],
+      "source": "https://www.ic3.gov/CrimeInfo/AccountTakeover",
+      "icon": "lock-open"
+    },
+    {
+      "title": "Fake Check Scam",
+      "description": "Scammers send counterfeit checks and ask victims to deposit them, then wire or send money back. These checks can look like real business, cashier’s, or personal checks. Victims lose money when the bank later rejects the fake check.",
+      "prevention": [
+        "Toss offers that require payment to claim a prize or job.",
+        "Verify check authenticity with your bank before using the funds.",
+        "Never use money from a check to send gift cards, wire money, or cryptocurrency.",
+        "Use Call blocking technology to filter out suspicious calls and thwart Caller ID spoofing.",
+        "Be cautious of checks from strangers, especially if they ask you to deposit and send money back.",
+        "Be suspicious of any check for more than the amount owed and requests to send the difference back."
+      ],
+      "source": "https://www.consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams",
+      "icon": "ticket-slash"
+    },
+    {
+      "title": "Social Media Investment Fraud",
+      "description": "Fraudsters exploit social media platforms to promote fake investment opportunities, impersonate financial professionals, and manipulate markets. These scams may include impersonation schemes, crypto frauds, romance-related investments, pump-and-dump schemes, and affinity frauds.",
+      "prevention": [
+        "Independently verify the identity and credentials of individuals promoting investments.",
+        "Avoid 'crypto' investment pitches that promise high returns with little or no risk.",
+        "Do not invest money based on recommendations from online-only acquaintances or romantic interests.",
+        "Use Investor.gov to check registration, license status, and disciplinary history of brokers or firms.",
+        "Ignore unsolicited investment messages, even if they appear to come from someone you know.",
+        "Report suspicious activity to the SEC or the FBI's Internet Crime Complaint Center (IC3)."
+      ],
+      "source": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-alerts/social-media-and-investment-fraud-investor-alert",
+      "icon": "bank-note-x"
+    },
+
+    {
+      "title": "Romance Scams",
+      "description": "Scammers create fake online profiles and build online relationships to exploit victims emotionally and financially, often requesting money for visas, emergencies, or travel. Losses exceeded $1 billion in 2024.",
+      "prevention": [
+        "Stop communicating with anyone you suspect is scamming you.",
+        "Be cautious with online relationships that quickly ask for money.",
+        "Never send money or personal details to someone you haven't met in person.",
+        "Try verifying the person’s identity through reverse image searches or social media.",
+        "If you paid a scammer by gift card, wire transfer, credit card, or debit card contact your financial institution immediately.",
+        "Report the scam to the FTC at ReportFraud.ftc.gov or to the FBI’s Internet Crime Complaint Center (IC3)."
+      ],
+      "source": "https://www.consumer.ftc.gov/articles/what-you-need-know-about-romance-scams",
+      "icon": "heart"
+    },
+    {
+      "title": "Tech Support Scams",
+      "description": "Victims receive pop-ups claiming computer issues, and are tricked into allowing remote access or paying for fake services. These are among the most common scams targeting older adults.",
+      "prevention": [
+        "Never grant remote access to your computer to unsolicited callers.",
+        "Legit companies will never call you to fix a problem you didn’t report.",
+        "Use reputable antivirus software and keep it updated.",
+        "Never hand out personal information or sensitive data over the phone.",
+        "If unsure, consult a trusted tech professional.",
+        "Do not click on links or call numbers from unsolicited pop-ups, emails, or texts. Tech companies will never ask you to call them or click on a link to fix a problem.",
+        "Use Call blocking technology to filter out suspicious calls and thwart Caller ID spoofing."
+      ],
+      "source": "https://www.consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams",
+      "icon": "cpu"
+    },
+    {
+      "title": "Robocall and Robotext Scam",
+      "description": "Scammers use illegal robocalls or spoofed numbers to impersonate legitimate businesses or government agencies. These calls or texts may ask for personal information, money, or request you to press a button, leading to further scams or identity theft.",
+      "prevention": [
+        "Don’t answer calls from unknown or suspicious numbers. Hang up immediately.",
+        "Never give out personal or financial information during unexpected calls or texts.",
+        "Avoid responding to prompts in robocalls, especially pressing buttons.",
+        "Use call-blocking tools and register your number on the Do Not Call Registry.",
+        "Verify callers independently by using known contact information from official sources."
+      ],
+      "source": "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts",
+      "icon": "phone-off "
+    },
+
+    {
+      "title": "Medicare and Health Insurance Scams",
+      "description": "Scammers claim to be Medicare reps to gain access to personal information or fraudulently bill Medicare for fake services.",
+      "prevention": [
+        "Never give your Medicare number or personal info to unsolicited callers.",
+        "Verify any contact by calling Medicare directly.",
+        "Report fraud to the Medicare Fraud Hotline.",
+        "Medicare does not call you uninvited and ask you for personal or private information.",
+        "Be cautious of unsolicited offers for medical equipment or services.",
+        "Use Call blocking technology to filter out suspicious calls and thwart Caller ID spoofing.",
+        "You will usually get a written statement in the mail before you get a phone call from a government agency."
+      ],
+      "source": "https://www.fcc.gov/older-americans-and-medicare-scams",
+      "icon": "ambulance"
+    },
+    {
+      "title": "Government Impersonation Scams",
+      "description": "Scammers impersonate the IRS, SSA, or Medicare to steal personal info or money, often threatening legal action. They spoof official numbers to appear legitimate.",
+      "prevention": [
+        "The government will never call to demand immediate payment or threaten arrest.",
+        "Verify any suspicious contact by calling official government numbers.",
+        "Do not provide personal information to unsolicited callers.",
+        "Report suspicious calls to the FTC or relevant government agency.",
+        "Use Call blocking technology to filter out suspicious calls and thwart Caller ID spoofing.",
+        "You will usually get a written statement in the mail before you get a phone call from a government agency."
+      ],
+      "source": "https://www.usa.gov/imposter-scams",
+      "icon": "landmark"
+    },
+
+    {
+      "title": "Phishing",
+      "description": "Phishing scams involve emails or text messages that appear to be from legitimate sources, such as banks or government agencies, attempting to trick you into revealing personal or financial information. These messages often contain fake invoices, urgent security alerts,requests to verify account details, or requests for immediate payment.",
+      "prevention": [
+        "Don’t click on suspicious links or attachments in emails or texts.",
+        "Verify the message by contacting the company directly using a trusted method.",
+        "Enable multi-factor authentication (MFA) on all important accounts.",
+        "Use security software and keep it up to date.",
+        "Back up important data regularly to prevent loss from malware.",
+        "Report phishing attempts to the FTC at ReportFraud.ftc.gov or forward emails to reportphishing@apwg.org."
+      ],
+      "source": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
+      "icon": "fish-off"
+    }
+  ]
+}
