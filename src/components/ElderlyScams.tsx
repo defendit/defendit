@@ -4,7 +4,7 @@ import { elderly } from "../../data/scams.json";
 
 export const ElderlyScamsList: React.FC = () => {
   return (
-    <section className="w-[95%] sm:w-[90%] mx-auto px-4 py-10 bg-gray-100/30 dark:bg-slate-800/50 rounded-md shadow-xl mt-8">
+    <section className="w-[95%] sm:w-[90%] mx-auto px-4 py-10 bg-gray-100/30 dark:bg-slate-800/50 rounded-md shadow-xl mt-6">
       <header className="text-center mb-10">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
           Top Financial Scams Targeting Older Adults

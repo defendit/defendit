@@ -1,102 +1,82 @@
-import { ElderlyScamsList, PageContainer } from "@/components";
 import Link from "next/link";
+import Head from "next/head";
+import { ElderlyScamsList, PageContainer } from "@/components";
 
 export default function AwarenessPage() {
   return (
-    <PageContainer>
-      <div className="w-full mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <header className="text-center space-y-4">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white">
-            Cybersecurity Awareness
-          </h1>
-          <p className="text-md text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Protecting what you’ve worked hard for, through education,
-            prevention, and personal support. This page is especially designed
-            for retirees and seniors looking to stay safe online.
-          </p>
-        </header>
+    <>
+      <Head>
+        <title>
+          Cybersecurity Awareness for Seniors | Defend I.T. Solutions
+        </title>
+        <meta
+          name="description"
+          content="Free cybersecurity education and scam prevention tips for retirees and seniors in The Villages and Ocala, Florida."
+        />
+        <meta
+          property="og:title"
+          content="Cybersecurity Awareness for Seniors | Defend I.T. Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Defend I.T. Solutions helps retirees and seniors stay safe online through clear,
+              private, and practical education."
+        />
+        <meta
+          property="og:url"
+          content="https://www.wedefendit.com/awareness"
+        />
+        <meta
+          name="keywords"
+          content="Cybersecurity, IT support, The Villages, Ocala, senior tech support, phishing scams, online safety for retirees, awareness training, cybersecurity education, elderly scams, tech help for seniors"
+        />
 
-        {/* Section: Latest Threats */}
-        <section className="space-y-4 text-center">
-          <ElderlyScamsList />
-        </section>
+        <link rel="canonical" href="https://www.wedefendit.com/awareness" />
+      </Head>
+      <PageContainer>
+        <div className="w-full mx-auto px-4 sm:px-6">
+          {/* Header */}
+          <header className="text-center space-y-3 mt-12">
+            <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 dark:text-white">
+              Cybersecurity Awareness
+            </h1>
+            <p className="text-sm text-gray-600 dark:text-gray-400 w-[90%] mx-auto px-8">
+              Helping retirees and seniors stay safe online through clear,
+              private, and practical education.
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              No trackers. No data collection. Just helpful info.
+            </p>
+          </header>
 
-        {/* Section: Practical Tips */}
-        {/* <section className="space-y-4 text-center mt-32">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white">
-            Simple Steps for Staying Safe Online
-          </h2>
-          <p className="text-base text-gray-600 dark:text-gray-400">
-            Learn how to create strong passwords, spot suspicious links, and
-            keep your devices updated.
-          </p>
-          <Link
-            href="#"
-            className="inline-block text-blue-600 dark:text-sky-400 hover:underline text-sm"
-          >
-            Read Our Safety Guide
-          </Link>
-        </section> */}
+          {/* Section: Latest Threats */}
+          <section className="space-y-4 text-center mt-12">
+            <ElderlyScamsList />
+          </section>
 
-        {/* Section: Resource Download */}
-        {/* <section className="space-y-4 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white">
-            Free Download: “10 Ways to Stay Safe Online”
-          </h2>
-          <p className="text-base text-gray-600 dark:text-gray-400">
-            Download and share this easy-to-read safety checklist with friends
-            and family.
-          </p>
-          <a
-            href="/downloads/safety-checklist.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-4 py-2 rounded bg-blue-600 dark:bg-sky-500 text-white font-medium shadow hover:bg-blue-700 dark:hover:bg-sky-600 transition"
-          >
-            Download PDF
-          </a>
-        </section> */}
+          {/* Section: Contact CTA */}
+          <section className="space-y-4 text-center border-t border-gray-300 dark:border-gray-700 pt-10 mt-16">
+            <p className="text-md text-gray-600 dark:text-gray-400">
+              Have questions or want to arrange a free* training session for
+              your retirement community?
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block px-4 py-2 rounded bg-blue-600 dark:bg-sky-500 text-white font-medium shadow hover:bg-blue-700 dark:hover:bg-sky-600 transition mt-6"
+            >
+              Contact Us
+            </Link>
+          </section>
 
-        {/* Section: Upcoming Events */}
-        {/* <section className="space-y-4 text-center">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white">
-            Upcoming Awareness Events
-          </h2>
-          <p className="text-base text-gray-600 dark:text-gray-400">
-            We host free community talks, webinars, and one-on-one support
-            sessions.
-          </p>
-          <Link
-            href="/book"
-            className="inline-block text-blue-600 dark:text-sky-400 hover:underline text-sm"
-          >
-            View Event Schedule or Book a Spot
-          </Link>
-        </section> */}
-
-        {/* Section: Contact CTA */}
-        <section className="space-y-4 text-center border-t border-gray-300 dark:border-gray-700 pt-10">
-          <p className="text-md text-gray-600 dark:text-gray-400">
-            Have questions or want to arrange a free* training session for your
-            retirement community?
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block px-4 py-2 rounded bg-blue-600 dark:bg-sky-500 text-white font-medium shadow hover:bg-blue-700 dark:hover:bg-sky-600 transition"
-          >
-            Contact Us
-          </Link>
-        </section>
-
-        <div className="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>
-            *Free training sessions are available for retirement communities and
-            senior centers for groups of 25 or more. Individual consultations
-            may incur a fee.
-          </p>
+          <div className="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">
+            <p>
+              *Free training sessions are available for retirement communities
+              and senior centers for groups of 25 or more. Individual
+              consultations may incur a fee.
+            </p>
+          </div>
         </div>
-      </div>
-    </PageContainer>
+      </PageContainer>
+    </>
   );
 }
