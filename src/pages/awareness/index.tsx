@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import { ElderlyScamsList, PageContainer } from "@/components";
+import { ElderlyScamsList, PageContainer, SafetyTipsList } from "@/components";
 
 export default function AwarenessPage() {
   return (
@@ -51,6 +51,7 @@ export default function AwarenessPage() {
 
           {/* Section: Latest Threats */}
           <section className="space-y-4 text-center mt-12">
+            <SafetyTipsList />
             <ElderlyScamsList />
           </section>
 
@@ -58,7 +59,7 @@ export default function AwarenessPage() {
           <section className="space-y-4 text-center border-t border-gray-300 dark:border-gray-700 pt-10 mt-16">
             <p className="text-md text-gray-600 dark:text-gray-400">
               Have questions or want to arrange a free* training session for
-              your retirement community?
+              your community?
             </p>
             <Link
               href="/contact"

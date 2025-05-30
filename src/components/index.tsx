@@ -7,3 +7,4 @@ export * from "./LegalPage";
 export * from "./ThemeToggler";
 export * from "./PageContainer";
 export * from "./ElderlyScams";
+export * from "./SafetyTipsList";
