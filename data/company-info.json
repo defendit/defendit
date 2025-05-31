@@ -99,13 +99,6 @@
     ],
     "residential": [
       {
-        "title": "Hardwired Ethernet Install & Wi-Fi Optimization",
-        "description": "We professionally install Ethernet cabling to smart TVs, desktops, gaming rigs, or any device that doesn’t need to be wireless — for faster, more secure connections. Wi-Fi is tuned for what remains.",
-        "tags": ["network", "infrastructure", "featured"],
-        "featured": true,
-        "icons": ["cable", "ethernet-port", "house-wifi"]
-      },
-      {
         "title": "Advanced Data Recovery",
         "description": "Lost family photos? Corrupt drives? We recover important files from failing hard drives, USBs, and even some deleted data. From your home or securely offsite.",
         "tags": ["data", "recovery", "featured"],
@@ -146,6 +139,13 @@
         "tags": ["security", "privacy", "audit", "featured"],
         "featured": true,
         "icons": ["shield", "house-wifi", "cctv"]
+      },
+      {
+        "title": "Digital Estate Planning",
+        "description": "We help you organize and protect digital assets — passwords, accounts, and backups — for your family’s future peace of mind.",
+        "tags": ["planning", "family"],
+        "featured": true,
+        "icons": ["qr-code", "map-pin-house", "notebook-pen"]
       },
       {
         "title": "Wi-Fi & Home Network Setup",
@@ -211,13 +211,6 @@
         "icons": ["file-clock", "cloud-upload", "database-backup"]
       },
       {
-        "title": "Remote Support",
-        "description": "Need help but can’t bring the device anywhere? We offer secure remote support sessions at your convenience.",
-        "tags": ["support", "remote"],
-        "featured": false,
-        "icons": ["computer", "headset", "handshake"]
-      },
-      {
         "title": "Virus & Malware Removal",
         "description": "We clean your systems of harmful software and strengthen defenses to prevent future infections.",
         "tags": ["security", "repair"],
@@ -230,20 +223,6 @@
         "tags": ["setup", "work-from-home"],
         "featured": false,
         "icons": ["house-plug", "printer-check", "ethernet-port"]
-      },
-      {
-        "title": "Digital Estate Planning",
-        "description": "We help you organize and protect digital assets — passwords, accounts, and backups — for your family’s future peace of mind.",
-        "tags": ["planning", "family"],
-        "featured": false,
-        "icons": ["qr-code", "map-pin-house", "notebook-pen"]
-      },
-      {
-        "title": "Wired Network Upgrades (Ethernet / 10G)",
-        "description": "We professionally run Ethernet wiring for ultra-fast, stable internet. Perfect for gaming, streaming, or future-proofing your home.",
-        "tags": ["network", "infrastructure"],
-        "featured": false,
-        "icons": ["cable", "ethernet-port", "network"]
       }
     ]
   },
