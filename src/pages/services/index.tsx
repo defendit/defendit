@@ -1,7 +1,5 @@
-import Head from "next/head";
-
+import { Meta, PageContainer, BookOnline } from "@/components";
 import * as Icons from "lucide-react";
-import { BookOnline, PageContainer } from "@/components";
 import companyInfo from "../../../data/company-info.json";
 
 type SectionProps = {
@@ -80,6 +78,7 @@ const sections = [
     services: business,
   },
 ];
+
 const renderSections = sections.map((section, index) => (
   <ServiceSection
     key={index}
@@ -91,65 +90,29 @@ const renderSections = sections.map((section, index) => (
 export default function ServicesPage() {
   return (
     <>
-      <Head>
-        <title>
-          Cybersecurity & Tech Support Services | Defend I.T. Solutions
-        </title>
-        <meta
-          name="description"
-          content="Explore local in-person IT support, secure home networking, and small business cybersecurity services in The Villages and Ocala."
-        />
-        <meta
-          property="og:title"
-          content="Cybersecurity & Tech Support Services"
-        />
-        <meta
-          property="og:description"
-          content="Defend I.T. Solutions provides professional on-site tech support and security consulting for homeowners and businesses across Central Florida."
-        />
-        <meta property="og:url" content="https://www.wedefendit.com/services" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://www.wedefendit.com/og-image.png"
-        />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Cybersecurity & Tech Support Services"
-        />
-        <meta
-          name="twitter:description"
-          content="On-site IT help and digital protection from a trusted local expert. Serving The Villages, Ocala, and nearby areas."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.wedefendit.com/og-image.png"
-        />
-
-        <link rel="canonical" href="https://www.wedefendit.com/services" />
-        <meta
-          name="keywords"
-          content="IT support, cybersecurity, tech help, The Villages, Ocala, home networking, small business IT, computer repair, local tech services"
-        />
-      </Head>
+      <Meta
+        title="Cybersecurity & Tech Support Services | Defend I.T. Solutions"
+        description="Explore in-person I.T. support, secure home networking, and business cybersecurity services for The Villages, Ocala, and Central Florida."
+        image="https://www.wedefendit.com/og-image.png"
+        url="https://www.wedefendit.com/services"
+        keywords="IT support, cybersecurity, tech help, The Villages, Ocala, home networking, small business IT, computer repair, local tech services"
+      />
       <PageContainer>
         <div className="max-w-6xl mx-auto px-4 py-10 space-y-12">
           <header className="text-center">
             <h1 className="text-4xl font-bold mb-2">Our Services</h1>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Local, in-person tech support and cybersecurity help for
-              homeowners and businesses.
+              Local, in-person cybersecurity and I.T. support for homeowners,
+              retirees, and small businesses in Central Florida.
             </p>
           </header>
 
           <div className="space-y-10">{renderSections}</div>
 
           <p className="text-center text-sm text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-8">
-            Don&apos;t see exactly what you need? We offer a wide range of
-            custom tech solutions tailored to your situation. Just reach out and
-            we&apos;ll make it happen.
+            Don&apos;t see what you&apos;re looking for? We offer custom tech
+            support and cybersecurity solutions tailored to your exact needs.
+            Reach out and we&apos;ll help you figure it out.
           </p>
 
           <BookOnline />

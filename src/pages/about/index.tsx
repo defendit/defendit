@@ -1,5 +1,4 @@
-import Head from "next/head";
-import { PageContainer } from "@/components";
+import { PageContainer, Meta } from "@/components";
 import { ShieldCheck, MapPin, MessageCircle } from "lucide-react";
 
 const valueData = [
@@ -12,7 +11,7 @@ const valueData = [
   {
     title: "Local & Personal",
     description:
-      "No call centers or bots. Just real humans, helping real people — in person.",
+      "No call centers or bots. Just real humans helping real people, in person.",
     icon: MapPin,
   },
   {
@@ -63,43 +62,13 @@ function RenderValues() {
 export default function About() {
   return (
     <>
-      <Head>
-        <title>
-          About Defend I.T. Solutions | Cybersecurity & Tech Support in Ocala
-        </title>
-        <meta
-          name="description"
-          content="Learn more about Defend I.T. Solutions — a local, privacy-focused cybersecurity and IT support firm serving The Villages, Ocala, and surrounding areas."
-        />
-        <meta property="og:title" content="About Defend I.T. Solutions" />
-        <meta
-          property="og:description"
-          content="Meet your local cybersecurity expert. Defend I.T. offers honest, on-site support for homes and businesses in Central Florida."
-        />
-        <meta property="og:url" content="https://www.wedefendit.com/about" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://www.wedefendit.com/og-image.png"
-        />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Defend I.T. Solutions" />
-        <meta
-          name="twitter:description"
-          content="Cybersecurity with a human touch — based in Ocala, serving The Villages and beyond."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.wedefendit.com/og-image.png"
-        />
-
-        <link rel="canonical" href="https://www.wedefendit.com/about" />
-        <meta
-          name="keywords"
-          content="About Defend I.T. Solutions, cybersecurity Ocala, IT support The Villages, local tech services, privacy-focused IT, on-site tech help, small business cybersecurity"
-        />
-      </Head>
+      <Meta
+        title="About Defend I.T. Solutions | Cybersecurity & Tech Support in Ocala"
+        description="Learn more about Defend I.T. Solutions — a local, privacy-focused cybersecurity and IT support company serving The Villages, Ocala, and surrounding areas."
+        image="https://www.wedefendit.com/og-image.png"
+        url="https://www.wedefendit.com/about"
+        keywords="About Defend I.T. Solutions, cybersecurity Ocala, IT support The Villages, local tech services, privacy-focused IT, on-site tech help, small business cybersecurity"
+      />
       <PageContainer>
         <div className="max-w-3xl space-y-10 justify-center items-center mx-auto p-4">
           <h1 className="text-4xl md:text-5xl font-bold text-center">
@@ -107,36 +76,36 @@ export default function About() {
           </h1>
 
           <p className="text-lg text-justify p-1">
-            <strong>Defend I.T. Solutions</strong> is a locally owned and
-            operated cybersecurity and technology consulting firm based in
-            Ocala, FL. We specialize in providing
-            <span className="font-semibold"> on-site IT services </span>
-            for both residential users and small businesses that value
-            convenience, security, and personalized support.
+            <strong>Defend I.T. Solutions</strong> is a locally owned
+            cybersecurity and tech support company based in Ocala, Florida. We
+            bring expert, on-site I.T. support directly to your door. Our
+            services are tailored for homes and small businesses that want real
+            results without the runaround.
           </p>
 
           <p className="text-lg -mt-6">
-            We believe technology should empower — not overwhelm — and
-            we&apos;re here to help you make sense of it all, safely and
-            confidently.
+            We believe technology should help you, not stress you out. Our
+            mission is to make cybersecurity simple, accessible, and effective.
+            No jargon. No upsells. Just honest help.
           </p>
 
-          <div className="flex flex-col items-start justify-center ">
-            <h2 className="text-2xl md:txt-3xl font-semibold mb-4">
-              What We Stand For
+          <div className="flex flex-col items-start justify-center">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+              Our Core Values
             </h2>
             <RenderValues />
           </div>
 
           <div>
-            <h2 className="text-2xl md:txt-3xl font-semibold mb-2">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-2">
               Why We&apos;re Different
             </h2>
             <p className="text-lg">
-              From securing smart homes to upgrading Wi-Fi and protecting
-              business networks, we focus on practical, real-world solutions
-              that make technology feel safe and simple. Whether you&apos;re a
-              homeowner or a local business, we&apos;re here to help.
+              Whether it&apos;s securing your smart home, installing a safer
+              network, or cleaning up malware, we offer real solutions that
+              actually fix problems. No corporate bloat. No vague tech talk.
+              Just reliable help from someone local, experienced, and easy to
+              talk to.
             </p>
           </div>
         </div>

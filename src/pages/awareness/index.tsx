@@ -1,38 +1,21 @@
 import Link from "next/link";
-import Head from "next/head";
-import { ElderlyScamsList, PageContainer, SafetyTipsList } from "@/components";
+import {
+  ElderlyScamsList,
+  PageContainer,
+  SafetyTipsList,
+  Meta,
+} from "@/components";
 
 export default function AwarenessPage() {
   return (
     <>
-      <Head>
-        <title>
-          Cybersecurity Awareness for Seniors | Defend I.T. Solutions
-        </title>
-        <meta
-          name="description"
-          content="Free cybersecurity education and scam prevention tips for retirees and seniors in The Villages and Ocala, Florida."
-        />
-        <meta
-          property="og:title"
-          content="Cybersecurity Awareness for Seniors | Defend I.T. Solutions"
-        />
-        <meta
-          property="og:description"
-          content="Defend I.T. Solutions helps retirees and seniors stay safe online through clear,
-              private, and practical education."
-        />
-        <meta
-          property="og:url"
-          content="https://www.wedefendit.com/awareness"
-        />
-        <meta
-          name="keywords"
-          content="Cybersecurity, IT support, The Villages, Ocala, senior tech support, phishing scams, online safety for retirees, awareness training, cybersecurity education, elderly scams, tech help for seniors"
-        />
-
-        <link rel="canonical" href="https://www.wedefendit.com/awareness" />
-      </Head>
+      <Meta
+        title="Cybersecurity Awareness for Seniors | Defend I.T. Solutions"
+        description="Free cybersecurity education and scam prevention tips for retirees and seniors in The Villages and Ocala, Florida."
+        url="https://www.wedefendit.com/awareness"
+        image="https://www.wedefendit.com/og-image.png"
+        keywords="Cybersecurity, IT support, The Villages, Ocala, senior tech support, phishing scams, online safety for retirees, awareness training, cybersecurity education, elderly scams, tech help for seniors"
+      />
       <PageContainer>
         <div className="w-full mx-auto px-4 sm:px-6">
           {/* Header */}

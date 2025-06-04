@@ -39,7 +39,9 @@ export default function Home() {
         url="https://www.wedefendit.com/"
       />
       <PageContainer>
-        <h1 className="text-4xl md:text-5xl font-bold text-center">{name}</h1>
+        <h1 className="text-4xl p-2 md:text-5xl font-bold text-center">
+          {name}
+        </h1>
         <p className="-mt-6 text-lg md:text-xl text-center">{tagline}</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
           <div className="flex flex-col items-center text-center max-w-[160px]">
@@ -68,7 +70,7 @@ export default function Home() {
           </div>
         </div>
 
-        <p className="text-base -mt-2 md:text-lg text-gray-800 dark:text-gray-300 text-center w-full max-w-2xl mx-auto">
+        <p className="text-base p-6 md:p-0 -mt-2 md:text-lg text-gray-800 dark:text-gray-300 text-center w-full max-w-2xl mx-auto ">
           {description}
         </p>
 
@@ -78,7 +80,7 @@ export default function Home() {
           </h2>
 
           <CallToActionButtons />
-          <p className="text-center text-base md:text-lg max-w-3xl text-gray-700 dark:text-gray-300 mt-4">
+          <p className="text-center p-6 md:p-0 text-base md:text-lg max-w-3xl text-gray-700 dark:text-gray-300 mt-4">
             Based in Ocala and proudly serving The Villages, we bring
             enterprise-grade protection to everyday users. Our service is
             personal. Our pricing is transparent. Our goal is to keep your

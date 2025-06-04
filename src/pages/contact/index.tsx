@@ -1,6 +1,5 @@
-import Head from "next/head";
-import { BookOnline, PageContainer } from "@/components";
 import companyInfo from "../../../data/company-info.json";
+import { BookOnline, PageContainer, Meta } from "@/components";
 import { Mail, Phone, ShieldCheck, MapPin, Fingerprint } from "lucide-react";
 
 const { contact, name } = companyInfo;
@@ -11,43 +10,13 @@ const { fingerprint, key_id, key_url, secure_email } = gpg;
 export default function ContactPage() {
   return (
     <>
-      <Head>
-        <title>
-          Contact Defend I.T. Solutions | Ocala & The Villages Cybersecurity
-        </title>
-        <meta
-          name="description"
-          content="Reach out to Defend I.T. Solutions for trusted, local cybersecurity and IT support in Ocala, The Villages, and Central Florida. Secure communication options available."
-        />
-        <meta property="og:title" content="Contact Defend I.T. Solutions" />
-        <meta
-          property="og:description"
-          content="Get in touch with Defend I.T. for private, on-site cybersecurity support in Ocala and The Villages."
-        />
-        <meta property="og:url" content="https://www.wedefendit.com/contact" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://www.wedefendit.com/og-image.png"
-        />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Defend I.T. Solutions" />
-        <meta
-          name="twitter:description"
-          content="Local cybersecurity and tech support in Ocala and The Villages, FL."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.wedefendit.com/og-image.png"
-        />
-
-        <link rel="canonical" href="https://www.wedefendit.com/contact" />
-        <meta
-          name="keywords"
-          content="Contact Defend I.T. Solutions, Ocala IT support, The Villages cybersecurity, secure communication, PGP email, local tech support"
-        />
-      </Head>
+      <Meta
+        title="Contact Defend I.T. Solutions | Ocala & The Villages Cybersecurity"
+        description="Reach out to Defend I.T. Solutions for trusted, local cybersecurity and IT support in Ocala, The Villages, and Central Florida. Secure communication options available."
+        url="https://www.wedefendit.com/contact"
+        image="https://www.wedefendit.com/og-image.png"
+        keywords="Contact Defend I.T. Solutions, Ocala IT support, The Villages cybersecurity, secure communication, PGP email, local tech support"
+      />
       <PageContainer>
         <div className="max-w-3xl mx-auto px-4 py-10 space-y-10">
           <header className="text-center space-y-2 -mt-10">

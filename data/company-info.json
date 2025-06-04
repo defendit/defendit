@@ -7,7 +7,7 @@
     "business": [
       {
         "title": "Cybersecurity Consulting",
-        "description": "Expert guidance and solutions to safeguard your business from cyber threats, ensuring compliance and peace of mind.",
+        "description": "Expert guidance and solutions to safeguard your business from cyber threats. Ensuring compliance and peace of mind.",
         "tags": ["security", "featured"],
         "featured": true,
         "icons": ["shield-check", "key-round", "scan-line"]
@@ -114,21 +114,21 @@
       },
       {
         "title": "Computer Repair",
-        "description": "We diagnose and repair laptops and desktops — fixing hardware, software, and performance issues. Fast, reliable, and explained in plain English.",
+        "description": "We diagnose and repair laptops and desktops. Fixing hardware, software, and performance issues. Fast, reliable, and explained in plain English.",
         "tags": ["repair", "on-site"],
         "featured": false,
         "icons": ["pc-case", "monitor-smartphone", "wrench"]
       },
       {
         "title": "Device Clean-Up & Performance Boost",
-        "description": "We fine-tune your devices — uninstall bloatware, clean up startup programs, and optimize system settings. The result? Faster boot times, smoother performance, and longer life for your computer.",
+        "description": "We fine-tune your devices. Uninstall bloatware, clean up startup programs, and optimize system settings. The result? Faster boot times, smoother performance, and longer life for your computer.",
         "tags": ["performance", "repair", "featured"],
         "featured": true,
         "icons": ["cpu", "gauge-circle", "battery-charging"]
       },
       {
         "title": "Scam Protection & Fraud Prevention",
-        "description": "We teach you and your family how to spot tech scams, fake emails, and suspicious phone calls — and we set up call filters, browser protections, and safe defaults to stop them in their tracks.",
+        "description": "We teach you and your family how to spot tech scams, fake emails, and suspicious phone calls. We set up call filters, browser protections, and safe defaults to stop them in their tracks.",
         "tags": ["security", "privacy", "training", "featured"],
         "featured": true,
         "icons": ["presentation", "shield-alert", "glasses"]
@@ -142,7 +142,7 @@
       },
       {
         "title": "Digital Estate Planning",
-        "description": "We help you organize and protect digital assets — passwords, accounts, and backups — for your family’s future peace of mind.",
+        "description": "We help you organize and protect digital assets. Passwords, accounts, and backups. For your family&apos;s future peace of mind.",
         "tags": ["planning", "family"],
         "featured": true,
         "icons": ["qr-code", "map-pin-house", "notebook-pen"]
