@@ -4,14 +4,14 @@
 const cspHeader = `
   default-src 'self';
   img-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval';
-  script-src-elem 'self' 'unsafe-inline' 'unsafe-eval';
-  style-src 'self' 'unsafe-inline';
+  script-src 'self';
+  script-src-elem 'self';
+  style-src 'self' ;
   frame-src 'self';
   font-src 'self';
   object-src 'none';
   base-uri 'self';
-  form-action 'self';
+  form-action 'self'
   frame-ancestors 'self';
 `
   .replace(/\n/g, "")
