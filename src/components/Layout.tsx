@@ -24,10 +24,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       </Link>
 
       <div
-        className="absolute inset-0 bg-no-repeat bg-center bg-cover bg-fixed opacity-3.25 dark:opacity-1.25 pointer-events-none z-0 w-full h-full"
-        style={{
-          backgroundImage: `url('/circuit.png')`,
-        }}
+        className="absolute inset-0 bg-[url('/circuit.png')] bg-center bg-repeat bg-fixed opacity-3.25 pointer-events-none z-0 w-full h-full"
         aria-hidden="true"
       />
 
