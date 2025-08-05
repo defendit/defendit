@@ -28,7 +28,7 @@ export const SafetyTipsList: React.FC = () => {
           return (
             <div
               key={index}
-              className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl shadow-md p-6 hover:shadow-xl transition"
+              className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-md p-6"
             >
               <div className="flex items-center mb-4">
                 <div className="bg-green-100 dark:bg-emerald-900 text-green-600 dark:text-emerald-300 p-3 rounded-full">

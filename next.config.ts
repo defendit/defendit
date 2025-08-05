@@ -12,6 +12,7 @@ const cspHeader = `
   object-src 'none';
   base-uri 'self';
   form-action 'self';
+  connect-src 'self' https://get.geojs.io;
   frame-ancestors 'self';
 `
   .replace(/\n/g, "")
@@ -20,14 +21,6 @@ const cspHeader = `
 const nextConfig = {
   // reactStrictMode: true,
   devIndicators: false,
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "img.youtube.com",
-      },
-    ],
-  },
   headers: async () => {
     return [
       {

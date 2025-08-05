@@ -63,7 +63,7 @@ export default function About() {
   return (
     <>
       <Meta
-        title="About Defend I.T. Solutions | Cybersecurity & Tech Support in Ocala"
+        title="About Defend I.T. Solutions | Cybersecurity & Tech Support in the Villages, FL"
         description="Learn more about Defend I.T. Solutions — a local, privacy-focused cybersecurity and IT support company serving The Villages, Ocala, and surrounding areas."
         image="https://www.wedefendit.com/og-image.png"
         url="https://www.wedefendit.com/about"
@@ -78,15 +78,18 @@ export default function About() {
           <p className="text-lg text-justify p-1">
             <strong>Defend I.T. Solutions</strong> is a locally owned
             cybersecurity and tech support company based in Ocala, Florida. We
-            bring expert, on-site I.T. support directly to your door. Our
-            services are tailored for homes and small businesses that want real
-            results without the runaround.
+            serve Ocala, Belleview, The Villages, and surrounding Central
+            Florida communities. Our mission is to bring expert, in-person I.T.
+            support directly to your home or business—without the frustration of
+            call centers or vague tech talk.
           </p>
 
           <p className="text-lg -mt-6">
-            We believe technology should help you, not stress you out. Our
-            mission is to make cybersecurity simple, accessible, and effective.
-            No jargon. No upsells. Just honest help.
+            We believe technology should work for you; not against you. Whether
+            you need a safer network, protection from scams, or help cleaning up
+            a slow device, we deliver real solutions in plain English. No
+            upsells. No scare tactics. Just honest, reliable help from people
+            who care about privacy and security.
           </p>
 
           <div className="flex flex-col items-start justify-center">

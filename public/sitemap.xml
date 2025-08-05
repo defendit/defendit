@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Static Pages -->
   <url>
     <loc>https://www.wedefendit.com/</loc>
     <priority>1.00</priority>
@@ -28,4 +29,129 @@
     <loc>https://www.wedefendit.com/privacy</loc>
     <priority>0.50</priority>
   </url>
+
+  <!-- Service Index Pages -->
+  <url>
+    <loc>https://www.wedefendit.com/services/ocala</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/belleview</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/the-villages</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/remote</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Ocala Slugs -->
+  <url>
+    <loc>https://www.wedefendit.com/services/ocala/computer-repair</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/ocala/virus-removal</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/ocala/home-network-security</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/ocala/scam-protection</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/ocala/custom-solutions</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/ocala/network-setup</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/ocala/data-recovery</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/ocala/password-management</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/ocala/network-hardening</loc>
+  </url>
+
+  <!-- Belleview Slugs -->
+  <url>
+    <loc>https://www.wedefendit.com/services/belleview/computer-repair</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/belleview/virus-removal</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/belleview/home-network-security</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/belleview/scam-protection</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/belleview/custom-solutions</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/belleview/network-setup</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/belleview/data-recovery</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/belleview/password-management</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/belleview/network-hardening</loc>
+  </url>
+
+  <!-- The Villages Slugs -->
+  <url>
+    <loc>https://www.wedefendit.com/services/the-villages/computer-repair</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/the-villages/virus-removal</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/the-villages/home-network-security</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/the-villages/scam-protection</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/the-villages/custom-solutions</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/the-villages/network-setup</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/the-villages/data-recovery</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/the-villages/password-management</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/the-villages/network-hardening</loc>
+  </url>
+  <!-- Remote Slugs -->
+  <url>
+    <loc>https://www.wedefendit.com/services/remote/support</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/remote/security-assessment</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/remote/privacy</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/remote/training</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/remote/virus-removal</loc>
+  </url>
+  <url>
+    <loc>https://www.wedefendit.com/services/remote/tech-tutoring</loc>
+  </url>
+
 </urlset>

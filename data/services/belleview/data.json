@@ -1,0 +1,77 @@
+{
+  "region": "Belleview, FL",
+  "services": [
+    {
+      "id": "computer-repair-belleview",
+      "title": "Computer Repair in Belleview, FL",
+      "headline": "Fix slow or broken devices with fast, local help.",
+      "icons": ["pc-case", "monitor-smartphone", "wrench"],
+      "summary": "We repair desktops and laptops with issues like crashes, poor performance, hardware failures, or software conflicts ",
+      "cta": "Learn More"
+    },
+    {
+      "id": "virus-removal-belleview",
+      "title": "Virus & Malware Removal in Belleview, FL",
+      "headline": "Clean up infections and restore system trust.",
+      "icons": ["shield-plus", "worm", "alert-triangle"],
+      "summary": "We detect and remove malware, spyware, and suspicious software, then harden your system so it doesn't happen again.",
+      "cta": "Get Help Now"
+    },
+    {
+      "id": "home-network-security-belleview",
+      "title": "Home Network Security in Belleview, FL",
+      "headline": "Secure your Wi-Fi and connected devices.",
+      "icons": ["house-wifi", "router", "shield-check"],
+      "summary": "We audit and harden your home network using industry-standard tools.",
+      "cta": "Secure My Network"
+    },
+    {
+      "id": "scam-protection-belleview",
+      "title": "Scam & Fraud Protection in Belleview, FL",
+      "headline": "Stop scams before they happen.",
+      "icons": ["presentation", "glasses", "shield-alert"],
+      "summary": "We teach you how to spot phone, email, and online scams. Learn how to configure devices to block suspicious content.",
+      "cta": "Stay Protected"
+    },
+    {
+      "id": "custom-solutions-belleview",
+      "title": "Custom Solutions in Belleview, FL",
+      "headline": "Need something more advanced?",
+      "icons": ["puzzle", "monitor-cog", "user"],
+      "summary": "From privacy planning to smart home lockdowns and advanced system design, we can tailor a solution to fit your needs.",
+      "cta": "Talk to an Expert, Today"
+    },
+    {
+      "id": "network-setup-belleview",
+      "title": "Wi-Fi & Network Setup in Belleview, FL",
+      "headline": "Stronger, faster, safer home internet.",
+      "icons": ["router", "ethernet-port", "house-plug"],
+      "summary": "We install or upgrade Wi-Fi, wired connections, and access points.  Is your network is fast and secure?",
+      "cta": "Get Set Up"
+    },
+    {
+      "id": "data-recovery-belleview",
+      "title": "Backup & Data Recovery in Belleview, FL",
+      "headline": "Recover lost files — or make sure you never lose them again.",
+      "icons": ["hard-drive", "clock", "file-check"],
+      "summary": "We recover deleted or lost data when possible and help you set up encrypted, automatic backups to protect your most important files.",
+      "cta": "Protect My Data"
+    },
+    {
+      "id": "password-management-belleview",
+      "title": "Password Management & Digital Safety in Belleview, FL",
+      "headline": "Stop writing passwords on paper — let’s secure them properly.",
+      "icons": ["lock", "key-round", "book-lock"],
+      "summary": "We help you set up a secure password manager, create strong passphrases, and protect your accounts from hacks, breaches, and scams.",
+      "cta": "Secure My Accounts"
+    },
+    {
+      "id": "network-hardening-belleview",
+      "title": "Network Hardening & IoT Lockdown in Belleview, FL",
+      "headline": "Real protection for your home network.",
+      "icons": ["shield-check", "router", "smartphone-nfc"],
+      "summary": "We secure your home network against tracking, malware, and insecure smart devices. Includes DNS hardening, firewall configuration, and full isolation of vulnerable systems.",
+      "cta": "Harden My Network"
+    }
+  ]
+}

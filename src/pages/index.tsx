@@ -84,7 +84,7 @@ export default function Home() {
             Based in Ocala and proudly serving The Villages, we bring
             enterprise-grade protection to everyday users. Our service is
             personal. Our pricing is transparent. Our goal is to keep your
-            digital life secure without the runaround.
+            digital life secure.
           </p>
         </section>
       </PageContainer>

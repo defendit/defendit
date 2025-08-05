@@ -1,0 +1,49 @@
+import Link from "next/link";
+import * as Icons from "lucide-react";
+
+type Service = {
+  id: string;
+  title: string;
+  headline: string;
+  icons: string[];
+  summary: string;
+  cta: string;
+};
+
+const cities = ["the-villages", "ocala", "belleview", "remote"];
+
+export function ServiceCard({ id, title, summary, icons }: Service) {
+  const city = cities.find((c) => id.includes(c)) || cities[0]; // Default to The Villages if not found
+  const slug = id.replace(`-${city}`, ""); // e.g. "computer-repair"
+  const href = `/services/${city}/${slug}`;
+
+  return (
+    <Link
+      href={href}
+      className="p-6 bg-white flex flex-col justify-around items-start dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-sm hover:shadow-md hover:shadow-blue-500 dark:hover:shadow-sky-400 hover:border-blue-500 dark:hover:border-sky-400 transition space-y-3 "
+    >
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+        {title}
+      </h3>
+      <div className="flex items-center gap-3 flex-wrap">
+        {icons.map((iconName, idx) => {
+          const name = iconName
+            .split("-")
+            .map((p) => p.charAt(0).toUpperCase() + p.slice(1))
+            .join("");
+          // eslint-disable-next-line
+          const LucideIcon = (Icons as any)[name];
+          return LucideIcon ? (
+            <LucideIcon
+              key={idx}
+              className="w-5 h-5 text-blue-500 dark:text-sky-400"
+            />
+          ) : null;
+        })}
+      </div>
+      <p className="text-gray-700 dark:text-gray-400 text-sm">{summary}</p>
+    </Link>
+  );
+}
+
+export default ServiceCard;
