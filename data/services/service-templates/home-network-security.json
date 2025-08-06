@@ -1,14 +1,15 @@
 {
   "id": "home-network-security-{{city_lower}}",
-  "title": "Home Network Security in {{city_upper}}, FL",
+  "title": "Home Network Security & Wi-Fi Hardening in {{city_upper}}, FL",
   "headline": "Protect your household from scams, spying, and insecure smart devices. Use the same tools trusted by security professionals.",
-  "description": "Protect your home network in {{city_upper}} with expert Wi-Fi hardening, DNS filtering, and smart device isolation. Local I.T. services from certified cybersecurity professionals.",
+  "description": "Secure your home network in {{city_upper}} with DNS filtering, Wi-Fi hardening, and smart device isolation. Local, professional cybersecurity services.",
   "keywords": [
-    "Home network security {{city_upper}}",
-    "Wi-Fi protection {{city_upper}}",
-    "smart home firewall {{city_upper}}",
+    "home network security {{city_upper}}",
+    "Wi-Fi hardening {{city_upper}}",
+    "smart home security {{city_upper}}",
     "DNS filtering {{city_upper}}",
-    "{{city_upper}} cybersecurity"
+    "IoT lockdown {{city_upper}}",
+    "{{city_upper}} home cybersecurity"
   ],
   "url": "/services/{{city_lower}}/home-network-security",
   "image": "https://www.wedefendit.com/og-image.png",
@@ -23,18 +24,25 @@
     },
     {
       "heading": "What We Do",
+      "paragraph": [
+        "We build hardened home networks using principles from NIST and CISA guidance, tailored for residential environments. Our service includes all the essentials to reduce digital risk and improve control:"
+      ],
       "items": [
-        "Install and configure DNS filtering",
-        "Set up a local DNS resolver to reduce reliance on external providers",
-        "Harden your router, firewall rules, DNS resolver, and disable insecure remote access",
-        "Isolate vulnerable smart home and IoT devices",
-        "Eliminate cloud logins, telemetry, and unnecessary manufacturer tracking"
+        "DNS filtering to block malware, tracking, and phishing domains",
+        "Wi-Fi hardening with strong encryption and restricted access",
+        "Isolated guest networks for visitors and untrusted devices",
+        "Custom firewall rules to block unwanted or unknown traffic",
+        "Segmentation to separate vulnerable smart devices from your main network",
+        "Hands-on setup without cloud dashboards or unnecessary subscriptions"
       ]
     },
-
     {
       "heading": "How It Works",
-      "paragraph": "We evaluate your current setup, then harden your internal network using open-source, local-first tooling. You stay in control, and we explain every step. No black boxes, no ongoing fees."
+      "paragraph": [
+        "We begin by evaluating your home network, identifying weak points and insecure defaults.",
+        "Then we apply practical, open-source solutions that give you better privacy and fewer vulnerabilities without adding complexity.",
+        "You stay in control and informed throughout the process. No black boxes. No ongoing fees."
+      ]
     }
   ],
   "cta": {

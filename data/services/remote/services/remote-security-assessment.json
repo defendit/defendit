@@ -2,7 +2,7 @@
   "id": "remote-security-assessment",
   "title": "Remote Security Assessment",
   "headline": "Evaluate and strengthen your setup remotely.",
-  "description": "We perform a comprehensive remote security audit of your systems, looking for vulnerabilities, misconfigurations, and weak points.",
+  "description": "We offer remote security audits for local clients with a support plan. Identify weak points, tighten settings, and secure your systems from real-world threats without anyone stepping foot in your home or office.",
   "keywords": [
     "Remote security audit",
     "Remote vulnerability scan",
@@ -16,24 +16,33 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Many systems that look secure still expose open ports, outdated services, or weak default settings that can be exploited without detection.",
-        "Password reuse, unpatched software, and browser extensions are some of the most common weak points attackers exploit first.",
-        "A remote audit can reveal misconfigurations and blind spots without requiring physical access to your devices or network."
+        "Many devices and operating systems appear secure on the surface, but default settings often leave unnecessary services running or expose hidden attack surfaces.",
+        "Misconfigured firewalls, missing updates, reused passwords, and third-party browser plugins are among the most common entry points for attackers.",
+        "Even basic home or office systems can leak sensitive data, run outdated software, or rely on settings that have not been reviewed in years."
       ]
     },
     {
       "heading": "Included in Every Assessment",
+      "paragraph": [
+        "We take a comprehensive look at your system settings, device posture, and digital habits to find weaknesses before someone else does."
+      ],
       "items": [
-        "Review of firewall rules, antivirus configuration, and system patch levels",
-        "Audit of account settings, password usage, and MFA implementation",
-        "Inspection of browser plugins, software risk posture, and telemetry settings",
-        "Evaluation of your backup strategy, encryption practices, and disaster readiness",
-        "Actionable report with prioritized recommendations based on your goals"
+        "Check system updates, software versions, and installed applications for known risks",
+        "Review firewall rules, antivirus behavior, and telemetry settings",
+        "Inspect account security, password use, and MFA configuration",
+        "Evaluate browser extensions, plugin risks, and privacy settings",
+        "Assess backup strategy, encryption practices, and disaster readiness",
+        "Deliver a written report with clear, ranked action items you can take immediately"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "We connect over an encrypted session and guide you through a structured security review. We do not collect your data. Everything is reviewed live, documented clearly, and delivered with practical steps to improve your setup immediately."
+      "paragraph": [
+        "This service is available only to local clients with an active remote support plan.",
+        "We connect securely and walk through your devices in real time, guiding you through each step of the audit.",
+        "Nothing is collected or stored. You stay in full control of your data the entire time.",
+        "At the end, you receive a summary with prioritized improvements tailored to your specific setup."
+      ]
     }
   ],
   "cta": {

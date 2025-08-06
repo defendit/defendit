@@ -2,7 +2,7 @@
   "id": "remote-support",
   "title": "Remote Tech Support",
   "headline": "Instant help without a house call.",
-  "description": "We provide secure, remote technical support for computers and devices. Fix problems, install software, or get expert help—without waiting for a visit.",
+  "description": "We offer secure remote tech support for local clients with a support plan. Get expert help with common issues, software fixes, and device configuration — all without waiting for an in-person visit.",
   "keywords": [
     "Remote tech support",
     "Online computer help",
@@ -16,24 +16,32 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Most common tech issues can be resolved remotely, without shipping your device or scheduling a home visit.",
-        "Our Remote support tools use encrypted connections and require your explicit permission before any work begins.",
-        "You can watch the entire session in real time, and disconnect at any moment with a single click."
+        "Most software and system issues can be resolved remotely without needing to bring in your computer or schedule an on-site technician.",
+        "Our remote access tools are encrypted, require your permission before starting, and show you everything that happens during the session.",
+        "You can watch the session live, ask questions in real time, and disconnect instantly if you ever feel uncomfortable."
       ]
     },
     {
       "heading": "What We Fix",
+      "paragraph": [
+        "Remote support is ideal for troubleshooting everyday tech problems, making system adjustments, or getting hands-on help with apps and settings."
+      ],
       "items": [
-        "Fix software issues, application crashes, and failed system updates",
-        "Diagnose slow performance caused by background tasks or bloatware",
-        "Resolve email sync, account login, and password reset issues",
-        "Install or troubleshoot device drivers, printers, and peripherals",
-        "Offer real-time training, walkthroughs, or app-specific support"
+        "Resolve software errors, frozen apps, and system update failures",
+        "Fix slow performance caused by background tasks or resource-hungry processes",
+        "Help with login problems, email syncing, and password resets",
+        "Install and troubleshoot printers, webcams, or other accessories",
+        "Walk you through tasks like installing software, setting up tools, or adjusting settings"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "Remote support is only available for local clients enrolled in a support plan. We visit your location to install and configure the secure remote access software. After setup, you can request help at any time. We are only able to connect with your permission. You stay in full control of every session."
+      "paragraph": [
+        "Remote support is only available to local clients with an active support plan.",
+        "We begin with a one-time visit to securely install and configure your remote access software.",
+        "After that, you can request support anytime. No waiting, no confusion.",
+        "We only connect when you approve the session, and you stay in control the entire time."
+      ]
     }
   ],
   "cta": {

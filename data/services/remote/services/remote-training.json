@@ -2,7 +2,7 @@
   "id": "remote-training",
   "title": "1-on-1 Remote Tech Training",
   "headline": "Learn securely and confidently at your pace.",
-  "description": "Get personalized tech training for any skill level. We offer private, remote sessions on everything from basics to advanced topics.",
+  "description": "Get personalized, one-on-one technology training through private Zoom sessions. We help individuals of all ages build confidence with digital tools — from basic skills to secure habits.",
   "keywords": [
     "Remote tech training",
     "Online computer classes",
@@ -16,26 +16,30 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Hands-on training improves retention and confidence far more than videos or self-paced tutorials.",
-        "Most tech frustrations come from skipped basics or poor explanations. Personalized training fixes that by focusing only on what you need.",
-        "Many privacy and security risks come from simple user mistakes. A little guided training prevents most of them."
+        "Interactive, live training helps people retain knowledge and avoid common mistakes better than videos or self-guided tutorials.",
+        "Frustration with technology often comes from skipped steps or one-size-fits-all solutions. Personalized instruction focuses on what matters to you.",
+        "Simple missteps with devices or accounts are responsible for many privacy issues. A little training can go a long way in keeping you safe."
       ]
     },
     {
       "heading": "Popular Topics",
       "items": [
-        "Basic computer skills, file management, and safe browsing",
-        "Windows, macOS, and mobile device navigation and configuration",
-        "Setting up email, cloud storage, and secure backups",
-        "Password management, 2FA, and account safety",
-        "Cybersecurity best practices for non-technical users",
-        "Safe online shopping, banking, and scam awareness",
-        "Digital hygiene for families, seniors, or new device users"
+        "Basic computer use, file organization, and safe web browsing",
+        "Windows, macOS, and smartphone navigation and settings",
+        "Email, cloud storage, and backup setup",
+        "Password managers, two-factor authentication, and account security",
+        "Cybersecurity for everyday users — how to stay safe online",
+        "Online shopping, banking, and scam detection",
+        "Digital hygiene and privacy for families, seniors, and beginners"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "Remote training is available for local clients with a remote access plan. We come to you to install and configure the software, then schedule live sessions tailored to your goals. Training is done over a secure screen-sharing connection, step by step, with zero pressure."
+      "paragraph": [
+        "Sessions are held over Zoom with clear, step-by-step instruction tailored to your pace and goals.",
+        "We work with individuals, couples, and families — no technical background required.",
+        "There is no software to install, and no support plan is required. All you need is an internet connection and a willingness to learn."
+      ]
     }
   ],
   "cta": {

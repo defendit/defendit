@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { Meta, PageContainer } from "@/components";
 import companyInfo from "../../data/company-info.json";
+import { useDetectLocation } from "@/hooks/useDetectLocation";
+import { useStoredLocation } from "@/hooks/useStoredLocation";
 import { ShieldCheck, Network, Laptop2, UserCheck } from "lucide-react";
+import { getNormalizedCityName, Meta, PageContainer } from "@/components";
 
 const { name, tagline, description, services_cta } = companyInfo;
 
-function CallToActionButtons() {
+function CallToActionButtons({ location }: { location: string | null }) {
   return (
     <div className="flex flex-col md:flex-row items-center justify-evenly gap-4 mt-6 w-auto p-3 font-semibold text-sm md:text-xl break-keep">
       {services_cta.buttons.map((button, index) => {
@@ -16,7 +18,13 @@ function CallToActionButtons() {
         return (
           <Link
             key={index}
-            href={button.link}
+            href={
+              button.text === "View Services"
+                ? `services/${
+                    getNormalizedCityName(location) ?? "the-villages"
+                  }` || "services/the-villages"
+                : button.link
+            }
             className={
               button.text === "View Services" ? viewServicesClasses : btnClasses
             }
@@ -30,6 +38,8 @@ function CallToActionButtons() {
 }
 
 export default function Home() {
+  useDetectLocation(); // Detect the user's location, ie, ocala, belleview, or default to The Villages
+  const city = useStoredLocation();
   return (
     <>
       <Meta
@@ -79,7 +89,7 @@ export default function Home() {
             {services_cta.headline}
           </h2>
 
-          <CallToActionButtons />
+          <CallToActionButtons location={city} />
           <p className="text-center p-6 md:p-0 text-base md:text-lg max-w-3xl text-gray-700 dark:text-gray-300 mt-4">
             Based in Ocala and proudly serving The Villages, we bring
             enterprise-grade protection to everyday users. Our service is

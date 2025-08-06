@@ -2,13 +2,13 @@
   "id": "network-setup-{{city_lower}}",
   "title": "Wi-Fi & Network Setup in {{city_upper}}, FL",
   "headline": "Stronger, faster, safer home internet. Installed by professionals.",
-  "description": "Get expert Wi-Fi and network installation in {{city_upper}}. We design secure, high-speed networks for homes and small offices using trusted tools and configurations.",
+  "description": "Get expert home Wi-Fi and network setup in {{city_upper}}. We install fast, secure networks with clean configurations and strong coverage—no guesswork, no subscriptions.",
   "keywords": [
     "Wi-Fi setup {{city_upper}}",
     "Home network installation {{city_upper}}",
     "Secure internet {{city_upper}}",
-    "Network configuration {{city_upper}}",
-    "Router setup {{city_upper}}"
+    "Wi-Fi troubleshooting {{city_upper}}",
+    "Router and mesh setup {{city_upper}}"
   ],
   "url": "/services/{{city_lower}}/network-setup",
   "image": "https://www.wedefendit.com/og-image.png",
@@ -23,17 +23,20 @@
     },
     {
       "heading": "What We Do",
-      "items": [
-        "Install and configure routers, switches, and wireless access points",
-        "Set up secure Wi-Fi with WPA3, strong passphrases, and proper isolation",
-        "Extend coverage using Ethernet drops or mesh systems with optimal placement",
-        "Configure guest networks and segment untrusted devices for better security",
-        "Apply firmware updates, DNS settings, and firewall rules to harden your network"
+      "paragraph": [
+        "We provide professional Wi-Fi and wired network installations designed for speed, security, and reliability. Whether you're working from home, managing a smart home setup, or just tired of slow connections, we build networks that perform.",
+        "Our process starts with understanding your layout and usage needs. Then we install and configure equipment like routers, switches, and access points using secure, modern standards.",
+        "We optimize signal strength, reduce interference, and separate trusted and untrusted devices to improve both performance and security.",
+        "Every setup is clean, consistent, and built with long-term stability in mind. No half-measures. No unnecessary hardware. Just fast and safe internet that works the way it should."
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "We review your space, needs, and existing equipment. Then we install and configure everything using security-focused best practices. You get a clean, fast, and secure network with no guesswork."
+      "paragraph": [
+        "We begin by reviewing your space, connection type, and current setup to understand what is working and what is not.",
+        "Then we implement a custom configuration that prioritizes speed, stability, and security using proven best practices.",
+        "Once complete, we walk you through your new network and provide guidance so you understand exactly how your devices connect and stay protected."
+      ]
     }
   ],
   "cta": {

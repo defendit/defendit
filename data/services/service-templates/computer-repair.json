@@ -2,13 +2,17 @@
   "id": "computer-repair-{{city_lower}}",
   "title": "Computer Repair in {{city_upper}}, FL",
   "headline": "Fix slow or broken devices with fast, local help. No waiting, no surprises.",
-  "description": "Reliable computer repair in {{city_upper}} for laptops and desktops. Hardware, software, and performance issues fixed by certified local professionals.",
+  "description": "Get expert computer repair in {{city_upper}} for laptops and desktops. We fix slow systems, replace failing hardware, recover data, and optimize performance—all locally and without unnecessary upsells.",
   "keywords": [
-    "Computer repair {{city_upper}}",
-    "Laptop repair {{city_upper}}",
-    "Desktop repair service {{city_upper}}",
-    "PC troubleshooting {{city_upper}}",
-    "IT technician {{city_upper}}"
+    "computer repair {{city_upper}}",
+    "laptop repair {{city_upper}}",
+    "desktop repair {{city_upper}}",
+    "PC diagnostics {{city_upper}}",
+    "computer troubleshooting {{city_upper}}",
+    "data recovery {{city_upper}}",
+    "slow computer fix {{city_upper}}",
+    "SSD upgrade {{city_upper}}",
+    "IT support {{city_upper}}"
   ],
   "url": "/services/{{city_lower}}/computer-repair",
   "image": "https://www.wedefendit.com/og-image.png",
@@ -16,24 +20,32 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Many performance issues like freezing, lag, or failed startups, are caused by aging hard drives, overheating, or misconfigured software, not hardware failure.",
-        "Replacing a traditional hard drive with an SSD can improve performance by 5-10×, and it often costs less than buying a new device.",
-        "Even when systems won't boot, data recovery is often possible without wiping or reformatting—if handled before further damage is done."
+        "Many performance issues like freezing, lag, or failed startups are caused by aging hard drives, overheating, or misconfigured software, not hardware failure.",
+        "Upgrading a traditional hard drive to an SSD can improve speed by 5 to 10 times and often costs far less than buying a new computer.",
+        "Even when a computer will not boot, data recovery is often possible without wiping the drive or reinstalling the system if handled correctly."
       ]
     },
     {
       "heading": "What We Do",
+      "paragraph": [
+        "We provide reliable diagnostics and repair for laptops and desktops, covering both hardware and software issues.",
+        "Whether your system is running slow, overheating, crashing, or failing to start, we work to identify the root cause and restore performance without unnecessary replacements."
+      ],
       "items": [
-        "Run a full diagnostic to identify hardware and software issues",
-        "Repair or replace failed hard drives, memory, fans, or power components",
-        "Tune up and optimize Windows/macOS for better speed and startup time",
-        "Address boot failures, crashes, overheating, or abnormal noise",
-        "Recover data from non-booting or partially damaged systems when possible"
+        "Run full diagnostics to pinpoint performance and boot issues",
+        "Repair or replace failed drives, memory, or cooling components",
+        "Improve startup time and responsiveness through system optimization",
+        "Recover data from non-booting or partially damaged systems",
+        "Extend device lifespan by addressing the real problem instead of pushing a replacement"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "We start with a transparent, non-destructive diagnostic to find the root cause. If repairs make sense, we give you clear options. No jargon, no pressure. We fix what's needed, extend your device's lifespan, and help you avoid wasteful replacements."
+      "paragraph": [
+        "We begin with a non-destructive diagnostic to find out what is really going on with your system.",
+        "If repair makes sense, we explain your options clearly with upfront pricing and no pressure.",
+        "We only fix what is needed and preserve your data whenever possible so you get the most out of your device."
+      ]
     }
   ],
   "cta": {

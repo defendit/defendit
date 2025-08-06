@@ -20,7 +20,7 @@ export function ServiceCard({ id, title, summary, icons }: Service) {
   return (
     <Link
       href={href}
-      className="p-6 bg-white flex flex-col justify-around items-start dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-sm hover:shadow-md hover:shadow-blue-500 dark:hover:shadow-sky-400 hover:border-blue-500 dark:hover:border-sky-400 transition space-y-3 "
+      className="p-6 bg-white/10 flex flex-col justify-around items-start dark:bg-gray-800/40 border border-gray-100 dark:border-gray-800 rounded-md shadow-sm hover:shadow-md hover:shadow-blue-500 hover:bg-blue-200/10 dark:hover:shadow-sky-400 hover:border-blue-500 dark:hover:bg-sky-700/10 dark:hover:border-sky-400 transition space-y-3 "
     >
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
         {title}
@@ -41,7 +41,7 @@ export function ServiceCard({ id, title, summary, icons }: Service) {
           ) : null;
         })}
       </div>
-      <p className="text-gray-700 dark:text-gray-400 text-sm">{summary}</p>
+      <p className="text-gray-700 dark:text-gray-300 text-sm">{summary}</p>
     </Link>
   );
 }

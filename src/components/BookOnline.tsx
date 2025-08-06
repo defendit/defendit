@@ -7,7 +7,7 @@ export function BookOnline() {
       id="schedule-service"
       className="max-w-xl mx-auto my-12 px-4 space-y-6 text-sm text-gray-700 dark:text-gray-300"
     >
-      <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-md border border-gray-200 dark:border-gray-700 space-y-3">
+      <div className="dark:bg-gray-800/40 z-0 p-5 rounded-md border border-gray-200 dark:border-gray-800 space-y-3">
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
           Need to schedule service?
         </h2>

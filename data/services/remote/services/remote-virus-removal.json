@@ -2,7 +2,7 @@
   "id": "remote-virus-removal",
   "title": "Remote Virus & Malware Removal",
   "headline": "Remove threats without anyone stepping foot inside.",
-  "description": "We detect and remove viruses, malware, spyware, and rootkits remotely using industry-standard tools and secure access.",
+  "description": "We provide remote virus and malware removal for local clients with active support plans. Using secure tools and expert methods, we eliminate infections and restore trust in your system without an in-person visit.",
   "keywords": [
     "Remote virus removal",
     "Online malware cleanup",
@@ -16,24 +16,28 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Modern malware often hides in memory, startup tasks, or user profiles where antivirus tools fail to detect it.",
-        "Some infections survive reboots, resets, or even OS reinstallations if the system is not fully cleaned.",
-        "Remote removal can be just as thorough as in-person service when proper tools and techniques are used."
+        "Modern threats like spyware, keyloggers, and fileless malware often avoid detection by traditional antivirus tools.",
+        "Some infections survive resets and reinstalls by embedding into startup tasks, boot sectors, or profile data.",
+        "Remote cleanup using professional tools can be just as effective as an in-person service when done correctly and securely."
       ]
     },
     {
       "heading": "What We Remove",
       "items": [
-        "Viruses, worms, trojans, and remote access backdoors",
-        "Spyware, adware, and browser hijackers",
-        "Rogue toolbars, bloatware, and fake system utilities",
-        "Keyloggers, clipboard monitors, and tracking scripts",
-        "Persistent malware like rootkits and bootkits that resist normal removal methods"
+        "Viruses, trojans, and worm infections",
+        "Spyware, adware, and browser redirects",
+        "Fake antivirus tools and system bloatware",
+        "Keyloggers, clipboard grabbers, and tracking agents",
+        "Rootkits and persistence-based malware that resist standard removal methods"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "Remote malware removal is available for local clients enrolled in a support plan. We install and configure our secure remote access tool during an on-site visit. After that, we can clean your system remotely when you request help. All sessions are permission-based and fully transparent."
+      "paragraph": [
+        "Remote malware removal is only available for local clients who are enrolled in an active support plan.",
+        "During your initial setup visit, we install a secure access tool with your consent. Once active, you can request help anytime, and we clean your system remotely.",
+        "You stay in control throughout the process. Every session requires your approval, and you can watch live or disconnect at any time."
+      ]
     }
   ],
   "cta": {

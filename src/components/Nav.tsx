@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import companyInfo from "../../data/company-info.json";
+import { useStoredLocation } from "@/hooks/useStoredLocation";
+import { supportedCities } from "@/hooks/useDetectLocation";
 
 const { name } = companyInfo;
 
@@ -9,43 +11,74 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
-
   { name: "Awareness", href: "/awareness" },
   { name: "Contact", href: "/contact" },
 ];
 
+export function getNormalizedCityName(city: string | null): string | null {
+  if (!city) return null;
+  const lowerCity = city.toLowerCase();
+  return Object.keys(supportedCities).find((c) => c === lowerCity) || null;
+}
+
 function RenderNavItems({
   navItems,
   pathname,
-}: Readonly<{ navItems: { name: string; href: string }[]; pathname: string }>) {
-  return navItems.map(({ name, href }) => (
-    <li key={href}>
-      <Link
-        href={href}
-        className={`${
-          pathname === href
-            ? "text-blue-600 dark:text-sky-400 font-semibold text-glow hover:underline underline-offset-4"
-            : "hover:text-blue-500 dark:hover:text-sky-400 text-gray-800 dark:text-gray-300 hover:underline underline-offset-4"
-        }  `}
-      >
-        {name}
-      </Link>
-    </li>
-  ));
+  location,
+}: Readonly<{
+  navItems: { name: string; href: string }[];
+  pathname: string;
+  location: string | null;
+}>) {
+  return navItems.map(({ name, href }) => {
+    const isSevice = name === "Services";
+    if (isSevice) {
+      const city = getNormalizedCityName(location);
+      if (city && supportedCities[city]) {
+        href = supportedCities[city];
+      } else {
+        href = "/services/the-villages"; // Default to The Villages if no location found
+      }
+    }
+    return (
+      <li key={href}>
+        <Link
+          href={href}
+          className={`${
+            pathname === href
+              ? "text-blue-600 dark:text-sky-400 font-semibold text-glow hover:underline underline-offset-4"
+              : "hover:text-blue-500 dark:hover:text-sky-400 text-gray-800 dark:text-gray-300 hover:underline underline-offset-4"
+          }  `}
+        >
+          {name}
+        </Link>
+      </li>
+    );
+  });
 }
 
-function DesktopBar({ pathname }: Readonly<{ pathname: string }>) {
+function DesktopBar({
+  pathname,
+  location,
+}: Readonly<{ pathname: string; location: string | null }>) {
   return (
     <ul
       id="desktop-bar"
       className="hidden md:flex space-x-24 text-lg w-auto m-0 lg:mr-16 md:mx-auto"
     >
-      <RenderNavItems navItems={navItems} pathname={pathname} />
+      <RenderNavItems
+        navItems={navItems}
+        pathname={pathname}
+        location={location}
+      />
     </ul>
   );
 }
 
-function MobileBar({ pathname }: Readonly<{ pathname: string }>) {
+function MobileBar({
+  pathname,
+  location,
+}: Readonly<{ pathname: string; location: string | null }>) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -94,7 +127,11 @@ function MobileBar({ pathname }: Readonly<{ pathname: string }>) {
 
           {/* Navigation Links */}
           <ul className="flex flex-col space-y-6 p-4 text-white z-30 ">
-            <RenderNavItems navItems={navItems} pathname={pathname} />
+            <RenderNavItems
+              navItems={navItems}
+              pathname={pathname}
+              location={location}
+            />
           </ul>
         </div>
       </div>
@@ -104,7 +141,11 @@ function MobileBar({ pathname }: Readonly<{ pathname: string }>) {
 
 export function Navbar() {
   const { pathname } = useRouter();
+  const userLocation = useStoredLocation();
 
+  useEffect(() => {
+    console.log("User location from session storage:", userLocation);
+  }, [userLocation]);
   return (
     <nav className="py-1 px-5 w-screen flex flex-wrap md:flex-row md:sticky-top justify-between items-center md:border-b md:border-gray-300 md:dark:border-gray-800 md:p-4">
       <Link
@@ -113,8 +154,8 @@ export function Navbar() {
       >
         {name}&trade;
       </Link>
-      <DesktopBar pathname={pathname} />
-      <MobileBar pathname={pathname} />
+      <DesktopBar pathname={pathname} location={userLocation} />
+      <MobileBar pathname={pathname} location={userLocation} />
     </nav>
   );
 }

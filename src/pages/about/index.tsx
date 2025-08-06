@@ -70,7 +70,7 @@ export default function About() {
         keywords="About Defend I.T. Solutions, cybersecurity Ocala, IT support The Villages, local tech services, privacy-focused IT, on-site tech help, small business cybersecurity"
       />
       <PageContainer>
-        <div className="max-w-3xl space-y-10 justify-center items-center mx-auto p-4">
+        <div className="max-w-3xl space-y-10 justify-center items-center mx-auto p-4  dark:bg-slate-900/30 z-0 rounded shadow-lg">
           <h1 className="text-4xl md:text-5xl font-bold text-center">
             About Us
           </h1>

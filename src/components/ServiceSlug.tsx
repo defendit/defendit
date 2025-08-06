@@ -1,4 +1,5 @@
 import { PageContainer, Meta } from "@/components";
+import { Lightbulb } from "lucide-react";
 
 export type ServiceContent = {
   id: string;
@@ -10,7 +11,7 @@ export type ServiceContent = {
   image: string;
   sections: {
     heading: string;
-    paragraph?: string;
+    paragraph?: string | string[];
     items?: string[];
   }[];
   cta: {
@@ -36,7 +37,7 @@ export default function ServiceSlug({ service }: ServiceSlugProgs) {
         keywords={service.keywords.join(", ")}
       />
       <PageContainer>
-        <div className="max-w-4xl mx-auto py-10 space-y-6 px-4 sm:px-6 lg:px-0 text-center sm:text-left">
+        <div className="max-w-4xl mx-auto py-8 space-y-6 px-4 sm:px-6  text-center sm:text-left bg-gray-50/20 dark:bg-slate-950/20 z-0 rounded shadow-lg">
           <h1 className="text-3xl sm:text-4xl font-bold ">{service.title}</h1>
           <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-lg">
             {service.headline}
@@ -44,24 +45,30 @@ export default function ServiceSlug({ service }: ServiceSlugProgs) {
 
           {/* Highlight "Did You Know?" section if present */}
           {first?.heading.toLowerCase().includes("did you know") && (
-            <div className="bg-yellow-100 dark:bg-yellow-900 border-l-4 border-yellow-500 p-4 rounded shadow-sm">
-              <h2 className="text-xl font-bold text-yellow-800 dark:text-yellow-200 ">
-                {first.heading}
-              </h2>
-              {Array.isArray(first.paragraph)
-                ? first.paragraph.map((text, idx) => (
-                    <p
-                      key={idx}
-                      className="mt-2 text-yellow-700 dark:text-yellow-100 text-left text-sm sm:text-base"
-                    >
-                      {text}
-                    </p>
-                  ))
-                : first.paragraph && (
-                    <p className="mt-2 text-yellow-700 dark:text-yellow-100 text-left text-sm sm:text-base">
-                      {first.paragraph}
-                    </p>
-                  )}
+            <div className="bg-yellow-100 dark:bg-yellow-900 border-l-4 border-yellow-500 p-4 rounded shadow-sm flex items-start gap-3">
+              <div className="flex-1">
+                <h2 className="text-xl font-bold text-yellow-800 dark:text-yellow-200 ">
+                  {/* Lucide Lightbulb icon */}
+                  <span className="inline-flex items-center gap-2 w-auto text-center sm:text-left">
+                    <Lightbulb className="h-8 w-8 text-yellow-300" />{" "}
+                    {first.heading}
+                  </span>
+                </h2>
+                {Array.isArray(first.paragraph)
+                  ? first.paragraph.map((text, idx) => (
+                      <p
+                        key={idx}
+                        className="mt-2 text-yellow-700 dark:text-yellow-100 text-left text-sm sm:text-base "
+                      >
+                        {text}
+                      </p>
+                    ))
+                  : first.paragraph && (
+                      <p className="mt-2 text-yellow-700 dark:text-yellow-100 text-left text-sm sm:text-base">
+                        {first.paragraph}
+                      </p>
+                    )}
+              </div>
             </div>
           )}
 
@@ -72,13 +79,23 @@ export default function ServiceSlug({ service }: ServiceSlugProgs) {
           ).map((section, idx) => (
             <div key={idx} className="mt-6 space-y-2">
               <h2 className="text-2xl font-semibold">{section.heading}</h2>
-              {section.paragraph && (
-                <p className=" text-gray-700 dark:text-gray-400 text-left  text-sm sm:text-base">
-                  {section.paragraph}
-                </p>
-              )}
+              {section.paragraph &&
+                (Array.isArray(section.paragraph) ? (
+                  section.paragraph.map((text: string, idx: number) => (
+                    <p
+                      key={idx}
+                      className="mt-2 text-gray-700 dark:text-gray-300 text-left text-sm sm:text-base"
+                    >
+                      {text}
+                    </p>
+                  ))
+                ) : (
+                  <p className="mt-2 text-gray-700 dark:text-gray-300 text-left text-sm sm:text-base">
+                    {section.paragraph}
+                  </p>
+                ))}
               {section.items && (
-                <ul className="list-disc pl-5 sm:pl-6 text-gray-700 dark:text-gray-400 text-left text-sm sm:text-base space-y-2">
+                <ul className="list-disc pl-5 sm:pl-6 text-gray-700 dark:text-gray-300 text-left text-sm sm:text-base space-y-2">
                   {section.items.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}

@@ -1,14 +1,16 @@
 {
   "id": "data-recovery-{{city_lower}}",
-  "title": "Backup & Data Recovery in {{city_upper}}, FL",
+  "title": "Data Recovery & Encrypted Backup Solutions in {{city_upper}}, FL",
   "headline": "Recover lost files, or make sure you never lose them again.",
-  "description": "We offer expert backup and data recovery services in {{city_upper}}. Recover deleted files, restore failing drives, and set up automatic, encrypted backups for long-term protection.",
+  "description": "Recover lost files and secure your data with encrypted backup systems. Local data recovery experts in {{city_upper}} for drives, USBs, and more.",
   "keywords": [
-    "Data recovery {{city_upper}}",
-    "Backup solutions {{city_upper}}",
-    "Recover deleted files {{city_upper}}",
-    "Hard drive recovery {{city_upper}}",
-    "Secure file backup {{city_upper}}"
+    "data recovery {{city_upper}}",
+    "encrypted backup {{city_upper}}",
+    "file recovery services {{city_upper}}",
+    "hard drive recovery {{city_upper}}",
+    "ransomware data recovery {{city_upper}}",
+    "backup setup {{city_upper}}",
+    "small business data protection {{city_upper}}"
   ],
   "url": "/services/{{city_lower}}/data-recovery",
   "image": "https://www.wedefendit.com/og-image.png",
@@ -17,24 +19,31 @@
       "heading": "Did You Know?",
       "paragraph": [
         "Over 90 percent of people have no recent backup of their personal or business data.",
-        "Drives can fail without warning due to age, firmware bugs, electrical issues, or heat damage. SSDs often give no warning at all.",
-        "Ransomware can encrypt your files instantly and demand payment, but with a secure backup in place, recovery is fast and safe."
+        "Drives can fail suddenly due to age, firmware bugs, electrical damage, or overheating. SSDs often show no warning at all before failure.",
+        "Ransomware can lock your files instantly, but with a secure backup in place, recovery is quick and stress-free."
       ]
     },
     {
       "heading": "What We Do",
+      "paragraph": [
+        "We recover lost data when your system fails and set up long-term backup strategies to prevent it from happening again. Our goal is to protect your files and give you peace of mind, whether you're an individual, family, or small business."
+      ],
       "items": [
-        "Recover deleted, corrupted, or inaccessible files from hard drives, SSDs, and USB drives",
-        "Assess hardware for signs of failure before total data loss",
-        "Configure encrypted, automated backup systems for personal or business use",
-        "Migrate data between devices, operating systems, or secure cloud platforms",
-        "Design custom backup plans with both local and offsite protection",
-        "Secure sensitive data using open-source tools and privacy-respecting platforms"
+        "Recover deleted, corrupted, or inaccessible files from drives and USB devices",
+        "Identify hardware warning signs before complete failure occurs",
+        "Configure encrypted, automated backup systems that work in the background",
+        "Migrate files across computers, operating systems, or secure cloud platforms",
+        "Create backup strategies with both onsite and offsite protection",
+        "Use trusted tools that respect your privacy and keep you in control"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "We begin with a risk-free evaluation to determine if recovery is possible without invasive methods. If the drive is readable, we recover what we can using trusted tools and validate the integrity of your data. Then we help you build a real backup strategy so you never face the same risk again."
+      "paragraph": [
+        "We start with a no-risk assessment to determine if recovery is possible without sending your drive to a lab.",
+        "If your data can be accessed, we recover what we can using proven tools and validate the results with you.",
+        "Then we help set up a backup system that protects you going forward. No subscriptions. No recurring fees. Just secure access to your data when you need it."
+      ]
     }
   ],
   "cta": {

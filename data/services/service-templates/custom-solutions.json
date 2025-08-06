@@ -1,14 +1,17 @@
 {
   "id": "custom-solutions-{{city_lower}}",
-  "title": "Custom I.T. Solutions in {{city_upper}}, FL",
+  "title": "Advanced Cybersecurity & Custom Tech Consulting in {{city_upper}}, FL",
   "headline": "Need something more advanced? Let's build a secure, personalized tech plan that fits you.",
-  "description": "Advanced cybersecurity and custom technology consulting in {{city_upper}}. Get help with privacy planning, network design, smart home lockdowns, and more. Tailored to your needs.",
+  "description": "Custom I.T. solutions in {{city_upper}} for privacy, security, and performance. We help design advanced networks, lock down smart homes, and build tailored tech systems.",
   "keywords": [
-    "Custom cybersecurity {{city_upper}}",
-    "Tech consulting {{city_upper}}",
-    "Smart home security {{city_upper}}",
-    "Advanced network design {{city_upper}}",
-    "Privacy consulting {{city_upper}}"
+    "custom I.T. solutions {{city_upper}}",
+    "cybersecurity consulting {{city_upper}}",
+    "smart home lockdown {{city_upper}}",
+    "advanced tech planning {{city_upper}}",
+    "homelab setup {{city_upper}}",
+    "network design {{city_upper}}",
+    "privacy tech consulting {{city_upper}}",
+    "secure tech support {{city_upper}}"
   ],
   "url": "/services/{{city_lower}}/custom-solutions",
   "image": "https://www.wedefendit.com/og-image.png",
@@ -16,27 +19,32 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Most prebuilt solutions prioritize convenience over security. Default configurations often leak data, leave ports open, or rely on third-party cloud services you cannot control.",
-        "If you are running a homelab, hosting private data, or integrating smart devices, your setup needs more than generic tools or default settings.",
-        "Advanced configurations allow you to self-host services, lock down hardware, and eliminate unnecessary external dependencies."
+        "Most off-the-shelf solutions prioritize convenience over security. Default settings often leak data, expose unnecessary services, or rely on third-party clouds you cannot control.",
+        "If you are running a homelab, hosting sensitive data, or integrating smart devices, you need more than generic tools and default configurations.",
+        "Advanced setups let you self-host services, restrict access, and reduce reliance on external platforms while improving both privacy and performance."
       ]
     },
-
     {
       "heading": "What We Do",
+      "paragraph": [
+        "We help privacy-conscious individuals, professionals, and small businesses implement secure, efficient systems that go beyond basic tech support."
+      ],
       "items": [
-        "Design secure, high-performance home or small office networks",
-        "Harden and isolate smart home ecosystems like Apple HomeKit, Google Nest, or Amazon Alexa",
-        "Set up private file sharing, encrypted backups, or self-hosted services",
-        "Implement VPNs, DNS over TLS, firewalls, and network segmentation",
-        "Repurpose hardware or build custom systems for privacy-focused use cases",
-        "Develop or configure software tools to match your privacy, security, or automation needs",
-        "Provide custom websites, web applications, or automation solutions tailored to your needs"
+        "Design secure, high-performance network environments tailored to your needs",
+        "Lock down smart home platforms and reduce reliance on cloud services",
+        "Set up private file sharing, encrypted backup, or self-hosted services",
+        "Optimize or repurpose hardware for privacy-first applications",
+        "Develop or configure automation tools and privacy-focused software",
+        "Build custom websites or applications with security and data control in mind"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "We start with a consultation to understand your goals, risks, and technical constraints. Then we build a custom configuration plan using vetted tools and best practices. You stay in full control of your data, and we document everything for long-term maintainability."
+      "paragraph": [
+        "We start with a consultation to understand your goals, technical environment, and potential risks.",
+        "Based on that, we create a detailed plan using open, trusted tools to meet your performance, security, or privacy requirements.",
+        "You stay in full control of your systems with clear documentation and long-term maintainability built in from the start."
+      ]
     }
   ],
   "cta": {

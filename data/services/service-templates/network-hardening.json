@@ -2,13 +2,13 @@
   "id": "network-hardening-{{city_lower}}",
   "title": "Network Hardening & IoT Lockdown in {{city_upper}}, FL",
   "headline": "Real protection for your home network, not just antivirus popups.",
-  "description": "We secure your {{city_upper}} home network using professional-grade methods to protect against malware, ad tracking, and insecure IoT devices. No subscriptions. No spyware. Just control.",
+  "description": "Get expert network hardening in {{city_upper}}. We lock down home Wi-Fi, block tracking, and isolate smart devices using open-source, local-first security tools. No subscriptions. No spyware. Just control.",
   "keywords": [
     "network hardening {{city_upper}}",
     "IoT security {{city_upper}}",
-    "firewall configuration {{city_upper}}",
-    "Pi-hole setup {{city_upper}}",
-    "privacy network setup {{city_upper}}"
+    "home firewall setup {{city_upper}}",
+    "secure Wi-Fi installation {{city_upper}}",
+    "privacy-focused networking {{city_upper}}"
   ],
   "url": "/services/{{city_lower}}/network-hardening",
   "image": "https://www.wedefendit.com/og-image.png",
@@ -23,17 +23,19 @@
     },
     {
       "heading": "What We Do",
-      "items": [
-        "Install and configure DNS filtering",
-        "Set up a local DNS resolver to reduce reliance on external providers",
-        "Harden your router, firewall rules, DNS resolver, and disable insecure remote access",
-        "Isolate vulnerable smart home and IoT devices",
-        "Eliminate cloud logins, telemetry, and unnecessary manufacturer tracking"
+      "paragraph": [
+        "We secure your home network using techniques trusted in professional environments. Our service protects against common threats like tracking, telemetry, and device exploitation while keeping you in full control of your network.",
+        "We isolate insecure smart devices, apply strict DNS filtering, and lock down access points to reduce risk. These changes are implemented with privacy in mind and without relying on subscription software or vendor lock-in.",
+        "Our approach is built on tested frameworks and practical tools, tailored to your space and your goals. Whether you're concerned about surveillance, reliability, or both, we deliver a hardened, private, and dependable network setup."
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "We evaluate your current setup, then harden your internal network using open-source, local-first tooling. You stay in control, and we explain every step. No black boxes, no ongoing fees."
+      "paragraph": [
+        "We begin by evaluating your network layout, connected devices, and potential vulnerabilities.",
+        "From there, we apply hardening techniques using local-first, open-source tools that prioritize transparency and long-term control.",
+        "We explain each change so you are never left guessing. No subscriptions. No cloud dashboards. Just solid security that works."
+      ]
     }
   ],
   "cta": {

@@ -1,14 +1,14 @@
 {
   "id": "virus-removal-{{city_lower}}",
-  "title": "Virus & Malware Removal in {{city_upper}}, FL",
+  "title": "Virus and Malware Removal in {{city_upper}}, FL",
   "headline": "Clean infections, restore trust, and lock down your devices professionally.",
-  "description": "Local virus and malware removal in {{city_upper}}. We remove threats, restore your system, and secure it against future attacks. Fast, professional, and discreet service.",
+  "description": "Professional virus and malware removal in {{city_upper}}. We eliminate threats, recover your system, and strengthen it against future attacks. Fast, local, and discreet service for your peace of mind.",
   "keywords": [
     "Virus removal {{city_upper}}",
     "Malware cleanup {{city_upper}}",
-    "Computer virus fix {{city_upper}}",
-    "Spyware removal {{city_upper}}",
-    "Cybersecurity help {{city_upper}}"
+    "Computer infection removal {{city_upper}}",
+    "Spyware and rootkit cleanup {{city_upper}}",
+    "Cybersecurity support {{city_upper}}"
   ],
   "url": "/services/{{city_lower}}/virus-removal",
   "image": "https://www.wedefendit.com/og-image.png",
@@ -17,23 +17,27 @@
       "heading": "Did You Know?",
       "paragraph": [
         "Many modern threats bypass antivirus software by hiding in trusted folders, memory, or scheduled tasks.",
-        "Malware can silently log keystrokes, steal browser data, or join your device to a botnet without obvious symptoms.",
-        "Some infections persist even after reboot or factory reset if the malware is embedded."
+        "Malware can silently log keystrokes, steal browser data, or connect your device to a botnet without showing obvious symptoms.",
+        "Some infections can survive reboot, antivirus scans, or even factory resets. The only guaranteed way to remove advanced threats is to rebuild the system from a clean base."
       ]
     },
     {
       "heading": "What We Do",
+      "paragraph": [
+        "We offer two levels of service depending on the severity of the infection and your needs. In both cases, our priority is restoring your system and securing it against future attacks."
+      ],
       "items": [
-        "Identify and remove viruses, spyware, rootkits, and fileless malware using trusted tools",
-        "Analyze startup behavior, background processes, and system anomalies",
-        "Inspect installed applications, browser extensions, and scheduled tasks for hidden threats",
-        "Restore system stability and performance without wiping your data",
-        "Apply system hardening with DNS filtering, safer software defaults, and privacy-focused antivirus"
+        "Standard Removal – We attempt non-destructive cleanup by removing active malware, repairing damage, and securing the system. This option preserves your apps and files, but may not catch deeply embedded threats.",
+        "Wipe and Rebuild – For maximum assurance, we back up your files, wipe the system, reinstall the operating system from a trusted source, and restore your data safely. This is the only method that guarantees full removal of persistent or hidden malware."
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "We connect or visit, run a deep malware inspection, and isolate known threats. Then we secure your system using non-invasive tools and best practices. You keep your files, we remove the risk."
+      "paragraph": [
+        "We begin with an assessment to determine whether the system is infected.",
+        "If deep compromise is suspected, we recommend the rebuild option and walk you through secure data backup and recovery.",
+        "Either way, we harden your system afterward using trusted tools and best practices to reduce the risk of future infection."
+      ]
     }
   ],
   "cta": {

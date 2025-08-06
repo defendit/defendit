@@ -48,7 +48,7 @@ export default function ServicePage(props: ServicesPageProps) {
         description={meta.description}
       />
       <PageContainer>
-        <div className="max-w-6xl mx-auto px-4 py-10 space-y-10 py-1">
+        <div className="max-w-6xl mx-auto px-4 py-10 space-y-10">
           <header className="text-center">
             <h1 className="text-4xl font-bold">{h1}</h1>
             {
@@ -58,7 +58,8 @@ export default function ServicePage(props: ServicesPageProps) {
                 ) : (
                   <>
                     Learn more about our local, in-person cybersecurity and I.T.
-                    support for {cityName}, FL.
+                    support
+                    {cityName.trim() !== "" ? ` for ${cityName}, FL.` : "."}
                   </>
                 )}
               </p>

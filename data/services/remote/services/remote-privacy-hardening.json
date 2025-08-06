@@ -1,14 +1,14 @@
 {
   "id": "remote-privacy-hardening",
-  "title": "Privacy Hardening & Digital Safety",
-  "headline": "Lock down your data, wherever you are.",
-  "description": "We guide you remotely through privacy best practices: encrypted tools, secure browsers, VPNs, DNS filtering, and more. Take control of your digital footprint.",
+  "title": "Remote Privacy Hardening & Digital Safety Support",
+  "headline": "Protect your digital life no matter where you are.",
+  "description": "Remote privacy help for individuals and small teams. Lock down your devices, apps, and online activity with expert guidance. Encrypted tools, secure settings, and no guesswork.",
   "keywords": [
     "Privacy hardening",
+    "Remote privacy support",
     "Online privacy help",
     "Encrypted messaging setup",
-    "VPN and DNS security",
-    "Remote privacy support"
+    "VPN and DNS security"
   ],
   "url": "/services/remote/privacy-hardening",
   "image": "https://www.wedefendit.com/og-image.png",
@@ -16,24 +16,29 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Most operating systems and apps collect telemetry by default, sending data to vendors without asking for permission.",
-        "Your browser history, IP address, and device fingerprint can be used to track you across sites even with cookies turned off.",
-        "Many so-called private apps still connect to third-party servers unless properly configured or replaced."
+        "Most apps and devices collect personal data by default, even when you turn off basic sharing settings.",
+        "Your IP address, browser fingerprint, and system metadata can be used to track you across sites, even without cookies.",
+        "Popular apps marketed as private often connect to third-party servers unless properly configured or replaced."
       ]
     },
     {
       "heading": "What We Cover",
       "items": [
-        "Configure privacy-respecting browsers with hardened settings and trusted extensions",
-        "Set up secure email and encrypted messaging platforms with minimal metadata leakage",
-        "Apply DNS filtering to block ad networks, trackers, and malicious infrastructure",
-        "Choose and configure VPNs, proxies, or anonymization tools suited to your threat model",
-        "Lock down mobile and desktop operating systems by disabling telemetry, location tracking, and unwanted background services"
+        "Configure hardened, privacy-respecting browsers with vetted extensions",
+        "Set up encrypted email and messaging platforms that avoid metadata leakage",
+        "Apply DNS filtering to block trackers, ad networks, and malicious infrastructure",
+        "Choose and configure VPNs, proxies, or anonymization tools based on your needs",
+        "Lock down mobile and desktop systems by disabling telemetry, tracking, and unnecessary services"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "We connect with you over a secure remote session, walk through your current tools and habits, and configure each setting step by step. No guesswork, no jargon, just clear instructions and real results."
+      "paragraph": [
+        "This service is available only to local customers with an active remote support plan.",
+        "Once your plan is active, you can schedule a secure remote session and we'll review your current setup together.",
+        "We apply hardened privacy settings using trusted tools and clear explanations every step of the way.",
+        "You stay in full control, with no guesswork, no jargon, and no unnecessary software."
+      ]
     }
   ],
   "cta": {
