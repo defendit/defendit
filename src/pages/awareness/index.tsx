@@ -90,11 +90,11 @@ export default function AwarenessPage() {
             <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 dark:text-white">
               Cybersecurity Awareness for Seniors
             </h1>
-            <p className="text-sm text-gray-600 dark:text-gray-400 w-[90%] mx-auto px-8">
+            <p className="text-md text-gray-600 dark:text-gray-400 w-[90%] mx-auto px-8">
               Simple, private, and practical guidance to help retirees and older
               adults stay safe online.
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               No tracking. No data collection. Just helpful info from local
               experts.
             </p>
@@ -102,13 +102,6 @@ export default function AwarenessPage() {
 
           {/* Best Practices Section */}
           <section className="space-y-6 text-center mt-14">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white">
-              5 Ways to Stay Safe Online
-            </h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              These cybersecurity best practices help protect your identity,
-              devices, and personal data from scams and cyber threats.
-            </p>
             <SafetyTipsList />
           </section>
 
