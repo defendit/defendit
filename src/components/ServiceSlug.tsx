@@ -1,5 +1,6 @@
 import { PageContainer, Meta } from "@/components";
 import { Lightbulb } from "lucide-react";
+import Link from "next/link";
 
 export type ServiceContent = {
   id: string;
@@ -22,9 +23,10 @@ export type ServiceContent = {
 
 export type ServiceSlugProgs = {
   service: ServiceContent;
+  isRemote?: boolean;
 };
 
-export default function ServiceSlug({ service }: ServiceSlugProgs) {
+export default function ServiceSlug({ service, isRemote }: ServiceSlugProgs) {
   const [first, ...rest] = service.sections;
 
   return (
@@ -104,13 +106,20 @@ export default function ServiceSlug({ service }: ServiceSlugProgs) {
             </div>
           ))}
 
-          <div className="mt-8 text-center">
-            <a
+          <div className="mt-8 text-center w-full flex flex-col items-center  justify-center space-y-8">
+            <Link
               href={service.cta.link}
-              className="inline-block bg-blue-600 dark:bg-sky-600 text-white px-6 py-3 rounded hover:bg-green-600 dark:hover:bg-emerald-600 transition shadow-sm shadow-black"
+              className="inline-block bg-blue-600 dark:bg-sky-600 text-white px-6 py-3 rounded hover:bg-green-600 dark:hover:bg-emerald-600 transition shadow-sm shadow-black w-3/4 sm:w-1/2 min-w-[200px]"
             >
               {service.cta.label}
-            </a>
+            </Link>
+
+            <Link
+              href={isRemote ? "/services/remote" : "/services"}
+              className="text-blue-600 dark:text-sky-400 hover:underline text-center"
+            >
+              {isRemote ? "View All Remote Services" : "View All Services"}
+            </Link>
           </div>
         </div>
       </PageContainer>

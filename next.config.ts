@@ -12,7 +12,7 @@ const cspHeader = `
   object-src 'none';
   base-uri 'self';
   form-action 'self';
-  connect-src 'self' https://get.geojs.io;
+  connect-src 'self' https://ipwho.is;
   frame-ancestors 'self';
 `
   .replace(/\n/g, "")

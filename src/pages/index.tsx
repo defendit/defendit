@@ -1,7 +1,6 @@
 import Link from "next/link";
 import companyInfo from "../../data/company-info.json";
-import { useDetectLocation } from "@/hooks/useDetectLocation";
-import { useStoredLocation } from "@/hooks/useStoredLocation";
+import { useLocation } from "@/providers/location";
 import { ShieldCheck, Network, Laptop2, UserCheck } from "lucide-react";
 import { getNormalizedCityName, Meta, PageContainer } from "@/components";
 
@@ -20,9 +19,8 @@ function CallToActionButtons({ location }: { location: string | null }) {
             key={index}
             href={
               button.text === "View Services"
-                ? `services/${
-                    getNormalizedCityName(location) ?? "the-villages"
-                  }` || "services/the-villages"
+                ? `services/${getNormalizedCityName(location) ?? ""}` ||
+                  "services/"
                 : button.link
             }
             className={
@@ -38,8 +36,33 @@ function CallToActionButtons({ location }: { location: string | null }) {
 }
 
 export default function Home() {
-  useDetectLocation(); // Detect the user's location, ie, ocala, belleview, or default to The Villages
-  const city = useStoredLocation();
+  const { location } = useLocation();
+  const links = {
+    cybersecurity: location
+      ? `/services/${location}/custom-solutions`
+      : "/services/the-villages/cusom-solutions`",
+    network: location
+      ? `/services/${location}/network-setup`
+      : "/services/the-villages/network-setup",
+    onsite: location
+      ? `/services/${location}/custom-solutions`
+      : "/services/the-villages/custom-solutions",
+    personalized: location
+      ? `/services/${location}/custom-solutions`
+      : "/services/the-villages/custom-solutions",
+  };
+
+  const serviceLinks = [
+    { text: "Cybersecurity", Icon: ShieldCheck, link: links.cybersecurity },
+    { text: "Network Support", Icon: Network, link: links.network },
+    { text: "On-Site Tech Support", Icon: Laptop2, link: links.onsite },
+    {
+      text: "Personalized Service",
+      Icon: UserCheck,
+      link: links.personalized,
+    },
+  ];
+
   return (
     <>
       <Meta
@@ -54,30 +77,16 @@ export default function Home() {
         </h1>
         <p className="-mt-6 text-lg md:text-xl text-center">{tagline}</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
-          <div className="flex flex-col items-center text-center max-w-[160px]">
-            <ShieldCheck className="h-10 w-10 text-blue-400 dark:text-blue-300 mb-2" />
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              Cybersecurity
-            </p>
-          </div>
-          <div className="flex flex-col items-center text-center max-w-[160px]">
-            <Network className="h-10 w-10 text-blue-400 dark:text-blue-300 mb-2" />
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              Network Support
-            </p>
-          </div>
-          <div className="flex flex-col items-center text-center max-w-[160px]">
-            <Laptop2 className="h-10 w-10 text-blue-400 dark:text-blue-300 mb-2" />
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              On-Site Tech Support
-            </p>
-          </div>
-          <div className="flex flex-col items-center text-center max-w-[160px]">
-            <UserCheck className="h-10 w-10 text-blue-400 dark:text-blue-300 mb-2" />
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              Personalized Service
-            </p>
-          </div>
+          {serviceLinks.map((service) => (
+            <Link
+              href={service.link}
+              key={service.text}
+              className="flex flex-col items-center text-center max-w-[160px] text-sm text-gray-700 dark:text-gray-300 hover:underline"
+            >
+              <service.Icon className="h-10 w-10 text-blue-400 dark:text-blue-300 hover:text-emerald-400 mb-2" />
+              {service.text}
+            </Link>
+          ))}
         </div>
 
         <p className="text-base p-6 md:p-0 -mt-2 md:text-lg text-gray-800 dark:text-gray-300 text-center w-full max-w-2xl mx-auto ">
@@ -89,7 +98,7 @@ export default function Home() {
             {services_cta.headline}
           </h2>
 
-          <CallToActionButtons location={city} />
+          <CallToActionButtons location={location} />
           <p className="text-center p-6 md:p-0 text-base md:text-lg max-w-3xl text-gray-700 dark:text-gray-300 mt-4">
             Based in Ocala and proudly serving The Villages, we bring
             enterprise-grade protection to everyday users. Our service is

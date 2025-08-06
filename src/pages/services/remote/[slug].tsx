@@ -35,5 +35,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export default function VillagesServicePage({ service }: ServiceSlugProgs) {
-  return <ServiceSlug service={service} />;
+  return <ServiceSlug service={service} isRemote />;
 }

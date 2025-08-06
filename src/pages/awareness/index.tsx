@@ -1,3 +1,70 @@
+// import Link from "next/link";
+// import {
+//   ElderlyScamsList,
+//   PageContainer,
+//   SafetyTipsList,
+//   Meta,
+// } from "@/components";
+
+// export default function AwarenessPage() {
+//   return (
+//     <>
+//       <Meta
+//         title="Cybersecurity Awareness for Seniors | Defend I.T. Solutions"
+//         description="Free cybersecurity education and scam prevention tips for retirees and seniors in The Villages and Ocala, Florida."
+//         url="https://www.wedefendit.com/awareness"
+//         image="https://www.wedefendit.com/og-image.png"
+//         keywords="Cybersecurity, IT support, The Villages, Ocala, senior tech support, phishing scams, online safety for retirees, awareness training, cybersecurity education, elderly scams, tech help for seniors"
+//       />
+//       <PageContainer>
+//         <div className="w-full mx-auto px-4 sm:px-6">
+//           {/* Header */}
+//           <header className="text-center space-y-3 mt-12">
+//             <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 dark:text-white">
+//               Cybersecurity Awareness
+//             </h1>
+//             <p className="text-sm text-gray-600 dark:text-gray-400 w-[90%] mx-auto px-8">
+//               Helping retirees and seniors stay safe online through clear,
+//               private, and practical education.
+//             </p>
+//             <p className="text-xs text-gray-500 dark:text-gray-400">
+//               No trackers. No data collection. Just helpful info.
+//             </p>
+//           </header>
+
+//           {/* Section: Latest Threats */}
+//           <section className="space-y-4 text-center mt-12">
+//             <SafetyTipsList />
+//             <ElderlyScamsList />
+//           </section>
+
+//           {/* Section: Contact CTA */}
+//           <section className="space-y-4 text-center border-t border-gray-300 dark:border-gray-700 pt-10 mt-16">
+//             <p className="text-md text-gray-600 dark:text-gray-400">
+//               Have questions or want to arrange a free* training session for
+//               your community?
+//             </p>
+//             <Link
+//               href="/contact"
+//               className="inline-block px-4 py-2 rounded bg-blue-600 dark:bg-sky-500 text-white font-medium shadow hover:bg-blue-700 dark:hover:bg-sky-600 transition mt-6"
+//             >
+//               Contact Us
+//             </Link>
+//           </section>
+
+//           <div className="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">
+//             <p>
+//               *Free training sessions are available for retirement communities
+//               and senior centers for groups of 25 or more. Individual
+//               consultations may incur a fee.
+//             </p>
+//           </div>
+//         </div>
+//       </PageContainer>
+//     </>
+//   );
+// }
+
 import Link from "next/link";
 import {
   ElderlyScamsList,
@@ -11,52 +78,66 @@ export default function AwarenessPage() {
     <>
       <Meta
         title="Cybersecurity Awareness for Seniors | Defend I.T. Solutions"
-        description="Free cybersecurity education and scam prevention tips for retirees and seniors in The Villages and Ocala, Florida."
+        description="Free cybersecurity safety training and scam prevention tips for retirees and seniors in The Villages, Ocala, and surrounding Florida areas."
         url="https://www.wedefendit.com/awareness"
         image="https://www.wedefendit.com/og-image.png"
-        keywords="Cybersecurity, IT support, The Villages, Ocala, senior tech support, phishing scams, online safety for retirees, awareness training, cybersecurity education, elderly scams, tech help for seniors"
+        keywords="Cybersecurity, online safety for seniors, tech support for retirees, Ocala, The Villages, scam prevention, phishing awareness, digital safety training"
       />
       <PageContainer>
         <div className="w-full mx-auto px-4 sm:px-6">
-          {/* Header */}
+          {/* Hero Section */}
           <header className="text-center space-y-3 mt-12">
             <h1 className="text-3xl sm:text-5xl font-bold text-gray-900 dark:text-white">
-              Cybersecurity Awareness
+              Cybersecurity Awareness for Seniors
             </h1>
             <p className="text-sm text-gray-600 dark:text-gray-400 w-[90%] mx-auto px-8">
-              Helping retirees and seniors stay safe online through clear,
-              private, and practical education.
+              Simple, private, and practical guidance to help retirees and older
+              adults stay safe online.
             </p>
             <p className="text-xs text-gray-500 dark:text-gray-400">
-              No trackers. No data collection. Just helpful info.
+              No tracking. No data collection. Just helpful info from local
+              experts.
             </p>
           </header>
 
-          {/* Section: Latest Threats */}
-          <section className="space-y-4 text-center mt-12">
+          {/* Best Practices Section */}
+          <section className="space-y-6 text-center mt-14">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white">
+              5 Ways to Stay Safe Online
+            </h2>
+            <p className="text-sm text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              These cybersecurity best practices help protect your identity,
+              devices, and personal data from scams and cyber threats.
+            </p>
             <SafetyTipsList />
+          </section>
+
+          {/* Elder Scam Education Section */}
+          <section className="mt-16">
+            <h2 className="sr-only">Top Financial Scams Targeting Seniors</h2>
             <ElderlyScamsList />
           </section>
 
-          {/* Section: Contact CTA */}
-          <section className="space-y-4 text-center border-t border-gray-300 dark:border-gray-700 pt-10 mt-16">
+          {/* CTA Section */}
+          <section className="text-center border-t border-gray-300 dark:border-gray-700 pt-10 mt-20 space-y-4">
             <p className="text-md text-gray-600 dark:text-gray-400">
-              Have questions or want to arrange a free* training session for
-              your community?
+              Want to arrange a cybersecurity awareness session for your group
+              or community?
             </p>
             <Link
               href="/contact"
-              className="inline-block px-4 py-2 rounded bg-blue-600 dark:bg-sky-500 text-white font-medium shadow hover:bg-blue-700 dark:hover:bg-sky-600 transition mt-6"
+              className="inline-block px-5 py-2 rounded bg-blue-600 dark:bg-sky-500 text-white font-medium shadow hover:bg-blue-700 dark:hover:bg-sky-600 transition"
             >
-              Contact Us
+              Request a Free Training
             </Link>
           </section>
 
+          {/* Disclaimer Section */}
           <div className="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">
             <p>
-              *Free training sessions are available for retirement communities
-              and senior centers for groups of 25 or more. Individual
-              consultations may incur a fee.
+              *Free training sessions are available for senior centers,
+              retirement communities, or groups of 25+ attendees. Individual
+              training may be subject to a small fee.
             </p>
           </div>
         </div>

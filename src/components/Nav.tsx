@@ -2,8 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import companyInfo from "../../data/company-info.json";
-import { useStoredLocation } from "@/hooks/useStoredLocation";
-import { supportedCities } from "@/hooks/useDetectLocation";
+import { supportedCities, useLocation } from "@/providers/location";
 
 const { name } = companyInfo;
 
@@ -37,7 +36,7 @@ function RenderNavItems({
       if (city && supportedCities[city]) {
         href = supportedCities[city];
       } else {
-        href = "/services/the-villages"; // Default to The Villages if no location found
+        href = "/services";
       }
     }
     return (
@@ -141,11 +140,12 @@ function MobileBar({
 
 export function Navbar() {
   const { pathname } = useRouter();
-  const userLocation = useStoredLocation();
+  const { location } = useLocation(); // Initialize location detection
 
   useEffect(() => {
-    console.log("User location from session storage:", userLocation);
-  }, [userLocation]);
+    console.log("User location from local storage:", location);
+    console.log("");
+  }, [location]);
   return (
     <nav className="py-1 px-5 w-screen flex flex-wrap md:flex-row md:sticky-top justify-between items-center md:border-b md:border-gray-300 md:dark:border-gray-800 md:p-4">
       <Link
@@ -154,8 +154,8 @@ export function Navbar() {
       >
         {name}&trade;
       </Link>
-      <DesktopBar pathname={pathname} location={userLocation} />
-      <MobileBar pathname={pathname} location={userLocation} />
+      <DesktopBar pathname={pathname} location={location} />
+      <MobileBar pathname={pathname} location={location} />
     </nav>
   );
 }
