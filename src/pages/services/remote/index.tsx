@@ -7,7 +7,7 @@ export default function RemoteServicesPage() {
       meta={{
         title: "Remote Tech Support & Cybersecurity | Defend I.T. Solutions",
         description:
-          "Nationwide remote cybersecurity and tech support services — fast, secure, and personal.",
+          "Nationwide remote cybersecurity and tech support services. Fast, secure, and personal.",
         url: "https://www.wedefendit.com/services/remote",
         image: "https://www.wedefendit.com/og-image.png",
         keywords:

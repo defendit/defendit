@@ -1,0 +1,39 @@
+{
+  "id": "data-recovery-the-villages",
+  "title": "Backup & Data Recovery in The Villages, FL",
+  "headline": "Recover lost files, or make sure you never lose them again.",
+  "description": "We offer expert backup and data recovery services in The Villages. Recover deleted files, restore failing drives, and set up automatic, encrypted backups for long-term protection.",
+  "keywords": [
+    "Data recovery The Villages",
+    "Backup solutions The Villages",
+    "Recover deleted files The Villages",
+    "Hard drive recovery The Villages",
+    "Secure file backup The Villages"
+  ],
+  "url": "/services/the-villages/data-recovery",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": "Most people don't back up their files until it's too late. Hard drives fail, ransomware hits, or files get accidentally deleted. Without a backup, your data could be gone for good."
+    },
+    {
+      "heading": "What We Do",
+      "items": [
+        "Recover deleted or corrupted files from hard drives, SSDs, and USBs",
+        "Help identify signs of drive failure before total loss",
+        "Set up encrypted, automatic backup systems for home or business",
+        "Migrate data between devices or to secure cloud storage",
+        "Create custom backup strategies using local and offsite redundancy"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "If you've lost data, we assess the drive and attempt non-invasive recovery using industry-standard tools. For prevention, we install secure backup solutions tailored to your devices and preferences. Your files are safe even if disaster strikes."
+    }
+  ],
+  "cta": {
+    "label": "Protect My Data",
+    "link": "/contact#schedule-service"
+  }
+}

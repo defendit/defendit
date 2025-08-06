@@ -1,0 +1,43 @@
+{
+  "id": "remote-tech-tutoring",
+  "title": "Remote Tech Tutoring & Mentoring",
+  "headline": "Learn coding, cybersecurity, or IT skills one-on-one.",
+  "description": "We provide live, remote tutoring for students, professionals, and hobbyists. Learn technical skills at your level and speed.",
+  "keywords": [
+    "Remote tech tutoring",
+    "Online coding mentorship",
+    "Cybersecurity tutoring online",
+    "Virtual IT training",
+    "1-on-1 tech mentorship"
+  ],
+  "url": "/services/remote/remote-tech-tutoring",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": "Learning tech skills one-on-one allows you to ask real-time questions, fix mistakes as they happen, and move at your own pace without feeling overwhelmed by group settings or generic tutorials."
+    },
+    {
+      "heading": "Expert Help, Personalized",
+      "paragraph": "Whether you're studying for a certification or just starting out, we help you grow your skills with focused, one-on-one sessions."
+    },
+    {
+      "heading": "What We Teach",
+      "items": [
+        "Python, Linux, and scripting",
+        "Networking and virtualization (VMware, Proxmox, etc.)",
+        "Cybersecurity principles and tools",
+        "IT certifications (CompTIA, CEH, etc.)",
+        "General tech literacy for all ages"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "We schedule a session, assess your goals, and start teaching right away. Live screen sharing and interactive walkthroughs make learning easier and more effective."
+    }
+  ],
+  "cta": {
+    "label": "Schedule Tutoring",
+    "link": "/contact#schedule-service"
+  }
+}

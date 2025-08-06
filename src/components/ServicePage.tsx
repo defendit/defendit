@@ -53,13 +53,12 @@ export default function ServicePage(props: ServicesPageProps) {
             <h1 className="text-4xl font-bold">{h1}</h1>
             {
               <p className="text-gray-500 dark:text-gray-400 mt-2">
-                {cityName === "" ? (
-                  "Local, in-person cybersecurity and I.T. support for homeowners, retirees, and small businesses in Central Florida."
+                {isRemote ? (
+                  "Remote cybersecurity and I.T. support for homeowners, retirees, and small businesses in Central Florida."
                 ) : (
                   <>
                     Learn more about our local, in-person cybersecurity and I.T.
-                    support
-                    {!isRemote && ` for ${cityName}, FL`}
+                    support for {cityName}, FL.
                   </>
                 )}
               </p>

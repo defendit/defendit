@@ -1,56 +1,73 @@
+import fs from "fs";
+import path from "path";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { PageContainer, Meta } from "@/components";
-import remoteData from "@/data/services/remote/data.json";
-import * as Icons from "lucide-react";
 
-type Service = {
+type ServiceContent = {
   id: string;
   title: string;
   headline: string;
-  icons: string[];
-  summary: string;
-  cta: string;
+  description: string;
+  keywords: string[];
+  url: string;
+  image: string;
+  sections: {
+    heading: string;
+    paragraph?: string;
+    items?: string[];
+  }[];
+  cta: {
+    label: string;
+    link: string;
+  };
 };
 
 type Props = {
-  service: Service;
+  service: ServiceContent;
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = remoteData.services.map((service) => ({
-    params: { slug: service.id },
-  }));
+  const dirPath = path.join(process.cwd(), "data/services/remote/services");
+  const files = fs.readdirSync(dirPath);
+  const paths = files.map((file) => {
+    const slug = file.replace(".json", "");
+    return { params: { slug } };
+  });
 
-  return {
-    paths,
-    fallback: false,
-  };
+  return { paths, fallback: false };
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string;
-  const service = remoteData.services.find((s) => s.id === slug);
+  const filePath = path.join(
+    process.cwd(),
+    "data/services/remote/services",
+    `${slug}.json`
+  );
 
-  if (!service) {
+  if (!fs.existsSync(filePath)) {
     return { notFound: true };
   }
 
+  const fileContents = fs.readFileSync(filePath, "utf-8");
+  const service = JSON.parse(fileContents);
+
   return {
-    props: {
-      service,
-    },
+    props: { service },
   };
 };
 
-export default function RemoteServicePage({ service }: Props) {
+export default function VillagesServicePage({ service }: Props) {
+  const [first, ...rest] = service.sections;
+
   return (
     <>
       <Meta
-        title={`${service.title} | Remote Tech Support | Defend I.T.`}
-        description={service.summary}
-        url={`https://www.wedefendit.com/services/remote/${service.id}`}
-        image="https://www.wedefendit.com/og-image.png"
-        keywords={`${service.title}, remote cybersecurity, online tech help`}
+        title={service.title}
+        description={service.description}
+        url={`https://www.wedefendit.com${service.url}`}
+        image={service.image}
+        keywords={service.keywords.join(", ")}
       />
       <PageContainer>
         <div className="max-w-4xl mx-auto py-10 space-y-6">
@@ -59,27 +76,50 @@ export default function RemoteServicePage({ service }: Props) {
             {service.headline}
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            {service.icons.map((iconName, idx) => {
-              // eslint-disable-next-line
-              const Icon = (Icons as any)[
-                iconName
-                  .split("-")
-                  .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
-                  .join("")
-              ];
-              return Icon ? (
-                <Icon
-                  key={idx}
-                  className="w-6 h-6 text-blue-500 dark:text-sky-400"
-                />
-              ) : null;
-            })}
-          </div>
+          {/* Highlight "Did You Know?" section if present */}
+          {first?.heading.toLowerCase().includes("did you know") && (
+            <div className="bg-yellow-100 dark:bg-yellow-900 border-l-4 border-yellow-500 p-4 rounded shadow-sm">
+              <h2 className="text-xl font-bold text-yellow-800 dark:text-yellow-200">
+                {first.heading}
+              </h2>
+              {first.paragraph && (
+                <p className="mt-2 text-yellow-700 dark:text-yellow-100">
+                  {first.paragraph}
+                </p>
+              )}
+            </div>
+          )}
 
-          <p className="text-gray-700 dark:text-gray-400 text-base mt-4">
-            {service.summary}
-          </p>
+          {/* Render remaining sections */}
+          {(first?.heading.toLowerCase().includes("did you know")
+            ? rest
+            : service.sections
+          ).map((section, idx) => (
+            <div key={idx} className="mt-6 space-y-2">
+              <h2 className="text-2xl font-semibold">{section.heading}</h2>
+              {section.paragraph && (
+                <p className="text-base text-gray-700 dark:text-gray-400">
+                  {section.paragraph}
+                </p>
+              )}
+              {section.items && (
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-400">
+                  {section.items.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+
+          <div className="mt-8">
+            <a
+              href={service.cta.link}
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+            >
+              {service.cta.label}
+            </a>
+          </div>
         </div>
       </PageContainer>
     </>

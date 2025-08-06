@@ -1,0 +1,43 @@
+{
+  "id": "remote-security-assessment",
+  "title": "Remote Security Assessment",
+  "headline": "Evaluate and strengthen your setup remotely.",
+  "description": "We perform a comprehensive remote security audit of your systems, looking for vulnerabilities, misconfigurations, and weak points.",
+  "keywords": [
+    "Remote security audit",
+    "Remote vulnerability scan",
+    "Cybersecurity assessment",
+    "System hardening remotely",
+    "Online security check"
+  ],
+  "url": "/services/remote/remote-security-assessment",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": "Many systems appear secure but still expose sensitive data or services online. Misconfigured settings, weak passwords, or outdated software can create invisible vulnerabilities until they're exploited."
+    },
+    {
+      "heading": "What's a Remote Audit?",
+      "paragraph": "We examine your system, settings, and network configuration through a secure remote session. You receive a full report of risks and actionable fixes."
+    },
+    {
+      "heading": "Included in Every Assessment",
+      "items": [
+        "Firewall, antivirus, and patch status review",
+        "Account security and password hygiene checks",
+        "Browser and software vulnerability scan",
+        "Backup strategy and encryption review",
+        "Tailored recommendations based on your use case"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "You connect with us using a secure remote tool. We walk you through the process, run non-invasive checks, and deliver your report the same day."
+    }
+  ],
+  "cta": {
+    "label": "Book My Assessment",
+    "link": "/contact#schedule-service"
+  }
+}

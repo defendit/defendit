@@ -1,0 +1,43 @@
+{
+  "id": "remote-privacy-hardening",
+  "title": "Privacy Hardening & Digital Safety",
+  "headline": "Lock down your data, wherever you are.",
+  "description": "We guide you remotely through privacy best practices: encrypted tools, secure browsers, VPNs, DNS filtering, and more. Take control of your digital footprint.",
+  "keywords": [
+    "Privacy hardening",
+    "Online privacy help",
+    "Encrypted messaging setup",
+    "VPN and DNS security",
+    "Remote privacy support"
+  ],
+  "url": "/services/remote/privacy-hardening",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": "Your browser, apps, and operating system may be quietly sending usage data to dozens of third parties. Many of these settings can be changed—but only if you know where to look."
+    },
+    {
+      "heading": "Why It Matters",
+      "paragraph": "Every day, your data is collected and sold. Often without your knowledge. We help you regain control through simple but powerful tools and habits."
+    },
+    {
+      "heading": "What We Cover",
+      "items": [
+        "Privacy-first browser configuration and extensions",
+        "Secure messaging and email setup",
+        "DNS filtering and ad/tracker blocking",
+        "VPN and anonymous browsing tools",
+        "Hardening mobile and desktop OS settings"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "Over a secure session, we walk you through every setting. No prior experience required—we'll explain each option clearly and make it easy to follow."
+    }
+  ],
+  "cta": {
+    "label": "Start My Privacy Session",
+    "link": "/contact#schedule-service"
+  }
+}

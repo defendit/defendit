@@ -1,0 +1,43 @@
+{
+  "id": "remote-training",
+  "title": "1-on-1 Remote Tech Training",
+  "headline": "Learn securely and confidently at your pace.",
+  "description": "Get personalized tech training for any skill level. We offer private, remote sessions on everything from basics to advanced topics.",
+  "keywords": [
+    "Remote tech training",
+    "Online computer classes",
+    "1-on-1 tech coaching",
+    "Cybersecurity training",
+    "Private tech tutor"
+  ],
+  "url": "/services/remote/remote-training",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": "Studies show people retain up to 70% more when learning through hands-on, personalized instruction—especially when the content is immediately relevant to their own devices and goals."
+    },
+    {
+      "heading": "Your Pace. Your Topics.",
+      "paragraph": "No group sessions. No fluff. Just one-on-one guidance on exactly what you want to learn—on your schedule."
+    },
+    {
+      "heading": "Popular Topics",
+      "items": [
+        "Computer basics and Windows/macOS navigation",
+        "Using email and staying safe online",
+        "File management and cloud storage",
+        "Securing your devices and passwords",
+        "Intro to cybersecurity principles"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "We connect over a secure video call with screen sharing. You follow along as we explain, demonstrate, and answer your questions live."
+    }
+  ],
+  "cta": {
+    "label": "Book a Training Session",
+    "link": "/contact#schedule-service"
+  }
+}

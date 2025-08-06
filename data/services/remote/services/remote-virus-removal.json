@@ -1,0 +1,43 @@
+{
+  "id": "remote-virus-removal",
+  "title": "Remote Virus & Malware Removal",
+  "headline": "Remove threats without anyone stepping foot inside.",
+  "description": "We detect and remove viruses, malware, spyware, and rootkits remotely using industry-standard tools and secure access.",
+  "keywords": [
+    "Remote virus removal",
+    "Online malware cleanup",
+    "Spyware removal remotely",
+    "Remove ransomware remotely",
+    "Online PC cleaning"
+  ],
+  "url": "/services/remote/remote-virus-removal",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": "Some advanced malware hides in system memory or user profiles and can persist even after a reboot. Remote tools allow for precise, live threat detection without wiping your system."
+    },
+    {
+      "heading": "Stay Safe Without Waiting",
+      "paragraph": "No need to bring your computer anywhere. We connect remotely and clean your system using advanced detection and removal tools."
+    },
+    {
+      "heading": "What We Remove",
+      "items": [
+        "Viruses, worms, and trojans",
+        "Spyware, adware, and bloatware",
+        "Browser hijackers and toolbars",
+        "Keyloggers and trackers",
+        "Stubborn or hidden startup malware"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "We guide you to install a secure remote session tool. We then scan, clean, and validate your system's health, while explaining each step as we go."
+    }
+  ],
+  "cta": {
+    "label": "Clean My PC Now",
+    "link": "/contact#schedule-service"
+  }
+}

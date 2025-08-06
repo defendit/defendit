@@ -27,8 +27,6 @@ export const useLocationRedirect = (shouldRedirect = true) => {
         const data = await res.json();
         const city = data.city?.toLowerCase().trim();
 
-        console.log("Detected city:", city);
-
         if (city && supportedCities[city]) {
           localStorage.setItem("userRegion", city);
           if (shouldRedirect) router.replace(supportedCities[city]);

@@ -1,0 +1,39 @@
+{
+  "id": "network-setup-ocala",
+  "title": "Wi-Fi & Network Setup in Ocala, FL",
+  "headline": "Stronger, faster, safer home internet. Installed by professionals.",
+  "description": "Get expert Wi-Fi and network installation in Ocala. We design secure, high-speed networks for homes and small offices using trusted tools and configurations.",
+  "keywords": [
+    "Wi-Fi setup Ocala",
+    "Home network installation",
+    "Secure internet Ocala",
+    "Network configuration",
+    "Router setup Ocala"
+  ],
+  "url": "/services/ocala/network-setup",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": "Many routers ship with outdated firmware, default logins, and weak configurations making them easy targets for attackers. A professionally configured network can improve speed, privacy, and security."
+    },
+    {
+      "heading": "What We Do",
+      "items": [
+        "Install and configure routers, access points, and switches",
+        "Set up secure Wi-Fi with WPA3 and strong passphrases",
+        "Extend coverage with mesh systems or Ethernet drops",
+        "Configure guest networks and isolate untrusted devices",
+        "Ensure firmware updates, DNS settings, and firewall rules are correct"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "We evaluate your layout and devices, then install and configure your networking hardware using secure practices. Whether you're setting up a new space or upgrading an existing setup, we'll ensure your connection is fast, reliable, and safe."
+    }
+  ],
+  "cta": {
+    "label": "Get My Network Set Up",
+    "link": "/contact#schedule-service"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "virus-removal-ocala",
+  "title": "Virus & Malware Removal in Ocala, FL",
+  "headline": "Clean infections, restore trust, and lock down your devices professionally.",
+  "description": "Local virus and malware removal in Ocala. We remove threats, restore your system, and secure it against future attacks. Fast, professional, and discreet service.",
+  "keywords": [
+    "Virus removal Ocala",
+    "Malware cleanup",
+    "Computer virus fix",
+    "Spyware removal Ocala",
+    "Cybersecurity help Ocala"
+  ],
+  "url": "/services/ocala/virus-removal",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": "Some malware can silently collect your passwords, track browsing, or turn your computer into part of a criminal botnet. All without triggering antivirus alerts."
+    },
+    {
+      "heading": "What We Do",
+      "items": [
+        "Detect and remove viruses, spyware, rootkits, and persistent threats",
+        "Diagnose slowdowns, pop-ups, and strange system behavior",
+        "Audit installed programs and browser extensions for hidden malware",
+        "Restore system performance without wiping your data",
+        "Harden your system and install real protections"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "We begin with a forensic-style malware scan, isolate infected files, and restore your system. Then we implement real-world protections like DNS filtering, application control, and privacy-respecting antivirus solutions. Without selling you more software."
+    }
+  ],
+  "cta": {
+    "label": "Clean My System Now",
+    "link": "/contact#schedule-service"
+  }
+}

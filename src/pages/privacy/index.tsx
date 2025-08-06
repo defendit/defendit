@@ -12,7 +12,7 @@ export default function Privacy() {
         <title>Privacy Policy | Defend I.T. Solutions</title>
         <meta
           name="description"
-          content="Learn how Defend I.T. Solutions protects your privacy. We do not collect, track, or sell your personal data — ever."
+          content="Learn how Defend I.T. Solutions protects your privacy. We do not collect, track, or sell your personal data, ever."
         />
         <meta name="robots" content="noindex, follow" />
         <meta property="og:title" content="Privacy Policy | Defend I.T." />

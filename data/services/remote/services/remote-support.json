@@ -1,0 +1,43 @@
+{
+  "id": "remote-support",
+  "title": "Remote Tech Support",
+  "headline": "Instant help without a house call.",
+  "description": "We provide secure, remote technical support for computers and devices. Fix problems, install software, or get expert help—without waiting for a visit.",
+  "keywords": [
+    "Remote tech support",
+    "Online computer help",
+    "Remote IT support",
+    "Secure remote access",
+    "Fix computer remotely"
+  ],
+  "url": "/services/remote/remote-support",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": "Over 80% of tech issues can be solved remotely, often in less time than an in-person visit. With secure remote access tools, we can fix most problems while you watch—no travel required."
+    },
+    {
+      "heading": "Why Remote?",
+      "paragraph": "Many tech issues can be solved without anyone entering your home. Remote sessions are fast, secure, and private—perfect for quick help or longer fixes."
+    },
+    {
+      "heading": "What We Fix",
+      "items": [
+        "Software errors, crashes, and update problems",
+        "Slow performance and background processes",
+        "Email and account setup issues",
+        "Device configuration and driver installs",
+        "General troubleshooting and training"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "You schedule a session and install a secure connection tool. Once authorized, our technician connects and begins work while you watch. Nothing is done without your consent."
+    }
+  ],
+  "cta": {
+    "label": "Start Remote Support",
+    "link": "/contact#schedule-service"
+  }
+}

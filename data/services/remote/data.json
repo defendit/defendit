@@ -12,15 +12,15 @@
     {
       "id": "remote-security-assessment",
       "title": "Remote Security Assessment",
-      "headline": "Evaluate and strengthen your setup — remotely.",
+      "headline": "Evaluate and strengthen your setup remotely.",
       "icons": ["shield-check", "search", "alert-circle"],
       "summary": "We audit your system security remotely, identify weak points, and help you fix them without needing to be on-site.",
       "cta": "Schedule Assessment"
     },
     {
-      "id": "privacy-hardening",
+      "id": "remote-privacy-hardening",
       "title": "Privacy Hardening & Digital Safety",
-      "headline": "Lock down your data — wherever you are.",
+      "headline": "Lock down your data, wherever you are.",
       "icons": ["lock", "eye-off", "key-round"],
       "summary": "We guide you through privacy tools, encrypted messaging, VPNs, and browser hardening via remote session.",
       "cta": "Protect My Privacy"
@@ -28,7 +28,7 @@
     {
       "id": "remote-training",
       "title": "1-on-1 Remote Tech Training",
-      "headline": "Learn securely and confidently — at your pace.",
+      "headline": "Learn securely and confidently at your pace.",
       "icons": ["graduation-cap", "mouse-pointer-click", "presentation"],
       "summary": "We offer remote training sessions on everything from cybersecurity basics to using your devices more confidently.",
       "cta": "Book a Session"
