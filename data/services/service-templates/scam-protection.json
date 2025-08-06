@@ -1,0 +1,43 @@
+{
+  "id": "scam-protection-{{city_lower}}",
+  "title": "Scam & Fraud Protection in {{city_upper}}, FL",
+  "headline": "Learn to spot scams, stop fraud, and protect yourself before it's too late.",
+  "description": "Local scam and fraud protection in {{city_upper}}. We help you identify online scams, configure your devices securely, and protect against social engineering and fraud.",
+  "keywords": [
+    "Scam protection {{city_upper}}",
+    "Online fraud help {{city_upper}}",
+    "Tech support scams {{city_upper}}",
+    "Elder fraud defense {{city_upper}}",
+    "Cybersecurity training {{city_upper}}"
+  ],
+  "url": "/services/{{city_lower}}/scam-protection",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": [
+        "Scammers now use AI-generated voices, spoofed caller IDs, and fake websites to impersonate family members, banks, and tech support.",
+        "Social engineering works because it targets emotions, not firewalls. You don't need to be hacked to be tricked.",
+        "Many scam attempts bypass antivirus software entirely and rely on human error to succeed."
+      ]
+    },
+    {
+      "heading": "What We Do",
+      "items": [
+        "Teach you how to recognize scams by phone, email, and web with real examples",
+        "Secure devices used by seniors or vulnerable users with hardened settings",
+        "Block scam domains, dangerous links, and known phishing infrastructure",
+        "Set up call filtering, email rules, and safe browsing protections",
+        "Help investigate and respond to suspicious messages or compromised accounts"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "We review your devices, walk through real-world scam tactics, and show you exactly how they work. Then we configure protections tailored to your household and help you build habits that keep you safe."
+    }
+  ],
+  "cta": {
+    "label": "Schedule a Scam Protection Session",
+    "link": "/contact#schedule-service"
+  }
+}

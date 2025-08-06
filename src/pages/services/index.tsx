@@ -1,4 +1,4 @@
-import companyInfo from "@/data/services/lander.json";
+import jsonData from "@/data/services/lander.json";
 import { Service, ServicePage } from "@/components";
 import { useLocationRedirect } from "@/hooks/useLocationRedirect";
 
@@ -17,7 +17,7 @@ export default function ServicesPage() {
           "IT support, cybersecurity, tech help, The Villages, Ocala, home networking, small business IT, computer repair, local tech services",
       }}
       h1="Our Services"
-      services={companyInfo.services as Service[]}
+      services={jsonData.services as Service[]}
       city=""
     />
   );

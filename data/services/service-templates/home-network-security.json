@@ -1,0 +1,44 @@
+{
+  "id": "home-network-security-{{city_lower}}",
+  "title": "Home Network Security in {{city_upper}}, FL",
+  "headline": "Protect your household from scams, spying, and insecure smart devices. Use the same tools trusted by security professionals.",
+  "description": "Protect your home network in {{city_upper}} with expert Wi-Fi hardening, DNS filtering, and smart device isolation. Local I.T. services from certified cybersecurity professionals.",
+  "keywords": [
+    "Home network security {{city_upper}}",
+    "Wi-Fi protection {{city_upper}}",
+    "smart home firewall {{city_upper}}",
+    "DNS filtering {{city_upper}}",
+    "{{city_upper}} cybersecurity"
+  ],
+  "url": "/services/{{city_lower}}/home-network-security",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": [
+        "Smart TVs, speakers, and voice assistants often collect behavioral and usage data and send it back to manufacturers without your knowledge.",
+        "Most home routers ship with weak security settings, default passwords, and open ports that can be exploited by malware or exposed to the internet.",
+        "IoT devices often bypass traditional firewall settings and communicate directly with cloud services, creating hidden risks on your network."
+      ]
+    },
+    {
+      "heading": "What We Do",
+      "items": [
+        "Install and configure DNS filtering",
+        "Set up a local DNS resolver to reduce reliance on external providers",
+        "Harden your router, firewall rules, DNS resolver, and disable insecure remote access",
+        "Isolate vulnerable smart home and IoT devices",
+        "Eliminate cloud logins, telemetry, and unnecessary manufacturer tracking"
+      ]
+    },
+
+    {
+      "heading": "How It Works",
+      "paragraph": "We evaluate your current setup, then harden your internal network using open-source, local-first tooling. You stay in control, and we explain every step. No black boxes, no ongoing fees."
+    }
+  ],
+  "cta": {
+    "label": "Book a Home Network Hardening Visit",
+    "link": "/contact#schedule-service"
+  }
+}

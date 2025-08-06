@@ -1,0 +1,43 @@
+{
+  "id": "virus-removal-{{city_lower}}",
+  "title": "Virus & Malware Removal in {{city_upper}}, FL",
+  "headline": "Clean infections, restore trust, and lock down your devices professionally.",
+  "description": "Local virus and malware removal in {{city_upper}}. We remove threats, restore your system, and secure it against future attacks. Fast, professional, and discreet service.",
+  "keywords": [
+    "Virus removal {{city_upper}}",
+    "Malware cleanup {{city_upper}}",
+    "Computer virus fix {{city_upper}}",
+    "Spyware removal {{city_upper}}",
+    "Cybersecurity help {{city_upper}}"
+  ],
+  "url": "/services/{{city_lower}}/virus-removal",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": [
+        "Many modern threats bypass antivirus software by hiding in trusted folders, memory, or scheduled tasks.",
+        "Malware can silently log keystrokes, steal browser data, or join your device to a botnet without obvious symptoms.",
+        "Some infections persist even after reboot or factory reset if the malware is embedded."
+      ]
+    },
+    {
+      "heading": "What We Do",
+      "items": [
+        "Identify and remove viruses, spyware, rootkits, and fileless malware using trusted tools",
+        "Analyze startup behavior, background processes, and system anomalies",
+        "Inspect installed applications, browser extensions, and scheduled tasks for hidden threats",
+        "Restore system stability and performance without wiping your data",
+        "Apply system hardening with DNS filtering, safer software defaults, and privacy-focused antivirus"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "We connect or visit, run a deep malware inspection, and isolate known threats. Then we secure your system using non-invasive tools and best practices. You keep your files, we remove the risk."
+    }
+  ],
+  "cta": {
+    "label": "Schedule Virus Removal",
+    "link": "/contact#schedule-service"
+  }
+}

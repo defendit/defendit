@@ -1,0 +1,43 @@
+{
+  "id": "network-hardening-{{city_lower}}",
+  "title": "Network Hardening & IoT Lockdown in {{city_upper}}, FL",
+  "headline": "Real protection for your home network, not just antivirus popups.",
+  "description": "We secure your {{city_upper}} home network using professional-grade methods to protect against malware, ad tracking, and insecure IoT devices. No subscriptions. No spyware. Just control.",
+  "keywords": [
+    "network hardening {{city_upper}}",
+    "IoT security {{city_upper}}",
+    "firewall configuration {{city_upper}}",
+    "Pi-hole setup {{city_upper}}",
+    "privacy network setup {{city_upper}}"
+  ],
+  "url": "/services/{{city_lower}}/network-hardening",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": [
+        "Smart speakers, TVs, and even light bulbs often report back to third parties, collecting data about your home and usage patterns. Many of them bypass basic router settings completely.",
+        "Most home networks are wide open to malware, ad tracking, and insecure devices. Default settings leave you vulnerable to attacks that can compromise your privacy and security.",
+        "By default, most home routers send every website you visit through your ISP's DNS servers, allowing them to log and potentially sell your data."
+      ]
+    },
+    {
+      "heading": "What We Do",
+      "items": [
+        "Install and configure DNS filtering",
+        "Set up a local DNS resolver to reduce reliance on external providers",
+        "Harden your router, firewall rules, DNS resolver, and disable insecure remote access",
+        "Isolate vulnerable smart home and IoT devices",
+        "Eliminate cloud logins, telemetry, and unnecessary manufacturer tracking"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "We evaluate your current setup, then harden your internal network using open-source, local-first tooling. You stay in control, and we explain every step. No black boxes, no ongoing fees."
+    }
+  ],
+  "cta": {
+    "label": "Harden My Network Today",
+    "link": "/contact#schedule-service"
+  }
+}

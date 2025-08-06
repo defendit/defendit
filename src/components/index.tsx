@@ -5,6 +5,7 @@ export * from "./Layout";
 export * from "./Footer";
 export * from "./BookOnline";
 export * from "./LegalPage";
+export * from "./ServiceSlug";
 export * from "./ServicePage";
 export * from "./ServiceCard";
 export * from "./ThemeToggler";

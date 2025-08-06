@@ -15,25 +15,27 @@
   "sections": [
     {
       "heading": "Did You Know?",
-      "paragraph": "Studies show people retain up to 70% more when learning through hands-on, personalized instruction—especially when the content is immediately relevant to their own devices and goals."
-    },
-    {
-      "heading": "Your Pace. Your Topics.",
-      "paragraph": "No group sessions. No fluff. Just one-on-one guidance on exactly what you want to learn—on your schedule."
+      "paragraph": [
+        "Hands-on training improves retention and confidence far more than videos or self-paced tutorials.",
+        "Most tech frustrations come from skipped basics or poor explanations. Personalized training fixes that by focusing only on what you need.",
+        "Many privacy and security risks come from simple user mistakes. A little guided training prevents most of them."
+      ]
     },
     {
       "heading": "Popular Topics",
       "items": [
-        "Computer basics and Windows/macOS navigation",
-        "Using email and staying safe online",
-        "File management and cloud storage",
-        "Securing your devices and passwords",
-        "Intro to cybersecurity principles"
+        "Basic computer skills, file management, and safe browsing",
+        "Windows, macOS, and mobile device navigation and configuration",
+        "Setting up email, cloud storage, and secure backups",
+        "Password management, 2FA, and account safety",
+        "Cybersecurity best practices for non-technical users",
+        "Safe online shopping, banking, and scam awareness",
+        "Digital hygiene for families, seniors, or new device users"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "We connect over a secure video call with screen sharing. You follow along as we explain, demonstrate, and answer your questions live."
+      "paragraph": "Remote training is available for local clients with a remote access plan. We come to you to install and configure the software, then schedule live sessions tailored to your goals. Training is done over a secure screen-sharing connection, step by step, with zero pressure."
     }
   ],
   "cta": {

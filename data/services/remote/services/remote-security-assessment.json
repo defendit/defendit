@@ -15,25 +15,25 @@
   "sections": [
     {
       "heading": "Did You Know?",
-      "paragraph": "Many systems appear secure but still expose sensitive data or services online. Misconfigured settings, weak passwords, or outdated software can create invisible vulnerabilities until they're exploited."
-    },
-    {
-      "heading": "What's a Remote Audit?",
-      "paragraph": "We examine your system, settings, and network configuration through a secure remote session. You receive a full report of risks and actionable fixes."
+      "paragraph": [
+        "Many systems that look secure still expose open ports, outdated services, or weak default settings that can be exploited without detection.",
+        "Password reuse, unpatched software, and browser extensions are some of the most common weak points attackers exploit first.",
+        "A remote audit can reveal misconfigurations and blind spots without requiring physical access to your devices or network."
+      ]
     },
     {
       "heading": "Included in Every Assessment",
       "items": [
-        "Firewall, antivirus, and patch status review",
-        "Account security and password hygiene checks",
-        "Browser and software vulnerability scan",
-        "Backup strategy and encryption review",
-        "Tailored recommendations based on your use case"
+        "Review of firewall rules, antivirus configuration, and system patch levels",
+        "Audit of account settings, password usage, and MFA implementation",
+        "Inspection of browser plugins, software risk posture, and telemetry settings",
+        "Evaluation of your backup strategy, encryption practices, and disaster readiness",
+        "Actionable report with prioritized recommendations based on your goals"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "You connect with us using a secure remote tool. We walk you through the process, run non-invasive checks, and deliver your report the same day."
+      "paragraph": "We connect over an encrypted session and guide you through a structured security review. We do not collect your data. Everything is reviewed live, documented clearly, and delivered with practical steps to improve your setup immediately."
     }
   ],
   "cta": {

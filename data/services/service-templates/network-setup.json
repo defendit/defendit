@@ -1,0 +1,43 @@
+{
+  "id": "network-setup-{{city_lower}}",
+  "title": "Wi-Fi & Network Setup in {{city_upper}}, FL",
+  "headline": "Stronger, faster, safer home internet. Installed by professionals.",
+  "description": "Get expert Wi-Fi and network installation in {{city_upper}}. We design secure, high-speed networks for homes and small offices using trusted tools and configurations.",
+  "keywords": [
+    "Wi-Fi setup {{city_upper}}",
+    "Home network installation {{city_upper}}",
+    "Secure internet {{city_upper}}",
+    "Network configuration {{city_upper}}",
+    "Router setup {{city_upper}}"
+  ],
+  "url": "/services/{{city_lower}}/network-setup",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": [
+        "Most consumer routers ship with outdated firmware, insecure defaults, and open ports that make them easy to compromise.",
+        "Weak Wi-Fi passwords and unpatched devices can allow attackers to access your internal network from outside your home.",
+        "A properly configured network can significantly reduce tracking, improve speed, and isolate insecure devices before they become a problem."
+      ]
+    },
+    {
+      "heading": "What We Do",
+      "items": [
+        "Install and configure routers, switches, and wireless access points",
+        "Set up secure Wi-Fi with WPA3, strong passphrases, and proper isolation",
+        "Extend coverage using Ethernet drops or mesh systems with optimal placement",
+        "Configure guest networks and segment untrusted devices for better security",
+        "Apply firmware updates, DNS settings, and firewall rules to harden your network"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "We review your space, needs, and existing equipment. Then we install and configure everything using security-focused best practices. You get a clean, fast, and secure network with no guesswork."
+    }
+  ],
+  "cta": {
+    "label": "Get My Network Set Up",
+    "link": "/contact#schedule-service"
+  }
+}

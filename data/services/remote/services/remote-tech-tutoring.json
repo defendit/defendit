@@ -24,11 +24,12 @@
     {
       "heading": "What We Teach",
       "items": [
-        "Python, Linux, and scripting",
-        "Networking and virtualization (VMware, Proxmox, etc.)",
-        "Cybersecurity principles and tools",
-        "IT certifications (CompTIA, CEH, etc.)",
-        "General tech literacy for all ages"
+        "Programming in Python, JavaScript, and TypeScript",
+        "Web development with HTML, CSS, React, and Node.js",
+        "Linux fundamentals, shell scripting, and server management",
+        "Virtualization and networking with tools like VMware, Proxmox, and pfSense",
+        "Cybersecurity concepts including hardening, threat modeling, and tooling",
+        "Tech literacy and digital safety for beginners, seniors, or non-technical users"
       ]
     },
     {

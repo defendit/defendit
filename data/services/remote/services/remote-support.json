@@ -15,29 +15,29 @@
   "sections": [
     {
       "heading": "Did You Know?",
-      "paragraph": "Over 80% of tech issues can be solved remotely, often in less time than an in-person visit. With secure remote access tools, we can fix most problems while you watch—no travel required."
-    },
-    {
-      "heading": "Why Remote?",
-      "paragraph": "Many tech issues can be solved without anyone entering your home. Remote sessions are fast, secure, and private—perfect for quick help or longer fixes."
+      "paragraph": [
+        "Most common tech issues can be resolved remotely, without shipping your device or scheduling a home visit.",
+        "Our Remote support tools use encrypted connections and require your explicit permission before any work begins.",
+        "You can watch the entire session in real time, and disconnect at any moment with a single click."
+      ]
     },
     {
       "heading": "What We Fix",
       "items": [
-        "Software errors, crashes, and update problems",
-        "Slow performance and background processes",
-        "Email and account setup issues",
-        "Device configuration and driver installs",
-        "General troubleshooting and training"
+        "Fix software issues, application crashes, and failed system updates",
+        "Diagnose slow performance caused by background tasks or bloatware",
+        "Resolve email sync, account login, and password reset issues",
+        "Install or troubleshoot device drivers, printers, and peripherals",
+        "Offer real-time training, walkthroughs, or app-specific support"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "You schedule a session and install a secure connection tool. Once authorized, our technician connects and begins work while you watch. Nothing is done without your consent."
+      "paragraph": "Remote support is only available for local clients enrolled in a support plan. We visit your location to install and configure the secure remote access software. After setup, you can request help at any time. We are only able to connect with your permission. You stay in full control of every session."
     }
   ],
   "cta": {
-    "label": "Start Remote Support",
+    "label": "Get Started with Remote Support Today",
     "link": "/contact#schedule-service"
   }
 }

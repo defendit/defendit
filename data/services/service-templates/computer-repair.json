@@ -1,0 +1,43 @@
+{
+  "id": "computer-repair-{{city_lower}}",
+  "title": "Computer Repair in {{city_upper}}, FL",
+  "headline": "Fix slow or broken devices with fast, local help. No waiting, no surprises.",
+  "description": "Reliable computer repair in {{city_upper}} for laptops and desktops. Hardware, software, and performance issues fixed by certified local professionals.",
+  "keywords": [
+    "Computer repair {{city_upper}}",
+    "Laptop repair {{city_upper}}",
+    "Desktop repair service {{city_upper}}",
+    "PC troubleshooting {{city_upper}}",
+    "IT technician {{city_upper}}"
+  ],
+  "url": "/services/{{city_lower}}/computer-repair",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": [
+        "Many performance issues like freezing, lag, or failed startups, are caused by aging hard drives, overheating, or misconfigured software, not hardware failure.",
+        "Replacing a traditional hard drive with an SSD can improve performance by 5-10×, and it often costs less than buying a new device.",
+        "Even when systems won't boot, data recovery is often possible without wiping or reformatting—if handled before further damage is done."
+      ]
+    },
+    {
+      "heading": "What We Do",
+      "items": [
+        "Run a full diagnostic to identify hardware and software issues",
+        "Repair or replace failed hard drives, memory, fans, or power components",
+        "Tune up and optimize Windows/macOS for better speed and startup time",
+        "Address boot failures, crashes, overheating, or abnormal noise",
+        "Recover data from non-booting or partially damaged systems when possible"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": "We start with a transparent, non-destructive diagnostic to find the root cause. If repairs make sense, we give you clear options. No jargon, no pressure. We fix what's needed, extend your device's lifespan, and help you avoid wasteful replacements."
+    }
+  ],
+  "cta": {
+    "label": "Schedule Computer Repair",
+    "link": "/contact#schedule-service"
+  }
+}

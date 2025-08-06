@@ -15,25 +15,25 @@
   "sections": [
     {
       "heading": "Did You Know?",
-      "paragraph": "Your browser, apps, and operating system may be quietly sending usage data to dozens of third parties. Many of these settings can be changed—but only if you know where to look."
-    },
-    {
-      "heading": "Why It Matters",
-      "paragraph": "Every day, your data is collected and sold. Often without your knowledge. We help you regain control through simple but powerful tools and habits."
+      "paragraph": [
+        "Most operating systems and apps collect telemetry by default, sending data to vendors without asking for permission.",
+        "Your browser history, IP address, and device fingerprint can be used to track you across sites even with cookies turned off.",
+        "Many so-called private apps still connect to third-party servers unless properly configured or replaced."
+      ]
     },
     {
       "heading": "What We Cover",
       "items": [
-        "Privacy-first browser configuration and extensions",
-        "Secure messaging and email setup",
-        "DNS filtering and ad/tracker blocking",
-        "VPN and anonymous browsing tools",
-        "Hardening mobile and desktop OS settings"
+        "Configure privacy-respecting browsers with hardened settings and trusted extensions",
+        "Set up secure email and encrypted messaging platforms with minimal metadata leakage",
+        "Apply DNS filtering to block ad networks, trackers, and malicious infrastructure",
+        "Choose and configure VPNs, proxies, or anonymization tools suited to your threat model",
+        "Lock down mobile and desktop operating systems by disabling telemetry, location tracking, and unwanted background services"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "Over a secure session, we walk you through every setting. No prior experience required—we'll explain each option clearly and make it easy to follow."
+      "paragraph": "We connect with you over a secure remote session, walk through your current tools and habits, and configure each setting step by step. No guesswork, no jargon, just clear instructions and real results."
     }
   ],
   "cta": {

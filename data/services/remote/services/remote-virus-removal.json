@@ -15,29 +15,29 @@
   "sections": [
     {
       "heading": "Did You Know?",
-      "paragraph": "Some advanced malware hides in system memory or user profiles and can persist even after a reboot. Remote tools allow for precise, live threat detection without wiping your system."
-    },
-    {
-      "heading": "Stay Safe Without Waiting",
-      "paragraph": "No need to bring your computer anywhere. We connect remotely and clean your system using advanced detection and removal tools."
+      "paragraph": [
+        "Modern malware often hides in memory, startup tasks, or user profiles where antivirus tools fail to detect it.",
+        "Some infections survive reboots, resets, or even OS reinstallations if the system is not fully cleaned.",
+        "Remote removal can be just as thorough as in-person service when proper tools and techniques are used."
+      ]
     },
     {
       "heading": "What We Remove",
       "items": [
-        "Viruses, worms, and trojans",
-        "Spyware, adware, and bloatware",
-        "Browser hijackers and toolbars",
-        "Keyloggers and trackers",
-        "Stubborn or hidden startup malware"
+        "Viruses, worms, trojans, and remote access backdoors",
+        "Spyware, adware, and browser hijackers",
+        "Rogue toolbars, bloatware, and fake system utilities",
+        "Keyloggers, clipboard monitors, and tracking scripts",
+        "Persistent malware like rootkits and bootkits that resist normal removal methods"
       ]
     },
     {
       "heading": "How It Works",
-      "paragraph": "We guide you to install a secure remote session tool. We then scan, clean, and validate your system's health, while explaining each step as we go."
+      "paragraph": "Remote malware removal is available for local clients enrolled in a support plan. We install and configure our secure remote access tool during an on-site visit. After that, we can clean your system remotely when you request help. All sessions are permission-based and fully transparent."
     }
   ],
   "cta": {
-    "label": "Clean My PC Now",
+    "label": "Schedule My Virus Removal",
     "link": "/contact#schedule-service"
   }
 }

@@ -48,7 +48,7 @@ export default function ServicePage(props: ServicesPageProps) {
         description={meta.description}
       />
       <PageContainer>
-        <div className="max-w-6xl mx-auto px-4 py-10 space-y-10">
+        <div className="max-w-6xl mx-auto px-4 py-10 space-y-10 py-1">
           <header className="text-center">
             <h1 className="text-4xl font-bold">{h1}</h1>
             {
