@@ -1,5 +1,6 @@
 {
   "id": "remote-privacy-hardening",
+  "requiresPlan": true,
   "title": "Remote Privacy Hardening & Digital Safety Support",
   "headline": "Protect your digital life no matter where you are.",
   "description": "Remote privacy help for individuals and small teams. Lock down your devices, apps, and online activity with expert guidance. Encrypted tools, secure settings, and no guesswork.",

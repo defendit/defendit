@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-2 text-sm">
           {contact.phone && (
             <a href={`tel:${contact.phone}`} className="hover:underline">
-              {contact.phone}
+              {contact.phone.replace("+1", "")}
             </a>
           )}
           {contact.email && (

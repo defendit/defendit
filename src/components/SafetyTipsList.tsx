@@ -10,9 +10,9 @@ interface SafetyTip {
 
 export const SafetyTipsList: React.FC = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto py-12 px-6 sm:px-10">
+    <section className="w-full max-w-6xl mx-auto py-12 px-6 sm:px-10 -mt-10">
       <header className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold text-slate-800 dark:text-slate-100">
+        <h1 className="text-4xl font-extrabold text-slate-800 dark:text-slate-200">
           Ways to Stay Safe Online
         </h1>
         <p className="mt-3 text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">

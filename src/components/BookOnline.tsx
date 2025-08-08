@@ -1,5 +1,6 @@
 import { Phone, Mail } from "lucide-react";
 import { contact, services_cta } from "../../data/company-info.json";
+import TrustStrip from "./TrustStrip";
 
 export function BookOnline() {
   return (
@@ -8,9 +9,11 @@ export function BookOnline() {
       className="max-w-xl mx-auto my-12 px-4 space-y-6 text-sm text-gray-700 dark:text-gray-300"
     >
       <div className="dark:bg-gray-800/40 z-0 p-5 rounded-md border border-gray-200 dark:border-gray-800 space-y-3">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white -mb-2">
           Need to schedule service?
         </h2>
+
+        <TrustStrip />
 
         <p>You can book a service call by phone, email, or Calendly</p>
 

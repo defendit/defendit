@@ -1,5 +1,6 @@
 {
   "id": "remote-support",
+  "requiresPlan": true,
   "title": "Remote Tech Support",
   "headline": "Instant help without a house call.",
   "description": "We offer secure remote tech support for local clients with a support plan. Get expert help with common issues, software fixes, and device configuration — all without waiting for an in-person visit.",

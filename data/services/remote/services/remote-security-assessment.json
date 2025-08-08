@@ -1,5 +1,6 @@
 {
   "id": "remote-security-assessment",
+  "requiresPlan": true,
   "title": "Remote Security Assessment",
   "headline": "Evaluate and strengthen your setup remotely.",
   "description": "We offer remote security audits for local clients with a support plan. Identify weak points, tighten settings, and secure your systems from real-world threats without anyone stepping foot in your home or office.",

@@ -1,44 +1,72 @@
 import fs from "fs";
 import path from "path";
-import { GetStaticPaths, GetStaticProps } from "next";
-import { ServiceSlug, ServiceSlugProgs } from "@/components";
+import type { GetStaticPaths, GetStaticProps } from "next";
+import { ServiceSlug, ServiceSlugProps } from "@/components";
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const dirPath = path.join(process.cwd(), "data/services/service-templates");
-  const files = fs.readdirSync(dirPath);
-  const paths = files.map((file) => {
-    const slug = file.replace(".json", "");
-    return { params: { slug } };
-  });
+const TEMPLATES_DIR = path.join(
+  process.cwd(),
+  "data/services/service-templates"
+);
 
-  return { paths, fallback: false };
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.slug as string;
-  const filePath = path.join(
-    process.cwd(),
-    "data/services/service-templates",
-    `${slug}.json`
-  );
-
-  if (!fs.existsSync(filePath)) {
-    return { notFound: true };
-  }
-
-  const cityLower = "belleview";
-  const cityUpper = "Belleview";
+function readServiceJson(
+  filePath: string,
+  cityLower: string,
+  cityUpper: string
+) {
   const fileContents = fs
     .readFileSync(filePath, "utf-8")
     .replace(/{{city_lower}}/g, cityLower)
     .replace(/{{city_upper}}/g, cityUpper);
-  const service = JSON.parse(fileContents);
+  return JSON.parse(fileContents);
+}
 
-  return {
-    props: { service },
-  };
+export const getStaticPaths: GetStaticPaths = async () => {
+  const files = fs.readdirSync(TEMPLATES_DIR);
+  const paths = files
+    .filter((f) => f.endsWith(".json"))
+    .map((file) => ({ params: { slug: file.replace(".json", "") } }));
+  return { paths, fallback: false };
 };
 
-export default function TheVillagesServicePage({ service }: ServiceSlugProgs) {
-  return <ServiceSlug service={service} />;
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = String(params?.slug || "");
+  const filePath = path.join(TEMPLATES_DIR, `${slug}.json`);
+  if (!fs.existsSync(filePath)) return { notFound: true };
+
+  const cityLower = "belleview";
+  const cityUpper = "Belleview";
+
+  // current page
+  const service = readServiceJson(filePath, cityLower, cityUpper);
+
+  // related from the same templates folder
+  const files = fs
+    .readdirSync(TEMPLATES_DIR)
+    .filter((f) => f.endsWith(".json"));
+  const related = files
+    .map((f) => f.replace(".json", ""))
+    .filter((s) => s !== slug)
+    .slice(0, 3)
+    .map((s) => {
+      const p = path.join(TEMPLATES_DIR, `${s}.json`);
+      const svc = readServiceJson(p, cityLower, cityUpper);
+      return { label: svc.title as string, slug: s };
+    });
+
+  return { props: { service, related } };
+};
+
+type PageProps = ServiceSlugProps & {
+  related?: { label: string; slug: string }[];
+};
+
+export default function BelleviewServicePage({ service, related }: PageProps) {
+  return (
+    <ServiceSlug
+      service={service}
+      citySlug="belleview"
+      related={related}
+      isRemote={false}
+    />
+  );
 }

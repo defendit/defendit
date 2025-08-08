@@ -2,6 +2,7 @@
   "id": "remote-virus-removal",
   "title": "Remote Virus & Malware Removal",
   "headline": "Remove threats without anyone stepping foot inside.",
+  "requiresPlan": true,
   "description": "We provide remote virus and malware removal for local clients with active support plans. Using secure tools and expert methods, we eliminate infections and restore trust in your system without an in-person visit.",
   "keywords": [
     "Remote virus removal",

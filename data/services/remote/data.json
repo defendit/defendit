@@ -6,6 +6,7 @@
       "title": "Remote Tech Support",
       "headline": "Instant help without a house call.",
       "icons": ["monitor", "wifi", "headphones"],
+      "requiresPlan": true,
       "summary": "We connect to your computer over a secure connection to solve issues, provide training, or configure security, no matter where you are.",
       "cta": "Get Help Now"
     },
@@ -14,6 +15,7 @@
       "title": "Remote Security Assessment",
       "headline": "Evaluate and strengthen your setup remotely.",
       "icons": ["shield-check", "search", "alert-circle"],
+      "requiresPlan": true,
       "summary": "We audit your system security remotely, identify weak points, and help you fix them without needing to be on-site.",
       "cta": "Schedule Assessment"
     },
@@ -22,6 +24,7 @@
       "title": "Privacy Hardening & Digital Safety",
       "headline": "Lock down your data, wherever you are.",
       "icons": ["lock", "eye-off", "key-round"],
+      "requiresPlan": true,
       "summary": "We guide you through privacy tools, encrypted messaging, VPNs, and browser hardening via remote session.",
       "cta": "Protect My Privacy"
     },
@@ -38,6 +41,7 @@
       "title": "Remote Virus & Malware Removal",
       "headline": "Remove threats without anyone stepping foot inside.",
       "icons": ["shield-plus", "bug", "alert-triangle"],
+      "requiresPlan": true,
       "summary": "We remotely scan for and remove malware, spyware, and other threats using secure tools. Fast, safe, and private.",
       "cta": "Clean My System"
     },
