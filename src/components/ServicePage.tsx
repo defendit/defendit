@@ -5,7 +5,6 @@ import {
   ServiceCard,
   PageContainer,
   RemoteServicesCTA,
-  TrustStrip,
 } from "@/components";
 
 export type Service = {
@@ -137,7 +136,6 @@ export default function ServicePage(props: ServicesPageProps) {
           {/* Header */}
           <header className="text-center">
             <h1 className="text-4xl font-bold">{h1}</h1>
-            <TrustStrip />
             <p className="text-gray-500 dark:text-gray-400 mt-2">
               {isRemote ? (
                 "Remote cybersecurity and I.T. support for homeowners, retirees, and small businesses in Central Florida."

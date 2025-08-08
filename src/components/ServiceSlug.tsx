@@ -265,10 +265,6 @@ export default function ServiceSlug({
 
 export { ServiceSlug };
 
-/* ------------------------------------------------------------------ */
-/* Local helpers: purely presentational, no schema or prop changes     */
-/* ------------------------------------------------------------------ */
-
 function RequiresPlanNotice() {
   return (
     <div className="mt-6 rounded-lg border border-sky-400/30 bg-sky-100/40 dark:bg-sky-900/20 p-4 sm:p-5 text-sky-900 dark:text-sky-100 text-sm flex flex-col items-center">

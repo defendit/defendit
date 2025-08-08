@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ComponentType, SVGProps } from "react";
-import { PageContainer, Meta, TrustStrip } from "@/components";
+import { PageContainer, Meta, BookOnline } from "@/components";
 import { ShieldCheck, MapPin, MessageCircle } from "lucide-react";
 
 const valueData = [
@@ -100,7 +100,6 @@ export default function About() {
 
           <header className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold">About Us</h1>
-            <TrustStrip />
           </header>
 
           <section aria-labelledby="who-we-are">
@@ -150,6 +149,8 @@ export default function About() {
               to.
             </p>
           </section>
+
+          <BookOnline />
         </div>
       </PageContainer>
     </>
