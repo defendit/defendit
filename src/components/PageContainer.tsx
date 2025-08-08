@@ -3,7 +3,7 @@ export function PageContainer({ children }: { children: React.ReactNode }) {
     <main
       className={`font-sans relative h-full w-full flex flex-col items-center justify-start -mt-10 `}
     >
-      <section className="relative z-10 flex flex-col items-center justify-center gap-8 p-1 sm:p-0">
+      <section className="relative z-5 flex flex-col items-center justify-center gap-8 p-1 sm:p-0">
         {children}
       </section>
     </main>

@@ -51,6 +51,25 @@ export default function RemoteSupportPlanPage() {
     })),
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.wedefendit.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Remote Support Plan",
+        item: "https://www.wedefendit.com/remote-support-plan",
+      },
+    ],
+  };
+
   return (
     <>
       <Meta
@@ -68,16 +87,22 @@ export default function RemoteSupportPlanPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
 
       <PageContainer>
-        <main className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-center sm:text-left bg-gray-50/10 dark:bg-slate-950/20 rounded-lg shadow-lg">
+        {/* Left by default on mobile; larger screens inherit your existing look */}
+        <main className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left bg-gray-50/10 dark:bg-slate-950/20 rounded-lg shadow-lg">
           {/* Breadcrumbs */}
           <nav
             aria-label="Breadcrumb"
-            className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto whitespace-nowrap"
+            className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto whitespace-normal sm:whitespace-nowrap max-w-full"
+            style={{ WebkitOverflowScrolling: "touch" }}
           >
-            <ol className="flex items-center gap-1 sm:gap-2">
-              <li>
+            <ol className="flex items-center gap-1 sm:gap-2 min-w-0">
+              <li className="truncate max-w-[5rem]">
                 <Link href="/" className="hover:underline">
                   Home
                 </Link>
@@ -85,7 +110,7 @@ export default function RemoteSupportPlanPage() {
               <li aria-hidden="true" className="px-1 sm:px-2">
                 ›
               </li>
-              <li className="text-gray-400 dark:text-gray-500 truncate">
+              <li className="text-gray-400 dark:text-gray-500 truncate max-w-[12rem]">
                 <span aria-current="page">Remote Support Plan</span>
               </li>
             </ol>
@@ -101,8 +126,8 @@ export default function RemoteSupportPlanPage() {
             </p>
           </div>
 
-          {/* Highlights */}
-          <ul className="mt-2 inline-flex flex-col sm:flex-row gap-2 sm:gap-3 text-sm text-gray-700 dark:text-gray-300">
+          {/* Highlights chips: wrap and left align on mobile */}
+          <ul className="mt-2 flex flex-wrap gap-2 sm:gap-3 text-sm text-gray-700 dark:text-gray-300">
             <li className="px-3 py-1 rounded border border-gray-200 dark:border-gray-700 bg-white/60 dark:bg-slate-900/40">
               Encrypted sessions
             </li>
@@ -146,7 +171,7 @@ export default function RemoteSupportPlanPage() {
             </p>
           </section>
 
-          {/* Technical Approach (high-level, no blueprint) */}
+          {/* Technical Approach */}
           <section
             className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60"
             aria-labelledby="tech-approach"
@@ -217,7 +242,6 @@ export default function RemoteSupportPlanPage() {
                   (subscription members)
                 </span>
               </li>
-
               <li>
                 Reduced labor rates for most remote services{" "}
                 <span className="text-gray-600 dark:text-gray-400">
@@ -274,25 +298,25 @@ export default function RemoteSupportPlanPage() {
             </p>
             <ul className="mt-3 list-disc pl-5 sm:pl-6 text-gray-700 dark:text-gray-300 text-sm sm:text-base space-y-2 marker:text-sky-500 dark:marker:text-sky-400">
               <li>
-                <strong>Tier&nbsp;1</strong> – Fully asynchronous remote
+                <strong>Tier&nbsp;1</strong> - Fully asynchronous remote
                 support. We can connect without you being present once devices
                 are enrolled and permissions are set.
               </li>
               <li>
-                <strong>Tier&nbsp;2</strong> – Client-initiated support. You’ll
-                be present to start sessions and enter any necessary
+                <strong>Tier&nbsp;2</strong> - Client initiated support. You
+                will be present to start sessions and enter any necessary
                 credentials.
               </li>
             </ul>
 
             <p className="mt-4 text-gray-700 dark:text-gray-300">
-              Each tier is available as a subscription or on a pay-as-you-go
-              basis.{" "}
+              Each tier is available as a subscription or on a pay as you go
+              basis.
             </p>
 
             <p className="text-gray-600 dark:text-gray-400 mt-2">
               Subscription members receive plan benefits like discounted labor
-              and after-hours priority. Pay-as-you-go uses standard rates, does
+              and after-hours priority. Pay as you go uses standard rates, does
               not include member discounts, and is limited to one device per
               customer.
             </p>
@@ -306,7 +330,7 @@ export default function RemoteSupportPlanPage() {
             <h2 id="enroll" className="text-2xl font-semibold">
               Ready to Enroll
             </h2>
-            <div className="mt-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white/60 dark:bg-slate-900/40 p-5 text-center">
+            <div className="mt-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white/60 dark:bg-slate-900/40 p-5 text-left sm:text-center">
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Initial on-site setup and enrollment are included at no
                 additional cost* when you join the Remote Support Plan.

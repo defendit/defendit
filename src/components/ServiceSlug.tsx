@@ -121,14 +121,16 @@ export default function ServiceSlug({
       />
 
       <PageContainer>
-        <div className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-center sm:text-left bg-gray-50/10 dark:bg-slate-950/20 z-0 rounded-lg shadow-lg">
+        {/* mobile-left by default; larger screens keep same look */}
+        <div className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left rounded-lg shadow-lg bg-gray-50/10 dark:bg-slate-950/20 z-0">
           {/* Breadcrumbs */}
           <nav
             aria-label="Breadcrumb"
-            className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto whitespace-nowrap"
+            className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto whitespace-normal sm:whitespace-nowrap max-w-full"
+            style={{ WebkitOverflowScrolling: "touch" }}
           >
-            <ol className="flex items-center gap-1 sm:gap-2">
-              <li>
+            <ol className="flex items-center gap-1 sm:gap-2 min-w-0">
+              <li className="truncate max-w-[5rem]">
                 <Link href="/" className="hover:underline">
                   Home
                 </Link>
@@ -136,7 +138,7 @@ export default function ServiceSlug({
               <li aria-hidden="true" className="px-1 sm:px-2">
                 ›
               </li>
-              <li>
+              <li className="truncate max-w-[7rem]">
                 <Link href="/services" className="hover:underline">
                   Services
                 </Link>
@@ -146,7 +148,7 @@ export default function ServiceSlug({
                   <li aria-hidden="true" className="px-1 sm:px-2">
                     ›
                   </li>
-                  <li>
+                  <li className="truncate max-w-[8rem]">
                     <Link
                       href={`/services/${city.slug}`}
                       className="hover:underline"
@@ -159,7 +161,7 @@ export default function ServiceSlug({
               <li aria-hidden="true" className="px-1 sm:px-2">
                 ›
               </li>
-              <li className="text-gray-400 dark:text-gray-500 truncate">
+              <li className="text-gray-400 dark:text-gray-500 truncate max-w-[10rem]">
                 {service.title}
               </li>
             </ol>
@@ -248,7 +250,7 @@ export default function ServiceSlug({
           {service.requiresPlan && <RequiresPlanNotice />}
 
           {/* CTA + internal links */}
-          <div className="mt-10 w-full flex flex-col items-center justify-center gap-8 text-center">
+          <div className="mt-10 w-full flex flex-col items-stretch sm:items-center justify-center gap-6 sm:gap-8 text-left sm:text-center">
             <div className="w-full">
               <BookOnline />
             </div>
@@ -323,10 +325,11 @@ function FooterLinks({ city, isRemote, related }: FooterLinksProps) {
         />
       )}
 
-      <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
+      {/* All services button: full-width on mobile, auto on larger screens */}
+      <div className="flex flex-wrap items-stretch sm:items-center justify-start sm:justify-center gap-3 text-sm">
         <Link
           href={`/services/${city.slug}`}
-          className="inline-flex items-center rounded-lg border border-sky-300 dark:border-sky-700 px-4 py-2 bg-sky-50 dark:bg-slate-900 text-sky-700 dark:text-sky-300 font-medium hover:bg-sky-100 dark:hover:bg-sky-900/40 transition"
+          className="w-full sm:w-auto inline-block rounded-lg border border-sky-300 dark:border-sky-700 px-4 py-2 bg-sky-50 dark:bg-slate-900 text-sky-700 dark:text-sky-300 font-medium hover:bg-sky-100 dark:hover:bg-sky-900/40 transition whitespace-normal text-center"
         >
           {allServicesLabel}
         </Link>
@@ -335,17 +338,17 @@ function FooterLinks({ city, isRemote, related }: FooterLinksProps) {
       {related && related.length > 0 && (
         <nav
           aria-label="Related services"
-          className="text-sm text-gray-700 dark:text-gray-300"
+          className="text-sm text-gray-700 dark:text-gray-300 max-w-full overflow-x-auto px-0 sm:px-1 mt-2"
         >
           <p className="mb-2 font-semibold text-blue-700 dark:text-sky-300">
             {relatedHeading}
           </p>
-          <ul className="flex flex-wrap items-center justify-center gap-2">
+          <ul className="flex flex-wrap items-stretch sm:items-center justify-start sm:justify-center gap-2 max-w-full">
             {related.map((r) => (
-              <li key={r.slug}>
+              <li key={r.slug} className="w-full sm:w-auto">
                 <Link
                   href={`/services/${city.slug}/${r.slug}`}
-                  className="inline-flex items-center rounded-lg border border-sky-300 dark:border-sky-700 px-4 py-2 bg-white dark:bg-slate-900 text-sky-700 dark:text-sky-300 font-medium hover:bg-sky-50 dark:hover:bg-sky-800/30 transition"
+                  className="w-full sm:w-auto inline-block rounded-lg border border-sky-300 dark:border-sky-700 px-4 py-2 bg-white dark:bg-slate-900 text-sky-700 dark:text-sky-300 font-medium hover:bg-sky-50 dark:hover:bg-sky-800/30 transition whitespace-normal text-center"
                 >
                   {r.label}
                 </Link>
