@@ -19,7 +19,6 @@ export function getNormalizedCityName(city: string | null): string | null {
   const lowerCity = city.toLowerCase();
   return Object.keys(supportedCities).find((c) => c === lowerCity) || null;
 }
-
 function RenderNavItems({
   navItems,
   pathname,
@@ -29,25 +28,40 @@ function RenderNavItems({
   pathname: string;
   location: string | null;
 }>) {
+  // strip ?query, #hash, trailing slash; fallback to '/'
+  const clean = (p: string) => {
+    const noQ = p.split("#")[0].split("?")[0];
+    const trimmed = noQ.replace(/\/+$/, "");
+    return trimmed === "" ? "/" : trimmed;
+  };
+
+  const current = clean(pathname);
+
   return navItems.map(({ name, href }) => {
-    const isSevice = name === "Services";
-    if (isSevice) {
+    // keep Services city-aware redirect
+    if (name === "Services") {
       const city = getNormalizedCityName(location);
-      if (city && supportedCities[city]) {
-        href = supportedCities[city];
-      } else {
-        href = "/services";
-      }
+      href =
+        city && supportedCities[city] ? supportedCities[city] : "/services";
     }
+
+    const target = clean(href);
+
+    // active if exact match, or if current is a child of target
+    const isActive =
+      target === "/"
+        ? current === "/"
+        : current === target || current.startsWith(`${target}/`);
+
     return (
-      <li key={href}>
+      <li key={`${name}-${target}`}>
         <Link
           href={href}
-          className={`${
-            pathname === href
+          className={
+            isActive
               ? "text-blue-600 dark:text-sky-400 font-semibold text-glow hover:underline underline-offset-4"
               : "hover:text-blue-500 dark:hover:text-sky-400 text-gray-800 dark:text-gray-300 hover:underline underline-offset-4"
-          }  `}
+          }
         >
           {name}
         </Link>

@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 const { contact, name } = companyInfo;
-const { phone, email, address, gpg } = contact;
+const { phone, email, address, gpg, service_email } = contact;
 const { street, city, state, zip } = address;
 const { fingerprint, key_id, key_url, secure_email } = gpg;
 
@@ -30,9 +30,9 @@ function HeadingSection() {
 
 function ContactGrid() {
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-16">
+    <section className="flex flex-wrap flex-col md:flex-row items-center justify-center gap-6 sm:gap-12 max-w-3xl mx-auto">
       {/* Phone */}
-      <div className="flex flex-col items-center text-center space-y-2">
+      <div className="flex flex-col items-center text-center space-y-2 mt-4 md:mt-16">
         <Phone className="w-6 h-6 text-blue-500 dark:text-sky-400" />
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
           Call or Text
@@ -46,7 +46,7 @@ function ContactGrid() {
       </div>
 
       {/* Email */}
-      <div className="flex flex-col items-center text-center space-y-2">
+      <div className="flex flex-col items-center text-center space-y-2 md:mt-16">
         <Mail className="w-6 h-6 text-blue-500 dark:text-sky-400" />
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
           Standard Email
@@ -56,6 +56,20 @@ function ContactGrid() {
           className="text-blue-600 dark:text-sky-400 hover:underline text-sm"
         >
           {email}
+        </a>
+      </div>
+
+      {/* Email */}
+      <div className="flex flex-col items-center text-center space-y-2 md:mt-16">
+        <Mail className="w-6 h-6 text-blue-500 dark:text-sky-400" />
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+          Service Email
+        </h2>
+        <a
+          href={`mailto:${service_email}`}
+          className="text-blue-600 dark:text-sky-400 hover:underline text-sm"
+        >
+          {service_email}
         </a>
       </div>
 
