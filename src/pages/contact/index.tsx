@@ -17,8 +17,6 @@ const { phone, email, address, gpg } = contact;
 const { street, city, state, zip } = address;
 const { fingerprint, key_id, key_url, secure_email } = gpg;
 
-/* ------- sections ------- */
-
 function HeadingSection() {
   return (
     <header className="text-center space-y-2 my-4">
@@ -221,7 +219,7 @@ export default function ContactPage() {
       />
 
       <PageContainer>
-        <div className="max-w-4xl mx-auto px-4 py-10 space-y-12 bg-gray-50/10 dark:bg-slate-950/20 z-0">
+        <div className="max-w-4xl mx-auto px-4 py-10 space-y-12 bg-gray-50/10 dark:bg-slate-950/20 z-0 shadow-md">
           {/* Breadcrumbs */}
           <nav
             aria-label="Breadcrumb"

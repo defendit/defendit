@@ -98,7 +98,7 @@ export default function ServicePage(props: ServicesPageProps) {
       />
 
       <PageContainer>
-        <div className="max-w-6xl mx-auto px-4 py-10 space-y-10 bg-gray-50/10 dark:bg-slate-950/20 z-0">
+        <div className="max-w-6xl mx-auto px-4 py-10 space-y-10 bg-gray-50/10 dark:bg-slate-950/20 z-0 shadow-md">
           {/* Breadcrumbs */}
           <nav
             aria-label="Breadcrumb"

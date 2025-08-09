@@ -1,4 +1,5 @@
 import { PageContainer, Meta } from "@/components";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function RemoteSupportPlanPage() {
@@ -51,6 +52,7 @@ export default function RemoteSupportPlanPage() {
     })),
   };
 
+  // home > services > remote-support-plan
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -64,8 +66,14 @@ export default function RemoteSupportPlanPage() {
       {
         "@type": "ListItem",
         position: 2,
+        name: "Services",
+        item: "https://www.wedefendit.com/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
         name: "Remote Support Plan",
-        item: "https://www.wedefendit.com/remote-support-plan",
+        item: "https://www.wedefendit.com/services/remote-support-plan",
       },
     ],
   };
@@ -96,6 +104,7 @@ export default function RemoteSupportPlanPage() {
         {/* Left by default on mobile; larger screens inherit your existing look */}
         <main className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left bg-gray-50/10 dark:bg-slate-950/20 rounded-lg shadow-lg">
           {/* Breadcrumbs */}
+          {/* home > services > remote-support-plan */}
           <nav
             aria-label="Breadcrumb"
             className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto whitespace-normal sm:whitespace-nowrap max-w-full"
@@ -105,6 +114,14 @@ export default function RemoteSupportPlanPage() {
               <li className="truncate max-w-[5rem]">
                 <Link href="/" className="hover:underline">
                   Home
+                </Link>
+              </li>
+              <li aria-hidden="true" className="px-1 sm:px-2">
+                ›
+              </li>
+              <li className="truncate max-w-[7rem]">
+                <Link href="/services" className="hover:underline">
+                  Services
                 </Link>
               </li>
               <li aria-hidden="true" className="px-1 sm:px-2">
@@ -322,6 +339,32 @@ export default function RemoteSupportPlanPage() {
             </p>
           </section>
 
+          {/* View Remote Services */}
+          {/* View Remote Services */}
+          <section
+            className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60"
+            aria-labelledby="view-remote-services"
+          >
+            <h2 id="view-remote-services" className="text-2xl font-semibold">
+              View Remote Services
+            </h2>
+            <div className="mt-3 rounded-lg border border-sky-300 dark:border-sky-700 bg-sky-50/40 dark:bg-sky-900/20 p-5 text-left sm:text-center">
+              <div className="flex items-start gap-3 sm:block">
+                <p className="text-sm text-sky-900 dark:text-sky-100">
+                  Explore all our remote service offerings for local clients,
+                  including troubleshooting, maintenance, and more.
+                </p>
+              </div>
+              <Link
+                href="/services/remote"
+                className="inline-flex items-center justify-center mt-3 px-4 py-2 rounded-md border border-sky-500 text-sky-700 dark:text-sky-200 bg-transparent hover:bg-sky-50 dark:hover:bg-sky-900/40 font-medium transition"
+              >
+                View Remote Services
+                <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
+              </Link>
+            </div>
+          </section>
+
           {/* CTA */}
           <section
             className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60"
@@ -330,17 +373,22 @@ export default function RemoteSupportPlanPage() {
             <h2 id="enroll" className="text-2xl font-semibold">
               Ready to Enroll
             </h2>
-            <div className="mt-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white/60 dark:bg-slate-900/40 p-5 text-left sm:text-center">
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Initial on-site setup and enrollment are included at no
-                additional cost* when you join the Remote Support Plan.
-              </p>
+            <div className="mt-3 rounded-lg bg-blue-600/70 dark:bg-sky-700/40 text-white p-5 text-left sm:text-center shadow-sm">
+              <div className="flex items-start gap-3 sm:block">
+                <p className="text-sm/6 opacity-95">
+                  Initial on-site setup and enrollment are included at no
+                  additional cost* when you join the Remote Support Plan.
+                </p>
+              </div>
               <Link
                 href="/contact"
-                className="inline-block mt-3 px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded transition"
+                className="inline-block mt-3 px-5 py-3 rounded-md bg-white text-blue-700 dark:text-sky-900 font-semibold hover:bg-slate-100 transition"
               >
                 Request Remote Setup
               </Link>
+              <p className="mt-2 text-xs opacity-85">
+                * Within our local service area.
+              </p>
             </div>
           </section>
 

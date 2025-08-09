@@ -36,6 +36,10 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.wedefendit.com/services/remote-support-plan</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.wedefendit.com/services/belleview</loc>
     <priority>0.80</priority>
   </url>
@@ -135,23 +139,25 @@
     <loc>https://www.wedefendit.com/services/the-villages/network-hardening</loc>
   </url>
   <!-- Remote Slugs -->
+  <!-- Remote Slugs -->
   <url>
-    <loc>https://www.wedefendit.com/services/remote/support</loc>
+    <loc>https://www.wedefendit.com/services/remote/remote-privacy-hardening</loc>
   </url>
   <url>
-    <loc>https://www.wedefendit.com/services/remote/security-assessment</loc>
+    <loc>https://www.wedefendit.com/services/remote/remote-security-assessment</loc>
   </url>
   <url>
-    <loc>https://www.wedefendit.com/services/remote/privacy</loc>
+    <loc>https://www.wedefendit.com/services/remote/remote-support</loc>
   </url>
   <url>
-    <loc>https://www.wedefendit.com/services/remote/training</loc>
+    <loc>https://www.wedefendit.com/services/remote/remote-tech-tutoring</loc>
   </url>
   <url>
-    <loc>https://www.wedefendit.com/services/remote/virus-removal</loc>
+    <loc>https://www.wedefendit.com/services/remote/remote-training</loc>
   </url>
   <url>
-    <loc>https://www.wedefendit.com/services/remote/tech-tutoring</loc>
+    <loc>https://www.wedefendit.com/services/remote/remote-virus-removal</loc>
   </url>
+
 
 </urlset>
