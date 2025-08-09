@@ -17,6 +17,7 @@ import data from "../../data/company-info.json";
 import TrustStrip from "./TrustStrip";
 
 const contact = data.contact;
+const hours = data.contact.hours;
 const services_cta = data.services_cta || {};
 
 export function BookOnline() {
@@ -26,22 +27,33 @@ export function BookOnline() {
   return (
     <section
       id="schedule-service"
-      className="max-w-xl mx-auto my-12 px-4 text-left sm:text-center text-sm text-gray-700 dark:text-gray-300"
+      className="max-w-xl mx-auto my-12 px-4 text-left sm:text-center text-[15px] leading-6 text-gray-700 dark:text-gray-300"
     >
-      <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white/60 dark:bg-slate-900/40 p-5 sm:p-6 shadow-sm">
+      <div className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white/60 dark:bg-slate-900/40 p-4 sm:p-6 shadow-sm space-y-3 sm:space-y-4">
         <header>
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
             Need to schedule service?
           </h2>
-          <TrustStrip />
+          <p className="-mb-2">
+            Book by phone, email, or use Calendly to pick a time.
+          </p>
         </header>
 
-        <p className="mt-3">
-          Book by phone, email, or use Calendly to pick a time.
-        </p>
+        <TrustStrip />
 
-        <ul role="list" className="mt-4 space-y-2">
-          <li className="flex items-center gap-2">
+        <div className="mt-1 text-gray-600 dark:text-gray-400 sm:flex sm:justify-center">
+          <ul className="list-none space-y-1">
+            <li>
+              <span className="font-semibold">Mon-Fri:</span> 9:00 AM - 6:00 PM
+            </li>
+            <li>
+              <span className="font-semibold">Sat:</span> 10:00 AM - 4:00 PM
+            </li>
+          </ul>
+        </div>
+
+        <ul role="list" className="mt-3 sm:mt-4 space-y-3 sm:space-y-2">
+          <li className="flex items-center gap-3">
             <Phone
               className="w-4 h-4 text-blue-600 dark:text-sky-400"
               aria-hidden="true"
@@ -54,7 +66,7 @@ export function BookOnline() {
               {displayPhone}
             </a>
           </li>
-          <li className="flex items-center gap-2">
+          <li className="flex items-center gap-3">
             <Mail
               className="w-4 h-4 text-blue-600 dark:text-sky-400"
               aria-hidden="true"
@@ -71,18 +83,12 @@ export function BookOnline() {
           </li>
         </ul>
 
-        <details className="group mt-3">
-          <summary
-            className="cursor-pointer text-blue-600 dark:text-sky-400 hover:underline list-none select-none"
-            aria-controls="calendly-panel"
-          >
+        <details className="group mt-2 sm:mt-3">
+          <summary className="cursor-pointer text-blue-600 dark:text-sky-400 hover:underline list-none select-none">
             Book online with Calendly
           </summary>
 
-          <div
-            id="calendly-panel"
-            className="mt-3 border-t border-gray-200 dark:border-gray-700 pt-3 space-y-3"
-          >
+          <div className="mt-3 border-t border-gray-200 dark:border-gray-700 pt-3 space-y-3">
             <p className="text-gray-600 dark:text-gray-400">
               You will be redirected to Calendly to choose a time. By
               continuing, you agree to Calendly&apos;s terms and privacy policy.
