@@ -16,34 +16,30 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Many smart devices ship with insecure defaults like open services, universal plug-and-play (UPnP), or weak credentials.",
-        "Devices often send telemetry to cloud services by default. Least-privilege access and segmentation reduce exposure.",
-        "Poor access point placement, not just signal strength, causes dead zones and unreliable automations."
+        "Some devices send telemetry to external servers by default.",
+        "Insecure IoT devices have been used in large-scale botnet attacks such as Mirai.",
+        "Keeping firmware updated is one of the most effective ways to prevent remote exploitation.",
+        "Many smart devices ship with insecure defaults such as open ports, UPnP enabled, or weak default passwords."
       ]
     },
     {
-      "heading": "What We Set Do",
+      "heading": "What We Do",
       "paragraph": [
-        "A secure, reliable smart home starts with clean configuration and the right boundaries."
+        "We set up your smart home for both convenience and security, with clear boundaries to protect your privacy and network."
       ],
       "items": [
-        "Cameras, doorbells, sensors, and hubs",
-        "Voice assistants and local dashboards",
-        "Automations and routines that actually work",
-        "Guest access and role-based permissions",
-        "Privacy-respecting defaults and logging"
-      ]
-    },
-    {
-      "heading": "Security by Design",
-      "paragraph": [
-        "We isolate untrusted devices, restrict cloud exposure where practical, and apply least-privilege access so one device can't compromise your whole network."
+        "Install and configure cameras, doorbells, sensors, and hubs",
+        "Set up voice assistants and local control dashboards",
+        "Create reliable automations and routines",
+        "Configure guest access and role-based permissions",
+        "Apply privacy-respecting defaults and enable logging"
       ]
     },
     {
       "heading": "How It Works",
       "paragraph": [
-        "We assess your goals and space, install and configure devices, and document everything so you stay in control, No subscriptions or vendor lock-in required."
+        "We start by reviewing your goals, devices, and network layout. Then we install, configure, and secure your smart home with proper segmentation, strong authentication, and minimal required permissions.",
+        "We document every change so you stay in control. No hidden subscriptions, no vendor lock-in."
       ]
     }
   ],

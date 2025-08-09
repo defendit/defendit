@@ -16,35 +16,32 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Replacing a hard drive with an SSD dramatically improves boot and app load times, even on older PCs.",
-        "Insufficient RAM forces constant disk swapping, which makes systems feel slow under normal workloads.",
-        "Dust buildup and dried thermal paste lead to thermal throttling. Cleaning and re-pasting restore lost performance."
+        "Running out of RAM slows the system even if the CPU is not busy.",
+        "Replacing a mechanical hard drive with an SSD can improve load times.",
+        "Many laptops can support more RAM and faster storage than they shipped with by default.",
+        "Firmware and BIOS updates can improve hardware compatibility, stability, and even performance.",
+        "Dust buildup and degraded thermal paste cause overheating, which triggers thermal throttling and reduces performance."
       ]
     },
     {
       "heading": "What We Do",
       "paragraph": [
-        "We upgrade and optimize PCs and laptops to deliver faster performance, better reliability, and longer lifespan. Whether you need more speed for everyday tasks or extra power for demanding workloads, we handle every step from parts sourcing to installation.",
-        "Our process includes thorough diagnostics, careful installation of components, and post-upgrade testing to ensure stability. We use quality parts, proper thermal management, and firmware updates to give you results that last."
-      ]
-    },
-    {
-      "heading": "Popular Upgrades",
-      "paragraph": [
-        "Targeted upgrades deliver big gains for daily use, gaming, and work, often for less than replacing the device."
+        "We upgrade and optimize PCs and laptops to improve speed, stability, and lifespan. We handle parts sourcing, installation, and testing to ensure reliable results.",
+        "Our service includes diagnostics, careful hardware installation, firmware updates, and performance tuning so you get measurable improvements."
       ],
       "items": [
-        "SSD replacements and OS migration",
-        "RAM upgrades and stability tuning",
-        "Battery swaps and storage expansion",
-        "Thermal paste refresh and dust cleaning",
-        "BIOS/firmware updates and health checks"
+        "SSD installation and operating system migration",
+        "RAM upgrades and stability optimization",
+        "Battery replacements and storage expansion",
+        "Thermal paste refresh and dust removal",
+        "Firmware and BIOS updates with validation"
       ]
     },
     {
       "heading": "How It Works",
       "paragraph": [
-        "We evaluate your system, recommend the best-value upgrades, and handle parts, installation, and testing. You get a faster, quieter machine and a clear report of what changed."
+        "We inspect your current system and recommend the most cost-effective upgrades. After sourcing quality parts, we install, test, and verify stability.",
+        "You receive a faster, quieter machine along with a clear report of the work performed."
       ]
     }
   ],
