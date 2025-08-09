@@ -59,8 +59,8 @@ export default function Home() {
       ? `/services/${location}/network-setup`
       : "/services/the-villages/network-setup",
     onsite: location
-      ? `/services/${location}/custom-solutions`
-      : "/services/the-villages/custom-solutions",
+      ? `/services/${location}/onsite-tech-support`
+      : "/services/the-villages/onsite-tech-support",
     personalized: location
       ? `/services/${location}/custom-solutions`
       : "/services/the-villages/custom-solutions",
