@@ -17,7 +17,6 @@ import data from "../../data/company-info.json";
 import TrustStrip from "./TrustStrip";
 
 const contact = data.contact;
-const hours = data.contact.hours;
 const services_cta = data.services_cta || {};
 
 export function BookOnline() {
