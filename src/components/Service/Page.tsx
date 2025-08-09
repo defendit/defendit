@@ -112,7 +112,7 @@ export default function ServicePage(props: ServicesPageProps) {
       />
 
       <PageContainer>
-        <div className="max-w-6xl mx-auto px-4 py-10 space-y-10 bg-gray-50/10 dark:bg-slate-950/20 z-0 shadow-md">
+        <div className="max-w-7xl mx-auto px-4 py-10 space-y-10 bg-gray-50/10 dark:bg-slate-950/20 z-0 shadow-md">
           {/* Breadcrumbs */}
           <nav
             aria-label="Breadcrumb"
@@ -164,7 +164,7 @@ export default function ServicePage(props: ServicesPageProps) {
           </header>
 
           {/* Grid */}
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {services.map((service: Service) => (
               <ServiceCard key={service.id} {...service} />
             ))}
@@ -172,6 +172,20 @@ export default function ServicePage(props: ServicesPageProps) {
 
           <RemoteServicesCTA isRemote={isRemote} />
           <BookOnline />
+
+          <section className="text-sm text-gray-600 dark:text-gray-400 italic text-center max-w-3xl mx-auto">
+            <p>
+              Not seeing the service you need? We offer a wide range of I.T.
+              solutions beyond what&apos;s listed here.{" "}
+              <Link
+                href="/contact"
+                className="text-blue-600 dark:text-sky-400 hover:underline"
+              >
+                Contact us
+              </Link>{" "}
+              to discuss your specific needs and how we can assist you.
+            </p>
+          </section>
         </div>
       </PageContainer>
     </>

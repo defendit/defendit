@@ -12,122 +12,85 @@ licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
 
-// providers/location.tsx
+// providers/location.tsx (dropdown-only, no third‑party IP calls, default = the-villages, added remote)
 "use client";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
 const STORAGE_KEY = "stored-location";
+export type CityKey = "ocala" | "belleview" | "the-villages" | "remote";
 
-// canonical city keys
-export type CityKey = "ocala" | "belleview" | "the-villages";
-
-// where each city key should redirect
 export const supportedCities: Record<CityKey, string> = {
   ocala: "/services/ocala",
   belleview: "/services/belleview",
   "the-villages": "/services/the-villages",
+  remote: "/services/remote",
 };
 
-// neighbor/alias mapping -> canonical city key
-const CITY_FALLBACK_MAP: Record<CityKey, string[]> = {
-  ocala: [
-    "Ocala",
-    "Silver Springs",
-    "Silver Springs Shores",
-    "Marion Oaks",
-    "Dunnellon",
-    "Reddick",
-    "Citra",
-    "Anthony",
-    "Fort McCoy",
-    "McIntosh",
-    "Lowell",
-    "Zuber",
-    "Flemington",
-  ],
-  belleview: [
-    "Belleview",
-    "Summerfield",
-    "Pedro",
-    "Oxford",
-    "Lake Weir",
-    "Ocklawaha",
-    "Weirsdale",
-  ],
-  "the-villages": [
-    "The Villages",
-    "Lady Lake",
-    "Fruitland Park",
-    "Wildwood",
-    "Leesburg",
-    "Coleman",
-  ],
+export const CITY_LABELS: Record<CityKey, string> = {
+  ocala: "Ocala",
+  belleview: "Belleview",
+  "the-villages": "The Villages",
+  remote: "Remote",
 };
 
-// fast lookup set
-const CITY_ALIAS_INDEX: Record<string, CityKey> = (() => {
-  const idx: Record<string, CityKey> = {};
-  (Object.keys(CITY_FALLBACK_MAP) as CityKey[]).forEach((key) => {
-    CITY_FALLBACK_MAP[key].forEach((n) => (idx[n.toLowerCase()] = key));
-  });
-  // include canonical spellings too
-  idx["ocala"] = "ocala";
-  idx["belleview"] = "belleview";
-  idx["the villages"] = "the-villages";
-  idx["the-villages"] = "the-villages";
-  return idx;
-})();
+const CITY_ALIAS_INDEX: Record<string, CityKey> = {
+  ocala: "ocala",
+  belleview: "belleview",
+  "the villages": "the-villages",
+  "the-villages": "the-villages",
+  remote: "remote",
+};
 
-function normalize(s?: string | null) {
-  return (s || "").toLowerCase().trim();
+function normalize(v?: string | null) {
+  return (v || "").toLowerCase().trim();
 }
 
-function resolveCityKey(cityName: string | null): CityKey | null {
-  const n = normalize(cityName);
+function resolveCityKey(value: string | null): CityKey | null {
+  const n = normalize(value);
   if (!n) return null;
   return CITY_ALIAS_INDEX[n] ?? null;
 }
 
-async function fetchWithTimeout(url: string, ms = 2000) {
-  const ctrl = new AbortController();
-  const t = setTimeout(() => ctrl.abort(), ms);
-  try {
-    const res = await fetch(url, { signal: ctrl.signal });
-    if (!res.ok) throw new Error(String(res.status));
-    return await res.json();
-  } finally {
-    clearTimeout(t);
-  }
-}
-
 type LocationContextType = {
-  location: CityKey | null; // canonical key or null
-  setLocation: (city: CityKey) => void; // manual override (persisted)
+  location: CityKey | null;
+  setLocation: (city: CityKey) => void;
+  clearLocation: () => void;
 };
 
 const LocationContext = createContext<LocationContextType>({
   location: null,
   setLocation: () => {},
+  clearLocation: () => {},
 });
 
 export const useLocation = () => useContext(LocationContext);
 
-export const LocationProvider = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+export function LocationProvider({ children }: { children: React.ReactNode }) {
   const [location, setLocationState] = useState<CityKey | null>(null);
 
   const setLocation = (city: CityKey) => {
-    localStorage.setItem(STORAGE_KEY, city);
+    try {
+      localStorage.setItem(STORAGE_KEY, city);
+    } catch {}
     setLocationState(city);
+  };
+
+  const clearLocation = () => {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {}
+    setLocationState(null);
   };
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    // 1) query override ?city=ocala|belleview|the-villages
     const url = new URL(window.location.href);
     const qCity = url.searchParams.get("city");
     const qKey = qCity && resolveCityKey(qCity);
@@ -136,34 +99,113 @@ export const LocationProvider = ({
       return;
     }
 
-    // 2) stored
-    const stored = localStorage.getItem(STORAGE_KEY) as CityKey | null;
-    if (stored && supportedCities[stored]) {
-      setLocationState(stored);
-      return;
-    }
-
-    // 3) detect via IP (two providers with timeouts)
-    (async () => {
-      try {
-        // provider A
-        const a = await fetchWithTimeout("https://ipwho.is/", 2000);
-        const aKey = resolveCityKey(a?.city);
-        if (aKey) return setLocation(aKey);
-
-        // provider B (fallback)
-        const b = await fetchWithTimeout("https://ipapi.co/json/", 2000);
-        const bKey = resolveCityKey(b?.city);
-        if (bKey) return setLocation(bKey);
-      } catch {
-        // ignore detection errors
+    try {
+      const stored =
+        (localStorage.getItem(STORAGE_KEY) as CityKey | null) || null;
+      if (stored && supportedCities[stored]) {
+        setLocationState(stored);
+        return;
       }
-    })();
+    } catch {}
+
+    // Default to the-villages if no prior selection
+    setLocation("the-villages");
   }, []);
 
+  const value = useMemo(
+    () => ({ location, setLocation, clearLocation }),
+    [location]
+  );
+
   return (
-    <LocationContext.Provider value={{ location, setLocation }}>
+    <LocationContext.Provider value={value}>
       {children}
     </LocationContext.Provider>
   );
-};
+}
+
+export function LocationPicker({
+  label = "Choose your city",
+  showHelper = true,
+  autoRedirect = false,
+}: {
+  label?: string;
+  showHelper?: boolean;
+  autoRedirect?: boolean;
+}) {
+  const { location, setLocation } = useLocation();
+
+  const [pending, setPending] = useState<CityKey | "">(location || "");
+
+  useEffect(() => {
+    setPending(location || "");
+  }, [location]);
+
+  const onChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const next = e.target.value as CityKey;
+    setPending(next);
+    setLocation(next);
+    if (autoRedirect) {
+      try {
+        const to = supportedCities[next];
+        if (to) window.location.assign(to);
+      } catch {}
+    }
+  };
+
+  return (
+    <div className="w-full max-w-sm">
+      <label className="block text-sm font-medium mb-1" htmlFor="city-select">
+        {label}
+      </label>
+      <select
+        id="city-select"
+        className="w-full rounded-2xl border p-2 shadow-sm"
+        value={pending}
+        onChange={onChange}
+        aria-label={label}
+      >
+        <option value="" disabled>
+          Select…
+        </option>
+        {(Object.keys(CITY_LABELS) as CityKey[]).map((key) => (
+          <option key={key} value={key}>
+            {CITY_LABELS[key]}
+          </option>
+        ))}
+      </select>
+      {showHelper && (
+        <p className="mt-2 text-xs opacity-70">
+          We don't auto-detect your location. Your choice is saved only on this
+          device (localStorage) and never sent to any third party.
+        </p>
+      )}
+    </div>
+  );
+}
+
+export function LocationPromptBanner({
+  className = "",
+  title = "Select your city",
+  description = "Choose the area we should tailor services for.",
+}: {
+  className?: string;
+  title?: string;
+  description?: string;
+}) {
+  const { location } = useLocation();
+
+  if (location) return null;
+
+  return (
+    <div
+      className={`rounded-2xl border p-4 shadow-sm ${className}`}
+      role="region"
+      aria-live="polite"
+    >
+      <h2 className="text-base font-semibold mb-1">{title}</h2>
+      <p className="text-sm opacity-80 mb-3">{description}</p>
+      <LocationPicker showHelper={false} />
+    </div>
+  );
+}

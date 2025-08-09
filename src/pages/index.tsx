@@ -14,7 +14,7 @@ party without express written consent.
 
 import Link from "next/link";
 import companyInfo from "../../data/company-info.json";
-import { useLocation } from "@/providers/location";
+import { LocationPicker, useLocation } from "@/providers/location";
 import { ShieldCheck, Network, Laptop2, UserCheck } from "lucide-react";
 import { getNormalizedCityName, Meta, PageContainer } from "@/components";
 
@@ -108,9 +108,14 @@ export default function Home() {
         </p>
 
         <section className="relative z-10 flex flex-col items-center justify-center w-full">
-          <h2 className="text-2xl md:text-3xl font-bold text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
             {services_cta.headline}
           </h2>
+          {
+            <span className="-mb-3">
+              <LocationPicker showHelper={true} />
+            </span>
+          }
 
           <CallToActionButtons location={location} />
           <p className="text-center p-6 md:p-0 text-base md:text-lg max-w-3xl text-gray-700 dark:text-gray-300 mt-4">
