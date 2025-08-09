@@ -176,8 +176,8 @@ export function LocationPicker({
       </select>
       {showHelper && (
         <p className="mt-2 text-xs opacity-70">
-          We do&apos;t auto-detect your location. Your choice is saved only on
-          this device (localStorage) and never sent to any third party.
+          We don&apos;t auto-detect your location. Your choice is saved only on
+          this device (localStorage) and is never sent to any server.
         </p>
       )}
     </div>
