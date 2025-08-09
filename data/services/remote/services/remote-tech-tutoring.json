@@ -2,7 +2,7 @@
   "id": "remote-tech-tutoring",
   "title": "Remote Tech Tutoring & Mentoring",
   "headline": "Learn coding, cybersecurity, or IT skills one-on-one.",
-  "description": "We provide personalized, live tutoring over Zoom for students, professionals, and curious learners. Build skills in coding, system administration, or cybersecurity — at your pace, with real answers.",
+  "description": "We provide personalized, live tutoring over Zoom for students, professionals, and curious learners. Build skills in coding, system administration, or cybersecurity. At your pace and with real answers.",
   "keywords": [
     "Remote tech tutoring",
     "Online coding mentorship",
@@ -24,7 +24,7 @@
     {
       "heading": "Expert Help, Personalized",
       "paragraph": [
-        "Our tutoring sessions are tailored to you. We work with beginners, students, professionals, and hobbyists — no cookie-cutter lessons or generic training paths.",
+        "Our tutoring sessions are tailored to you. We work with beginners, students, professionals, and hobbyists. No cookie-cutter lessons or generic training paths.",
         "If you are stuck on a problem, preparing for a job interview, or want structured learning in a specific topic, we build the session around that."
       ]
     },
@@ -42,12 +42,17 @@
     {
       "heading": "How It Works",
       "paragraph": [
-        "We meet over Zoom at a time that works for you — no software installation or support plan required.",
+        "We meet over Zoom at a time that works for you. No software installation or support plan required.",
         "You tell us your goals and current skill level, and we tailor the session accordingly.",
         "Live screen sharing, walkthroughs, and step-by-step guidance make learning fast and practical.",
         "We can also provide follow-up material or homework upon request to help you continue growing."
       ]
     }
+  ],
+  "related": [
+    { "label": "Remote Training", "slug": "remote-training" },
+    { "label": "Remote Support", "slug": "remote-support" },
+    { "label": "Remote Privacy Hardening", "slug": "remote-privacy-hardening" }
   ],
   "cta": {
     "label": "Schedule Tutoring",

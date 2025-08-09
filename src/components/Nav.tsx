@@ -56,7 +56,9 @@ function RenderNavItems({
     if (name === "Services") {
       const city = getNormalizedCityName(location);
       href =
-        city && supportedCities[city] ? supportedCities[city] : "/services";
+        city && supportedCities[city as keyof typeof supportedCities]
+          ? supportedCities[city as keyof typeof supportedCities]
+          : "/services";
     }
 
     const target = clean(href);

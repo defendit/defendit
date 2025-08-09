@@ -1,0 +1,49 @@
+{
+  "id": "software-troubleshooting-{{city_lower}}",
+  "title": "Software Installation & Troubleshooting in {{city_upper}}, FL",
+  "headline": "OS installs, drivers, and app fixes.",
+  "description": "Clean installs, updates, drivers, and app fixes in {{city_upper}}. We stabilize your system, remove conflicts, and document the changes.",
+  "keywords": [
+    "software help {{city_upper}}",
+    "windows install {{city_upper}}",
+    "macOS install {{city_upper}}",
+    "driver update {{city_upper}}",
+    "application troubleshooting {{city_upper}}"
+  ],
+  "url": "/services/{{city_lower}}/software-troubleshooting",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Common Issues We Fix",
+      "paragraph": [
+        "From failed updates to driver conflicts and crashing apps, we bring systems back to a stable, usable state."
+      ],
+      "items": [
+        "Windows/macOS installation or repair",
+        "Driver conflicts and blue screens",
+        "Slow startup and update failures",
+        "Office, browser, and productivity app issues",
+        "Clean uninstalls and configuration cleanup"
+      ]
+    },
+    {
+      "heading": "Our Approach",
+      "paragraph": [
+        "We start with a quick assessment and backup recommendations as needed. Then we apply the minimal, documented changes required to stabilize your system and improve reliability.",
+        "No bloatware, no mystery tweaks. Just reproducible fixes you can trust."
+      ]
+    }
+  ],
+  "related": [
+    { "label": "Computer Repair", "slug": "computer-repair" },
+    {
+      "label": "Data Recovery & Encrypted Backup Solutions",
+      "slug": "data-recovery"
+    },
+    { "label": "PC & Laptop Upgrades", "slug": "pc-upgrades" }
+  ],
+  "cta": {
+    "label": "Fix My Software",
+    "link": "/contact#schedule-service"
+  }
+}

@@ -40,6 +40,17 @@
       ]
     }
   ],
+  "related": [
+    {
+      "label": "Password Management & Digital Safety",
+      "slug": "password-management"
+    },
+    {
+      "label": "Home Network Security & Wi-Fi Hardening",
+      "slug": "home-network-security"
+    },
+    { "label": "Computer Repair", "slug": "computer-repair" }
+  ],
   "cta": {
     "label": "Schedule Virus Removal",
     "link": "/contact#schedule-service"

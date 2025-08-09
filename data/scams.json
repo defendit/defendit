@@ -26,11 +26,11 @@
     },
     {
       "title": "Home Repair and Contractor Fraud",
-      "description": "Scammers offer cheap or urgent repairs—especially after storms—then take payment and vanish. In Florida, unlicensed contracting is illegal and often linked to financial fraud.",
+      "description": "Scammers offer cheap or urgent repairs, especially after storms, then take payment and vanish. In Florida, unlicensed contracting is illegal and often linked to financial fraud.",
       "prevention": [
         "Never hire door-to-door contractors without checking credentials.",
         "Get multiple written estimates before agreeing to work.",
-        "Avoid paying large sums upfront—pay in stages when possible.",
+        "Avoid paying large sums upfront. Pay in stages when possible.",
         "Verify licenses through the Florida DBPR (Department of Business & Professional Regulation).",
         "Report unlicensed work to local law enforcement or DBPR."
       ],
@@ -53,7 +53,7 @@
       "title": "Fake Check Scam",
       "description": "You receive a check and are asked to deposit it, then return part of the money. Later, the check bounces and you're left owing the bank.",
       "prevention": [
-        "Never accept checks from strangers—especially overpayment.",
+        "Never accept checks from strangers, especially overpayment.",
         "Never send gift cards or cash after receiving a check.",
         "Verify all checks with your bank before depositing or using the funds.",
         "Watch for poor grammar or fake-sounding business names.",
@@ -68,7 +68,7 @@
       "prevention": [
         "Avoid unsolicited investment offers on social media.",
         "Verify financial professionals through Investor.gov or FINRA BrokerCheck.",
-        "Be cautious of high-return, low-risk pitches—these are classic red flags.",
+        "Be cautious of high-return, low-risk pitches, these are classic red flags.",
         "Don't invest based on romance, flattery, or peer pressure.",
         "Report scams to the SEC or FBI's IC3 platform."
       ],
@@ -102,7 +102,7 @@
       "title": "Robocall and Robotext Scam",
       "description": "You receive calls or texts from fake numbers pretending to be banks, delivery companies, or government agencies. They ask you to press a button or give personal info.",
       "prevention": [
-        "Never press buttons on robocalls—just hang up.",
+        "Never press buttons on robocalls, just hang up.",
         "Don't reply to strange texts asking for money or info.",
         "Use call blocking apps and register with the Do Not Call list.",
         "Always confirm callers using numbers from official websites.",

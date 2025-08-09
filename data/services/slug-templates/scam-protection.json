@@ -43,6 +43,17 @@
       ]
     }
   ],
+  "related": [
+    {
+      "label": "Password Management & Digital Safety",
+      "slug": "password-management"
+    },
+    {
+      "label": "Home Network Security & Wi-Fi Hardening",
+      "slug": "home-network-security"
+    },
+    { "label": "Virus & Malware Removal", "slug": "virus-removal" }
+  ],
   "cta": {
     "label": "Schedule a Scam Protection Session",
     "link": "/contact#schedule-service"

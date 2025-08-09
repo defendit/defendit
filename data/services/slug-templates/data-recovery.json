@@ -46,6 +46,14 @@
       ]
     }
   ],
+  "related": [
+    { "label": "Computer Repair", "slug": "computer-repair" },
+    { "label": "PC & Laptop Upgrades", "slug": "pc-upgrades" },
+    {
+      "label": "Password Management & Digital Safety",
+      "slug": "password-management"
+    }
+  ],
   "cta": {
     "label": "Protect My Data",
     "link": "/contact#schedule-service"

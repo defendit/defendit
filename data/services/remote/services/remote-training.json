@@ -2,7 +2,7 @@
   "id": "remote-training",
   "title": "1-on-1 Remote Tech Training",
   "headline": "Learn securely and confidently at your pace.",
-  "description": "Get personalized, one-on-one technology training through private Zoom sessions. We help individuals of all ages build confidence with digital tools — from basic skills to secure habits.",
+  "description": "Get personalized, one-on-one technology training through private Zoom sessions. We help individuals of all ages build confidence with digital tools. From basic skills to secure habits.",
   "keywords": [
     "Remote tech training",
     "Online computer classes",
@@ -28,7 +28,7 @@
         "Windows, macOS, and smartphone navigation and settings",
         "Email, cloud storage, and backup setup",
         "Password managers, two-factor authentication, and account security",
-        "Cybersecurity for everyday users — how to stay safe online",
+        "Cybersecurity for everyday users; how to stay safe online",
         "Online shopping, banking, and scam detection",
         "Digital hygiene and privacy for families, seniors, and beginners"
       ]
@@ -37,10 +37,15 @@
       "heading": "How It Works",
       "paragraph": [
         "Sessions are held over Zoom with clear, step-by-step instruction tailored to your pace and goals.",
-        "We work with individuals, couples, and families — no technical background required.",
+        "We work with individuals, couples, and families. No technical background required.",
         "There is no software to install, and no support plan is required. All you need is an internet connection and a willingness to learn."
       ]
     }
+  ],
+  "related": [
+    { "label": "Remote Tech Tutoring", "slug": "remote-tech-tutoring" },
+    { "label": "Remote Support", "slug": "remote-support" },
+    { "label": "Remote Privacy Hardening", "slug": "remote-privacy-hardening" }
   ],
   "cta": {
     "label": "Book a Training Session",

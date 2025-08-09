@@ -1,0 +1,57 @@
+{
+  "id": "onsite-tech-support-{{city_lower}}",
+  "title": "On-Site Tech Support in {{city_upper}}, FL",
+  "headline": "We come to you to fix it fast.",
+  "description": "Get in-home tech support in {{city_upper}} for computers, Wi-Fi, printers, and devices. Professional diagnostics, fixes, and setup without the shop visit.",
+  "keywords": [
+    "on-site tech support {{city_upper}}",
+    "in-home computer help {{city_upper}}",
+    "home tech support {{city_upper}}",
+    "printer setup {{city_upper}}",
+    "wifi help {{city_upper}}"
+  ],
+  "url": "/services/{{city_lower}}/onsite-tech-support",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": [
+        "Many 'hardware' problems at home turn out to be configuration issues, mis-set Wi-Fi, power management, or background apps.",
+        "Multiple security suites and cleanup tools can conflict, causing crashes and slowdowns that look like failing parts.",
+        "Most issues can be diagnosed on-site without hauling equipment to a shop or wiping the system."
+      ]
+    },
+    {
+      "heading": "What We Do",
+      "paragraph": [
+        "Fast, local help for common home tech issues. Without unplugging everything or waiting in line."
+      ],
+      "items": [
+        "PC/Mac diagnostics and fixes",
+        "Wi-Fi troubleshooting and optimization",
+        "Printer and peripheral setup",
+        "New device setup and data transfer",
+        "Email, browser, and account tune-ups"
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": [
+        "Tell us what's happening and pick a time. We come to your home, diagnose the issue, and either fix it on the spot or provide a clear plan and estimate.",
+        "Transparent pricing and plain-language explanations. You stay in control of every step."
+      ]
+    }
+  ],
+  "related": [
+    { "label": "Computer Repair", "slug": "computer-repair" },
+    { "label": "Wi-Fi & Network Setup", "slug": "network-setup" },
+    {
+      "label": "Software Installation & Troubleshooting",
+      "slug": "software-troubleshooting"
+    }
+  ],
+  "cta": {
+    "label": "Book a Visit",
+    "link": "/contact#schedule-service"
+  }
+}

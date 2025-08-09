@@ -46,6 +46,11 @@
       ]
     }
   ],
+  "related": [
+    { "label": "Remote Privacy Hardening", "slug": "remote-privacy-hardening" },
+    { "label": "Remote Virus Removal", "slug": "remote-virus-removal" },
+    { "label": "Remote Support", "slug": "remote-support" }
+  ],
   "cta": {
     "label": "Book My Assessment",
     "link": "/contact#schedule-service"

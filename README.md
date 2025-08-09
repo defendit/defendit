@@ -1,6 +1,6 @@
 # Defend I.T. Solutions™ LLC
 
-> **Cybersecurity, I.T. Support, and Digital Defense. Serving Central Florida and Beyond.**  
+> **Cybersecurity Services, Managed IT Support, and Digital Protection. Serving Ocala, Belleview, The Villages, and Central Florida.**  
 > _Registered Florida LLC • Insured_
 
 [![Website](https://img.shields.io/badge/Website-wedefendit.com-blue?style=flat-square&logo=google-chrome)](https://wedefendit.com)
@@ -12,74 +12,73 @@
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [About the Founder](#about-the-founder)
-  - [Core Services](#core-services)
-    - [General I.T. and Cybersecurity](#general-it-and-cybersecurity)
-    - [Advanced Cyber Capabilities](#advanced-cyber-capabilities)
-    - [Consulting and Support](#consulting-and-support)
+  - [Residential Services](#residential-services)
+  - [Business Services](#business-services)
   - [Coverage Area](#coverage-area)
   - [Contact](#contact)
   - [Legal](#legal)
 
 ## Overview
 
-**Defend I.T. Solutions™** is a cybersecurity-focused I.T. service provider helping homeowners, retirees, and small businesses protect their technology against modern threats.  
-We combine enterprise-grade security practices with clear, jargon-free support.
+**Defend I.T. Solutions™** is a cybersecurity-first IT service provider helping homeowners, retirees, and small businesses protect their networks, devices, and data from modern threats.  
+We combine enterprise-grade security practices with clear, jargon-free support for both residential and business clients.
 
 - ✅ Registered Florida LLC  
 - ✅ Fully insured  
 - ✅ Privacy-focused  
-- ✅ Local, in-person, and remote services available
+- ✅ Local in-person and remote services available
 
-**Mission:** Deliver expert, trustworthy, and accessible technology support that protects your privacy and strengthens your digital defenses.
+**Mission:** Deliver expert, trustworthy, and accessible technology solutions that protect your privacy, secure your systems, and keep you connected.
 
 ## About the Founder
 
 Founder and Lead Engineer: **Anthony Tropeano**  
 
-- Senior cybersecurity engineering student 
-- Full-stack web developer and software engineer
-- Experienced in both **offensive** and **defensive** security
+- Cybersecurity engineering student  
+- Full-stack web developer  
+- Experienced in **offensive** and **defensive** security operations
 
 **Technical Expertise:**
 
-- Offensive and defensive security operations
-- Digital forensics and malware analysis
-- Network architecture, assessment and hardening
-- Incident response and security automation
-- Secure software development (Assembly, Python, C, Rust, C#, JavaScript/TypeScript)
+- Penetration testing and vulnerability assessments  
+- Digital forensics and malware analysis  
+- Network architecture, assessment and hardening  
+- Incident response and threat containment  
+- Secure software development (Python, C, JavaScript/TypeScript)  
+- Security automation and compliance consulting  
 
-## Core Services
+## Residential Services
 
-### General I.T. and Cybersecurity
+We offer in-person and remote services for homeowners, retirees, and residential clients:
 
-- Computer repair and optimization
-- Virus and malware removal
-- Secure home and office networking
-- Data recovery and backup solutions
-- Technology setup and configuration
+- Computer repair and optimization  
+- Virus, malware, and ransomware removal  
+- Secure home Wi-Fi and network setup  
+- Network hardening and IoT lockdown  
+- Backup and data recovery solutions  
+- Password management and account security  
+- Scam and fraud protection training  
+- Technology setup and configuration  
+- Custom privacy and security solutions  
 
-### Advanced Cyber Capabilities
+## Business Services
 
-- Threat intelligence and analysis
-- Incident response and containment
-- Vulnerability scanning and penetration testing
-- Reverse engineering and malware analysis
-- Secure code review and application hardening
-- Security audits and compliance checks
+We help small and medium-sized businesses protect operations, data, and client trust:
 
-### Consulting and Support
-
-- I.T. consulting for home and business
-- Wi-Fi and firewall security assessments
-- VPN and encrypted communication setup
-- Cloud security configuration
-- Phishing prevention and email security
-- Security awareness training
+- Managed IT services and ongoing support  
+- Business network security and monitoring  
+- HIPAA, PCI, and industry compliance consulting  
+- Email security and phishing prevention  
+- Data backup and disaster recovery planning  
+- Firewall and VPN configuration  
+- Ransomware prevention and incident response  
+- IT infrastructure setup and cabling  
+- Security audits and employee training  
 
 ## Coverage Area
 
 - **In-person:** Ocala, Belleview, The Villages, and surrounding Central Florida  
-- **Remote services:** Available to verified local clients
+- **Remote services:** Available to verified local business and residential clients
 
 ## Contact
 

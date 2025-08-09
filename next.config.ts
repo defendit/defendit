@@ -26,7 +26,7 @@ const cspHeader = `
   object-src 'none';
   base-uri 'self';
   form-action 'self';
-  connect-src 'self' https://ipwho.is;
+  connect-src 'self' https://ipwho.is https://ipapi.co;
   frame-ancestors 'self';
 `
   .replace(/\n/g, "")

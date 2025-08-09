@@ -2,7 +2,7 @@
   "id": "network-setup-{{city_lower}}",
   "title": "Wi-Fi & Network Setup in {{city_upper}}, FL",
   "headline": "Stronger, faster, safer home internet. Installed by professionals.",
-  "description": "Get expert home Wi-Fi and network setup in {{city_upper}}. We install fast, secure networks with clean configurations and strong coverage—no guesswork, no subscriptions.",
+  "description": "Get expert home Wi-Fi and network setup in {{city_upper}}. We install fast, secure networks with clean configurations and strong coverage. No guesswork, no subscriptions.",
   "keywords": [
     "Wi-Fi setup {{city_upper}}",
     "Home network installation {{city_upper}}",
@@ -38,6 +38,14 @@
         "Once complete, we walk you through your new network and provide guidance so you understand exactly how your devices connect and stay protected."
       ]
     }
+  ],
+  "related": [
+    {
+      "label": "Home Network Security & Wi-Fi Hardening",
+      "slug": "home-network-security"
+    },
+    { "label": "Smart Home Setup & Security", "slug": "smart-home-setup" },
+    { "label": "On-Site Tech Support", "slug": "onsite-tech-support" }
   ],
   "cta": {
     "label": "Get My Network Set Up",

@@ -1,9 +1,3 @@
-// lib/service-pages.ts
-/*
-Copyright © 2025 Defend I.T. Solutions LLC. All Rights Reserved.
-(…copyright header unchanged…)
-*/
-
 import fs from "fs";
 import path from "path";
 import type {
@@ -13,10 +7,7 @@ import type {
 } from "next";
 import type { ServiceSlugProps } from "@/components";
 
-const TEMPLATES_DIR = path.join(
-  process.cwd(),
-  "data/services/service-templates"
-);
+const TEMPLATES_DIR = path.join(process.cwd(), "data/services/slug-templates");
 
 export const CONSUMER_SERVICES_JSON = path.join(
   process.cwd(),
@@ -62,19 +53,27 @@ export function makeGetStaticSlugProps({
 
     const service = readServiceJson(filePath, cityLower, cityUpper);
 
-    const files = fs
-      .readdirSync(TEMPLATES_DIR)
-      .filter((f) => f.endsWith(".json"));
+    let related = service.related || [];
+    if (related.length > 3) {
+      // If more than 3, truncate to 3
+      related = related.slice(0, 3);
+    } else {
+      // If less than 3, fill with other services
+      const files = fs
+        .readdirSync(TEMPLATES_DIR)
+        .filter((f) => f.endsWith(".json") && f !== `${slug}.json`);
 
-    const related = files
-      .map((f) => f.replace(".json", ""))
-      .filter((s) => s !== slug)
-      .slice(0, 3)
-      .map((s) => {
-        const p = path.join(TEMPLATES_DIR, `${s}.json`);
-        const svc = readServiceJson(p, cityLower, cityUpper);
-        return { label: svc.title as string, slug: s };
-      });
+      const additional = files
+        .map((f) => f.replace(".json", ""))
+        .slice(0, 3 - related.length)
+        .map((s) => {
+          const p = path.join(TEMPLATES_DIR, `${s}.json`);
+          const svc = readServiceJson(p, cityLower, cityUpper);
+          return { label: svc.title as string, slug: s };
+        });
+
+      related = [...related, ...additional];
+    }
 
     return { props: { service, related } };
   };

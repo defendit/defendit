@@ -2,7 +2,7 @@
   "id": "computer-repair-{{city_lower}}",
   "title": "Computer Repair in {{city_upper}}, FL",
   "headline": "Fix slow or broken devices with fast, local help. No waiting, no surprises.",
-  "description": "Get expert computer repair in {{city_upper}} for laptops and desktops. We fix slow systems, replace failing hardware, recover data, and optimize performance—all locally and without unnecessary upsells.",
+  "description": "Get expert computer repair in {{city_upper}} for laptops and desktops. We fix slow systems, replace failing hardware, recover data, and optimize performance. Local and without unnecessary upsells.",
   "keywords": [
     "computer repair {{city_upper}}",
     "laptop repair {{city_upper}}",
@@ -47,6 +47,14 @@
         "We only fix what is needed and preserve your data whenever possible so you get the most out of your device."
       ]
     }
+  ],
+  "related": [
+    { "label": "On-Site Tech Support", "slug": "onsite-tech-support" },
+    {
+      "label": "Software Installation & Troubleshooting",
+      "slug": "software-troubleshooting"
+    },
+    { "label": "PC & Laptop Upgrades", "slug": "pc-upgrades" }
   ],
   "cta": {
     "label": "Schedule Computer Repair",

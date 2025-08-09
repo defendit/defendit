@@ -3,7 +3,7 @@
   "requiresPlan": true,
   "title": "Remote Tech Support",
   "headline": "Instant help without a house call.",
-  "description": "We offer secure remote tech support for local clients with a support plan. Get expert help with common issues, software fixes, and device configuration — all without waiting for an in-person visit.",
+  "description": "We offer secure remote tech support for local clients with a support plan. Get expert help with common issues, software fixes, and device configuration. No waiting, no confusion.",
   "keywords": [
     "Remote tech support",
     "Online computer help",
@@ -44,6 +44,11 @@
         "We only connect when you approve the session, and you stay in control the entire time."
       ]
     }
+  ],
+  "related": [
+    { "label": "Remote Virus Removal", "slug": "remote-virus-removal" },
+    { "label": "Remote Tech Tutoring", "slug": "remote-tech-tutoring" },
+    { "label": "Remote Training", "slug": "remote-training" }
   ],
   "cta": {
     "label": "Get Started with Remote Support Today",

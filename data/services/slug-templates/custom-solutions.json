@@ -47,6 +47,14 @@
       ]
     }
   ],
+  "related": [
+    {
+      "label": "Home Network Security & Wi-Fi Hardening",
+      "slug": "home-network-security"
+    },
+    { "label": "Smart Home Setup", "slug": "smart-home-setup" },
+    { "label": "Network Setup", "slug": "network-setup" }
+  ],
   "cta": {
     "label": "Talk to an Expert",
     "link": "/contact#schedule-service"

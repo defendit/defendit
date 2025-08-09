@@ -42,6 +42,14 @@
       ]
     }
   ],
+  "related": [
+    {
+      "label": "Remote Security Assessment",
+      "slug": "remote-security-assessment"
+    },
+    { "label": "Remote Virus Removal", "slug": "remote-virus-removal" },
+    { "label": "Remote Tech Tutoring", "slug": "remote-tech-tutoring" }
+  ],
   "cta": {
     "label": "Start My Privacy Session",
     "link": "/contact#schedule-service"

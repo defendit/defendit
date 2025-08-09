@@ -1,0 +1,62 @@
+{
+  "id": "smart-home-setup-{{city_lower}}",
+  "title": "Smart Home Setup & Security in {{city_upper}}, FL",
+  "headline": "Make it smart without making it risky.",
+  "description": "Professional setup and security for smart home devices in {{city_upper}}. We configure cameras, assistants, and automations with privacy-first, least-privilege access.",
+  "keywords": [
+    "smart home setup {{city_upper}}",
+    "home automation {{city_upper}}",
+    "smart camera install {{city_upper}}",
+    "home assistant setup {{city_upper}}",
+    "iot security {{city_upper}}"
+  ],
+  "url": "/services/{{city_lower}}/smart-home-setup",
+  "image": "https://www.wedefendit.com/og-image.png",
+  "sections": [
+    {
+      "heading": "Did You Know?",
+      "paragraph": [
+        "Many smart devices ship with insecure defaults like open services, universal plug-and-play (UPnP), or weak credentials.",
+        "Devices often send telemetry to cloud services by default. Least-privilege access and segmentation reduce exposure.",
+        "Poor access point placement, not just signal strength, causes dead zones and unreliable automations."
+      ]
+    },
+    {
+      "heading": "What We Set Do",
+      "paragraph": [
+        "A secure, reliable smart home starts with clean configuration and the right boundaries."
+      ],
+      "items": [
+        "Cameras, doorbells, sensors, and hubs",
+        "Voice assistants and local dashboards",
+        "Automations and routines that actually work",
+        "Guest access and role-based permissions",
+        "Privacy-respecting defaults and logging"
+      ]
+    },
+    {
+      "heading": "Security by Design",
+      "paragraph": [
+        "We isolate untrusted devices, restrict cloud exposure where practical, and apply least-privilege access so one device can't compromise your whole network."
+      ]
+    },
+    {
+      "heading": "How It Works",
+      "paragraph": [
+        "We assess your goals and space, install and configure devices, and document everything so you stay in control, No subscriptions or vendor lock-in required."
+      ]
+    }
+  ],
+  "related": [
+    {
+      "label": "Home Network Security & Wi-Fi Hardening",
+      "slug": "home-network-security"
+    },
+    { "label": "Wi-Fi & Network Setup", "slug": "network-setup" },
+    { "label": "On-Site Tech Support", "slug": "onsite-tech-support" }
+  ],
+  "cta": {
+    "label": "Set Up My Smart Home",
+    "link": "/contact#schedule-service"
+  }
+}
