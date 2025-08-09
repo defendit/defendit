@@ -1,8 +1,0 @@
-{
-  "remote-support": "/services/remote/support",
-  "remote-security-assessment": "/services/remote/security-assessment",
-  "privacy-hardening": "/services/remote/privacy",
-  "remote-training": "/services/remote/training",
-  "remote-virus-removal": "/services/remote/virus-removal",
-  "remote-tech-tutoring": "/services/remote/tech-tutoring"
-}

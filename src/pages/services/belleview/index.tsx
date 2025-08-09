@@ -1,7 +1,31 @@
-import belleview from "@/data/services/belleview/data.json";
-import { ServicePage } from "@/components";
+/*
+Copyright © 2025 Defend I.T. Solutions LLC. All Rights Reserved.
 
-export default function BelleviewServicesPage() {
+This software and its source code are the proprietary property of
+Defend I.T. Solutions LLC and are protected by United States and
+international copyright laws. Unauthorized reproduction, distribution,
+modification, display, or use of this software, in whole or in part, without the
+prior written permission of Defend I.T. Solutions LLC, is strictly prohibited.
+
+This software is provided for use only by authorized employees, contractors, or
+licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
+party without express written consent.
+*/
+
+import { GetStaticProps } from "next";
+import { Service, ServicePage } from "@/components/Service";
+import { makeGetStaticConsumerProps } from "@/lib/service-page";
+
+export const getStaticProps: GetStaticProps = makeGetStaticConsumerProps({
+  cityLower: "belleview",
+  cityUpper: "Belleview",
+});
+
+export default function BelleviewServicesPage({
+  service,
+}: {
+  service: { services: Service[] };
+}) {
   return (
     <ServicePage
       meta={{
@@ -14,7 +38,7 @@ export default function BelleviewServicesPage() {
           "IT support Belleview, cybersecurity Belleview, tech help Belleview, home networking Belleview, small business IT Belleview, computer repair Belleview, local tech services Belleview",
       }}
       h1="Services in Belleview"
-      services={belleview.services}
+      services={service.services}
       city="belleview"
     />
   );

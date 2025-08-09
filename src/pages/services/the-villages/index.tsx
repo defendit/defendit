@@ -1,7 +1,30 @@
-import theVillages from "@/data/services/the-villages/data.json";
-import { ServicePage } from "@/components";
+/*
+Copyright © 2025 Defend I.T. Solutions LLC. All Rights Reserved.
 
-export default function TheVillagesServicesPage() {
+This software and its source code are the proprietary property of
+Defend I.T. Solutions LLC and are protected by United States and
+international copyright laws. Unauthorized reproduction, distribution,
+modification, display, or use of this software, in whole or in part, without the
+prior written permission of Defend I.T. Solutions LLC, is strictly prohibited.
+
+This software is provided for use only by authorized employees, contractors, or
+licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
+party without express written consent.
+*/
+import { GetStaticProps } from "next";
+import { Service, ServicePage } from "@/components/Service";
+import { makeGetStaticConsumerProps } from "@/lib/service-page";
+
+export const getStaticProps: GetStaticProps = makeGetStaticConsumerProps({
+  cityLower: "the-villages",
+  cityUpper: "The Villages",
+});
+
+export default function TheVillagesServicesPage({
+  service,
+}: {
+  service: { services: Service[] };
+}) {
   return (
     <ServicePage
       meta={{
@@ -14,7 +37,7 @@ export default function TheVillagesServicesPage() {
           "IT support The Villages, cybersecurity The Villages, tech help The Villages, home networking The Villages, small business IT The Villages, computer repair The Villages, local tech services The Villages",
       }}
       h1="Services in The Villages"
-      services={theVillages.services}
+      services={service.services}
       city="the-villages"
     />
   );

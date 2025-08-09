@@ -1,83 +1,97 @@
 # Defend I.T. Solutions™ LLC
 
+> **Cybersecurity, I.T. Support, and Digital Defense. Serving Central Florida and Beyond.**  
+> _Registered Florida LLC • Insured_
+
+[![Website](https://img.shields.io/badge/Website-wedefendit.com-blue?style=flat-square&logo=google-chrome)](https://wedefendit.com)
+[![Email](https://img.shields.io/badge/Email-info%40wedefendit.com-blue?style=flat-square&logo=gmail)](mailto:info@wedefendit.com)
+
 ## Table of Contents
 
 - [Defend I.T. Solutions™ LLC](#defend-it-solutions-llc)
   - [Table of Contents](#table-of-contents)
-  - [Cybersecurity That Fights Back](#cybersecurity-that-fights-back)
+  - [Overview](#overview)
   - [About the Founder](#about-the-founder)
-  - [Services](#services)
-    - [General](#general)
+  - [Core Services](#core-services)
+    - [General I.T. and Cybersecurity](#general-it-and-cybersecurity)
     - [Advanced Cyber Capabilities](#advanced-cyber-capabilities)
-    - [Consulting \& Support](#consulting--support)
+    - [Consulting and Support](#consulting-and-support)
+  - [Coverage Area](#coverage-area)
   - [Contact](#contact)
+  - [Legal](#legal)
 
+## Overview
 
-## Cybersecurity That Fights Back
+**Defend I.T. Solutions™** is a cybersecurity-focused I.T. service provider helping homeowners, retirees, and small businesses protect their technology against modern threats.  
+We combine enterprise-grade security practices with clear, jargon-free support.
 
-**Defend I.T. Solutions™** is a cybersecurity-focused initiative built to help individuals, homeowners, and small businesses stay protected in an increasingly hostile digital landscape. This is a temporary landing page representing the pending Florida-based LLC.
+- ✅ Registered Florida LLC  
+- ✅ Fully insured  
+- ✅ Privacy-focused  
+- ✅ Local, in-person, and remote services available
 
----
+**Mission:** Deliver expert, trustworthy, and accessible technology support that protects your privacy and strengthens your digital defenses.
 
 ## About the Founder
 
-I'm a cybersecurity engineering senior and full stack web developer with deep skills in:
+Founder and Lead Engineer: **Anthony Tropeano**  
 
-- Offensive and defensive security
+- Senior cybersecurity engineering student 
+- Full-stack web developer and software engineer
+- Experienced in both **offensive** and **defensive** security
+
+**Technical Expertise:**
+
+- Offensive and defensive security operations
 - Digital forensics and malware analysis
-- Software development (Python, C, JavaScript)
-- Network operations, assessment, and secure design
+- Network architecture, assessment and hardening
+- Incident response and security automation
+- Secure software development (Assembly, Python, C, Rust, C#, JavaScript/TypeScript)
 
-This site is an early representation of the services that will be offered through **Defend I.T. Solutions™**.
+## Core Services
 
----
+### General I.T. and Cybersecurity
 
-## Services
-
-### General
-
-- Cybersecurity
-- Networking
-- Web & Software
-- Data Recovery
-- Forensics
-- Virus & Malware Removal
-- Computer Repair
-- Site Surveys
+- Computer repair and optimization
+- Virus and malware removal
+- Secure home and office networking
+- Data recovery and backup solutions
+- Technology setup and configuration
 
 ### Advanced Cyber Capabilities
 
-- Threat Analysis
-- Incident Response
-- Vulnerability Assessments
-- Security Audits
-- Penetration Testing
-- Reverse Engineering
-- Malware Analysis
-- Secure Code Review
+- Threat intelligence and analysis
+- Incident response and containment
+- Vulnerability scanning and penetration testing
+- Reverse engineering and malware analysis
+- Secure code review and application hardening
+- Security audits and compliance checks
 
-### Consulting & Support
+### Consulting and Support
 
-- IT Consulting
-- Wi-Fi Security Assessments
-- Firewall Configuration
-- VPN Setup
-- Email Security & Anti-Phishing
-- Cloud Security Configurations
-- Security Awareness Training
-- Policy Development & Compliance Guidance
+- I.T. consulting for home and business
+- Wi-Fi and firewall security assessments
+- VPN and encrypted communication setup
+- Cloud security configuration
+- Phishing prevention and email security
+- Security awareness training
 
----
+## Coverage Area
+
+- **In-person:** Ocala, Belleview, The Villages, and surrounding Central Florida  
+- **Remote services:** Available to verified local clients
 
 ## Contact
 
-If you have questions, please email: [info@wedefendit.com](mailto:info@wedefendit.com)  
-  
----
+- **Website:** [https://wedefendit.com](https://wedefendit.com)  
+- **Email:** [info@wedefendit.com](mailto:info@wedefendit.com)  
+- **Phone:** See [Website Contact Page](https://wedefendit.com/contact)  
 
-© 2025 Defend I.T. Solutions LLC. All rights reserved.
+## Legal
 
-**Defend I.T.™** and **Defend I.T. Solutions™** are trademarks of Defend I.T. Solutions LLC. Unauthorized use of these names, brand elements, or associated materials is strictly prohibited.
+© 2025 **Defend I.T. Solutions LLC**. All rights reserved.  
+**Defend I.T.™** and **Defend I.T. Solutions™** are registered trademarks.  
+Unauthorized use of these names, branding, or proprietary materials is prohibited.
 
-This software and its documentation are the property of Defend I.T. Solutions LLC and may not be reproduced, distributed, or used without express written permission.
-
+This repository and its contents are property of **Defend I.T. Solutions LLC**.  
+No part may be reproduced, distributed, or used without express written permission.

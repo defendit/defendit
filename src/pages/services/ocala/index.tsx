@@ -1,7 +1,34 @@
-import ocala from "@/data/services/ocala/data.json";
-import { ServicePage } from "@/components";
+/*
+Copyright © 2025 Defend I.T. Solutions LLC. All Rights Reserved.
 
-export default function OcalaServicesPage() {
+This software and its source code are the proprietary property of
+Defend I.T. Solutions LLC and are protected by United States and
+international copyright laws. Unauthorized reproduction, distribution,
+modification, display, or use of this software, in whole or in part, without the
+prior written permission of Defend I.T. Solutions LLC, is strictly prohibited.
+
+This software is provided for use only by authorized employees, contractors, or
+licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
+party without express written consent.
+*/
+
+import { GetStaticProps } from "next";
+import { Service, ServicePage } from "@/components";
+import { makeGetStaticConsumerProps } from "@/lib/service-page";
+
+const ocala = "ocala";
+const Ocala = "Ocala";
+
+export const getStaticProps: GetStaticProps = makeGetStaticConsumerProps({
+  cityLower: ocala,
+  cityUpper: Ocala,
+});
+
+export default function OcalaServicesPage({
+  service,
+}: {
+  service: { services: Service[] };
+}) {
   return (
     <ServicePage
       meta={{
@@ -14,7 +41,7 @@ export default function OcalaServicesPage() {
           "IT support Ocala, cybersecurity Ocala, tech help Ocala, home networking Ocala, small business IT Ocala, computer repair Ocala, local tech services Ocala",
       }}
       h1="Services in Ocala"
-      services={ocala.services}
+      services={service.services}
       city="ocala"
     />
   );
