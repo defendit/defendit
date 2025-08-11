@@ -13,44 +13,13 @@ party without express written consent.
 */
 
 // app/privacy/page.tsx
-import type { Metadata } from "next";
+
 import { LegalPage } from "@/components";
 import companyInfo from "../../../data/company-info.json";
 
 const { contact } = companyInfo;
 const { email, privacy_email, address } = contact;
 const { street, city, state, zip } = address || {};
-
-export const metadata: Metadata = {
-  title: "Privacy Policy | Defend I.T. Solutions",
-  description:
-    "Learn how Defend I.T. Solutions protects your privacy. We do not collect, track, or sell your personal data.",
-  robots: { index: false, follow: true },
-  alternates: { canonical: "https://www.wedefendit.com/privacy" },
-  openGraph: {
-    title: "Privacy Policy | Defend I.T.",
-    description:
-      "We believe in education without intrusion. View our full privacy policy.",
-    url: "https://www.wedefendit.com/privacy",
-    type: "article",
-    images: ["https://www.wedefendit.com/og-image.png"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Privacy Policy | Defend I.T.",
-    description:
-      "Defend I.T. does not track or sell your data. See how we protect your privacy.",
-    images: ["https://www.wedefendit.com/og-image.png"],
-  },
-  keywords: [
-    "Defend I.T. Solutions",
-    "privacy policy",
-    "data protection",
-    "cybersecurity",
-    "Ocala IT support",
-    "The Villages cybersecurity",
-  ],
-};
 
 export default function Privacy() {
   return (

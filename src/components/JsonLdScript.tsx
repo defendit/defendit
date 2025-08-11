@@ -12,20 +12,13 @@ licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
 
-export * from "./Nav";
-export * from "./Meta";
-export * from "./Icons";
-export * from "./Layout";
-export * from "./Footer";
-export * from "./Service";
-export * from "./LegalPage";
-export * from "./TrustStrip";
-export * from "./BookOnline";
-export * from "./BreadCrumbs";
-export * from "./CopyableCode";
-export * from "./ThemeToggler";
-export * from "./ElderlyScams";
-export * from "./JsonLdScript";
-export * from "./PageContainer";
-export * from "./SafetyTipsList";
-export * from "./RemoteServicesCTA";
+export function JsonLdScript({ jsonLd }: { jsonLd: object }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+export default JsonLdScript;

@@ -18,32 +18,23 @@ import {
   Meta,
   SafetyTipsList,
   ElderlyScamsList,
+  JsonLdScript,
 } from "@/components";
+import { generateFAQPageLd } from "@/lib/json-ld";
 
 export default function AwarenessPage() {
-  // Simple FAQPage JSON-LD (kept minimal; you can expand if you want SERP rich results)
-  const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Who is this guide for?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Retirees, seniors, caregivers, and community groups in Central Florida. It is written in plain English with practical steps.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you collect data on this page?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "No. There is no tracking on this page. It is education only.",
-        },
-      },
-    ],
-  };
+  const faqLd = generateFAQPageLd([
+    {
+      name: "Who is this guide for?",
+      acceptedAnswer:
+        "Retirees, seniors, caregivers, and community groups in Central Florida. It is written in plain English with practical steps.",
+    },
+    {
+      name: "Do you collect data on this page?",
+      acceptedAnswer:
+        "No. There is no tracking on this page. It is education only.",
+    },
+  ]);
 
   return (
     <>
@@ -54,10 +45,8 @@ export default function AwarenessPage() {
         image="https://www.wedefendit.com/og-image.png"
         keywords="cybersecurity for seniors, scam prevention, phishing, Ocala, The Villages, free training"
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-      />
+
+      <JsonLdScript jsonLd={faqLd} />
 
       <PageContainer>
         <div className="max-w-5xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-center sm:text-left bg-gray-50/10 dark:bg-slate-950/20 z-0 rounded-lg shadow-lg">

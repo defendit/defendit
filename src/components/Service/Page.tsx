@@ -18,6 +18,7 @@ import {
   BookOnline,
   PageContainer,
   RemoteServicesCTA,
+  BreadCrumbs,
 } from "@/components";
 import { ServiceCard } from "@/components/Service/Card";
 
@@ -58,42 +59,6 @@ export default function ServicePage(props: ServicesPageProps) {
       : "";
 
   // Build breadcrumb JSON-LD
-  const breadcrumbList = [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.wedefendit.com/",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Services",
-      item: "https://www.wedefendit.com/services",
-    },
-  ];
-
-  if (city && !isRemote) {
-    breadcrumbList.push({
-      "@type": "ListItem",
-      position: 3,
-      name: cityName,
-      item: `https://www.wedefendit.com/services/${city}`,
-    });
-  } else if (isRemote) {
-    breadcrumbList.push({
-      "@type": "ListItem",
-      position: 3,
-      name: "Remote",
-      item: "https://www.wedefendit.com/services/remote",
-    });
-  }
-
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: breadcrumbList,
-  };
 
   return (
     <>
@@ -105,48 +70,23 @@ export default function ServicePage(props: ServicesPageProps) {
         description={meta.description}
       />
 
-      {/* JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
-
       <PageContainer>
         <div className="max-w-7xl mx-auto px-4 py-10 space-y-10 bg-gray-50/10 dark:bg-slate-950/20 z-0 shadow-md">
-          {/* Breadcrumbs */}
-          <nav
-            aria-label="Breadcrumb"
-            className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto whitespace-nowrap"
-          >
-            <ol className="flex items-center gap-1 sm:gap-2">
-              <li>
-                <Link href="/" className="hover:underline">
-                  Home
-                </Link>
-              </li>
-              <li aria-hidden="true" className="px-1 sm:px-2">
-                ›
-              </li>
-              <li>
-                <Link href="/services" className="hover:underline">
-                  Services
-                </Link>
-              </li>
-              {city && (
-                <>
-                  <li aria-hidden="true" className="px-1 sm:px-2">
-                    ›
-                  </li>
-                  <li className="text-gray-400 dark:text-gray-500 truncate">
-                    <span aria-current="page">
-                      {isRemote ? "Remote" : cityName}
-                    </span>
-                  </li>
-                </>
-              )}
-            </ol>
-          </nav>
-
+          <BreadCrumbs
+            includeJsonLd={true}
+            items={[
+              { name: "Home", href: "/" },
+              { name: "Services", href: "/services" },
+              ...(city
+                ? [
+                    {
+                      name: isRemote ? "Remote" : cityName,
+                      href: `/services/${city}`,
+                    },
+                  ]
+                : []),
+            ]}
+          />
           {/* Header */}
           <header className="text-center">
             <h1 className="text-4xl font-bold">{h1}</h1>

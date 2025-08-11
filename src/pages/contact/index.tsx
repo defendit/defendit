@@ -12,18 +12,23 @@ licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import companyInfo from "../../../data/company-info.json";
-import { BookOnline, PageContainer, Meta, CopyableCode } from "@/components";
+import {
+  Meta,
+  BookOnline,
+  BreadCrumbs,
+  CopyableCode,
+  PageContainer,
+} from "@/components";
 import {
   Mail,
   Phone,
-  ShieldCheck,
   MapPin,
+  ChevronUp,
   Fingerprint,
   ChevronDown,
-  ChevronUp,
+  ShieldCheck,
 } from "lucide-react";
 
 const { contact, name } = companyInfo;
@@ -196,26 +201,6 @@ function ServiceAreaAndBooking() {
 export default function ContactPage() {
   const [showPGP, setShowPGP] = useState(false);
 
-  // BreadcrumbList JSON-LD
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.wedefendit.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Contact",
-        item: "https://www.wedefendit.com/contact",
-      },
-    ],
-  };
-
   // Auto-open PGP when ?secure=1 or #pgp is present
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -240,34 +225,12 @@ export default function ContactPage() {
         keywords="Contact Defend I.T. Solutions, Ocala IT support, The Villages cybersecurity, secure communication, PGP email, local tech support"
       />
 
-      {/* JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
-
       <PageContainer>
         <div className="max-w-4xl mx-auto px-4 py-10 space-y-12 bg-gray-50/10 dark:bg-slate-950/20 z-0 shadow-md">
-          {/* Breadcrumbs */}
-          <nav
-            aria-label="Breadcrumb"
-            className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto whitespace-nowrap"
-          >
-            <ol className="flex items-center gap-1 sm:gap-2">
-              <li>
-                <Link href="/" className="hover:underline">
-                  Home
-                </Link>
-              </li>
-              <li aria-hidden="true" className="px-1 sm:px-2">
-                ›
-              </li>
-              <li className="text-gray-400 dark:text-gray-500 truncate">
-                <span aria-current="page">Contact</span>
-              </li>
-            </ol>
-          </nav>
-
+          <BreadCrumbs
+            includeJsonLd={true}
+            items={[{ name: "Home", href: "/" }, { name: "Contact" }]}
+          />
           <HeadingSection />
           <ContactGrid />
           <PgpBlock showPGP={showPGP} setShowPGP={setShowPGP} />

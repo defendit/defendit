@@ -12,9 +12,15 @@ licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
 
-import { PageContainer, Meta, BookOnline } from "@/components";
-import { Lightbulb } from "lucide-react";
+import {
+  generateServiceLd,
+  generateBreadCrumbJsonLd,
+  generateRelatedServiceLd,
+} from "@/lib/json-ld";
 import Link from "next/link";
+import { Lightbulb } from "lucide-react";
+import JsonLdScript from "../JsonLdScript";
+import { PageContainer, Meta, BookOnline, BreadCrumbs } from "@/components";
 
 /** Map hard-coded city folders to labels and paths */
 const CITY_MAP = {
@@ -58,55 +64,37 @@ export default function ServiceSlug({
   const [first, ...rest] = service.sections;
   isRemote = isRemote || citySlug === "remote" || false;
 
-  /** JSON-LD */
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    ...(city ? [{ name: city.name, href: `/services/${city.slug}` }] : []),
+    { name: service.title },
+  ];
+
+  const breadcrumbLd = generateBreadCrumbJsonLd({
+    items: crumbs,
+    baseUrl: "https://www.wedefendit.com",
+  });
+
+  const serviceLd = generateServiceLd({
+    name: service.title,
+    image: service.image,
+    keywords: service.keywords,
+    city: city ? city.name : "",
+    description: service.description,
+    url: `https://www.wedefendit.com${service.url}`,
+    provider: { "@type": "Organization", name: "Defend I.T. Solutions" },
+    offers: [
       {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.wedefendit.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: "https://www.wedefendit.com/services",
-      },
-      ...(city
-        ? [
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: city.name,
-              item: `https://www.wedefendit.com/services/${city.slug}`,
-            },
-          ]
-        : []),
-      {
-        "@type": "ListItem",
-        position: city ? 4 : 3,
-        name: service.title,
-        item: `https://www.wedefendit.com${service.url}`,
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.title,
+          description: service.description,
+        },
       },
     ],
-  };
-
-  const serviceLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: service.title,
-    description: service.description,
-    image: service.image,
-    url: `https://www.wedefendit.com${service.url}`,
-    areaServed: city
-      ? [`${city.name} FL`, "Central Florida"]
-      : ["Central Florida"],
-    provider: { "@type": "LocalBusiness", name: "Defend I.T. Solutions" },
-    offers: { "@type": "Offer", availability: "https://schema.org/InStock" },
-  };
+  });
 
   /** Determine which sections to render after the Did You Know block */
   const hasDYK =
@@ -118,68 +106,19 @@ export default function ServiceSlug({
     <>
       <Meta
         title={service.title}
+        image={service.image}
         description={service.description}
         url={`https://www.wedefendit.com${service.url}`}
-        image={service.image}
         keywords={service.keywords.join(", ")}
       />
-
       {/* JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
-      />
+      <JsonLdScript jsonLd={breadcrumbLd as object} />
+      <JsonLdScript jsonLd={serviceLd as object} />
 
       <PageContainer>
         {/* mobile-left by default; larger screens keep same look */}
         <div className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left rounded-lg shadow-lg bg-gray-50/10 dark:bg-slate-950/20 z-0">
-          {/* Breadcrumbs */}
-          <nav
-            aria-label="Breadcrumb"
-            className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto whitespace-normal sm:whitespace-nowrap max-w-full"
-            style={{ WebkitOverflowScrolling: "touch" }}
-          >
-            <ol className="flex items-center gap-1 sm:gap-2 min-w-0">
-              <li className="truncate max-w-[5rem]">
-                <Link href="/" className="hover:underline">
-                  Home
-                </Link>
-              </li>
-              <li aria-hidden="true" className="px-1 sm:px-2">
-                ›
-              </li>
-              <li className="truncate max-w-[7rem]">
-                <Link href="/services" className="hover:underline">
-                  Services
-                </Link>
-              </li>
-              {city && (
-                <>
-                  <li aria-hidden="true" className="px-1 sm:px-2">
-                    ›
-                  </li>
-                  <li className="truncate max-w-[8rem]">
-                    <Link
-                      href={`/services/${city.slug}`}
-                      className="hover:underline"
-                    >
-                      {city.name}
-                    </Link>
-                  </li>
-                </>
-              )}
-              <li aria-hidden="true" className="px-1 sm:px-2">
-                ›
-              </li>
-              <li className="text-gray-400 dark:text-gray-500 truncate max-w-[10rem]">
-                {service.title}
-              </li>
-            </ol>
-          </nav>
+          <BreadCrumbs items={crumbs} baseUrl="https://www.wedefendit.com" />
 
           {/* Title + headline + city line */}
           <div className="space-y-1">
@@ -314,26 +253,12 @@ function FooterLinks({ city, isRemote, related }: FooterLinksProps) {
   // JSON-LD for related links as an ItemList
   const itemListLd =
     related && related.length > 0
-      ? {
-          "@context": "https://schema.org",
-          "@type": "ItemList",
-          itemListElement: related.map((r, i) => ({
-            "@type": "ListItem",
-            position: i + 1,
-            name: r.label,
-            url: `https://www.wedefendit.com/services/${city.slug}/${r.slug}`,
-          })),
-        }
+      ? generateRelatedServiceLd(related, city)
       : null;
 
   return (
     <>
-      {itemListLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
-        />
-      )}
+      {itemListLd && <JsonLdScript jsonLd={itemListLd as object} />}
 
       {/* All services button: full-width on mobile, auto on larger screens */}
       <div className="flex flex-wrap items-stretch sm:items-center justify-start sm:justify-center gap-3 text-sm">

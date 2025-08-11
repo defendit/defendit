@@ -12,9 +12,8 @@ licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
 
-import Link from "next/link";
 import type { ComponentType, SVGProps } from "react";
-import { PageContainer, Meta, BookOnline } from "@/components";
+import { PageContainer, Meta, BookOnline, BreadCrumbs } from "@/components";
 import { ShieldCheck, MapPin, MessageCircle } from "lucide-react";
 
 const valueData = [
@@ -92,25 +91,10 @@ export default function About() {
 
       <PageContainer>
         <div className="max-w-3xl mx-auto p-4 space-y-10 rounded shadow-lg bg-gray-50/10 dark:bg-slate-950/20 z-0">
-          {/* Breadcrumbs */}
-          <nav
-            aria-label="Breadcrumb"
-            className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto whitespace-nowrap"
-          >
-            <ol className="flex items-center gap-1 sm:gap-2">
-              <li>
-                <Link href="/" className="hover:underline">
-                  Home
-                </Link>
-              </li>
-              <li aria-hidden="true" className="px-1 sm:px-2">
-                ›
-              </li>
-              <li className="text-gray-400 dark:text-gray-500 truncate">
-                <span aria-current="page">About</span>
-              </li>
-            </ol>
-          </nav>
+          <BreadCrumbs
+            includeJsonLd={true}
+            items={[{ name: "Home", href: "/" }, { name: "About" }]}
+          />
 
           <header className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold">About Us</h1>

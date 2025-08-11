@@ -172,10 +172,6 @@ export function Navbar() {
   const { pathname } = useRouter();
   const { location } = useLocation(); // Initialize location detection
 
-  useEffect(() => {
-    console.log("User location from local storage:", location);
-    console.log("");
-  }, [location]);
   return (
     <nav className="py-1 px-5 w-screen flex flex-wrap md:flex-row md:sticky-top justify-between items-center md:border-b md:border-gray-300 md:dark:border-gray-800 md:p-4">
       <Link
