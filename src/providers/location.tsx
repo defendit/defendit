@@ -154,13 +154,13 @@ export function LocationPicker({
   };
 
   return (
-    <div className="w-full max-w-sm">
+    <div className="w-full max-w-[75%] sm:w-[75%] sm:max-w-[300px] md:max-w-sm mx-auto">
       <label className="block text-sm font-medium mb-1" htmlFor="city-select">
         {label}
       </label>
       <select
         id="city-select"
-        className="w-full rounded-2xl border p-2 shadow-sm"
+        className="w-full rounded-2xl border border-black dark:border-gray-100 p-2 shadow-sm text-black dark:text-sky-400 dark:active:sky-400 dark:focus:ring-2 dark:ring-offset-2 dark:ring-offset-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-sky-400 transition-colors"
         value={pending}
         onChange={onChange}
         aria-label={label}

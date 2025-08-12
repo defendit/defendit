@@ -258,9 +258,7 @@ function FooterLinks({ city, isRemote, related }: FooterLinksProps) {
 
   return (
     <>
-      {itemListLd && <JsonLdScript jsonLd={itemListLd as object} />}
-
-      {/* All services button: full-width on mobile, auto on larger screens */}
+      {itemListLd && <JsonLdScript jsonLd={itemListLd as object} />}{" "}
       <div className="flex flex-wrap items-stretch sm:items-center justify-start sm:justify-center gap-3 text-sm">
         <Link
           href={`/services/${city.slug}`}
@@ -269,7 +267,6 @@ function FooterLinks({ city, isRemote, related }: FooterLinksProps) {
           {allServicesLabel}
         </Link>
       </div>
-
       {related && related.length > 0 && (
         <nav
           aria-label="Related services"

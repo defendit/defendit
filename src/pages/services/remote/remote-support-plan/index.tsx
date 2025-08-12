@@ -12,7 +12,7 @@ licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
 
-import { PageContainer, Meta } from "@/components";
+import { PageContainer, Meta, BreadCrumbs, JsonLdScript } from "@/components";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -66,32 +66,6 @@ export default function RemoteSupportPlanPage() {
     })),
   };
 
-  // home > services > remote-support-plan
-  const breadcrumbLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://www.wedefendit.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: "https://www.wedefendit.com/services",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Remote Support Plan",
-        item: "https://www.wedefendit.com/services/remote-support-plan",
-      },
-    ],
-  };
-
   return (
     <>
       <Meta
@@ -101,52 +75,24 @@ export default function RemoteSupportPlanPage() {
         image="https://www.wedefendit.com/og-image.png"
         keywords="Remote support, secure remote access, local IT support, DISConnect, DISNet, DISecureLink, Defend I.T. Solutions"
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
 
+      <JsonLdScript jsonLd={serviceLd} />
+      <JsonLdScript jsonLd={faqLd} />
       <PageContainer>
         {/* Left by default on mobile; larger screens inherit your existing look */}
         <main className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left bg-gray-50/10 dark:bg-slate-950/20 rounded-lg shadow-lg">
-          {/* Breadcrumbs */}
-          {/* home > services > remote-support-plan */}
-          <nav
-            aria-label="Breadcrumb"
-            className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto whitespace-normal sm:whitespace-nowrap max-w-full"
-            style={{ WebkitOverflowScrolling: "touch" }}
-          >
-            <ol className="flex items-center gap-1 sm:gap-2 min-w-0">
-              <li className="truncate max-w-[5rem]">
-                <Link href="/" className="hover:underline">
-                  Home
-                </Link>
-              </li>
-              <li aria-hidden="true" className="px-1 sm:px-2">
-                ›
-              </li>
-              <li className="truncate max-w-[7rem]">
-                <Link href="/services" className="hover:underline">
-                  Services
-                </Link>
-              </li>
-              <li aria-hidden="true" className="px-1 sm:px-2">
-                ›
-              </li>
-              <li className="text-gray-400 dark:text-gray-500 truncate max-w-[12rem]">
-                <span aria-current="page">Remote Support Plan</span>
-              </li>
-            </ol>
-          </nav>
-
+          <BreadCrumbs
+            items={[
+              { name: "Home", href: "/" },
+              { name: "Services", href: "/services" },
+              { name: "Remote", href: "/services/remote" },
+              {
+                name: "Remote Support Plan",
+                href: "/services/remote/remote-support-plan",
+              },
+            ]}
+            includeJsonLd={true}
+          />
           {/* Title */}
           <div className="space-y-1">
             <h1 className="text-3xl sm:text-5xl font-bold leading-tight">

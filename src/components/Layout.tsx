@@ -12,10 +12,10 @@ licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
 
-import { Navbar } from "./Nav";
 import Link from "next/link";
-import { Footer } from "./Footer";
+import { Navbar } from "./Nav";
 import { Logo } from "./Icons";
+import { Footer } from "./Footer";
 import React, { ReactNode } from "react";
 import { ThemeToggle } from "./ThemeToggler";
 
@@ -29,7 +29,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       id="main-scroll-container"
       className="relative w-full min-h-screen flex flex-col z-10 justify-between items-center"
     >
-      <header className="w-full">
+      <header className="w-full md:sticky md:top-0 dark:bg-gray-900/40  backdrop-blur-md bg-gray-50/40 z-10">
         <Navbar />
       </header>
       <ThemeToggle />
