@@ -71,7 +71,8 @@ function RenderNavItems({
     const isActive =
       target === "/"
         ? current === target
-        : current.startsWith("/services") && target.startsWith("/services");
+        : (current.startsWith("/services") && target.startsWith("/services")) ||
+          current === target;
 
     return (
       <li key={`${name}-${target}`}>
