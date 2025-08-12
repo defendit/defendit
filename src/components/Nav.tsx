@@ -67,11 +67,11 @@ function RenderNavItems({
     const textColor = isMobile
       ? "text-gray-300"
       : "text-gray-800 dark:text-gray-200";
-    // active if exact match, or if current is a child of target
+    // active if exact match, or if current is a child of /services
     const isActive =
       target === "/"
-        ? current === "/"
-        : current === target || current.startsWith(`${target}/`);
+        ? current === target
+        : current.startsWith("/services") && target.startsWith("/services");
 
     return (
       <li key={`${name}-${target}`}>

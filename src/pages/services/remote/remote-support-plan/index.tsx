@@ -394,9 +394,13 @@ export default function RemoteSupportPlanPage() {
               {faq.map(({ q, a }) => (
                 <details
                   key={q}
-                  className="rounded border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-slate-900/40 p-3"
+                  className="rounded border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-slate-900/40 p-3 text-black dark:text-gray-200"
                 >
-                  <summary className="cursor-pointer font-medium">{q}</summary>
+                  <summary className="cursor-pointer font-medium w-full">
+                    <span className=" text-blue-500 dark:text-sky-400">
+                      {q}
+                    </span>
+                  </summary>
                   <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
                     {a}
                   </p>

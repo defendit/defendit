@@ -15,9 +15,37 @@ party without express written consent.
 import jsonData from "@/data/services/lander.json";
 import { Service, ServicePage } from "@/components/Service";
 import { useLocationRedirect } from "@/hooks/useLocationRedirect";
-
+import { generateBreadCrumbJsonLd, generateServiceLd } from "@/lib/json-ld";
 export default function ServicesPage() {
   useLocationRedirect(true); // auto-redirects if match found
+
+  const canonical = "https://www.wedefendit.com/services";
+  const services = jsonData.services as Service[]; // expects { name, slug, description? }
+
+  const breadcrumbLd = generateBreadCrumbJsonLd({
+    items: [
+      { name: "Home", href: "https://www.wedefendit.com/" },
+      { name: "Services", href: canonical },
+    ],
+    baseUrl: "https://www.wedefendit.com",
+  });
+
+  const serviceLd = generateServiceLd({
+    name: "Cybersecurity & Tech Support Services",
+    description:
+      "Explore in-person I.T. support, secure home networking, and business cybersecurity services for The Villages, Ocala, and Central Florida.",
+    url: canonical,
+    image: "https://www.wedefendit.com/og-image.png",
+    offers: services.map((s) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: s.title,
+        description: s.summary || "",
+      },
+      availability: "https://schema.org/InStock",
+    })),
+  });
 
   return (
     <ServicePage
@@ -26,12 +54,14 @@ export default function ServicesPage() {
         description:
           "Explore in-person I.T. support, secure home networking, and business cybersecurity services for The Villages, Ocala, and Central Florida.",
         image: "https://www.wedefendit.com/og-image.png",
-        url: "https://www.wedefendit.com/services",
+        url: canonical,
+        canonical,
         keywords:
           "IT support, cybersecurity, tech help, The Villages, Ocala, home networking, small business IT, computer repair, local tech services",
+        structuredData: { "@graph": [breadcrumbLd, serviceLd] },
       }}
       h1="Our Services"
-      services={jsonData.services as Service[]}
+      services={services}
       city=""
     />
   );

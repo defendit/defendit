@@ -23,10 +23,9 @@ interface SafetyTip {
   title: string;
   description: string;
 }
-
 export const SafetyTipsList: React.FC = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto py-12 px-6 sm:px-10 -mt-10">
+    <>
       <header className="text-center mb-12">
         <h1 className="text-4xl font-extrabold text-slate-800 dark:text-slate-200">
           Ways to Stay Safe Online
@@ -61,6 +60,6 @@ export const SafetyTipsList: React.FC = () => {
           );
         })}
       </div>
-    </section>
+    </>
   );
 };

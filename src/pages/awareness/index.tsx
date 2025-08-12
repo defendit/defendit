@@ -18,11 +18,37 @@ import {
   Meta,
   SafetyTipsList,
   ElderlyScamsList,
-  JsonLdScript,
 } from "@/components";
-import { generateFAQPageLd } from "@/lib/json-ld";
-
+import { generateFAQPageLd, localBusinessLd } from "@/lib/json-ld";
 export default function AwarenessPage() {
+  const canonical = "https://www.wedefendit.com/awareness";
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.wedefendit.com/",
+      },
+      { "@type": "ListItem", position: 2, name: "Awareness", item: canonical },
+    ],
+  };
+
+  const awarenessPageLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Cybersecurity Awareness for Seniors | Defend I.T. Solutions",
+    url: canonical,
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: "https://www.wedefendit.com/og-image.png",
+    },
+    about: localBusinessLd, // from your json-ld.ts shared definition
+  };
+
   const faqLd = generateFAQPageLd([
     {
       name: "Who is this guide for?",
@@ -41,12 +67,14 @@ export default function AwarenessPage() {
       <Meta
         title="Cybersecurity Awareness for Seniors | Defend I.T. Solutions"
         description="Practical safety tips and scam prevention guidance for retirees and seniors in Ocala, The Villages, and nearby communities."
-        url="https://www.wedefendit.com/awareness"
+        url={canonical}
         image="https://www.wedefendit.com/og-image.png"
+        canonical={canonical}
         keywords="cybersecurity for seniors, scam prevention, phishing, Ocala, The Villages, free training"
+        structuredData={{
+          "@graph": [breadcrumbLd, awarenessPageLd, faqLd],
+        }}
       />
-
-      <JsonLdScript jsonLd={faqLd} />
 
       <PageContainer>
         <div className="max-w-5xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-center sm:text-left bg-gray-50/10 dark:bg-slate-950/20 z-0 rounded-lg shadow-lg">
@@ -94,7 +122,7 @@ export default function AwarenessPage() {
 
           {/* Scam Education */}
           <section
-            className=" dark:border-gray-700/60"
+            className="pt-6 sm:pt-8 first:pt-0 border-t border-gray-200/60 dark:border-gray-700/60 first:border-t-0 text-center"
             aria-labelledby="top-scams"
           >
             <ElderlyScamsList />
@@ -102,7 +130,7 @@ export default function AwarenessPage() {
 
           {/* CTA */}
           <section
-            className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60 text-center"
+            className="pt-6 sm:pt-8 first:pt-0 border-t border-gray-200/60 dark:border-gray-700/60 first:border-t-0 text-center"
             aria-labelledby="cta"
           >
             <h2 id="cta" className="sr-only">

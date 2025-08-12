@@ -23,8 +23,9 @@ import {
   LucideIcon,
 } from "lucide-react";
 import { getNormalizedCityName, Meta, PageContainer } from "@/components";
+import { localBusinessLd } from "@/lib/json-ld";
 
-const { name, tagline, contact, description, services_cta } = companyInfo;
+const { name, tagline, description, services_cta } = companyInfo;
 
 function CallToActionButtons({ location }: { location: string | null }) {
   // shared styles
@@ -78,7 +79,7 @@ function ServiceLink({ href, text, Icon }: ServiceLinkProps) {
     <Link
       href={href}
       className="
-        group flex flex-col items-center text-center
+        group flex flex-col items-center text-center max-w-[140px] sm:max-w-[200px] w-full
         focus:outline-none focus-visible:ring-2
         focus-visible:ring-blue-400/60 dark:focus-visible:ring-sky-400/60
       "
@@ -147,30 +148,7 @@ export default function Home() {
         url="https://www.wedefendit.com/"
         canonical="https://www.wedefendit.com/"
         keywords="cybersecurity, IT support, Ocala, The Villages, Belleview, small business IT, home tech support, network security, computer repair, tech services, elderly scams, online safety"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          name: "Defend I.T. Solutions",
-          image: "https://www.wedefendit.com/og-image.png",
-          "@id": "https://www.wedefendit.com/",
-          url: "https://www.wedefendit.com/",
-          telephone: contact.phone,
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: contact.address.street,
-            addressLocality: contact.address.city,
-            addressRegion: contact.address.state,
-            postalCode: contact.address.zip,
-            addressCountry: "US",
-          },
-          areaServed: [
-            "Ocala",
-            "Belleview",
-            "The Villages",
-            "Central Florida",
-            "Remote",
-          ],
-        }}
+        structuredData={localBusinessLd}
       />
 
       <PageContainer>
@@ -180,7 +158,7 @@ export default function Home() {
             <h1 className="text-3xl sm:text-4xl py-2 md:text-5xl font-bold">
               {name}
             </h1>
-            <h2 className="text-lg md:text-xl px-2 text-blue-500 dark:text-sky-400 font-semibold">
+            <h2 className="text-lg md:text-xl px-3 text-blue-500 dark:text-sky-400 font-semibold">
               {tagline}
             </h2>
           </header>
@@ -226,12 +204,12 @@ export default function Home() {
 
         {/* CTA */}
         <section
-          className="relative flex flex-col items-center justify-center w-full space-y-8 mt-16"
+          className="relative flex flex-col items-center justify-center w-full space-y-8 mt-4 border-t border-gray-200 dark:border-gray-700 pt-8 pb-6"
           aria-labelledby="cta-heading"
         >
           <h2
             id="cta-heading"
-            className="text-2xl md:text-3xl font-bold text-center mb-4"
+            className="text-2xl md:text-3xl font-bold text-center my-4"
           >
             {services_cta.headline}
           </h2>

@@ -11,8 +11,8 @@ This software is provided for use only by authorized employees, contractors, or
 licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
-
 import { useEffect, useState } from "react";
+import { localBusinessLd } from "@/lib/json-ld";
 import companyInfo from "../../../data/company-info.json";
 import {
   Meta,
@@ -197,6 +197,58 @@ function ServiceAreaAndBooking() {
 }
 
 /* ------- page ------- */
+const canonical = "https://www.wedefendit.com/contact";
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.wedefendit.com/",
+    },
+    { "@type": "ListItem", position: 2, name: "Contact", item: canonical },
+  ],
+};
+const contactPageLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact Defend I.T. Solutions",
+  url: canonical,
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://www.wedefendit.com/og-image.png",
+  },
+  about: {
+    ...localBusinessLd, // reuse the same LocalBusiness definition
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: contact.phone,
+      contactType: "Customer Service",
+      areaServed: "US",
+      availableLanguage: "English",
+      email: contact.email,
+      serviceUrl: "https://www.wedefendit.com/services",
+      url: canonical,
+      hoursAvailable: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "18:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: "Saturday",
+          opens: "10:00",
+          closes: "16:00",
+        },
+      ],
+    },
+  },
+};
 
 export default function ContactPage() {
   const [showPGP, setShowPGP] = useState(false);
@@ -218,11 +270,13 @@ export default function ContactPage() {
   return (
     <>
       <Meta
+        url={canonical}
+        canonical={canonical}
+        image="https://www.wedefendit.com/og-image.png"
         title="Contact Defend I.T. Solutions | Ocala & The Villages Cybersecurity"
         description="Reach out to Defend I.T. Solutions for trusted, local cybersecurity and IT support in Ocala, The Villages, and Central Florida. Secure communication options available."
-        url="https://www.wedefendit.com/contact"
-        image="https://www.wedefendit.com/og-image.png"
         keywords="Contact Defend I.T. Solutions, Ocala IT support, The Villages cybersecurity, secure communication, PGP email, local tech support"
+        structuredData={{ "@graph": [breadcrumbLd, contactPageLd] }}
       />
 
       <PageContainer>

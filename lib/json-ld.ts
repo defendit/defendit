@@ -12,6 +12,46 @@ licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
 
+import companyInfo from "@/data/company-info.json";
+
+const { name, contact } = companyInfo;
+const { phone, email, address } = contact;
+const { street, city, state, zip } = address;
+
+export const localBusinessLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.wedefendit.com/#organization",
+  name,
+  image: "https://www.wedefendit.com/og-image.png",
+  logo: "https://www.wedefendit.com/logo.svg",
+  url: "https://www.wedefendit.com/",
+  telephone: phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: street,
+    addressLocality: city,
+    addressRegion: state,
+    postalCode: zip,
+    addressCountry: "US",
+  },
+  areaServed: [
+    "Ocala",
+    "Belleview",
+    "The Villages",
+    "Central Florida",
+    "Remote",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "Customer Service",
+    telephone: phone,
+    email: email,
+    areaServed: "US",
+    availableLanguage: "English",
+  },
+};
+
 export type Crumb = {
   name: string;
   href?: string; // omit for the current page

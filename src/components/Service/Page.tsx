@@ -23,28 +23,31 @@ import {
 import { ServiceCard } from "@/components/Service/Card";
 
 export type Service = {
-  id: string;
+  id: string; // used as slug if present
   title: string;
   headline: string;
   icons: string[];
   summary: string;
   cta: string;
-};
-
-type MetaProps = {
-  url: string;
-  image: string;
-  title: string;
-  keywords: string;
-  description: string;
+  slug?: string; // optional: preferred slug if you have it
 };
 
 export type ServicesPageProps = {
   h1: string;
   city: string; // "", "ocala", "the-villages", "belleview", "remote"
-  meta: MetaProps;
+  //eslint-disable-next-line @typescript-eslint/no-explicit-any
+  meta: any;
   services: Service[];
 };
+
+function toSlug(s: string) {
+  return s
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
 export default function ServicePage(props: ServicesPageProps) {
   const { meta, h1, services, city } = props;
@@ -58,22 +61,89 @@ export default function ServicePage(props: ServicesPageProps) {
       ? city.charAt(0).toUpperCase() + city.slice(1)
       : "";
 
-  // Build breadcrumb JSON-LD
+  // Canonical for this page
+  const canonical = city
+    ? `https://www.wedefendit.com/services/${city}`
+    : `https://www.wedefendit.com/services`;
+
+  // ── JSON-LD ────────────────────────────────────────────────────────────────
+  // Breadcrumbs
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.wedefendit.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://www.wedefendit.com/services",
+      },
+      ...(city
+        ? [
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: isRemote ? "Remote" : cityName,
+              item: canonical,
+            },
+          ]
+        : []),
+    ],
+  };
+
+  // Collection of Service items for this city (or base services if no city)
+  const servicesCollectionLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: city
+      ? `${cityName} Services | Defend I.T. Solutions`
+      : "Services | Defend I.T. Solutions",
+    url: canonical,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: services.map((s, i) => {
+        const slug = s.slug || s.id || toSlug(s.title);
+        const url = city
+          ? `https://www.wedefendit.com/services/${city}/${slug}`
+          : `https://www.wedefendit.com/services/${slug}`;
+        return {
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "Service",
+            name: s.title,
+            description: s.summary || undefined,
+            url,
+            areaServed: cityName || "Central Florida",
+            provider: { "@id": "https://www.wedefendit.com/#organization" },
+          },
+        };
+      }),
+    },
+  };
+
+  // Merge into Meta props without touching your existing fields
+  const metaWithStructured = {
+    ...meta,
+    url: canonical,
+    canonical,
+    structuredData: { "@graph": [breadcrumbLd, servicesCollectionLd] },
+  };
 
   return (
     <>
-      <Meta
-        url={meta.url}
-        image={meta.image}
-        title={meta.title}
-        keywords={meta.keywords}
-        description={meta.description}
-      />
+      <Meta {...metaWithStructured} />
 
       <PageContainer>
         <div className="max-w-7xl mx-auto px-4 py-10 space-y-10 bg-gray-50/10 dark:bg-slate-950/20 z-0 shadow-md">
           <BreadCrumbs
-            includeJsonLd={true}
+            includeJsonLd={false}
             items={[
               { name: "Home", href: "/" },
               { name: "Services", href: "/services" },
@@ -95,7 +165,7 @@ export default function ServicePage(props: ServicesPageProps) {
                 "Remote cybersecurity and I.T. support for homeowners, retirees, and small businesses in Central Florida."
               ) : (
                 <>
-                  Learn more about our local, in person cybersecurity and I.T.
+                  Learn more about our local, in-person cybersecurity and I.T.
                   support
                   {cityName.trim() !== "" ? ` for ${cityName}, FL.` : "."}
                 </>

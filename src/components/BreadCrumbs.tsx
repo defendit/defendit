@@ -54,13 +54,13 @@ export function BreadCrumbs({
               <React.Fragment key={idx}>
                 <li
                   className={`truncate ${
-                    !isLast ? "max-w-[7rem]" : "max-w-[10rem]"
+                    !isLast ? "max-w-[7rem]" : "max-w-[4rem] sm:max-w-[12rem] "
                   }`}
                 >
                   {isLast || !c.href ? (
                     <span
                       aria-current="page"
-                      className="text-gray-400 dark:text-gray-500 truncate"
+                      className="text-gray-400 dark:text-gray-500"
                     >
                       {c.name}
                     </span>

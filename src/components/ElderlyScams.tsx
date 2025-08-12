@@ -43,13 +43,9 @@ function getLucideIcon(name: string) {
 export const ElderlyScamsList: React.FC<ElderlyScamsListProps> = ({
   showHeader = true,
   title = "Top Financial Scams Targeting Older Adults",
-  className = "",
 }) => {
   return (
-    <section
-      aria-labelledby="elderly-scams-heading"
-      className={`w-[95%] sm:w-[90%] mx-auto px-4 py-10 bg-gray-50/30 dark:bg-slate-900/50 rounded-md shadow-xl -mt-6 ${className}`}
-    >
+    <>
       {showHeader && (
         <header className="text-center mb-10">
           <h2
@@ -115,6 +111,6 @@ export const ElderlyScamsList: React.FC<ElderlyScamsListProps> = ({
           }
         )}
       </div>
-    </section>
+    </>
   );
 };

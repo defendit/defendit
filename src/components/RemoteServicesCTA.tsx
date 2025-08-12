@@ -16,18 +16,18 @@ import Link from "next/link";
 type RemoteServicesCTAProps = { isRemote?: boolean };
 export default function RemoteServicesCTA(props: RemoteServicesCTAProps) {
   return (
-    <div className="mt-8 text-left border-t border-gray-200 dark:border-gray-700  w-full h-auto flex flex-col items-start justify-center p-4">
+    <>
       {props?.isRemote && (
         <section className="mt-8 w-full h-auto flex flex-col items-start justify-center text-gray-200 rounded-md  ">
           <h3 className="text-gray-700 dark:text-gray-300 mb-4 text-left  text-base sm:text-2xl font-semibold">
             Need a Remote Service Plan?
           </h3>
-          <span className="w-full p-8 sm:p-12 bg-blue-600/60  dark:bg-sky-800/40 rounded-md flex flex-col items-center justify-center shadow-sm">
+          <span className="w-full p-2 sm:p-12 bg-blue-600/60  dark:bg-sky-800/40 rounded-md flex flex-col items-center justify-center shadow-sm">
             <p className="my-2 sm:my-4 text-gray-50 dark:text-gray-200 text-lg text-center font-bold">
               We offer flexible remote support plans tailored to your needs.
             </p>
             <Link
-              href="/services/remote-support-plan"
+              href="/services/remote/remote-support-plan"
               className="text-blue-500 hover:text-blue-600 dark:text-sky-700 dark:hover:text-sky-800 font-bold hover:bg-gray-100 bg-gray-200 dark:hover:bg-gray-300 px-6 py-4 rounded-md glow-hover mt-2 whitespace-nowrap text-sm sm:text-md"
             >
               Remote Support Plans →
@@ -46,7 +46,7 @@ export default function RemoteServicesCTA(props: RemoteServicesCTAProps) {
             : "Looking for Remote Service Options?"}
         </h3>
 
-        <span className="w-full p-4 sm:p-6 border border-black dark:border-gray-200 rounded-md  flex flex-col items-center justify-center shadow-sm">
+        <span className="w-full p-2 sm:p-6 border border-black dark:border-gray-200 rounded-md  flex flex-col items-center justify-center shadow-sm">
           <p className="my-2 sm:my-4 text-black dark:text-gray-200 text-lg text-center">
             {props?.isRemote
               ? "We offer a range of on-site services."
@@ -60,7 +60,7 @@ export default function RemoteServicesCTA(props: RemoteServicesCTAProps) {
           </Link>
         </span>
       </section>
-    </div>
+    </>
   );
 }
 

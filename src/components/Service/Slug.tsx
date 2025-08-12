@@ -101,20 +101,27 @@ export default function ServiceSlug({
     typeof first?.heading === "string" &&
     first.heading.toLowerCase().includes("did you know");
   const sections = hasDYK ? rest : service.sections;
-
+  const canonical = `https://www.wedefendit.com${service.url}`;
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [breadcrumbLd, serviceLd],
+  };
   return (
     <>
       <Meta
-        title={service.title}
-        image={service.image}
+        title={
+          city
+            ? `${service.title} in ${city.name} | Defend I.T. Solutions`
+            : `${service.title} | Defend I.T. Solutions`
+        }
         description={service.description}
-        url={`https://www.wedefendit.com${service.url}`}
+        image={service.image}
+        imageAlt={`${service.title} — Defend I.T. Solutions`}
+        url={canonical}
+        canonical={canonical}
         keywords={service.keywords.join(", ")}
+        structuredData={{ "@graph": graph }}
       />
-      {/* JSON-LD */}
-      <JsonLdScript jsonLd={breadcrumbLd as object} />
-      <JsonLdScript jsonLd={serviceLd as object} />
-
       <PageContainer>
         {/* mobile-left by default; larger screens keep same look */}
         <div className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left rounded-lg shadow-lg bg-gray-50/10 dark:bg-slate-950/20 z-0">
@@ -225,7 +232,7 @@ function RequiresPlanNotice() {
         This service is available exclusively to Remote Service Plan members.
       </span>
       <Link
-        href="/services/remote-support-plan"
+        href="/services/remote/remote-support-plan"
         className="inline-block mt-2 px-3 py-1.5 rounded border border-sky-300 dark:border-sky-700 bg-sky-50 dark:bg-sky-950 text-sky-700 dark:text-sky-300 font-medium hover:underline transition"
       >
         Learn more

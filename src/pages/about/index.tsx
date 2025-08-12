@@ -12,9 +12,10 @@ licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
 
+import { localBusinessLd } from "@/lib/json-ld";
 import type { ComponentType, SVGProps } from "react";
-import { PageContainer, Meta, BookOnline, BreadCrumbs } from "@/components";
 import { ShieldCheck, MapPin, MessageCircle } from "lucide-react";
+import { PageContainer, Meta, BookOnline, BreadCrumbs } from "@/components";
 
 const valueData = [
   {
@@ -64,7 +65,7 @@ function ValueItem({ title, description, Icon }: ValueItemProps) {
 
 function RenderValues() {
   return (
-    <ul className="space-y-6 pl-2">
+    <ul className="space-y-6 pl-2" role="list">
       {valueData.map((item) => (
         <li key={item.title}>
           <ValueItem
@@ -79,25 +80,57 @@ function RenderValues() {
 }
 
 export default function About() {
+  const canonical = "https://www.wedefendit.com/about";
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.wedefendit.com/",
+      },
+      { "@type": "ListItem", position: 2, name: "About", item: canonical },
+    ],
+  };
+
+  const aboutPageLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About Defend I.T. Solutions",
+    url: canonical,
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: "https://www.wedefendit.com/og-image.png",
+    },
+    about: localBusinessLd,
+  };
+
   return (
     <>
       <Meta
-        title="About Defend I.T. Solutions | Cybersecurity & Tech Support in the Villages, FL"
-        description="Learn more about Defend I.T. Solutions, a local, privacy-focused cybersecurity and IT support company serving The Villages, Ocala, and surrounding areas."
+        title="About Defend I.T. Solutions | Cybersecurity & Tech Support in The Villages & Ocala"
+        description="Learn about Defend I.T. Solutions. Local, privacy-focused cybersecurity and IT support for The Villages, Ocala, Belleview, and Central Florida."
         image="https://www.wedefendit.com/og-image.png"
-        url="https://www.wedefendit.com/about"
+        url={canonical}
+        canonical={canonical}
         keywords="About Defend I.T. Solutions, cybersecurity Ocala, IT support The Villages, local tech services, privacy-focused IT, on-site tech help, small business cybersecurity"
+        structuredData={{ "@graph": [breadcrumbLd, aboutPageLd] }}
       />
 
       <PageContainer>
-        <div className="max-w-3xl mx-auto p-4 space-y-10 rounded shadow-lg bg-gray-50/10 dark:bg-slate-950/20 z-0">
+        <div className="max-w-3xl mx-auto p-4 space-y-10 rounded bg-gray-50/10 dark:bg-slate-950/20 shadow-sm">
           <BreadCrumbs
-            includeJsonLd={true}
+            includeJsonLd={false} // JSON-LD is supplied via Meta to avoid duplicating
             items={[{ name: "Home", href: "/" }, { name: "About" }]}
           />
 
           <header className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold">About Us</h1>
+            <h1 className="text-4xl md:text-5xl font-bold">
+              About Defend I.T. Solutions
+            </h1>
           </header>
 
           <section aria-labelledby="who-we-are">
@@ -105,12 +138,14 @@ export default function About() {
               Who we are
             </h2>
             <p className="text-lg">
-              <strong>Defend I.T. Solutions</strong> is a locally owned
-              cybersecurity and tech support company based in Ocala, Florida. We
-              serve Ocala, Belleview, The Villages, and surrounding Central
-              Florida communities. Our mission is to bring expert, in person
-              I.T. support directly to your home or business. No call centers.
-              No vague tech talk.
+              <strong className=" text-blue-500 dark:text-sky-400">
+                Defend I.T. Solutions
+              </strong>{" "}
+              is a locally owned cybersecurity and tech support company based in
+              Ocala, Florida. We serve Ocala, Belleview, The Villages, and
+              surrounding Central Florida communities. Our mission is to bring
+              expert, in-person I.T. support directly to your home or business.
+              No call centers. No vague tech talk.
             </p>
 
             <p className="text-lg mt-6">
@@ -137,7 +172,7 @@ export default function About() {
               id="why-different"
               className="text-2xl md:text-3xl font-semibold mb-2"
             >
-              Why We&apos;re Different
+              Why We&pos;re Different
             </h2>
             <p className="text-lg mt-4">
               Whether it&apos;s securing your smart home, installing a safer
