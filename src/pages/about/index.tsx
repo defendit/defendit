@@ -172,7 +172,7 @@ export default function About() {
               id="why-different"
               className="text-2xl md:text-3xl font-semibold mb-2"
             >
-              Why We&pos;re Different
+              Why We&apos;re Different
             </h2>
             <p className="text-lg mt-4">
               Whether it&apos;s securing your smart home, installing a safer

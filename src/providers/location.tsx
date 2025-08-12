@@ -160,7 +160,7 @@ export function LocationPicker({
       </label>
       <select
         id="city-select"
-        className="w-full rounded-2xl border border-black dark:border-gray-100 p-2 shadow-sm text-black dark:text-sky-400 dark:active:sky-400 dark:focus:ring-2 dark:ring-offset-2 dark:ring-offset-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-sky-400 transition-colors"
+        className="w-full rounded-2xl border border-black dark:border-gray-100 p-2 shadow-sm text-blue-500 dark:text-sky-400 dark:active:sky-400 dark:focus:ring-2 dark:ring-offset-2 dark:ring-offset-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-sky-400 transition-colors font-semibold"
         value={pending}
         onChange={onChange}
         aria-label={label}
