@@ -12,18 +12,18 @@ licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
 party without express written consent.
 */
 
-import Link from "next/link";
-import companyInfo from "../../data/company-info.json";
-import { LocationPicker, useLocation } from "@/providers/location";
 import {
-  ShieldCheck,
   Network,
   Laptop2,
   UserCheck,
   LucideIcon,
+  ShieldCheck,
 } from "lucide-react";
-import { getNormalizedCityName, Meta, PageContainer } from "@/components";
+import Link from "next/link";
 import { localBusinessLd } from "@/lib/json-ld";
+import companyInfo from "../../data/company-info.json";
+import { LocationPicker, useLocation } from "@/providers/location";
+import { getNormalizedCityName, Meta, PageContainer } from "@/components";
 
 const { name, tagline, description, services_cta } = companyInfo;
 

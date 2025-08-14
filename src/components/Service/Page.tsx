@@ -21,6 +21,7 @@ import {
   BreadCrumbs,
 } from "@/components";
 import { ServiceCard } from "@/components/Service/Card";
+import { localBusinessLd } from "@/lib/json-ld";
 
 export type Service = {
   id: string; // used as slug if present
@@ -133,7 +134,9 @@ export default function ServicePage(props: ServicesPageProps) {
     ...meta,
     url: canonical,
     canonical,
-    structuredData: { "@graph": [breadcrumbLd, servicesCollectionLd] },
+    structuredData: {
+      "@graph": [breadcrumbLd, servicesCollectionLd, localBusinessLd],
+    },
   };
 
   return (

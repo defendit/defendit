@@ -16,6 +16,7 @@ import {
   generateServiceLd,
   generateBreadCrumbJsonLd,
   generateRelatedServiceLd,
+  localBusinessLd,
 } from "@/lib/json-ld";
 import Link from "next/link";
 import { Lightbulb } from "lucide-react";
@@ -104,7 +105,7 @@ export default function ServiceSlug({
   const canonical = `https://www.wedefendit.com${service.url}`;
   const graph = {
     "@context": "https://schema.org",
-    "@graph": [breadcrumbLd, serviceLd],
+    "@graph": [breadcrumbLd, localBusinessLd, serviceLd],
   };
   return (
     <>

@@ -180,7 +180,15 @@ export default function Privacy() {
       <h2 className="text-xl font-bold uppercase border-b my-4">
         Cookie Policy
       </h2>
-      <p>We do not use cookies. You may disable them in your browser.</p>
+      <p>
+        We do not set cookies for analytics, advertising, or user tracking. Our
+        hosting provider (Vercel) may set strictly necessary cookies, for
+        example, _vcrcs, to help route requests securely and maintain site
+        performance. These cookies do not store personal information beyond what
+        is required to operate the site and are automatically removed after a
+        short period. You can configure your browser to block cookies, but doing
+        so may affect site functionality.
+      </p>
 
       <h2 className="text-xl font-bold uppercase border-b my-4">
         Additional Clauses

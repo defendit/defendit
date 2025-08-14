@@ -13,6 +13,7 @@ party without express written consent.
 */
 
 import { PageContainer, Meta, BreadCrumbs, JsonLdScript } from "@/components";
+import { localBusinessLd } from "@/lib/json-ld";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -36,26 +37,6 @@ export default function RemoteSupportPlanPage() {
     },
   ];
 
-  const serviceLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Remote Support Service Plan",
-    serviceType: "IT Support",
-    provider: { "@type": "LocalBusiness", name: "Defend I.T. Solutions" },
-    areaServed: [
-      "Ocala FL",
-      "Belleview FL",
-      "The Villages FL",
-      "Central Florida",
-    ],
-    brand: { "@type": "Brand", name: "DISNet, DISecureLink, DIS Connect" },
-    offers: {
-      "@type": "Offer",
-      availability: "https://schema.org/InStock",
-      url: "https://www.wedefendit.com/remote-support-plan",
-    },
-  };
-
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -76,10 +57,10 @@ export default function RemoteSupportPlanPage() {
         keywords="Remote support, secure remote access, local IT support, DISConnect, DISNet, DISecureLink, Defend I.T. Solutions"
       />
 
-      <JsonLdScript jsonLd={serviceLd} />
+      <JsonLdScript jsonLd={localBusinessLd} />
       <JsonLdScript jsonLd={faqLd} />
       <PageContainer>
-        {/* Left by default on mobile; larger screens inherit your existing look */}
+        {/* Left by default on mobile; larger screens inherit existing look */}
         <main className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left bg-gray-50/10 dark:bg-slate-950/20 rounded-lg shadow-lg">
           <BreadCrumbs
             items={[
