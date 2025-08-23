@@ -78,6 +78,7 @@ function RenderNavItems({
       <li key={`${name}-${target}`}>
         <Link
           href={href}
+          title={`${name} - Defend I.T. Solutions`}
           className={
             isActive
               ? "text-blue-500 dark:text-sky-400 font-semibold text-glow underline underline-offset-4"
@@ -215,6 +216,7 @@ export function Navbar() {
     <nav className="py-1 px-5 w-full md:sticky md:top-0 md:z-50 flex flex-wrap md:flex-row md:sticky-top justify-between items-center md:border-b md:border-gray-300 md:dark:border-gray-800 md:p-4">
       <Link
         href={"/"}
+        title="Defend I.T. Solutions Home"
         className="hover:text-blue-600 dark:hover:text-blue-400 font-semibold text-glow"
       >
         {name}&trade;

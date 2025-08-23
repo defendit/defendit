@@ -104,7 +104,7 @@ export default function AwarenessPage() {
               Cybersecurity Awareness for Seniors
             </h1>
             <p className="text-base sm:text-lg w-full text-blue-600 dark:text-sky-400">
-              Simple, private guidance to help you stay safe online.
+              Simple, Private Guidance To Help You Stay Safe Online.{" "}
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               No tracking. No data collection. Just useful information from

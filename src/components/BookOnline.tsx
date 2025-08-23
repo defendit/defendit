@@ -28,7 +28,7 @@ export function BookOnline() {
       id="schedule-service"
       className=" text-left sm:text-center text-[15px] leading-6 text-gray-700 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 "
     >
-      <div className="max-w-xl mx-auto my-12 px-4 rounded-lg border border-gray-200 dark:border-gray-900 bg-gray-50/40 dark:bg-slate-950/50 p-4 sm:p-6 shadow-sm space-y-3 sm:space-y-4 mt-16 ">
+      <div className="max-w-xl mx-auto my-12 px-4 rounded-lg border border-gray-200 dark:border-gray-900 bg-gray-50/40 dark:bg-gray-900/40 p-4 sm:p-6 shadow-sm dark:shadow-gray-800 space-y-3 sm:space-y-4 mt-16 ">
         <header>
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
             Need to Schedule Service?
@@ -58,7 +58,7 @@ export function BookOnline() {
               aria-hidden="true"
             />
             <a
-              href={`tel:${tel}`}
+              href={`tel:${tel.replace(/[^0-9]/g, "")}`}
               className="text-blue-600 dark:text-sky-400 hover:underline break-words"
               aria-label={`Call ${displayPhone}`}
             >

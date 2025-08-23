@@ -33,8 +33,11 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Navbar />
       </header>
       <ThemeToggle />
-      <Link href="/">
-        <Logo className="w-64 h-64 md:w-96 md:h-96 mb-4 text-gray-800 dark:text-sky-400  glow transition-all duration-700 animate-fade-in -mt-4 z-20" />
+      <Link href="/" title="Defend I.T. Solutions Home">
+        <Logo
+          className="w-64 h-64 md:w-96 md:h-96 mb-4 text-gray-800 dark:text-sky-400  glow transition-all duration-700 animate-fade-in -mt-4 z-20"
+          xlinkTitle="Defend I.T. Solutions Home"
+        />
       </Link>
 
       <div

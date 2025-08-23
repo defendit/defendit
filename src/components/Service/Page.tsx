@@ -168,8 +168,8 @@ export default function ServicePage(props: ServicesPageProps) {
                 "Remote cybersecurity and I.T. support for homeowners, retirees, and small businesses in Central Florida."
               ) : (
                 <>
-                  Learn more about our local, in-person cybersecurity and I.T.
-                  support
+                  Learn More About Our Local, In-Person Cybersecurity and I.T.
+                  Support
                   {cityName.trim() !== "" ? ` for ${cityName}, FL.` : "."}
                 </>
               )}

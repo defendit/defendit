@@ -25,7 +25,7 @@ import companyInfo from "../../data/company-info.json";
 import { LocationPicker, useLocation } from "@/providers/location";
 import { getNormalizedCityName, Meta, PageContainer } from "@/components";
 
-const { name, tagline, description, services_cta } = companyInfo;
+const { services_cta } = companyInfo;
 
 function CallToActionButtons({ location }: { location: string | null }) {
   // shared styles
@@ -86,17 +86,20 @@ function ServiceLink({ href, text, Icon }: ServiceLinkProps) {
       aria-label={text}
     >
       <Icon
+        xlinkTitle={text}
         aria-hidden="true"
         className="
           h-10 w-10 mb-2 transition-colors
           text-gray-900 dark:text-gray-300
-          group-hover:text-blue-500 dark:group-hover:text-sky-400
+          group-hover:text-blue-500  dark:group-hover:text-sky-400
           group-focus-visible:text-blue-500 dark:group-focus-visible:text-sky-400
+         
         "
       />
       <strong
         className="
           transition-colors
+          
           text-blue-500 dark:text-sky-400
           group-hover:text-gray-900 dark:group-hover:text-gray-300
           group-focus-visible:text-gray-900 dark:group-focus-visible:text-gray-300
@@ -147,58 +150,56 @@ export default function Home() {
         image="https://www.wedefendit.com/og-image.png"
         url="https://www.wedefendit.com/"
         canonical="https://www.wedefendit.com/"
-        keywords="cybersecurity, IT support, Ocala, The Villages, Belleview, small business IT, home tech support, network security, computer repair, tech services, elderly scams, online safety"
+        keywords="cybersecurity, IT support, Ocala, The Villages, Belleview, small business IT, home tech support, network security, cybersecurity, computer repair, tech services, elderly scams, online safety"
         structuredData={localBusinessLd}
       />
 
       <PageContainer>
         {/* Intro Section */}
-        <section id="home" className="w-auto space-y-8">
-          <header className="text-center">
-            <h1 className="text-3xl sm:text-4xl py-2 md:text-5xl font-bold">
-              {name}
-            </h1>
-            <h2 className="text-lg md:text-xl px-3 text-blue-500 dark:text-sky-400 font-semibold">
-              {tagline}
-            </h2>
-          </header>
+        <header className="text-center p-2">
+          <h1 className="flex text-3xl sm:text-4xl md:text-5xl font-bold leading-tight w-[85%] max-w-4xl mx-auto">
+            Cybersecurity & IT Support in Ocala, Belleview and The Villages
+          </h1>
+          <h2 className="flex mt-2 text-md sm:text-xl md:text-2xl font-semibold text-blue-500 dark:text-sky-400 w-[75%] max-w-2xl mx-auto leading-normal">
+            Providing On-Site Tech Support, Cybersecurity & Personalized IT You
+            Can Trust
+          </h2>
+        </header>
 
-          {/* Services */}
-          <section
-            id="common-services"
-            aria-labelledby="services-heading"
-            className="mt-24"
+        {/* Services */}
+        <section
+          id="common-services"
+          aria-labelledby="services-heading"
+          className="mt-16"
+        >
+          <h2
+            id="services-heading"
+            className="text-2xl font-bold text-center mb-6"
           >
-            <h2
-              id="services-heading"
-              className="text-2xl font-bold text-center mb-4"
-            >
-              Our Core Services
-            </h2>
-            <div className="grid grid-cols-2  md:grid-cols-4 gap-8 justify-items-center mt-8">
-              {serviceLinks.map((service) => (
-                <ServiceLink
-                  key={service.text.trim()}
-                  href={service.link}
-                  text={service.text}
-                  Icon={service.Icon}
-                />
-              ))}
-            </div>
-          </section>
+            Our Core Services
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center mt-10">
+            {serviceLinks.map((service) => (
+              <ServiceLink
+                key={service.text.trim()}
+                href={service.link}
+                text={service.text}
+                Icon={service.Icon}
+              />
+            ))}
+          </div>
 
-          <p
-            className=" 
-            text-base md:text-lg
-            text-gray-800 dark:text-gray-300
-            leading-relaxed
-            w-full max-w-2xl mx-auto
-            px-6 md:px-4
-            text-center
-            mt-8 mb-12
-    "
-          >
-            {description}
+          <p className="text-base md:text-lg text-gray-800 dark:text-gray-300 leading-normal w-full max-w-3xl mx-auto px-6 md:px-4 text-center mt-8">
+            At Defend I.T. Solutions, we bring local, hands-on support to homes
+            and businesses across Central Florida. Whether it&apos;s protecting
+            your devices with strong cybersecurity, removing viruses and
+            malware, fixing a computer that will not start, or setting up a
+            reliable network, our focus is on clear communication and practical
+            solutions.
+          </p>
+          <p className="text-base md:text-lg text-gray-800 dark:text-gray-300 leading-normal w-full max-w-3xl mx-auto px-6 md:px-4 text-center mt-6 mb-12">
+            You will always know what we are doing, why it matters, and what it
+            costs. No jargon. No hidden fees.
           </p>
         </section>
 
@@ -211,18 +212,11 @@ export default function Home() {
             id="cta-heading"
             className="text-2xl md:text-3xl font-bold text-center my-4"
           >
-            {services_cta.headline}
+            Need Local IT Help You Can Trust?
           </h2>
 
           <LocationPicker showHelper={true} />
           <CallToActionButtons location={location} />
-
-          <p className="text-center p-6 md:p-0 text-base md:text-lg max-w-3xl text-gray-700 dark:text-gray-300">
-            Based in Ocala and proudly serving The Villages, we bring
-            enterprise-grade protection to everyday users. Our service is
-            personal. Our pricing is transparent. Our goal is to keep your
-            digital life secure.
-          </p>
         </section>
       </PageContainer>
     </>

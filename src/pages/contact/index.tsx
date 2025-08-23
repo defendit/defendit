@@ -57,7 +57,7 @@ function ContactGrid() {
           Call or Text
         </h2>
         <a
-          href={`tel:${phone}`}
+          href={`tel:${phone.replace(/[^0-9]/g, "")}`}
           className="text-blue-600 dark:text-sky-400 hover:underline text-lg"
         >
           {phone.replace("+1", "")}

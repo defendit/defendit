@@ -31,8 +31,8 @@ export const SafetyTipsList: React.FC = () => {
           Ways to Stay Safe Online
         </h1>
         <p className="mt-3 text-base text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-          These best practices help protect your devices, identity, and personal
-          data from cyber threats.
+          These Best Practices Help Protect Your Devices, Identity, and Personal
+          Data From Cyber Threats.
         </p>
       </header>
 

@@ -55,8 +55,8 @@ export const ElderlyScamsList: React.FC<ElderlyScamsListProps> = ({
             {title}
           </h2>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Learn about common scams targeting seniors and how to protect
-            yourself or your loved ones.
+            These Best Practices Help Protect Your Devices, Identity, and
+            Personal Data From Cyber Threats.
           </p>
         </header>
       )}
