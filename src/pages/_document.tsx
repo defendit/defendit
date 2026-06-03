@@ -19,7 +19,7 @@ export default function Document() {
   return (
     <Html
       lang="en"
-      className="bg-gray-100 dark:bg-gray-900 text-black dark:text-gray-300 w-screen min-h-screen overflow-x-hidden overflow-y-auto"
+      className="dark text-ink w-screen min-h-screen overflow-x-hidden overflow-y-auto"
     >
       <Head>
         <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />

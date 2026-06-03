@@ -1,3 +1,17 @@
+/*
+Copyright © 2026 Defend I.T. Solutions LLC. All Rights Reserved.
+
+This software and its source code are the proprietary property of
+Defend I.T. Solutions LLC and are protected by United States and
+international copyright laws. Unauthorized reproduction, distribution,
+modification, display, or use of this software, in whole or in part, without the
+prior written permission of Defend I.T. Solutions LLC, is strictly prohibited.
+
+This software is provided for use only by authorized employees, contractors, or
+licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
+party without express written consent.
+*/
+
 import Link from "next/link";
 import React, { useState } from "react";
 import companyInfo from "../../data/company-info.json";
@@ -59,11 +73,12 @@ const AccordionSection: React.FC<{
   <div>
     <button
       type="button"
-      className="w-full flex items-center justify-between px-4 py-3 text-gray-800 dark:text-white text-sm"
+      aria-expanded={openSection === id}
+      className="w-full flex items-center justify-between px-4 py-3 text-ink text-sm"
       onClick={() => setOpenSection(openSection === id ? null : id)}
     >
       <span className="font-semibold">{title}</span>
-      <span className="text-blue-500 dark:text-sky-400">
+      <span aria-hidden className="text-accent">
         {openSection === id ? "−" : "+"}
       </span>
     </button>
@@ -76,9 +91,7 @@ const DesktopColumn: React.FC<{
   children: React.ReactNode;
 }> = ({ title, children }) => (
   <div>
-    <h4 className="font-semibold mb-3 text-gray-800 dark:text-white">
-      {title}
-    </h4>
+    <h4 className="font-semibold mb-3 text-ink">{title}</h4>
     <ul className="space-y-2">{children}</ul>
   </div>
 );
@@ -96,7 +109,7 @@ const ServiceLinks: React.FC<{
         <li key={service}>
           <Link
             href={`/services/${isRemote ? `remote/${service}` : service}`}
-            className={`text-blue-500 dark:text-sky-600 dark:hover:text-sky-500 hover:underline ${fontSizeClass}`}
+            className={`text-accent hover:underline ${fontSizeClass}`}
           >
             {formatLabel(service)}
           </Link>
@@ -112,9 +125,9 @@ export const Footer: React.FC = () => {
   >(null);
 
   return (
-    <footer className="w-full max-w-8xl p-6 mt-12 text-gray-500 dark:text-gray-400 text-xs md:text-sm border-t border-gray-200 dark:border-gray-700">
+    <footer className="w-full max-w-8xl p-6 mt-12 text-ink-dim text-xs md:text-sm border-t border-hairline">
       <div className="max-w-7xl mx-auto space-y-8">
-        <div className="rounded-lg md:hidden divide-y divide-gray-800">
+        <div className="rounded-lg md:hidden divide-y divide-hairline">
           <AccordionSection
             title="Services"
             id="services"
@@ -240,9 +253,9 @@ export const Footer: React.FC = () => {
           )}
         </div>
 
-        <div className="text-center space-y-1 text-gray-400 dark:text-gray-500">
+        <div className="text-center space-y-1 text-ink-dim">
           {copy.map((line: string, i: number) => (
-            <p key={i} className="text-[0.7rem]">
+            <p key={i} className="text-xs">
               {formatCopyYear(line)}
             </p>
           ))}

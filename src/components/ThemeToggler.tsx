@@ -53,16 +53,17 @@ export function ThemeToggle({ placement = "fixed" }: ThemeToggleProps) {
   const next = theme === "light" ? "dark" : "light";
   const buttonClass =
     placement === "inline"
-      ? "inline-flex h-8 w-8 items-center justify-center rounded-full border border-slate-300/70 bg-white/80 p-1.5 text-black shadow-sm transition-colors hover:cursor-pointer hover:border-slate-400 hover:bg-slate-100 hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.5)] dark:border-slate-700 dark:bg-gray-800/80 dark:text-white dark:hover:border-slate-500 dark:hover:bg-slate-800 dark:hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.6)]"
-      : "fixed bottom-1 left-2 z-[150] rounded-full bg-white p-2 text-xl text-black shadow-md transition-colors hover:cursor-pointer hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.5)] lg:bottom-auto lg:left-auto lg:right-4 lg:top-2 lg:z-15 dark:bg-gray-800 dark:text-white dark:hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.6)]";
+      ? "inline-flex h-8 w-8 items-center justify-center rounded-full border border-hairline bg-surface p-1.5 text-ink shadow-sm transition-colors hover:cursor-pointer hover:border-border-accent hover:bg-surface-hover hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.5)]"
+      : "fixed bottom-1 left-2 z-[150] rounded-full bg-surface p-2 text-xl text-ink shadow-md transition-colors hover:cursor-pointer hover:bg-surface-hover hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.5)] lg:bottom-auto lg:left-auto lg:right-4 lg:top-2 lg:z-15";
 
   return (
     <button
       type="button"
-      onClick={toggleTheme}
+      onClick={() => toggleTheme()}
       aria-label={`Switch to ${next} mode`}
       title={`Switch to ${next} mode`}
-      className={buttonClass}
+      className={`${buttonClass} touch-manipulation`}
+      style={{ touchAction: "manipulation" }}
     >
       {theme === "light" ? (
         <Moon className="w-5 h-5" />

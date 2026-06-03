@@ -47,7 +47,7 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 /* ── tiny helpers ─────────────────────────────────────────────────── */
 function SectionTag({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-block text-xs font-bold tracking-[0.25em] uppercase text-blue-600 dark:text-sky-400 mb-3">
+    <span className="inline-block text-eyebrow font-semibold tracking-eyebrow uppercase text-accent mb-3">
       {children}
     </span>
   );
@@ -55,7 +55,7 @@ function SectionTag({ children }: { children: React.ReactNode }) {
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+    <h2 className="text-h2 tracking-h2 font-semibold text-ink mb-4">
       {children}
     </h2>
   );
@@ -78,13 +78,13 @@ function SourceCard({
   badgeColor = "border border-sky-300/80 bg-sky-100/90 text-sky-700 dark:border-sky-400/20 dark:bg-sky-500/15 dark:text-sky-300",
 }: SourceCardProps) {
   return (
-    <div className="group relative flex items-start gap-4 overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-4 shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_18px_38px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
-      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-sky-200/80 bg-sky-100/90 text-blue-700 shadow-[0_8px_18px_rgba(59,130,246,0.12)] transition-all group-hover:scale-110 group-hover:text-blue-800 dark:border-sky-400/14 dark:bg-slate-800/88 dark:text-sky-400 dark:shadow-[0_10px_22px_rgba(2,132,199,0.14)] dark:group-hover:text-sky-300">
+    <div className="group relative flex items-start gap-4 overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
+      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-border-accent bg-surface text-accent transition-transform group-hover:scale-110">
         {icon}
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-1">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-sm font-semibold text-ink">
             {name}
           </h3>
           {badge && (
@@ -95,7 +95,7 @@ function SourceCard({
             </span>
           )}
         </div>
-        <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p className="text-xs text-ink-muted leading-relaxed">
           {description}
         </p>
       </div>
@@ -112,14 +112,14 @@ type CapCardProps = {
 
 function CapCard({ icon, title, description }: CapCardProps) {
   return (
-    <div className="group relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_18px_38px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-sky-200/80 bg-sky-100/90 text-blue-700 shadow-[0_8px_18px_rgba(59,130,246,0.12)] transition-all group-hover:scale-110 group-hover:text-blue-800 dark:border-sky-400/14 dark:bg-slate-800/88 dark:text-sky-400 dark:shadow-[0_10px_22px_rgba(2,132,199,0.14)] dark:group-hover:text-sky-300">
+    <div className="group relative overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-6 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-border-accent bg-surface text-accent transition-transform group-hover:scale-110">
         {icon}
       </div>
-      <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+      <h3 className="text-lg font-bold text-ink mb-2">
         {title}
       </h3>
-      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+      <p className="text-sm text-ink-muted leading-relaxed">
         {description}
       </p>
     </div>
@@ -130,10 +130,10 @@ function CapCard({ icon, title, description }: CapCardProps) {
 function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div className="text-center">
-      <div className="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-sky-400 font-mono">
+      <div className="text-h2 tracking-h2 font-semibold text-accent font-mono">
         {value}
       </div>
-      <div className="text-xs text-gray-600 dark:text-gray-400 mt-1 uppercase tracking-wider">
+      <div className="text-xs text-ink-muted mt-1 uppercase tracking-wider">
         {label}
       </div>
     </div>
@@ -169,17 +169,17 @@ export default function SigintPage() {
               <span>OSINT dashboard project by Defend I.T. Solutions</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.05] text-gray-900 dark:text-white mb-3">
-              <span className="text-blue-600 dark:text-sky-400">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.05] text-ink mb-3">
+              <span className="text-accent">
                 SIGINT Dashboard&trade;
               </span>
             </h1>
 
-            <p className="text-xl sm:text-2xl md:text-4xl font-medium text-gray-700 dark:text-gray-300 mb-6">
+            <p className="text-xl sm:text-2xl md:text-4xl font-medium text-ink-muted mb-6">
               Real-Time Intelligence, Correlated
             </p>
 
-            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-ink-muted max-w-2xl mx-auto mb-8 leading-relaxed">
               Live aircraft, vessels, weather alerts, earthquakes, fires,
               conflict events, and news in one interface. Self-host the
               community build today, or follow the roadmap for hosted
@@ -214,7 +214,7 @@ export default function SigintPage() {
             </div>
 
             {/* Hero screenshot */}
-            <div className="relative rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700/50 shadow-2xl shadow-black/50">
+            <div className="relative rounded-lg overflow-hidden border border-hairline/50 shadow-2xl shadow-black/50">
               <Image
                 src="/sigint-hero.png"
                 alt="SIGINT dashboard showing live globe with 64,000+ tracked entities, alert log, intel feed, news feed, and video monitoring"
@@ -224,7 +224,7 @@ export default function SigintPage() {
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-4 left-4 flex items-center gap-3 text-xs text-gray-600 dark:text-gray-400">
+              <div className="absolute bottom-4 left-4 flex items-center gap-3 text-xs text-ink-muted">
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                   LIVE
@@ -236,7 +236,7 @@ export default function SigintPage() {
           </header>
 
           {/* ── Stats bar ─────────────────────────────────────────── */}
-          <section className="grid grid-cols-2 sm:grid-cols-4 gap-8 py-8 border-y border-gray-200 dark:border-gray-700/50">
+          <section className="grid grid-cols-2 sm:grid-cols-4 gap-8 py-8 border-y border-hairline/50">
             <Stat value="60K+" label="Live Tracks" />
             <Stat value="7+" label="Data Sources" />
             <Stat value="<4min" label="Refresh Cycle" />
@@ -248,7 +248,7 @@ export default function SigintPage() {
             <div className="text-center mb-10">
               <SectionTag>Intelligence Sources</SectionTag>
               <SectionTitle>Live Data Feeds. One Dashboard.</SectionTitle>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              <p className="text-ink-muted max-w-2xl mx-auto">
                 Every source is fetched, parsed, cached, and rendered
                 automatically. Open the dashboard and see aircraft, vessels,
                 crisis events, weather alerts, fires, quakes, and news in one
@@ -306,7 +306,7 @@ export default function SigintPage() {
               <SectionTitle>
                 More Than a Map. An Intelligence Workstation.
               </SectionTitle>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              <p className="text-ink-muted max-w-2xl mx-auto">
                 SIGINT is built to reduce context switching and surface what
                 matters faster. The point is not just to show a map. It is to
                 help one person or a small team move from raw feeds to usable
@@ -368,7 +368,7 @@ export default function SigintPage() {
             <div className="text-center mb-10">
               <SectionTag>In Action</SectionTag>
               <SectionTitle>See What SIGINT Sees</SectionTitle>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              <p className="text-ink-muted max-w-2xl mx-auto">
                 Real screenshots from live sessions, not mockups. Every data
                 point, alert, and video feed is real.
               </p>
@@ -377,7 +377,7 @@ export default function SigintPage() {
             <div className="space-y-12">
               {/* Emergency detection */}
               <div className="grid md:grid-cols-5 gap-6 items-center">
-                <div className="md:col-span-3 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700/50 shadow-xl">
+                <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl">
                   <Image
                     src="/sigint-emergency.png"
                     alt="SIGINT detecting a 7700 emergency squawk with trail tracking, dossier, and live video feeds"
@@ -391,10 +391,10 @@ export default function SigintPage() {
                     <AlertTriangle className="w-3.5 h-3.5" />
                     EMERGENCY DETECTION
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-xl font-bold text-ink">
                     Squawk 7700: Instant Alert
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-sm text-ink-muted leading-relaxed">
                     A Gulfstream G550 declares emergency over Texas. SIGINT
                     picks up the squawk, scores the alert, renders the full
                     trail, and pulls the aircraft dossier with identity,
@@ -411,17 +411,17 @@ export default function SigintPage() {
                     <Plane className="w-3.5 h-3.5" />
                     TRAIL TRACKING
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-xl font-bold text-ink">
                     Squawk 7500: Route Reconstruction
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-sm text-ink-muted leading-relaxed">
                     American Airlines A321 squawking hijack. Trail shows every
                     recorded position with interpolated waypoints. Dossier pulls
                     a photo from Planespotters, displays available route info,
                     and provides LOCATE/FOCUS/SOLO isolation controls.
                   </p>
                 </div>
-                <div className="md:col-span-3 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700/50 shadow-xl order-1 md:order-2">
+                <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl order-1 md:order-2">
                   <Image
                     src="/sigint-hijack-trail.png"
                     alt="SIGINT tracking a squawk 7500 hijack code with trail rendering and aircraft dossier with photo"
@@ -434,7 +434,7 @@ export default function SigintPage() {
 
               {/* GDELT events */}
               <div className="grid md:grid-cols-5 gap-6 items-center">
-                <div className="md:col-span-3 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700/50 shadow-xl">
+                <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl">
                   <Image
                     src="/sigint-gdelt.png"
                     alt="SIGINT showing GDELT crisis event detail with 60K tracks, video feeds, alerts, and intel feed"
@@ -448,10 +448,10 @@ export default function SigintPage() {
                     <Globe className="w-3.5 h-3.5" />
                     SITUATIONAL AWARENESS
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-xl font-bold text-ink">
                     60K+ Tracks, One Screen
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-sm text-ink-muted leading-relaxed">
                     Globe view with 60,000+ live entities. A GDELT crisis event
                     selected showing headline, severity, tone, and source. Four
                     live video feeds streaming. 546 active alerts. 28,000+
@@ -467,10 +467,10 @@ export default function SigintPage() {
                     <Eye className="w-3.5 h-3.5" />
                     ENTITY DOSSIER
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-xl font-bold text-ink">
                     Full Aircraft Intelligence
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-sm text-ink-muted leading-relaxed">
                     Allegiant Air A319 squawking 7500. Dossier shows full
                     identity (callsign, ICAO24, type, registration, operator,
                     manufacturer), live telemetry at 28,750 ft and 494 kn, and
@@ -478,7 +478,7 @@ export default function SigintPage() {
                     FR24, and ADS-B Exchange.
                   </p>
                 </div>
-                <div className="md:col-span-3 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700/50 shadow-xl order-1 md:order-2">
+                <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl order-1 md:order-2">
                   <Image
                     src="/sigint-hijack-dossier.png"
                     alt="SIGINT aircraft dossier showing full identity, telemetry, route details for a squawk 7500 aircraft"
@@ -500,37 +500,37 @@ export default function SigintPage() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                <div className="text-2xl font-bold text-ink mb-1">
                   60K+
                 </div>
-                <p className="text-xs text-gray-600 dark:text-gray-400">
+                <p className="text-xs text-ink-muted">
                   Tracks rendered smoothly in live sessions, with the UI staying
                   responsive under load.
                 </p>
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                <div className="text-2xl font-bold text-ink mb-1">
                   Single Deploy
                 </div>
-                <p className="text-xs text-gray-600 dark:text-gray-400">
+                <p className="text-xs text-ink-muted">
                   Community stays simple to self-host. Hosted tiers add the
                   backend features that do not belong in a browser-only setup.
                 </p>
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                <div className="text-2xl font-bold text-ink mb-1">
                   Offline Ready
                 </div>
-                <p className="text-xs text-gray-600 dark:text-gray-400">
+                <p className="text-xs text-ink-muted">
                   Installable as a PWA, with fast reloads and cached state for
                   repeat use.
                 </p>
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                <div className="text-2xl font-bold text-ink mb-1">
                   Open Stack
                 </div>
-                <p className="text-xs text-gray-600 dark:text-gray-400">
+                <p className="text-xs text-ink-muted">
                   Community is self-hostable. Hosted tiers build on that
                   foundation with persistence, alerts, sync, and paid
                   infrastructure.
@@ -545,7 +545,7 @@ export default function SigintPage() {
               <SectionTitle>
                 Community Today. Hosted Platform Roadmap.
               </SectionTitle>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              <p className="text-ink-muted max-w-2xl mx-auto">
                 SIGINT Dashboard is already a real working project, not a
                 landing-page concept. The community build proves the core
                 platform today. The hosted tiers are where persistent backend
@@ -562,7 +562,7 @@ export default function SigintPage() {
               <SectionTitle>
                 Run It Yourself. Or Let Us Run It For You.
               </SectionTitle>
-              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              <p className="text-ink-muted max-w-2xl mx-auto">
                 Community is available now for self-hosting. Paid tiers are the
                 product roadmap for users who want hosted infrastructure, longer
                 retention, alerts, sync, collaboration, and features that do not
@@ -576,20 +576,20 @@ export default function SigintPage() {
                 <div className="mb-6">
                   <div className="flex items-center gap-2 mb-2">
                     <Github className="w-5 h-5 text-gray-700 dark:text-gray-400" />
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                    <h3 className="text-lg font-bold text-ink">
                       Community
                     </h3>
                   </div>
                   <div className="flex items-baseline gap-1 mb-2">
-                    <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                    <span className="text-3xl font-bold text-ink">
                       Free
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-ink-muted">
                     Self-hosted. Your server, your API keys, your environment.
                   </p>
                 </div>
-                <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 flex-1">
+                <ul className="space-y-3 text-sm text-ink-muted flex-1">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-emerald-700 dark:text-green-400 mt-0.5 flex-shrink-0" />
                     <span>All live data sources</span>
@@ -628,7 +628,7 @@ export default function SigintPage() {
                     href="https://github.com/wedefendit/sigint"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full text-center px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-sky-500 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium transition-all"
+                    className="block w-full text-center px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-sky-500 text-ink-muted hover:text-gray-900 dark:hover:text-white font-medium transition-all"
                   >
                     View on GitHub
                   </a>
@@ -643,28 +643,28 @@ export default function SigintPage() {
                 <div className="mb-6">
                   <div className="flex items-center gap-2 mb-2">
                     <User className="w-5 h-5 text-sky-700 dark:text-sky-400" />
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                    <h3 className="text-lg font-bold text-ink">
                       Individual
                     </h3>
                   </div>
                   <div className="flex items-baseline gap-1 mb-1">
-                    <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                    <span className="text-3xl font-bold text-ink">
                       $29
                     </span>
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                    <span className="text-sm text-ink-muted">
                       /mo
                     </span>
                   </div>
-                  <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">
+                  <p className="text-xs text-ink-dim mb-2">
                     or $249/yr (save 28%)
                   </p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-ink-muted">
                     Built for solo users who want hosted infrastructure,
                     persistent history, alerts, and cross-device access without
                     running the backend themselves.
                   </p>
                 </div>
-                <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 flex-1">
+                <ul className="space-y-3 text-sm text-ink-muted flex-1">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-sky-700 dark:text-sky-400 mt-0.5 flex-shrink-0" />
                     <span>Everything in Community</span>
@@ -713,31 +713,31 @@ export default function SigintPage() {
                 <div className="mb-6">
                   <div className="flex items-center gap-2 mb-2">
                     <Users className="w-5 h-5 text-violet-700 dark:text-violet-400" />
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                    <h3 className="text-lg font-bold text-ink">
                       Team
                     </h3>
                   </div>
                   <div className="flex items-baseline gap-1 mb-1">
-                    <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                    <span className="text-3xl font-bold text-ink">
                       $34
                     </span>
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                    <span className="text-sm text-ink-muted">
                       /seat/mo
                     </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-500 ml-1">
+                    <span className="text-xs text-ink-dim ml-1">
                       min 3 seats
                     </span>
                   </div>
-                  <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">
+                  <p className="text-xs text-ink-dim mb-2">
                     or $299/seat/yr (save 27%)
                   </p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-ink-muted">
                     Built for small teams that need shared workspaces, shared
                     alerts, role-based access, and collaboration on top of the
                     hosted platform.
                   </p>
                 </div>
-                <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 flex-1">
+                <ul className="space-y-3 text-sm text-ink-muted flex-1">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-violet-700 dark:text-violet-400 mt-0.5 flex-shrink-0" />
                     <span>Everything in Individual</span>
@@ -773,22 +773,22 @@ export default function SigintPage() {
                 <div className="mb-6">
                   <div className="flex items-center gap-2 mb-2">
                     <Shield className="w-5 h-5 text-amber-700 dark:text-amber-400" />
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                    <h3 className="text-lg font-bold text-ink">
                       Enterprise
                     </h3>
                   </div>
                   <div className="flex items-baseline gap-1 mb-2">
-                    <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                    <span className="text-3xl font-bold text-ink">
                       Custom
                     </span>
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-ink-muted">
                     For organizations that need dedicated deployment, deeper
                     integrations, stronger controls, and a more formal support
                     model.
                   </p>
                 </div>
-                <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300 flex-1">
+                <ul className="space-y-3 text-sm text-ink-muted flex-1">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-amber-700 dark:text-amber-400 mt-0.5 flex-shrink-0" />
                     <span>Everything in Team</span>
@@ -835,7 +835,7 @@ export default function SigintPage() {
             {/* Add-ons callout */}
             <div className="mt-10 rounded-2xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_62%)] p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_62%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5">
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-5">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                <h3 className="text-lg font-bold text-ink">
                   Add-ons
                 </h3>
                 <span className="rounded-full border border-sky-300/80 bg-sky-100/90 px-2.5 py-0.5 text-xs font-bold text-sky-700 dark:border-sky-400/20 dark:bg-sky-500/20 dark:text-sky-300">
@@ -846,10 +846,10 @@ export default function SigintPage() {
                 <div className="group flex items-start gap-3 rounded-lg border border-slate-200/80 bg-white/72 p-3 shadow-[0_10px_22px_rgba(15,23,42,0.06)] ring-1 ring-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_30px_rgba(15,23,42,0.1)] dark:border-slate-700/65 dark:bg-slate-900/46 dark:ring-white/5 dark:hover:border-sky-400/28 dark:hover:bg-slate-900/62 dark:hover:shadow-[0_18px_34px_rgba(2,6,23,0.28)]">
                   <Newspaper className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-700 dark:text-sky-400" />
                   <div>
-                    <span className="text-sm text-gray-900 dark:text-white font-medium">
+                    <span className="text-sm text-ink font-medium">
                       Custom RSS feeds
                     </span>
-                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                    <p className="text-xs text-ink-dim mt-0.5">
                       Add your own sources, fetched through our server
                     </p>
                   </div>
@@ -857,10 +857,10 @@ export default function SigintPage() {
                 <div className="group flex items-start gap-3 rounded-lg border border-slate-200/80 bg-white/72 p-3 shadow-[0_10px_22px_rgba(15,23,42,0.06)] ring-1 ring-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_30px_rgba(15,23,42,0.1)] dark:border-slate-700/65 dark:bg-slate-900/46 dark:ring-white/5 dark:hover:border-sky-400/28 dark:hover:bg-slate-900/62 dark:hover:shadow-[0_18px_34px_rgba(2,6,23,0.28)]">
                   <Satellite className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-700 dark:text-sky-400" />
                   <div>
-                    <span className="text-sm text-gray-900 dark:text-white font-medium">
+                    <span className="text-sm text-ink font-medium">
                       Premium data sources
                     </span>
-                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                    <p className="text-xs text-ink-dim mt-0.5">
                       ADS-B Exchange, ACLED, and other paid feeds
                     </p>
                   </div>
@@ -868,10 +868,10 @@ export default function SigintPage() {
                 <div className="group flex items-start gap-3 rounded-lg border border-slate-200/80 bg-white/72 p-3 shadow-[0_10px_22px_rgba(15,23,42,0.06)] ring-1 ring-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_30px_rgba(15,23,42,0.1)] dark:border-slate-700/65 dark:bg-slate-900/46 dark:ring-white/5 dark:hover:border-sky-400/28 dark:hover:bg-slate-900/62 dark:hover:shadow-[0_18px_34px_rgba(2,6,23,0.28)]">
                   <Database className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-700 dark:text-sky-400" />
                   <div>
-                    <span className="text-sm text-gray-900 dark:text-white font-medium">
+                    <span className="text-sm text-ink font-medium">
                       Extended retention
                     </span>
-                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                    <p className="text-xs text-ink-dim mt-0.5">
                       30, 60, or 90-day history add-ons
                     </p>
                   </div>
@@ -879,10 +879,10 @@ export default function SigintPage() {
                 <div className="group flex items-start gap-3 rounded-lg border border-slate-200/80 bg-white/72 p-3 shadow-[0_10px_22px_rgba(15,23,42,0.06)] ring-1 ring-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_30px_rgba(15,23,42,0.1)] dark:border-slate-700/65 dark:bg-slate-900/46 dark:ring-white/5 dark:hover:border-sky-400/28 dark:hover:bg-slate-900/62 dark:hover:shadow-[0_18px_34px_rgba(2,6,23,0.28)]">
                   <Bell className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-700 dark:text-sky-400" />
                   <div>
-                    <span className="text-sm text-gray-900 dark:text-white font-medium">
+                    <span className="text-sm text-ink font-medium">
                       Alert channels
                     </span>
-                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                    <p className="text-xs text-ink-dim mt-0.5">
                       SMS, Slack, Discord, Telegram delivery
                     </p>
                   </div>
@@ -890,10 +890,10 @@ export default function SigintPage() {
                 <div className="group flex items-start gap-3 rounded-lg border border-slate-200/80 bg-white/72 p-3 shadow-[0_10px_22px_rgba(15,23,42,0.06)] ring-1 ring-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_30px_rgba(15,23,42,0.1)] dark:border-slate-700/65 dark:bg-slate-900/46 dark:ring-white/5 dark:hover:border-sky-400/28 dark:hover:bg-slate-900/62 dark:hover:shadow-[0_18px_34px_rgba(2,6,23,0.28)]">
                   <Zap className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-700 dark:text-sky-400" />
                   <div>
-                    <span className="text-sm text-gray-900 dark:text-white font-medium">
+                    <span className="text-sm text-ink font-medium">
                       Priority refresh
                     </span>
-                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                    <p className="text-xs text-ink-dim mt-0.5">
                       Tighter polling intervals where APIs allow
                     </p>
                   </div>
@@ -901,10 +901,10 @@ export default function SigintPage() {
                 <div className="group flex items-start gap-3 rounded-lg border border-slate-200/80 bg-white/72 p-3 shadow-[0_10px_22px_rgba(15,23,42,0.06)] ring-1 ring-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_30px_rgba(15,23,42,0.1)] dark:border-slate-700/65 dark:bg-slate-900/46 dark:ring-white/5 dark:hover:border-sky-400/28 dark:hover:bg-slate-900/62 dark:hover:shadow-[0_18px_34px_rgba(2,6,23,0.28)]">
                   <Monitor className="mt-0.5 h-4 w-4 flex-shrink-0 text-sky-700 dark:text-sky-400" />
                   <div>
-                    <span className="text-sm text-gray-900 dark:text-white font-medium">
+                    <span className="text-sm text-ink font-medium">
                       Extra devices
                     </span>
-                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                    <p className="text-xs text-ink-dim mt-0.5">
                       Additional device slots beyond the default 5
                     </p>
                   </div>
@@ -915,10 +915,10 @@ export default function SigintPage() {
 
           {/* ── CTA ───────────────────────────────────────────────── */}
           <section className="text-center py-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-h2 tracking-h2 font-semibold text-ink mb-4">
               Ready to See It Live?
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto mb-8">
+            <p className="text-ink-muted max-w-xl mx-auto mb-8">
               SIGINT is currently in active development. Join the waitlist for
               early access or try the live demo now.
             </p>

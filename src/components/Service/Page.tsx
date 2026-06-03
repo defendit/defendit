@@ -21,6 +21,7 @@ import {
   ServiceAreaAndBooking,
 } from "@/components";
 import { ServiceCard } from "@/components/Service/Card";
+import { Card } from "@/components/Card";
 import { localBusinessLd } from "@/lib/json-ld";
 
 export type Service = {
@@ -143,6 +144,7 @@ export default function ServicePage(props: ServicesPageProps) {
     url: canonical,
     canonical,
     structuredData: {
+      "@context": "https://schema.org",
       "@graph": [
         ...existingGraph,
         breadcrumbLd,
@@ -157,7 +159,7 @@ export default function ServicePage(props: ServicesPageProps) {
       <Meta {...metaWithStructured} />
 
       <PageContainer>
-        <div className="max-w-7xl mx-auto w-full px-3 py-8 sm:px-4 sm:py-10 lg:px-6 space-y-8 sm:space-y-10 bg-gray-50/10 dark:bg-slate-950/20 z-0 shadow-md">
+        <div className="max-w-7xl mx-auto w-full px-3 py-8 sm:px-4 sm:py-10 lg:px-6 space-y-8 sm:space-y-10">
           <BreadCrumbs
             includeJsonLd={false}
             items={
@@ -176,38 +178,39 @@ export default function ServicePage(props: ServicesPageProps) {
           />
 
           {/* Header */}
-          <header className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/78 px-5 py-6 text-center shadow-[0_18px_40px_rgba(15,23,42,0.08)] ring-1 ring-white/75 backdrop-blur-md dark:border-sky-400/18 dark:bg-slate-950/78 dark:shadow-[0_24px_60px_rgba(2,6,23,0.42)] dark:ring-white/5 sm:px-6 sm:py-8">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent_54%)] dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.16),transparent_52%)]" />
-            <div className="pointer-events-none absolute left-1/2 top-0 h-24 w-52 -translate-x-1/2 rounded-full bg-sky-300/25 blur-3xl dark:bg-sky-400/16" />
-            <div className="relative">
-              <div className="inline-flex items-center gap-2 rounded-full border border-sky-300/60 bg-white/70 px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-sky-700 shadow-[0_8px_20px_rgba(56,189,248,0.12)] backdrop-blur-sm dark:border-sky-400/18 dark:bg-slate-900/70 dark:text-sky-300 dark:shadow-[0_12px_28px_rgba(2,132,199,0.16)] sm:px-4 sm:text-xs sm:tracking-[0.28em]">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  />
-                </svg>
-                Serving Central Florida
-              </div>
-
-              <h1 className="mt-5 text-balance text-3xl font-bold leading-tight text-slate-950 dark:text-white sm:text-4xl lg:text-5xl">
-                {h1}
-              </h1>
-
-              <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 dark:text-slate-300 sm:text-lg">
-                {isRemote
-                  ? "Some problems can be handled well online. This section covers remote sessions for local clients, guided training, and plan-based follow-up support."
-                  : "Start with the problem you need solved. We focus on clear, practical help for homes and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities."}
-              </p>
+          <Card
+            as="header"
+            wash
+            className="relative overflow-hidden px-5 py-6 text-center sm:px-6 sm:py-8"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-border-accent bg-surface px-3 py-2 text-eyebrow font-semibold uppercase tracking-eyebrow text-accent sm:px-4">
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={1.25}
+                viewBox="0 0 24 24"
+                aria-hidden
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+              Serving Central Florida
             </div>
-          </header>
+
+            <h1 className="mt-5 text-balance text-display tracking-display font-semibold text-ink">
+              {h1}
+            </h1>
+
+            <p className="mx-auto mt-4 max-w-readable text-lead text-ink-muted">
+              {isRemote
+                ? "Some problems can be handled well online. This section covers remote sessions for local clients, guided training, and plan-based follow-up support."
+                : "Start with the problem you need solved. We focus on clear, practical help for homes and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities."}
+            </p>
+          </Card>
 
           {/* Grid */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -224,14 +227,11 @@ export default function ServicePage(props: ServicesPageProps) {
           <RemoteServicesCTA isRemote={isRemote} />
           <ServiceAreaAndBooking />
 
-          <section className="text-sm text-gray-600 dark:text-gray-400 italic text-center max-w-3xl mx-auto">
+          <section className="text-sm text-ink-muted italic text-center max-w-3xl mx-auto">
             <p>
               Not every problem fits neatly into a service card. If you&apos;re
               not sure where your issue belongs,{" "}
-              <Link
-                href="/contact"
-                className="text-blue-600 dark:text-sky-400 hover:underline"
-              >
+              <Link href="/contact" className="text-accent hover:underline">
                 contact us
               </Link>{" "}
               and we&apos;ll help you choose the right starting point.

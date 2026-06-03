@@ -70,15 +70,15 @@ export default function ConfirmedPage() {
             <TierIcon className={`w-7 h-7 sm:w-8 sm:h-8 ${config.iconColor}`} />
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-h2 tracking-h2 font-semibold text-ink mb-4">
             {config.heading}
           </h1>
 
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">
+          <p className="text-lead text-ink-muted mb-3 leading-relaxed">
             {config.body}
           </p>
 
-          <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-500 mb-8 sm:mb-10">
+          <p className="text-xs sm:text-sm text-ink-dim mb-8 sm:mb-10">
             {config.sub}
           </p>
 
@@ -87,14 +87,16 @@ export default function ConfirmedPage() {
               href={DEMO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-lg border border-green-500/40 dark:border-green-500/30 hover:border-green-500 dark:hover:border-green-400 bg-green-500/5 hover:bg-green-500/10 text-gray-700 dark:text-green-300 hover:text-gray-900 dark:hover:text-green-200 text-base sm:text-lg font-medium transition-all"
+              style={{ touchAction: "manipulation" }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-lg border border-success/40 hover:border-success bg-success/10 hover:bg-success/20 text-ink text-base sm:text-lg font-medium transition-all touch-manipulation"
             >
               <Globe className="w-5 h-5" />
               Try Live Demo
             </a>
             <Link
               href={config.cta.href}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-blue-600 dark:text-sky-400 hover:text-blue-500 dark:hover:text-sky-300 text-base sm:text-lg font-medium transition-colors"
+              style={{ touchAction: "manipulation" }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-accent hover:text-accent-hover text-base sm:text-lg font-medium transition-colors touch-manipulation"
             >
               {config.cta.label}
               <CtaIcon className="w-4 h-4" />

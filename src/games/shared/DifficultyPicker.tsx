@@ -41,7 +41,7 @@ export function DifficultyPicker({
     <div
       role="radiogroup"
       aria-label="Difficulty"
-      className="inline-flex flex-wrap items-center gap-1 rounded-full border border-slate-200/70 bg-white/60 p-1 text-xs font-medium shadow-sm backdrop-blur-md ring-1 ring-slate-200/40 dark:border-sky-900/50 dark:bg-slate-900/60 dark:ring-sky-900/30"
+      className="inline-flex flex-wrap items-center gap-1 rounded-full border border-hairline bg-surface p-1 text-xs font-medium shadow-sm backdrop-blur-md"
     >
       {OPTIONS.map((opt) => {
         const active = value === opt.id;
@@ -54,11 +54,12 @@ export function DifficultyPicker({
             disabled={disabled}
             onClick={() => onChange(opt.id)}
             title={opt.hint}
+            style={{ touchAction: "manipulation" }}
             className={[
-              "rounded-full px-3 py-1.5 transition-colors",
+              "touch-manipulation rounded-full px-3 py-1.5 transition-colors",
               active
-                ? "bg-sky-600 text-white shadow-sm dark:bg-sky-500"
-                : "text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70",
+                ? "bg-accent text-accent-contrast shadow-sm"
+                : "text-ink hover:bg-surface-hover",
               disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer",
             ].join(" ")}
           >

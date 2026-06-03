@@ -65,7 +65,7 @@ export default function Terms() {
         />
       </Head>
       <LegalPage>
-        <h1 className="text-3xl font-bold text-center border-b pb-4 mb-6 uppercase tracking-wider underline">
+        <h1 className="text-h2 font-semibold text-center border-b border-hairline pb-4 mb-6 uppercase tracking-wider underline">
           Terms and Conditions
         </h1>
 
@@ -89,7 +89,7 @@ export default function Terms() {
           </strong>
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Intellectual Property
         </h2>
         <p>
@@ -100,7 +100,7 @@ export default function Terms() {
           our Site.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Age Restrictions
         </h2>
         <p>
@@ -109,7 +109,7 @@ export default function Terms() {
           for false age claims.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Acceptable Use
         </h2>
         <p>You agree to use our Site legally and not to:</p>
@@ -127,7 +127,7 @@ export default function Terms() {
           terminate access and pursue legal action.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Limitation of Liability
         </h2>
         <p>
@@ -135,19 +135,19 @@ export default function Terms() {
           claims, damages, or expenses arising from your use of the Site.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">Indemnity</h2>
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Indemnity</h2>
         <p>
           You agree to indemnify and hold harmless Defend I.T. Solutions LLC and
           affiliates from claims and liabilities arising from your use of the
           Site or violation of these Terms.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Applicable Law
         </h2>
         <p>These Terms are governed by the laws of the State of Florida.</p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Dispute Resolution
         </h2>
         <p>
@@ -160,7 +160,7 @@ export default function Terms() {
           injunctive relief or intellectual property matters.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Additional Terms
         </h2>
         <ul className="list-disc ml-6 my-2">
@@ -187,7 +187,7 @@ export default function Terms() {
           </li>
         </ul>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Severability
         </h2>
         <p>
@@ -195,13 +195,13 @@ export default function Terms() {
           rest remain in effect.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">Changes</h2>
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Changes</h2>
         <p>
           These Terms may be updated. We&apos;ll notify users via email or post
           changes on the Site.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Contact Details
         </h2>
         <p>
@@ -211,21 +211,21 @@ export default function Terms() {
             href={`mailto:${email}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 underline"
+            className="text-accent underline"
           >
             {email}
           </a>
           <br />
           <a
             href={`tel:+${phone.replace(/[^0-9]/g, "")}`}
-            className="text-blue-600 underline"
+            className="text-accent underline"
           >
             {phone}
           </a>
           {address && (
             <>
               <br />
-              <span className="text-gray-600 dark:text-gray-400">
+              <span className="text-ink-muted">
                 {street}, {city}, {state} {zip}
               </span>
             </>

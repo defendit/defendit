@@ -14,8 +14,9 @@ party without express written consent.
 import Link from "next/link";
 import { localBusinessLd } from "@/lib/json-ld";
 import type { ComponentType, SVGProps } from "react";
-import { ShieldCheck, MapPin, MessageCircle } from "lucide-react";
+import { ShieldCheck, MapPin, MessageCircle, ArrowRight } from "lucide-react";
 import { PageContainer, Meta, BookOnline, BreadCrumbs } from "@/components";
+import { Card } from "@/components/Card";
 
 const valueData = [
   {
@@ -38,30 +39,23 @@ const valueData = [
   },
 ] as const;
 
-type ValueItemProps = {
+type ValueItemProps = Readonly<{
   title: string;
   description: string;
   Icon: ComponentType<SVGProps<SVGSVGElement>>;
-};
+}>;
 
 function ValueItem({ title, description, Icon }: ValueItemProps) {
   return (
-    <article className="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_18px_38px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
+    <Card as="article" wash className="relative overflow-hidden p-6">
       <div className="flex items-center gap-4 mb-3">
-        <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-sky-200/80 bg-sky-100/85 shadow-[0_8px_18px_rgba(59,130,246,0.12)] dark:border-sky-400/14 dark:bg-slate-800/88 dark:shadow-[0_10px_22px_rgba(2,132,199,0.14)]">
-          <Icon
-            className="w-7 h-7 text-blue-700 dark:text-sky-300"
-            aria-hidden="true"
-          />
+        <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-border-accent bg-surface">
+          <Icon className="w-7 h-7 text-accent" aria-hidden="true" />
         </div>
-        <h3 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">
-          {title}
-        </h3>
+        <h3 className="text-h3 tracking-h3 font-semibold text-ink">{title}</h3>
       </div>
-      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-        {description}
-      </p>
-    </article>
+      <p className="text-ink-muted leading-relaxed">{description}</p>
+    </Card>
   );
 }
 
@@ -69,7 +63,7 @@ function RenderValues() {
   return (
     <div className="grid gap-6 md:grid-cols-1" role="list">
       {valueData.map((item) => (
-        <div key={item.title}>
+        <div key={item.title} role="listitem">
           <ValueItem
             title={item.title}
             description={item.description}
@@ -123,84 +117,74 @@ export default function About() {
         url={canonical}
         canonical={canonical}
         keywords="Defend I.T. Solutions, cybersecurity Ocala FL, IT support Belleview FL, IT support The Villages FL, local tech support Central Florida, privacy-focused IT services"
-        structuredData={{ "@graph": [breadcrumbLd, aboutPageLd] }}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@graph": [breadcrumbLd, aboutPageLd],
+        }}
       />
 
       <PageContainer>
-        <div className="max-w-3xl mx-auto w-full p-3 sm:p-4 space-y-8 sm:space-y-10 rounded bg-gray-50/10 dark:bg-slate-950/20 shadow-sm">
+        <div className="max-w-3xl mx-auto w-full p-3 sm:p-4 space-y-8 sm:space-y-10">
           <BreadCrumbs
             includeJsonLd={false}
             items={[{ name: "Home", href: "/" }, { name: "About" }]}
           />
 
           {/* Hero Section */}
-          <header className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/78 px-5 py-6 text-center shadow-[0_18px_40px_rgba(15,23,42,0.08)] ring-1 ring-white/75 backdrop-blur-md dark:border-sky-400/18 dark:bg-slate-950/78 dark:shadow-[0_24px_60px_rgba(2,6,23,0.42)] dark:ring-white/5 sm:px-6 sm:py-8">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent_54%)] dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.16),transparent_52%)]" />
-            <div className="pointer-events-none absolute left-1/2 top-0 h-24 w-52 -translate-x-1/2 rounded-full bg-sky-300/25 blur-3xl dark:bg-sky-400/16" />
-            <div className="relative">
-              <div className="inline-flex items-center gap-2 rounded-full border border-sky-300/60 bg-white/70 px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-sky-700 shadow-[0_8px_20px_rgba(56,189,248,0.12)] backdrop-blur-sm dark:border-sky-400/18 dark:bg-slate-900/70 dark:text-sky-300 dark:shadow-[0_12px_28px_rgba(2,132,199,0.16)] sm:px-4 sm:text-xs sm:tracking-[0.28em]">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                Locally Owned & Operated
-              </div>
-
-              <h1 className="mt-5 text-balance text-3xl font-bold leading-tight text-slate-950 dark:text-white sm:text-4xl md:text-5xl">
-                About Defend I.T. Solutions
-              </h1>
-
-              <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 dark:text-slate-300 sm:text-lg">
-                Local cybersecurity and IT support serving Ocala, Belleview, The
-                Villages, and surrounding Central Florida.
-              </p>
-            </div>
-          </header>
-
-          <section
-            aria-labelledby="who-we-are"
-            className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5"
+          <Card
+            as="header"
+            wash
+            className="relative overflow-hidden px-5 py-6 text-center sm:px-6 sm:py-8"
           >
-            <p className="text-lg text-gray-900 dark:text-white">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border-accent bg-surface px-3 py-2 text-eyebrow font-semibold uppercase tracking-eyebrow text-accent sm:px-4">
+              <MapPin className="w-4 h-4" aria-hidden />
+              Locally Owned &amp; Operated
+            </div>
+
+            <h1 className="mt-5 text-balance text-display tracking-display font-semibold text-ink">
+              About Defend I.T. Solutions
+            </h1>
+
+            <p className="mx-auto mt-4 max-w-readable text-lead text-ink-muted">
+              Local cybersecurity and IT support serving Ocala, Belleview, The
+              Villages, and surrounding Central Florida.
+            </p>
+          </Card>
+
+          <Card
+            as="section"
+            aria-labelledby="who-we-are"
+            wash
+            className="relative overflow-hidden p-6"
+          >
+            <h2 id="who-we-are" className="sr-only">
+              Who we are
+            </h2>
+            <p className="text-lead text-ink">
               Defend I.T. Solutions is a founder-led local business based in
               Ocala, serving homeowners and small businesses across Ocala,
               Belleview, and The Villages.
             </p>
 
-            <p className="text-lg mt-4 text-gray-700 dark:text-gray-300">
+            <p className="text-lead mt-4 text-ink-muted">
               The focus is practical help with malware, scam prevention, Wi-Fi
               issues, device setup, safer account habits, and the day-to-day
               technology problems that waste time and create stress.
             </p>
 
-            <p className="text-lg mt-4 text-gray-700 dark:text-gray-300">
+            <p className="text-lead mt-4 text-ink-muted">
               This business exists because too many people are expected to trust
               devices and networks they were never given enough information to
               judge. The goal is to solve the problem, reduce avoidable risk,
               and leave people with technology that feels easier to use and
               easier to trust.
             </p>
-          </section>
+          </Card>
 
           <section aria-labelledby="core-values">
             <h2
               id="core-values"
-              className="text-2xl md:text-3xl font-semibold mb-4"
+              className="text-h2 tracking-h2 font-semibold text-ink mb-4"
             >
               Our Core Values
             </h2>
@@ -208,38 +192,23 @@ export default function About() {
           </section>
 
           {/* Services CTA */}
-          <section className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/76 p-8 text-center shadow-[0_16px_38px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-sky-400/18 dark:bg-slate-950/74 dark:shadow-[0_22px_48px_rgba(2,6,23,0.36)] dark:ring-white/5">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.06),transparent_54%)] dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.12),transparent_52%)]" />
-            <div className="relative">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-                Explore Our Services
-              </h2>
-              <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                From computer repair and malware cleanup to scam protection and
-                Wi-Fi help, explore the local services we offer across Central
-                Florida.
-              </p>
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 dark:border dark:border-sky-400/18 dark:bg-sky-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(125,211,252,0.14),transparent_62%)] dark:shadow-[0_14px_28px_rgba(2,132,199,0.18)] dark:ring-1 dark:ring-white/5 dark:backdrop-blur-sm dark:hover:-translate-y-0.5 dark:hover:border-sky-400/28 dark:hover:bg-sky-900/72 dark:hover:shadow-[0_18px_34px_rgba(2,132,199,0.24)] text-white font-semibold transition-all shadow-lg hover:shadow-xl"
-              >
-                View Local Services
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Link>
-            </div>
-          </section>
+          <Card wash className="relative overflow-hidden p-8 text-center">
+            <h2 className="text-h2 tracking-h2 font-semibold mb-4 text-ink">
+              Explore Our Services
+            </h2>
+            <p className="text-ink-muted mb-6 max-w-readable mx-auto">
+              From computer repair and malware cleanup to scam protection and
+              Wi-Fi help, explore the local services we offer across Central
+              Florida.
+            </p>
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-contrast font-semibold transition-all shadow-lg hover:bg-accent-hover hover:shadow-xl"
+            >
+              View Local Services
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </Card>
 
           <BookOnline />
         </div>

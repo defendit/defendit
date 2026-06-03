@@ -159,19 +159,19 @@ export function GameShell({
           <dialog
             open
             aria-label="Badge earned"
-            className="fixed inset-x-3 top-20 bottom-auto z-80 mx-auto flex max-w-sm items-start gap-3 rounded-2xl border border-sky-300/70 bg-white/95 p-4 shadow-2xl ring-1 ring-sky-200/60 backdrop-blur-md min-[820px]:inset-x-0 min-[820px]:top-auto min-[820px]:bottom-6 dark:border-sky-700/60 dark:bg-slate-900/95 dark:ring-sky-800/50"
+            className="fixed inset-x-3 top-20 bottom-auto z-80 mx-auto flex max-w-sm items-start gap-3 rounded-feature border border-border-accent bg-surface-hover p-4 shadow-card-hover backdrop-blur-md min-[820px]:inset-x-0 min-[820px]:top-auto min-[820px]:bottom-6 dark:border-sky-700/60 dark:bg-slate-900/95 dark:ring-sky-800/50"
           >
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sky-100 text-lg font-bold text-sky-700 dark:bg-sky-900/60 dark:text-sky-200">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface border border-border-accent text-lg font-bold text-accent">
               ★
             </div>
             <div className="min-w-0 flex-1">
-              <p className="text-xs font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-300">
+              <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
                 Badge earned
               </p>
-              <p className="mt-0.5 text-sm font-semibold text-slate-900 dark:text-slate-50">
+              <p className="mt-0.5 text-sm font-semibold text-ink">
                 {earnedBadge.name}
               </p>
-              <p className="mt-0.5 text-xs text-slate-600 dark:text-slate-300">
+              <p className="mt-0.5 text-xs text-ink-muted">
                 {earnedBadge.description}
               </p>
             </div>
@@ -179,7 +179,7 @@ export function GameShell({
               type="button"
               aria-label="Dismiss badge notification"
               onClick={() => setEarnedBadge(null)}
-              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+              className="text-ink-dim hover:text-ink"
             >
               ×
             </button>
@@ -193,25 +193,20 @@ export function GameShell({
     <GameShellContext.Provider value={ctxValue}>
       <section
         aria-label={title}
-        className="relative w-full max-w-6xl rounded-2xl border border-slate-200/70 bg-white/70 p-5 shadow-lg ring-1 ring-slate-200/40 backdrop-blur-md sm:p-7 dark:border-sky-900/50 dark:bg-slate-900/60 dark:shadow-sky-900/20 dark:ring-sky-900/30"
+        className="relative w-full max-w-6xl rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] p-5 shadow-card sm:p-7"
       >
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_at_top,rgba(14,165,233,0.08),transparent_60%)] dark:bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.12),transparent_60%)]"
-        />
-
-        <header className="relative flex flex-col gap-4 border-b border-slate-200/70 pb-4 sm:flex-row sm:items-start sm:justify-between dark:border-sky-900/40">
+        <header className="relative flex flex-col gap-4 border-b border-hairline pb-4 sm:flex-row sm:items-start sm:justify-between">
           <div className="min-w-0">
-            <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl dark:text-slate-50">
+            <h1 className="text-h2 tracking-h2 font-semibold text-ink">
               {title}
             </h1>
             {description && (
-              <p className="mt-1 max-w-2xl text-sm text-slate-600 dark:text-slate-300">
+              <p className="mt-1 max-w-2xl text-sm text-ink-muted">
                 {description}
               </p>
             )}
             {bestScore !== null && (
-              <p className="mt-2 text-xs font-medium uppercase tracking-wide text-sky-700 dark:text-sky-300">
+              <p className="mt-2 text-xs font-medium uppercase tracking-wide text-accent">
                 Best score: {bestScore}
               </p>
             )}
@@ -225,7 +220,8 @@ export function GameShell({
             <button
               type="button"
               onClick={onReset}
-              className="rounded-full border border-slate-300/80 bg-white/80 px-3 py-1.5 text-xs font-medium text-slate-700 shadow-sm transition-colors hover:bg-slate-100 dark:border-sky-900/50 dark:bg-slate-900/70 dark:text-slate-200 dark:hover:bg-slate-800/80"
+              style={{ touchAction: "manipulation" }}
+              className="rounded-full border border-hairline bg-surface px-3 py-1.5 text-xs font-medium text-ink shadow-sm transition-colors hover:bg-surface-hover touch-manipulation"
             >
               Reset
             </button>
@@ -235,20 +231,21 @@ export function GameShell({
         <div className="relative mt-5">{children}</div>
 
         {howToPlay && (
-          <div className="relative mt-6 border-t border-slate-200/70 pt-4 dark:border-sky-900/40">
+          <div className="relative mt-6 border-t border-hairline pt-4">
             <button
               type="button"
               aria-expanded={howToOpen}
               onClick={() => setHowToOpen((v) => !v)}
-              className="flex w-full items-center justify-between text-left text-sm font-semibold text-slate-800 dark:text-slate-100"
+              style={{ touchAction: "manipulation" }}
+              className="flex w-full items-center justify-between text-left text-sm font-semibold text-ink touch-manipulation"
             >
               <span>How to play</span>
-              <span aria-hidden className="text-slate-400">
+              <span aria-hidden className="text-ink-dim">
                 {howToOpen ? "−" : "+"}
               </span>
             </button>
             {howToOpen && (
-              <div className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <div className="mt-3 space-y-2 text-sm text-ink-muted">
                 {howToPlay}
               </div>
             )}
@@ -260,19 +257,19 @@ export function GameShell({
         <dialog
           open
           aria-label="Badge earned"
-          className="fixed inset-x-0 bottom-6 z-50 mx-auto flex max-w-sm items-start gap-3 rounded-2xl border border-sky-300/70 bg-white/95 p-4 shadow-2xl ring-1 ring-sky-200/60 backdrop-blur-md dark:border-sky-700/60 dark:bg-slate-900/95 dark:ring-sky-800/50"
+          className="fixed inset-x-0 bottom-6 z-50 mx-auto flex max-w-sm items-start gap-3 rounded-feature border border-border-accent bg-surface-hover p-4 shadow-card-hover backdrop-blur-md dark:border-sky-700/60 dark:bg-slate-900/95 dark:ring-sky-800/50"
         >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sky-100 text-lg font-bold text-sky-700 dark:bg-sky-900/60 dark:text-sky-200">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface border border-border-accent text-lg font-bold text-accent">
             ★
           </div>
           <div className="min-w-0 flex-1">
-            <p className="text-xs font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-300">
+            <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
               Badge earned
             </p>
-            <p className="mt-0.5 text-sm font-semibold text-slate-900 dark:text-slate-50">
+            <p className="mt-0.5 text-sm font-semibold text-ink">
               {earnedBadge.name}
             </p>
-            <p className="mt-0.5 text-xs text-slate-600 dark:text-slate-300">
+            <p className="mt-0.5 text-xs text-ink-muted">
               {earnedBadge.description}
             </p>
           </div>
@@ -280,7 +277,7 @@ export function GameShell({
             type="button"
             aria-label="Dismiss badge notification"
             onClick={() => setEarnedBadge(null)}
-            className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+            className="text-ink-dim hover:text-ink"
           >
             ×
           </button>

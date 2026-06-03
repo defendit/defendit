@@ -12,7 +12,7 @@ export default function SigintPrivacy() {
       />
 
       <LegalPage>
-        <h1 className="text-xl sm:text-3xl font-bold text-center border-b pb-4 mb-6 uppercase tracking-wider">
+        <h1 className="text-h2 font-semibold text-center border-b border-hairline pb-4 mb-6 uppercase tracking-wider">
           SIGINT Dashboard&trade; Privacy Policy
         </h1>
 
@@ -32,7 +32,7 @@ export default function SigintPrivacy() {
           Contact:{" "}
           <a
             href="mailto:privacy@wedefendit.com"
-            className="text-blue-600 underline"
+            className="text-accent underline"
           >
             privacy@wedefendit.com
           </a>
@@ -40,7 +40,7 @@ export default function SigintPrivacy() {
           3035 SE MARICAMP RD UNIT 104-205, Ocala, FL 34471
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">Purpose</h2>
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Purpose</h2>
         <p>
           The purpose of this privacy policy (&quot;Privacy Policy&quot;) is to
           inform users of our Site of the following:
@@ -57,7 +57,7 @@ export default function SigintPrivacy() {
           our Site.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">Consent</h2>
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Consent</h2>
         <p>By using our Site users agree that they consent to:</p>
         <ol className="list-decimal ml-6 my-2">
           <li>The conditions set out in this Privacy Policy</li>
@@ -67,7 +67,7 @@ export default function SigintPrivacy() {
           </li>
         </ol>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Lawful Basis for Data Processing
         </h2>
         <p>
@@ -82,7 +82,7 @@ export default function SigintPrivacy() {
             one or more specific purposes. You can withdraw consent by emailing{" "}
             <a
               href="mailto:privacy@wedefendit.com"
-              className="text-blue-600 underline"
+              className="text-accent underline"
             >
               privacy@wedefendit.com
             </a>{" "}
@@ -97,7 +97,7 @@ export default function SigintPrivacy() {
           </li>
         </ol>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Personal Data We Collect
         </h2>
         <p>
@@ -139,7 +139,7 @@ export default function SigintPrivacy() {
           <li>Waiting list sign-up form submissions</li>
         </ul>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           How We Use Personal Data
         </h2>
         <p>
@@ -156,7 +156,7 @@ export default function SigintPrivacy() {
           </li>
         </ul>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Who We Share Personal Data With
         </h2>
 
@@ -199,7 +199,7 @@ export default function SigintPrivacy() {
           policies and practices.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           How Long We Store Personal Data
         </h2>
         <p>
@@ -210,7 +210,7 @@ export default function SigintPrivacy() {
           You will be notified if your data is kept for longer than this period.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           How We Protect Your Personal Data
         </h2>
         <p>
@@ -228,7 +228,7 @@ export default function SigintPrivacy() {
           reasonably practical.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           International Data Transfers
         </h2>
         <p>We transfer user personal data to the following countries:</p>
@@ -260,7 +260,7 @@ export default function SigintPrivacy() {
           </li>
         </ol>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Your Rights as a User
         </h2>
         <p>Under the GDPR, you have the following rights:</p>
@@ -274,7 +274,7 @@ export default function SigintPrivacy() {
           <li>Right to object.</li>
         </ol>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">Children</h2>
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Children</h2>
         <p>
           The minimum age to use our website is 13 years of age. We do not
           knowingly collect or use personal data from children under 16 years of
@@ -285,7 +285,7 @@ export default function SigintPrivacy() {
           officer.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           How to Access, Modify, Delete, or Challenge the Data Collected
         </h2>
         <p>
@@ -301,7 +301,7 @@ export default function SigintPrivacy() {
           <br />
           <a
             href="mailto:privacy@wedefendit.com"
-            className="text-blue-600 underline"
+            className="text-accent underline"
           >
             privacy@wedefendit.com
           </a>
@@ -309,7 +309,7 @@ export default function SigintPrivacy() {
           3035 SE MARICAMP RD UNIT 104-205, Ocala, FL 34471
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Do Not Track Notice
         </h2>
         <p>
@@ -321,7 +321,7 @@ export default function SigintPrivacy() {
           your data will respond to DNT signals.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           How to Opt-Out of Data Collection, Use or Disclosure
         </h2>
         <p>
@@ -336,7 +336,7 @@ export default function SigintPrivacy() {
             email or by emailing{" "}
             <a
               href="mailto:privacy@wedefendit.com"
-              className="text-blue-600 underline"
+              className="text-accent underline"
             >
               privacy@wedefendit.com
             </a>
@@ -344,7 +344,7 @@ export default function SigintPrivacy() {
           </li>
         </ol>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Cookie Policy
         </h2>
         <p>
@@ -366,7 +366,7 @@ export default function SigintPrivacy() {
           </li>
         </ol>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Additional Clauses
         </h2>
         <p>
@@ -383,7 +383,7 @@ export default function SigintPrivacy() {
           list sign-up process.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Modifications
         </h2>
         <p>
@@ -396,7 +396,7 @@ export default function SigintPrivacy() {
           we may notify users by email of changes to this Privacy Policy.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
           Complaints
         </h2>
         <p>
@@ -411,14 +411,14 @@ export default function SigintPrivacy() {
           (CNIL), France.
         </p>
 
-        <h2 className="text-xl font-bold uppercase border-b my-4">Contact</h2>
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Contact</h2>
         <p>For questions or concerns about this Privacy Policy, contact:</p>
         <p className="my-2">
           Anthony Tropeano
           <br />
           <a
             href="mailto:privacy@wedefendit.com"
-            className="text-blue-600 underline"
+            className="text-accent underline"
           >
             privacy@wedefendit.com
           </a>

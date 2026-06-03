@@ -17,10 +17,10 @@ export function LegalPage({ children }: { children: React.ReactNode }) {
     <main
       className={`font-sans relative min-h-full flex flex-col items-center justify-start w-full`}
     >
-      <section className="max-w-5xl mx-auto px-6 py-12 bg-white/20 dark:bg-slate-900/55  text-gray-900 dark:text-gray-100 font-serif text-justify leading-relaxed">
+      <section className="max-w-5xl mx-auto px-6 py-12 bg-surface text-ink font-serif text-justify leading-relaxed">
         {children}
 
-        <footer className="pt-8 border-t mt-8 text-sm text-center text-gray-500">
+        <footer className="pt-8 border-t border-hairline mt-8 text-sm text-center text-ink-dim">
           Prepared by: &copy; 2002-2026 LawDepot.com&reg;
         </footer>
       </section>

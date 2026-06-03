@@ -27,6 +27,26 @@ const SITE_PAGES = [
   { name: "awareness", path: "/awareness" },
 ];
 
+type Theme = "light" | "dark";
+const THEMES: Theme[] = ["dark", "light"];
+
+/**
+ * Force the site theme before any page script runs. The site reads
+ * `localStorage.theme` and toggles the `.dark` class on <html> (it does not use
+ * prefers-color-scheme), so we seed localStorage and also emulate the matching
+ * color-scheme media so native form controls/scrollbars match.
+ */
+async function applyTheme(page: Page, theme: Theme) {
+  await page.addInitScript((t) => {
+    try {
+      localStorage.setItem("theme", t);
+    } catch {
+      // private-mode / quota — best effort; the default (dark) still renders
+    }
+  }, theme);
+  await page.emulateMedia({ colorScheme: theme });
+}
+
 async function stabilize(page: Page) {
   await page.addStyleTag({
     content:
@@ -57,18 +77,24 @@ async function dismissOnboarding(page: Page) {
 // ====== SITE PAGES ======
 
 test.describe("Visual: site pages", () => {
-  for (const vp of VIEWPORTS) {
-    for (const pg of SITE_PAGES) {
-      test(`${pg.name} @ ${vp.name}`, async ({ page }) => {
-        await page.setViewportSize({ width: vp.width, height: vp.height });
-        await page.goto(pg.path, { waitUntil: "networkidle" });
-        await stabilize(page);
-        await page.waitForTimeout(300);
-        await expect(page).toHaveScreenshot(`${pg.name}-${vp.name}.png`, {
-          fullPage: true,
-          animations: "disabled",
+  for (const theme of THEMES) {
+    for (const vp of VIEWPORTS) {
+      for (const pg of SITE_PAGES) {
+        test(`${pg.name} @ ${vp.name} (${theme})`, async ({ page }) => {
+          await applyTheme(page, theme);
+          await page.setViewportSize({ width: vp.width, height: vp.height });
+          await page.goto(pg.path, { waitUntil: "networkidle" });
+          await stabilize(page);
+          await page.waitForTimeout(300);
+          await expect(page).toHaveScreenshot(
+            `${pg.name}-${theme}-${vp.name}.png`,
+            {
+              fullPage: true,
+              animations: "disabled",
+            },
+          );
         });
-      });
+      }
     }
   }
 });

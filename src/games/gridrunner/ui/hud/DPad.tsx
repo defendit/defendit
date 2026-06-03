@@ -19,11 +19,15 @@ type DPadProps = Readonly<{
   onRelease?: (direction: DPadDirection) => void;
 }>;
 
-const ARROW: Record<DPadDirection, string> = {
-  up: "\u25B2",
-  down: "\u25BC",
-  left: "\u25C0",
-  right: "\u25B6",
+// One upward triangle, rotated per direction. Replaces the previous Unicode
+// glyphs (U+25C0/U+25B6), which mobile rendered with emoji presentation and
+// therefore drew as colored play-button emoji instead of plain cyan triangles.
+// The path's centroid sits at the 24x24 viewBox center so rotation stays put.
+const ROTATION: Record<DPadDirection, string> = {
+  up: "rotate-0",
+  right: "rotate-90",
+  down: "rotate-180",
+  left: "-rotate-90",
 };
 
 const GRID_AREA: Record<DPadDirection, string> = {
@@ -32,6 +36,14 @@ const GRID_AREA: Record<DPadDirection, string> = {
   right: "2 / 3 / 3 / 4",
   down: "3 / 2 / 4 / 3",
 };
+
+function DPadArrow({ className }: Readonly<{ className?: string }>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" className={className}>
+      <path d="M12 4 19 16H5Z" />
+    </svg>
+  );
+}
 
 export function DPad({ onPress, onRelease }: DPadProps) {
   return (
@@ -49,10 +61,12 @@ export function DPad({ onPress, onRelease }: DPadProps) {
           onPointerDown={() => onPress?.(dir)}
           onPointerUp={() => onRelease?.(dir)}
           onPointerCancel={() => onRelease?.(dir)}
-          className="flex h-8 w-8 touch-none items-center justify-center rounded-sm border border-[#1a3a4a] bg-[#0f1b2d] text-[10px] text-[#00f0ff] shadow-[inset_0_0_6px_rgba(0,240,255,0.08)] active:brightness-150 sm:h-10 sm:w-10 sm:text-xs lg:h-12 lg:w-12 lg:text-sm"
+          className="flex h-8 w-8 touch-none items-center justify-center rounded-sm border border-[#1a3a4a] bg-[#0f1b2d] text-[#00f0ff] shadow-[inset_0_0_6px_rgba(0,240,255,0.08)] active:brightness-150 sm:h-10 sm:w-10 lg:h-12 lg:w-12"
           style={{ gridArea: GRID_AREA[dir] }}
         >
-          {ARROW[dir]}
+          <DPadArrow
+            className={`h-3 w-3 sm:h-3.5 sm:w-3.5 lg:h-4 lg:w-4 ${ROTATION[dir]}`}
+          />
         </button>
       ))}
       <div

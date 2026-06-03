@@ -1,3 +1,17 @@
+/*
+Copyright © 2026 Defend I.T. Solutions LLC. All Rights Reserved.
+
+This software and its source code are the proprietary property of
+Defend I.T. Solutions LLC and are protected by United States and
+international copyright laws. Unauthorized reproduction, distribution,
+modification, display, or use of this software, in whole or in part, without the
+prior written permission of Defend I.T. Solutions LLC, is strictly prohibited.
+
+This software is provided for use only by authorized employees, contractors, or
+licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
+party without express written consent.
+*/
+
 import { useState } from "react";
 import {
   Send,
@@ -26,10 +40,20 @@ const TOPICS = [
   { value: "other", label: "Other" },
 ];
 
-type ContactFormProps = {
+// text-base at the base viewport prevents iOS Safari auto-zoom on focus.
+const FIELD_BASE =
+  "w-full pl-10 pr-4 py-3 rounded-lg bg-surface-inset text-ink placeholder-ink-dim text-base focus:outline-none focus:ring-1 transition-colors";
+const FIELD_OK = "border border-hairline focus:border-accent focus:ring-accent";
+const FIELD_ERROR =
+  "border border-danger focus:border-danger focus:ring-danger";
+const LABEL = "block text-sm font-medium text-ink-muted mb-1";
+const FIELD_ICON =
+  "absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-dim pointer-events-none";
+
+type ContactFormProps = Readonly<{
   defaultTopic?: string;
   className?: string;
-};
+}>;
 
 export function ContactForm({
   defaultTopic = "general",
@@ -113,17 +137,17 @@ export function ContactForm({
   if (status === "success") {
     return (
       <div
-        className={`flex flex-col items-center justify-center gap-3 py-10 px-6 rounded-lg bg-green-500/10 border border-green-500/30 ${className}`}
+        className={`flex flex-col items-center justify-center gap-3 py-10 px-6 rounded-lg bg-success/10 border border-success/40 ${className}`}
       >
-        <Check className="w-8 h-8 text-green-400" />
-        <p className="text-green-400 font-semibold">Message sent!</p>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+        <Check className="w-8 h-8 text-success" />
+        <p className="text-success font-semibold">Message sent!</p>
+        <p className="text-sm text-ink-muted">
           We&apos;ll get back to you shortly.
         </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-2 text-sm text-sky-400 hover:text-sky-300 hover:underline transition-colors"
+          className="mt-2 text-sm text-accent hover:text-accent-hover hover:underline transition-colors"
         >
           Send another message
         </button>
@@ -136,19 +160,16 @@ export function ContactForm({
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Topic */}
         <div>
-          <label
-            htmlFor="contact-topic"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-          >
+          <label htmlFor="contact-topic" className={LABEL}>
             Topic
           </label>
           <div className="relative">
-            <Tag className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500 pointer-events-none" />
+            <Tag className={FIELD_ICON} />
             <select
               id="contact-topic"
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm focus:outline-none focus:border-sky-500 dark:focus:border-sky-400 focus:ring-1 focus:ring-sky-500 dark:focus:ring-sky-400 transition-colors appearance-none"
+              className={`${FIELD_BASE} ${FIELD_OK} appearance-none`}
             >
               {TOPICS.map((t) => (
                 <option key={t.value} value={t.value}>
@@ -161,14 +182,11 @@ export function ContactForm({
 
         {/* Name */}
         <div>
-          <label
-            htmlFor="contact-name"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-          >
-            Name <span className="text-gray-400 font-normal">(optional)</span>
+          <label htmlFor="contact-name" className={LABEL}>
+            Name <span className="text-ink-dim font-normal">(optional)</span>
           </label>
           <div className="relative">
-            <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500 pointer-events-none" />
+            <User className={FIELD_ICON} />
             <input
               id="contact-name"
               type="text"
@@ -180,24 +198,21 @@ export function ContactForm({
               }}
               placeholder="Your name"
               maxLength={100}
-              className="w-full pl-10 pr-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm focus:outline-none focus:border-sky-500 dark:focus:border-sky-400 focus:ring-1 focus:ring-sky-500 dark:focus:ring-sky-400 transition-colors"
+              className={`${FIELD_BASE} ${FIELD_OK}`}
             />
           </div>
           {fieldErrors.name && (
-            <p className="mt-1 text-xs text-red-400">{fieldErrors.name}</p>
+            <p className="mt-1 text-xs text-danger">{fieldErrors.name}</p>
           )}
         </div>
 
         {/* Email */}
         <div>
-          <label
-            htmlFor="contact-email"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-          >
+          <label htmlFor="contact-email" className={LABEL}>
             Email
           </label>
           <div className="relative">
-            <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500 pointer-events-none" />
+            <Mail className={FIELD_ICON} />
             <input
               id="contact-email"
               type="email"
@@ -210,28 +225,23 @@ export function ContactForm({
                 if (status === "error") setStatus("idle");
               }}
               placeholder="your@email.com"
-              className={`w-full pl-10 pr-4 py-3 rounded-lg bg-white dark:bg-gray-800 border text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm focus:outline-none focus:ring-1 transition-colors ${
-                fieldErrors.email
-                  ? "border-red-400 dark:border-red-500 focus:border-red-400 focus:ring-red-400"
-                  : "border-gray-300 dark:border-gray-600 focus:border-sky-500 dark:focus:border-sky-400 focus:ring-sky-500 dark:focus:ring-sky-400"
+              className={`${FIELD_BASE} ${
+                fieldErrors.email ? FIELD_ERROR : FIELD_OK
               }`}
             />
           </div>
           {fieldErrors.email && (
-            <p className="mt-1 text-xs text-red-400">{fieldErrors.email}</p>
+            <p className="mt-1 text-xs text-danger">{fieldErrors.email}</p>
           )}
         </div>
 
         {/* Message */}
         <div>
-          <label
-            htmlFor="contact-message"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
-          >
+          <label htmlFor="contact-message" className={LABEL}>
             Message
           </label>
           <div className="relative">
-            <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-gray-400 dark:text-gray-500 pointer-events-none" />
+            <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-ink-dim pointer-events-none" />
             <textarea
               id="contact-message"
               required
@@ -245,20 +255,18 @@ export function ContactForm({
               placeholder="How can we help?"
               rows={5}
               maxLength={5000}
-              className={`w-full pl-10 pr-4 py-3 rounded-lg bg-white dark:bg-gray-800 border text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm focus:outline-none focus:ring-1 transition-colors resize-y ${
-                fieldErrors.message
-                  ? "border-red-400 dark:border-red-500 focus:border-red-400 focus:ring-red-400"
-                  : "border-gray-300 dark:border-gray-600 focus:border-sky-500 dark:focus:border-sky-400 focus:ring-sky-500 dark:focus:ring-sky-400"
+              className={`${FIELD_BASE} resize-y ${
+                fieldErrors.message ? FIELD_ERROR : FIELD_OK
               }`}
             />
           </div>
           <div className="flex justify-between mt-1">
             {fieldErrors.message ? (
-              <p className="text-xs text-red-400">{fieldErrors.message}</p>
+              <p className="text-xs text-danger">{fieldErrors.message}</p>
             ) : (
               <span />
             )}
-            <p className="text-xs text-gray-400">{message.length}/5000</p>
+            <p className="text-xs text-ink-dim">{message.length}/5000</p>
           </div>
         </div>
 
@@ -266,7 +274,8 @@ export function ContactForm({
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 dark:border dark:border-sky-400/18 dark:bg-sky-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(125,211,252,0.14),transparent_62%)] dark:shadow-[0_14px_28px_rgba(2,132,199,0.18)] dark:ring-1 dark:ring-white/5 dark:backdrop-blur-sm dark:hover:-translate-y-0.5 dark:hover:border-sky-400/28 dark:hover:bg-sky-900/72 dark:hover:shadow-[0_18px_34px_rgba(2,132,199,0.24)] text-white font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          style={{ touchAction: "manipulation" }}
+          className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-contrast font-semibold shadow-lg hover:bg-accent-hover hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation"
         >
           {status === "loading" ? (
             <Loader2 className="w-4 h-4 animate-spin" />
@@ -277,10 +286,10 @@ export function ContactForm({
         </button>
 
         {status === "error" && (
-          <p className="text-xs text-red-400 text-center">{errorMsg}</p>
+          <p className="text-xs text-danger text-center">{errorMsg}</p>
         )}
       </form>
-      <p className="mt-3 text-[10px] text-gray-500 dark:text-gray-600 text-center">
+      <p className="mt-3 text-xs text-ink-dim text-center">
         Protected by reCAPTCHA. Your message goes directly to our team.
       </p>
     </div>

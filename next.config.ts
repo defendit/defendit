@@ -20,9 +20,54 @@ const csp = [
   "frame-ancestors 'self'",
 ].join("; ");
 
+// Deny every privileged browser feature except clipboard-write, which the
+// "copy" buttons (CopyableCode) use. The CSP above is intentionally left as-is:
+// Leaflet + reCAPTCHA require style-src 'unsafe-inline' and the google/tile
+// origins, so it is not tightened further here.
+const permissionsPolicy = [
+  "accelerometer=()",
+  "ambient-light-sensor=()",
+  "autoplay=()",
+  "battery=()",
+  "bluetooth=()",
+  "camera=()",
+  "clipboard-read=()",
+  "clipboard-write=(self)",
+  "display-capture=()",
+  "encrypted-media=()",
+  "fullscreen=()",
+  "gamepad=()",
+  "geolocation=()",
+  "gyroscope=()",
+  "hid=()",
+  "idle-detection=()",
+  "magnetometer=()",
+  "microphone=()",
+  "midi=()",
+  "payment=()",
+  "picture-in-picture=()",
+  "publickey-credentials-get=()",
+  "screen-wake-lock=()",
+  "serial=()",
+  "usb=()",
+  "web-share=()",
+  "xr-spatial-tracking=()",
+].join(", ");
+
 const securityHeaders = [
   { key: "Content-Security-Policy", value: csp },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  {
+    key: "Strict-Transport-Security",
+    value: "max-age=31536000; includeSubDomains; preload",
+  },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  // Matches the CSP frame-ancestors 'self' above.
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  // allow-popups keeps reCAPTCHA's popup/opener relationship intact.
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
+  { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
+  { key: "Permissions-Policy", value: permissionsPolicy },
 ];
 
 const nextConfig = {

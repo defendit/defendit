@@ -47,7 +47,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           : "relative w-full min-h-screen flex flex-col z-10 justify-between items-center"
       }
     >
-      <header className="w-full md:sticky md:top-0 dark:bg-gray-900/40  backdrop-blur-md bg-gray-50/40 z-10">
+      <header className="w-full sticky top-0 backdrop-blur-md bg-ground/40 z-10">
         <Navbar />
       </header>
       {/* ThemeToggle applies the `dark` class to <html>. Digital House mounts
@@ -57,7 +57,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       {!isGameRoute && (
         <Link href="/" title="Defend I.T. Solutions Home">
           <Logo
-            className="mb-3 h-52 w-52 -mt-2 text-gray-800 transition-all duration-700 animate-fade-in dark:text-sky-400 sm:mb-3 sm:h-56 sm:w-56 sm:-mt-3 md:mb-4 md:h-64 md:w-64 md:-mt-4 lg:h-80 lg:w-80 z-20"
+            className="mb-3 h-52 w-52 -mt-2 text-ink transition-all duration-700 animate-fade-in dark:text-accent sm:mb-3 sm:h-56 sm:w-56 sm:-mt-3 md:mb-4 md:h-64 md:w-64 md:-mt-4 lg:h-80 lg:w-80 z-20"
             xlinkTitle="Defend I.T. Solutions Home"
           />
         </Link>

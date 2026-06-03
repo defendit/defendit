@@ -42,7 +42,7 @@ export function BreadCrumbs({
       <nav
         aria-label="Breadcrumb"
         className={
-          "text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2 overflow-x-auto max-w-full " +
+          "text-xs sm:text-sm text-ink-dim mb-2 overflow-x-auto max-w-full " +
           className
         }
         style={{ WebkitOverflowScrolling: "touch" }}
@@ -58,10 +58,7 @@ export function BreadCrumbs({
                   }`}
                 >
                   {isLast || !c.href ? (
-                    <span
-                      aria-current="page"
-                      className="text-gray-400 dark:text-gray-500"
-                    >
+                    <span aria-current="page" className="text-ink-muted">
                       {c.name}
                     </span>
                   ) : (

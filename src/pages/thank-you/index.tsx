@@ -85,34 +85,34 @@ export default function ThankYouPage() {
       </Head>
       <PageContainer>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20 text-center space-y-10">
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto" />
+          <CheckCircle className="w-16 h-16 text-success mx-auto" />
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+          <h1 className="text-display tracking-display font-semibold text-ink">
             Thank You for Booking!
           </h1>
 
-          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+          <p className="text-base sm:text-lg text-ink-muted max-w-xl mx-auto">
             Your appointment has been successfully scheduled. We appreciate your
             trust in our services and look forward to assisting you.
           </p>
 
           <div className="space-y-2">
-            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-base sm:text-lg text-ink-muted">
               If you have any questions or need to reschedule, please call us
               at:
             </p>
             <a
               href={`tel:+${contact.phone.replace(/[^0-9]/g, "")}`}
-              className="text-base sm:text-lg text-blue-600 dark:text-sky-400 hover:underline break-words"
+              className="text-base sm:text-lg text-accent hover:underline break-words"
             >
               {contact.phone}
             </a>
           </div>
 
-          <div className="mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-400">
+          <div className="mt-6 text-base sm:text-lg text-ink-muted">
             Redirecting you to the homepage in{" "}
             <span
-              className="inline-block text-xl font-semibold text-gray-900 dark:text-white min-w-[2ch] text-center"
+              className="inline-block text-xl font-semibold text-ink min-w-[2ch] text-center"
               aria-live="polite"
             >
               {secondsLeft}
@@ -120,11 +120,12 @@ export default function ThankYouPage() {
             seconds...
           </div>
 
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-ink-dim">
             If you are not redirected automatically,&nbsp;
             <button
+              type="button"
               onClick={() => router.push("/")}
-              className="text-blue-600 dark:text-sky-400 hover:underline"
+              className="text-accent hover:underline"
             >
               click here
             </button>

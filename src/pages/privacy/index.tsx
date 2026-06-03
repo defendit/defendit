@@ -8,7 +8,7 @@ const { street, city, state, zip } = address || {};
 export default function Privacy() {
   return (
     <LegalPage>
-      <h1 className="text-xl sm:text-3xl font-bold text-center border-b pb-4 mb-6 uppercase tracking-wider">
+      <h1 className="text-h2 font-semibold text-center border-b border-hairline pb-4 mb-6 uppercase tracking-wider">
         www.wedefendit.com Privacy Policy
       </h1>
 
@@ -27,14 +27,14 @@ export default function Privacy() {
         <br />
         <br />
         Contact:{" "}
-        <a href={`mailto:${email}`} className="text-blue-600 underline">
+        <a href={`mailto:${email}`} className="text-accent underline">
           {email}
         </a>
         <br />
         {street}, {city}, {state} {zip}
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">Purpose</h2>
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Purpose</h2>
       <p>
         The purpose of this privacy policy (&quot;Privacy Policy&quot;) is to
         inform users of our Site of the following:
@@ -51,7 +51,7 @@ export default function Privacy() {
         our Site.
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">Consent</h2>
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Consent</h2>
       <p>By using our Site users agree that they consent to:</p>
       <ol className="list-decimal ml-6 my-2">
         <li>The conditions set out in this Privacy Policy</li>
@@ -61,7 +61,7 @@ export default function Privacy() {
         </li>
       </ol>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         Personal Data We Collect
       </h2>
       <p>
@@ -99,7 +99,7 @@ export default function Privacy() {
         <li>Contact form submissions</li>
       </ul>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         How We Use Personal Data
       </h2>
       <p>
@@ -123,7 +123,7 @@ export default function Privacy() {
         <li>To respond to inquiries and communicate with potential clients</li>
       </ul>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         Who We Share Personal Data With
       </h2>
       <h3 className="font-semibold mt-4 mb-1 underline">Employees</h3>
@@ -172,7 +172,7 @@ export default function Privacy() {
         policies and practices.
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         How Long We Store Personal Data
       </h2>
       <p>
@@ -183,7 +183,7 @@ export default function Privacy() {
         You will be notified if your data is kept for longer than this period.
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         How We Protect Your Personal Data
       </h2>
       <p>
@@ -200,7 +200,7 @@ export default function Privacy() {
         reasonably practical.
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         International Data Transfers
       </h2>
       <p>We transfer user personal data to the following countries:</p>
@@ -214,7 +214,7 @@ export default function Privacy() {
         requirements for transferring personal data internationally.
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">Children</h2>
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Children</h2>
       <p>
         The minimum age to use our website is 13 years of age. We do not
         knowingly collect or use personal data from children under 13 years of
@@ -224,7 +224,7 @@ export default function Privacy() {
         their parent or guardian may contact our privacy officer.
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         How to Access, Modify, Delete, or Challenge the Data Collected
       </h2>
       <p>
@@ -237,14 +237,14 @@ export default function Privacy() {
       <p className="my-2">
         Anthony Tropeano
         <br />
-        <a href={`mailto:${privacy_email}`} className="text-blue-600 underline">
+        <a href={`mailto:${privacy_email}`} className="text-accent underline">
           {privacy_email}
         </a>
         <br />
         {street}, {city}, {state} {zip}
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         Do Not Track Notice
       </h2>
       <p>
@@ -256,7 +256,7 @@ export default function Privacy() {
         will respond to DNT signals.
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         How to Opt-Out of Data Collection, Use or Disclosure
       </h2>
       <p>
@@ -271,7 +271,7 @@ export default function Privacy() {
           by emailing{" "}
           <a
             href={`mailto:${privacy_email}`}
-            className="text-blue-600 underline"
+            className="text-accent underline"
           >
             {privacy_email}
           </a>
@@ -279,7 +279,7 @@ export default function Privacy() {
         </li>
       </ol>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         Cookie Policy
       </h2>
       <p>
@@ -302,7 +302,7 @@ export default function Privacy() {
         </li>
       </ol>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         Additional Clauses
       </h2>
       <p>
@@ -318,7 +318,7 @@ export default function Privacy() {
         services within the previous 30 days.
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         Modifications
       </h2>
       <p>
@@ -331,7 +331,7 @@ export default function Privacy() {
         notify users by email of changes to this Privacy Policy.
       </p>
 
-      <h2 className="text-xl font-bold uppercase border-b my-4">
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
         Contact Information
       </h2>
       <p>
@@ -341,7 +341,7 @@ export default function Privacy() {
       <p className="my-2">
         Anthony Tropeano
         <br />
-        <a href={`mailto:${privacy_email}`} className="text-blue-600 underline">
+        <a href={`mailto:${privacy_email}`} className="text-accent underline">
           {privacy_email}
         </a>
         <br />

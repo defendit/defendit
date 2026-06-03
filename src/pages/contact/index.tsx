@@ -41,10 +41,10 @@ const { fingerprint, key_id, key_url, secure_email } = gpg;
 function HeadingSection() {
   return (
     <header className="my-4 space-y-3 text-center">
-      <h1 className="mx-auto max-w-[14ch] text-balance text-3xl font-bold leading-tight sm:max-w-none sm:text-4xl md:text-5xl">
+      <h1 className="mx-auto max-w-[14ch] text-balance text-display tracking-display font-semibold text-ink sm:max-w-none">
         Contact Defend I.T. Solutions
       </h1>
-      <h2 className="mx-auto mb-6 mt-2 max-w-2xl text-base text-gray-600 dark:text-gray-300 sm:text-lg md:text-xl">
+      <h2 className="mx-auto mb-6 mt-2 max-w-readable text-lead text-ink-muted">
         Tell us what is going on, and we&apos;ll point you in the right
         direction.
       </h2>
@@ -54,19 +54,19 @@ function HeadingSection() {
 
 function PrimaryContact() {
   return (
-    <div className="relative flex flex-col items-center justify-center space-y-6 overflow-hidden rounded-2xl border border-slate-200/80 bg-white/74 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.06),transparent_58%)] p-8 text-center shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.1),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5">
-      <Phone className="w-16 h-16 text-blue-600 dark:text-sky-400" />
+    <div className="relative flex flex-col items-center justify-center space-y-6 overflow-hidden rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] p-8 text-center shadow-card">
+      <Phone className="w-16 h-16 text-accent" />
       <div className="space-y-2">
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+        <h2 className="text-h2 tracking-h2 font-semibold text-ink">
           Call or Text Us
         </h2>
         <a
           href={`tel:${phone.replace(/[^0-9]/g, "")}`}
-          className="block text-3xl font-bold text-blue-600 dark:text-sky-400 hover:underline"
+          className="block text-3xl font-bold text-accent hover:underline"
         >
           {phone.replace("+1", "")}
         </a>
-        <p className="text-sm text-gray-600 dark:text-gray-400">
+        <p className="text-sm text-ink-muted">
           Available for calls and text messages
         </p>
       </div>
@@ -76,22 +76,22 @@ function PrimaryContact() {
 
 function ContactInfoCard() {
   return (
-    <div className="relative space-y-6 overflow-hidden rounded-2xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5">
-      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+    <div className="relative space-y-6 overflow-hidden rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] p-6 shadow-card">
+      <h3 className="text-h3 tracking-h3 font-semibold text-ink mb-4">
         Other Ways to Reach Us
       </h3>
 
       <div className="space-y-4">
         {/* Standard Email */}
         <div className="flex items-start gap-3">
-          <Mail className="w-5 h-5 text-blue-500 dark:text-sky-400 mt-1 flex-shrink-0" />
+          <Mail className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white">
+            <h4 className="font-semibold text-ink">
               Standard Email
             </h4>
             <a
               href={`mailto:${email}`}
-              className="text-blue-600 dark:text-sky-400 hover:underline text-sm break-all"
+              className="text-accent hover:underline text-sm break-all"
             >
               {email}
             </a>
@@ -100,14 +100,14 @@ function ContactInfoCard() {
 
         {/* Service Email */}
         <div className="flex items-start gap-3">
-          <Mail className="w-5 h-5 text-blue-500 dark:text-sky-400 mt-1 flex-shrink-0" />
+          <Mail className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white">
+            <h4 className="font-semibold text-ink">
               Service Requests
             </h4>
             <a
               href={`mailto:${service_email}`}
-              className="text-blue-600 dark:text-sky-400 hover:underline text-sm break-all"
+              className="text-accent hover:underline text-sm break-all"
             >
               {service_email}
             </a>
@@ -115,16 +115,16 @@ function ContactInfoCard() {
         </div>
 
         {/* Address */}
-        <div className="flex items-start gap-3 pt-2 border-t border-gray-200 dark:border-gray-700">
-          <MapPin className="w-5 h-5 text-blue-500 dark:text-sky-400 mt-1 flex-shrink-0" />
+        <div className="flex items-start gap-3 pt-2 border-t border-hairline">
+          <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
+            <h4 className="font-semibold text-ink mb-1">
               Mailing Address
             </h4>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">
+            <p className="text-xs text-ink-dim mb-2">
               Mailing address only • We operate on-site or remotely
             </p>
-            <address className="text-sm not-italic leading-relaxed text-gray-700 dark:text-gray-300">
+            <address className="text-sm not-italic leading-relaxed text-ink-muted">
               <strong>{name}</strong>
               <br />
               {street}
@@ -148,15 +148,15 @@ function SecureContactCard({
   return (
     <section
       id="pgp"
-      className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/74 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.06),transparent_58%)] p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.1),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5"
+      className="relative overflow-hidden rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] p-6 shadow-card"
     >
       <div className="flex items-start gap-4">
-        <ShieldCheck className="w-8 h-8 text-blue-600 dark:text-sky-400 flex-shrink-0 mt-1" />
+        <ShieldCheck className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
         <div className="flex-1">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+          <h3 className="text-h3 tracking-h3 font-semibold text-ink mb-2">
             Need Secure Communication?
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          <p className="text-sm text-ink-muted mb-4">
             For sensitive inquiries, we support PGP-encrypted email
             communication.
           </p>
@@ -164,7 +164,8 @@ function SecureContactCard({
           <button
             type="button"
             onClick={() => setShowPGP(!showPGP)}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 dark:border dark:border-sky-400/18 dark:bg-sky-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(125,211,252,0.14),transparent_62%)] dark:shadow-[0_14px_28px_rgba(2,132,199,0.18)] dark:ring-1 dark:ring-white/5 dark:backdrop-blur-sm dark:hover:-translate-y-0.5 dark:hover:border-sky-400/28 dark:hover:bg-sky-900/72 dark:hover:shadow-[0_18px_34px_rgba(2,132,199,0.24)] text-white text-sm font-medium shadow transition-all"
+            style={{ touchAction: "manipulation" }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded bg-accent text-accent-contrast text-sm font-medium shadow transition-all hover:bg-accent-hover touch-manipulation"
             aria-controls="pgp-panel"
             aria-expanded={showPGP}
           >
@@ -179,13 +180,13 @@ function SecureContactCard({
           {showPGP && (
             <div
               id="pgp-panel"
-              className="mt-6 space-y-4 rounded-xl border border-slate-200/80 bg-white/74 p-4 text-sm text-gray-700 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/64 dark:text-gray-300 dark:shadow-[0_18px_36px_rgba(2,6,23,0.26)] dark:ring-white/5"
+              className="mt-6 space-y-4 rounded-card border border-hairline bg-surface p-4 text-sm text-ink-muted shadow-card"
             >
               <div>
                 <p className="font-semibold mb-1">Secure Email Address:</p>
                 <a
                   href={`mailto:${secure_email}`}
-                  className="text-blue-600 dark:text-sky-400 hover:underline break-all"
+                  className="text-accent hover:underline break-all"
                 >
                   {secure_email}
                 </a>
@@ -197,18 +198,19 @@ function SecureContactCard({
                   target="_blank"
                   rel="noopener noreferrer"
                   download
-                  className="inline-block rounded bg-blue-600 px-4 py-2 hover:bg-blue-700 dark:border dark:border-sky-400/18 dark:bg-sky-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(125,211,252,0.14),transparent_62%)] dark:shadow-[0_14px_28px_rgba(2,132,199,0.18)] dark:ring-1 dark:ring-white/5 dark:backdrop-blur-sm dark:hover:-translate-y-0.5 dark:hover:border-sky-400/28 dark:hover:bg-sky-900/72 dark:hover:shadow-[0_18px_34px_rgba(2,132,199,0.24)] text-white font-medium text-sm shadow transition-all"
+                  style={{ touchAction: "manipulation" }}
+                  className="inline-block rounded bg-accent px-4 py-2 text-accent-contrast font-medium text-sm shadow transition-all hover:bg-accent-hover touch-manipulation"
                 >
                   Download Public PGP Key
                 </a>
               </div>
 
-              <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+              <div className="pt-2 border-t border-hairline">
                 <p className="font-semibold mb-1">Key ID:</p>
                 <CopyableCode text={key_id} />
               </div>
 
-              <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+              <div className="pt-2 border-t border-hairline">
                 <div className="flex items-center gap-2 mb-2">
                   <Fingerprint className="w-4 h-4" />
                   <p className="font-semibold">Fingerprint:</p>
@@ -289,7 +291,10 @@ export default function ContactPage() {
         title="Contact Defend I.T. Solutions | Ocala, The Villages & Belleview"
         description="Contact Defend I.T. Solutions for local computer repair, virus removal, scam protection, Wi-Fi help, and on-site tech support in Ocala, The Villages, and Belleview."
         keywords="contact computer repair Ocala FL, virus removal The Villages, scam protection Belleview FL, Wi-Fi help Central Florida, local tech support, secure contact PGP"
-        structuredData={{ "@graph": [breadcrumbLd, contactPageLd] }}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@graph": [breadcrumbLd, contactPageLd],
+        }}
       />
 
       <PageContainer>
@@ -311,16 +316,16 @@ export default function ContactPage() {
           <SecureContactCard showPGP={showPGP} setShowPGP={setShowPGP} />
 
           {/* Contact Form */}
-          <section className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/74 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.06),transparent_58%)] p-4 shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.1),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 sm:p-6">
+          <section className="relative overflow-hidden rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card sm:p-6">
             <div className="flex items-center gap-3 mb-4">
-              <MessageSquare className="w-7 h-7 sm:w-8 sm:h-8 text-blue-600 dark:text-sky-400 flex-shrink-0" />
+              <MessageSquare className="w-7 h-7 sm:w-8 sm:h-8 text-accent flex-shrink-0" />
               <div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+                <h3 className="text-lg sm:text-h3 tracking-h3 font-semibold text-ink">
                   Send Us a Message
                 </h3>
               </div>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+            <p className="text-sm text-ink-muted mb-6">
               Tell us what you need help with and we&apos;ll get back to you.
             </p>
             <ContactForm className="max-w-xl mx-auto" />

@@ -1,4 +1,19 @@
+/*
+Copyright © 2026 Defend I.T. Solutions LLC. All Rights Reserved.
+
+This software and its source code are the proprietary property of
+Defend I.T. Solutions LLC and are protected by United States and
+international copyright laws. Unauthorized reproduction, distribution,
+modification, display, or use of this software, in whole or in part, without the
+prior written permission of Defend I.T. Solutions LLC, is strictly prohibited.
+
+This software is provided for use only by authorized employees, contractors, or
+licensees of Defend I.T. Solutions LLC and may not be disclosed to any third
+party without express written consent.
+*/
+
 import Link from "next/link";
+import { Card } from "./Card";
 
 type GameCard = Readonly<{
   href: string;
@@ -265,51 +280,41 @@ const GAMES: GameCard[] = [
   },
 ];
 
-const cardBase =
-  "group relative overflow-hidden rounded-2xl border p-5 text-left backdrop-blur-md transition-all";
-const cardActive =
-  "border-slate-200/80 bg-white/78 shadow-[0_16px_38px_rgba(15,23,42,0.08)] ring-1 ring-white/70 hover:-translate-y-0.5 hover:shadow-[0_22px_48px_rgba(15,23,42,0.14)] dark:border-sky-400/18 dark:bg-slate-950/74 dark:shadow-[0_22px_48px_rgba(2,6,23,0.36)] dark:ring-white/5 dark:hover:border-sky-400/35";
-const cardDisabled =
-  "border-slate-200/40 bg-white/40 shadow-none ring-1 ring-white/30 dark:border-slate-700/40 dark:bg-slate-950/40 dark:ring-white/5";
-
 function TrainingCard({ card }: Readonly<{ card: GameCard }>) {
   const inner = (
     <>
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.07),transparent_60%)] dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.14),transparent_60%)]" />
       {card.demo && (
         <div className="pointer-events-none absolute right-3 top-3 z-10 rotate-6 select-none">
-          <span className="inline-block rounded-sm border-[2.5px] border-red-600/85 px-2.5 py-0.5 text-xs font-black uppercase tracking-[0.2em] text-red-600/85 dark:border-red-400/90 dark:text-red-400/90">
+          <span className="inline-block rounded-sm border-[2.5px] border-danger px-2.5 py-0.5 text-xs font-semibold uppercase tracking-[0.2em] text-danger">
             Demo
           </span>
         </div>
       )}
       <div className={`relative ${card.comingSoon ? "opacity-50" : ""}`}>
-        <div className="mb-4 flex items-end justify-center rounded-xl border border-slate-200/60 bg-slate-100/60 p-4 dark:border-sky-900/40 dark:bg-slate-900/50">
+        <div className="mb-4 flex items-end justify-center rounded-xl border border-hairline bg-surface-inset p-4">
           {card.thumbnail}
         </div>
         <div className="flex items-center gap-2">
           <span
             className={[
-              "inline-block rounded-full border px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider",
+              "inline-block rounded-full border px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider",
               card.comingSoon
-                ? "border-slate-300/60 bg-slate-100 text-slate-500 dark:border-slate-600/40 dark:bg-slate-800/50 dark:text-slate-400"
-                : "border-sky-300/60 bg-sky-50 text-sky-700 dark:border-sky-500/40 dark:bg-sky-950/50 dark:text-sky-300",
+                ? "border-hairline bg-surface-inset text-ink-dim"
+                : "border-border-accent bg-surface text-accent",
             ].join(" ")}
           >
             {card.badge}
           </span>
-          <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+          <span className="text-xs font-semibold uppercase tracking-wider text-ink-dim">
             {card.meta}
           </span>
         </div>
-        <h3 className="mt-2 text-lg font-bold text-slate-900 dark:text-white">
+        <h3 className="mt-2 text-h3 tracking-h3 font-semibold text-ink">
           {card.title}
         </h3>
-        <p className="mt-1.5 text-sm text-slate-600 dark:text-slate-300">
-          {card.description}
-        </p>
+        <p className="mt-1.5 text-sm text-ink-muted">{card.description}</p>
         {!card.comingSoon && (
-          <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-sky-600 dark:text-sky-400">
+          <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
             Play
             <svg
               className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
@@ -320,14 +325,14 @@ function TrainingCard({ card }: Readonly<{ card: GameCard }>) {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
+                strokeWidth={1.25}
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
           </div>
         )}
         {card.comingSoon && (
-          <div className="mt-4 text-sm font-semibold text-slate-400 dark:text-slate-500">
+          <div className="mt-4 text-sm font-semibold text-ink-dim">
             In development
           </div>
         )}
@@ -337,33 +342,42 @@ function TrainingCard({ card }: Readonly<{ card: GameCard }>) {
 
   if (card.comingSoon) {
     return (
-      <div className={`${cardBase} ${cardDisabled} cursor-default`}>
+      <Card
+        wash
+        className="group relative overflow-hidden p-5 text-left cursor-default"
+      >
         {inner}
-      </div>
+      </Card>
     );
   }
 
   return (
-    <Link href={card.href} className={`${cardBase} ${cardActive}`}>
+    <Card
+      as={Link}
+      href={card.href}
+      interactive
+      wash
+      className="group relative overflow-hidden p-5 text-left"
+    >
       {inner}
-    </Link>
+    </Card>
   );
 }
 
 export function InteractiveTraining() {
   return (
     <section
-      className="pt-6 sm:pt-8 first:pt-0 border-t border-gray-200/60 dark:border-gray-700/60 first:border-t-0"
+      className="pt-6 sm:pt-8 first:pt-0 border-t border-hairline first:border-t-0"
       aria-labelledby="interactive-training"
     >
       <div className="mb-5 text-center">
         <h2
           id="interactive-training"
-          className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white"
+          className="text-h2 tracking-h2 font-semibold text-ink"
         >
           Interactive Training
         </h2>
-        <p className="mt-2 text-sm text-slate-600 dark:text-slate-300 max-w-xl mx-auto">
+        <p className="mt-2 text-sm text-ink-muted max-w-xl mx-auto">
           Hands-on exercises that teach one core security idea at a time. Play
           at your own pace. No sign-in required.
         </p>

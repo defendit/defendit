@@ -68,7 +68,7 @@ export default function RemoteSupportPlanPage() {
       <JsonLdScript jsonLd={faqLd} />
       <PageContainer>
         {/* Left by default on mobile; larger screens inherit existing look */}
-        <main className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left bg-gray-50/10 dark:bg-slate-950/20 rounded-lg shadow-lg">
+        <main className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left">
           <BreadCrumbs
             items={[
               { name: "Home", href: "/" },
@@ -83,15 +83,15 @@ export default function RemoteSupportPlanPage() {
           />
 
           {/* Hero Section */}
-          <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/78 px-6 py-8 shadow-[0_18px_40px_rgba(15,23,42,0.08)] ring-1 ring-white/75 backdrop-blur-md dark:border-sky-400/18 dark:bg-slate-950/78 dark:shadow-[0_24px_60px_rgba(2,6,23,0.42)] dark:ring-white/5 space-y-4">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent_54%)] dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.16),transparent_52%)]" />
-            <div className="pointer-events-none absolute left-1/2 top-0 h-24 w-52 -translate-x-1/2 rounded-full bg-sky-300/25 blur-3xl dark:bg-sky-400/16" />
-            <div className="relative inline-flex items-center gap-2 rounded-full border border-sky-300/60 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-sky-700 shadow-[0_8px_20px_rgba(56,189,248,0.12)] backdrop-blur-sm dark:border-sky-400/18 dark:bg-slate-900/70 dark:text-sky-300 dark:shadow-[0_12px_28px_rgba(2,132,199,0.16)]">
+          <div className="relative overflow-hidden rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] px-6 py-8 shadow-card space-y-4">
+            <div className="relative inline-flex items-center gap-2 rounded-full border border-border-accent bg-surface px-4 py-2 text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
               <svg
                 className="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
+                strokeWidth={1.25}
                 viewBox="0 0 24 24"
+                aria-hidden
               >
                 <path
                   strokeLinecap="round"
@@ -103,21 +103,21 @@ export default function RemoteSupportPlanPage() {
               Local Clients Only
             </div>
 
-            <h1 className="relative text-3xl font-bold leading-tight text-slate-950 dark:text-white sm:text-5xl">
+            <h1 className="relative text-display tracking-display font-semibold text-ink">
               Remote Support Service Plan
             </h1>
 
-            <p className="relative max-w-2xl text-base text-slate-600 dark:text-slate-300 sm:text-lg">
+            <p className="relative max-w-readable text-lead text-ink-muted">
               Private remote support for verified local clients who want faster
               follow-up help without giving up control.
             </p>
 
             {/* Feature Highlights - Now Visual Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
-              <div className="relative flex items-center gap-3 overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 p-3 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-900/62 dark:shadow-[0_16px_30px_rgba(2,6,23,0.28)] dark:ring-white/5">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-sky-200/80 bg-sky-100/85 shadow-[0_8px_18px_rgba(59,130,246,0.12)] dark:border-sky-400/14 dark:bg-slate-800/88 dark:shadow-[0_10px_22px_rgba(2,132,199,0.14)]">
+              <div className="relative flex items-center gap-3 overflow-hidden rounded-card border border-hairline bg-surface p-3 shadow-card">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-border-accent bg-surface">
                   <svg
-                    className="w-5 h-5 text-blue-700 dark:text-sky-300"
+                    className="w-5 h-5 text-accent"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -130,15 +130,15 @@ export default function RemoteSupportPlanPage() {
                     />
                   </svg>
                 </div>
-                <span className="text-sm font-medium text-gray-900 dark:text-white">
+                <span className="text-sm font-medium text-ink">
                   Encrypted Sessions
                 </span>
               </div>
 
-              <div className="relative flex items-center gap-3 overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 p-3 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-900/62 dark:shadow-[0_16px_30px_rgba(2,6,23,0.28)] dark:ring-white/5">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-sky-200/80 bg-sky-100/85 shadow-[0_8px_18px_rgba(59,130,246,0.12)] dark:border-sky-400/14 dark:bg-slate-800/88 dark:shadow-[0_10px_22px_rgba(2,132,199,0.14)]">
+              <div className="relative flex items-center gap-3 overflow-hidden rounded-card border border-hairline bg-surface p-3 shadow-card">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-border-accent bg-surface">
                   <svg
-                    className="w-5 h-5 text-blue-700 dark:text-sky-300"
+                    className="w-5 h-5 text-accent"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -151,15 +151,15 @@ export default function RemoteSupportPlanPage() {
                     />
                   </svg>
                 </div>
-                <span className="text-sm font-medium text-gray-900 dark:text-white">
+                <span className="text-sm font-medium text-ink">
                   Consent-Based Access
                 </span>
               </div>
 
-              <div className="relative flex items-center gap-3 overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 p-3 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-900/62 dark:shadow-[0_16px_30px_rgba(2,6,23,0.28)] dark:ring-white/5">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-sky-200/80 bg-sky-100/85 shadow-[0_8px_18px_rgba(59,130,246,0.12)] dark:border-sky-400/14 dark:bg-slate-800/88 dark:shadow-[0_10px_22px_rgba(2,132,199,0.14)]">
+              <div className="relative flex items-center gap-3 overflow-hidden rounded-card border border-hairline bg-surface p-3 shadow-card">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-border-accent bg-surface">
                   <svg
-                    className="w-5 h-5 text-blue-700 dark:text-sky-300"
+                    className="w-5 h-5 text-accent"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -178,7 +178,7 @@ export default function RemoteSupportPlanPage() {
                     />
                   </svg>
                 </div>
-                <span className="text-sm font-medium text-gray-900 dark:text-white">
+                <span className="text-sm font-medium text-ink">
                   Local Enrollment
                 </span>
               </div>
@@ -187,19 +187,19 @@ export default function RemoteSupportPlanPage() {
 
           {/* Why a plan */}
           <section
-            className="pt-6 sm:pt-8 first:pt-0 border-t border-gray-200/60 dark:border-gray-700/60 first:border-t-0"
+            className="pt-6 sm:pt-8 first:pt-0 border-t border-hairline first:border-t-0"
             aria-labelledby="why-plan"
           >
-            <h2 id="why-plan" className="text-2xl font-semibold">
+            <h2 id="why-plan" className="text-h2 tracking-h2 font-semibold text-ink">
               Why a Support Plan
             </h2>
-            <p className="mt-2 text-gray-700 dark:text-gray-300">
+            <p className="mt-2 text-ink-muted">
               We use a private remote support environment for enrolled local
               clients and approved devices. The point is simple: make follow-up
               help faster and easier without turning remote access into a
               free-for-all.
             </p>
-            <p className="mt-2 text-gray-700 dark:text-gray-300">
+            <p className="mt-2 text-ink-muted">
               The plan covers the secure setup behind that access, including
               enrollment, provisioning, upkeep, and support capacity reserved
               for plan clients.
@@ -208,18 +208,18 @@ export default function RemoteSupportPlanPage() {
 
           {/* Technical Approach */}
           <section
-            className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60"
+            className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="tech-approach"
           >
-            <h2 id="tech-approach" className="text-2xl font-semibold">
+            <h2 id="tech-approach" className="text-h2 tracking-h2 font-semibold text-ink">
               Technical Approach
             </h2>
             <div className="mt-3 grid gap-4 sm:grid-cols-2">
-              <div className="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-4 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_32px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
+              <div className="relative overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-sky-900/30 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-surface border border-border-accent flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-5 h-5 text-blue-600 dark:text-sky-400"
+                      className="w-5 h-5 text-accent"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -233,10 +233,10 @@ export default function RemoteSupportPlanPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    <h3 className="font-semibold text-ink mb-1">
                       Private Infrastructure
                     </h3>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <p className="text-sm text-ink-muted">
                       Remote access services live on our private network and are
                       not exposed to the public internet.
                     </p>
@@ -244,11 +244,11 @@ export default function RemoteSupportPlanPage() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-4 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_32px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
+              <div className="relative overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-sky-900/30 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-surface border border-border-accent flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-5 h-5 text-blue-600 dark:text-sky-400"
+                      className="w-5 h-5 text-accent"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -262,10 +262,10 @@ export default function RemoteSupportPlanPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    <h3 className="font-semibold text-ink mb-1">
                       Scoped Access
                     </h3>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <p className="text-sm text-ink-muted">
                       The support tunnel is limited to approved service routes;
                       normal browsing stays on your regular connection.
                     </p>
@@ -273,11 +273,11 @@ export default function RemoteSupportPlanPage() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-4 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_32px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
+              <div className="relative overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-sky-900/30 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-surface border border-border-accent flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-5 h-5 text-blue-600 dark:text-sky-400"
+                      className="w-5 h-5 text-accent"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -291,10 +291,10 @@ export default function RemoteSupportPlanPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    <h3 className="font-semibold text-ink mb-1">
                       Layered Protection
                     </h3>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <p className="text-sm text-ink-muted">
                       Session encryption runs inside the private tunnel for
                       defense in depth.
                     </p>
@@ -302,11 +302,11 @@ export default function RemoteSupportPlanPage() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-4 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_32px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
+              <div className="relative overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-sky-900/30 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-surface border border-border-accent flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-5 h-5 text-blue-600 dark:text-sky-400"
+                      className="w-5 h-5 text-accent"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -320,10 +320,10 @@ export default function RemoteSupportPlanPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    <h3 className="font-semibold text-ink mb-1">
                       Least-Privilege Control
                     </h3>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <p className="text-sm text-ink-muted">
                       Access is consent-based and limited to enrolled devices;
                       enrollment and revocation are handled per device.
                     </p>
@@ -331,11 +331,11 @@ export default function RemoteSupportPlanPage() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-4 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_32px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
+              <div className="relative overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-sky-900/30 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-surface border border-border-accent flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-5 h-5 text-blue-600 dark:text-sky-400"
+                      className="w-5 h-5 text-accent"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -349,10 +349,10 @@ export default function RemoteSupportPlanPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    <h3 className="font-semibold text-ink mb-1">
                       Network Isolation
                     </h3>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <p className="text-sm text-ink-muted">
                       Segmented zones with default-deny rules; only explicit
                       service paths are allowed.
                     </p>
@@ -360,11 +360,11 @@ export default function RemoteSupportPlanPage() {
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-4 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_16px_32px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
+              <div className="relative overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-sky-900/30 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-surface border border-border-accent flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-5 h-5 text-blue-600 dark:text-sky-400"
+                      className="w-5 h-5 text-accent"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -384,10 +384,10 @@ export default function RemoteSupportPlanPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    <h3 className="font-semibold text-ink mb-1">
                       Operational Hardening
                     </h3>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <p className="text-sm text-ink-muted">
                       Ongoing monitoring, maintenance, and updates performed by
                       our team.
                     </p>
@@ -399,13 +399,13 @@ export default function RemoteSupportPlanPage() {
 
           {/* Included */}
           <section
-            className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60"
+            className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="included"
           >
-            <h2 id="included" className="text-2xl font-semibold">
+            <h2 id="included" className="text-h2 tracking-h2 font-semibold text-ink">
               What Is Included
             </h2>
-            <ul className="mt-2 list-disc pl-5 sm:pl-6 text-gray-700 dark:text-gray-300 text-sm sm:text-base space-y-2 marker:text-sky-500 dark:marker:text-sky-400">
+            <ul className="mt-2 list-disc pl-5 sm:pl-6 text-ink-muted text-sm sm:text-base space-y-2 marker:text-accent">
               <li>Priority scheduling for common remote issues</li>
               <li>Secure remote sessions with consent-based access</li>
               <li>
@@ -419,13 +419,13 @@ export default function RemoteSupportPlanPage() {
 
           {/* Eligibility */}
           <section
-            className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60"
+            className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="eligibility"
           >
-            <h2 id="eligibility" className="text-2xl font-semibold">
+            <h2 id="eligibility" className="text-h2 tracking-h2 font-semibold text-ink">
               Who Is Eligible
             </h2>
-            <p className="mt-2 text-gray-700 dark:text-gray-300">
+            <p className="mt-2 text-ink-muted">
               This plan is for local clients in Ocala, Belleview, The Villages,
               and nearby areas. Devices must be enrolled locally before remote
               support is available.
@@ -434,38 +434,38 @@ export default function RemoteSupportPlanPage() {
 
           {/* Tiered Support */}
           <section
-            className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60"
+            className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="tiered-support"
           >
-            <h2 id="tiered-support" className="text-2xl font-semibold mb-4">
+            <h2 id="tiered-support" className="text-h2 tracking-h2 font-semibold text-ink mb-4">
               Tiered Support Options
             </h2>
-            <p className="mt-2 text-gray-700 dark:text-gray-300 mb-6">
+            <p className="mt-2 text-ink-muted mb-6">
               Our Remote Support Plan is flexible, with tiers based on how you
               prefer to connect:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
               {/* Tier 1 */}
-              <div className="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_18px_38px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
+              <div className="relative overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-6 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-300/70 bg-sky-100/85 text-xl font-bold text-sky-700 shadow-[0_8px_18px_rgba(59,130,246,0.12)] dark:border-sky-400/18 dark:bg-slate-800/90 dark:text-sky-300 dark:shadow-[0_10px_24px_rgba(2,132,199,0.16)]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border-accent bg-surface text-xl font-bold text-accent">
                     1
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-h3 tracking-h3 font-semibold text-ink">
                     Tier 1
                   </h3>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                <p className="text-ink-muted mb-4">
                   <strong>Fully Asynchronous Remote Support</strong>
                 </p>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-sm text-ink-muted leading-relaxed">
                   We can connect without you being present once devices are
                   enrolled and permissions are set. Perfect for updates,
                   maintenance, and non-urgent fixes.
                 </p>
-                <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                <div className="mt-6 pt-4 border-t border-hairline">
+                  <p className="text-sm text-ink-muted">
                     ✓ Unattended access
                     <br />
                     ✓ After-hours support
@@ -475,24 +475,24 @@ export default function RemoteSupportPlanPage() {
               </div>
 
               {/* Tier 2 */}
-              <div className="relative overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-6 shadow-[0_12px_30px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white/84 hover:shadow-[0_18px_38px_rgba(15,23,42,0.12)] dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.3)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900/74 dark:hover:shadow-[0_24px_46px_rgba(2,6,23,0.36)]">
+              <div className="relative overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-6 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-300/70 bg-sky-100/85 text-xl font-bold text-sky-700 shadow-[0_8px_18px_rgba(59,130,246,0.12)] dark:border-sky-400/18 dark:bg-slate-800/90 dark:text-sky-300 dark:shadow-[0_10px_24px_rgba(2,132,199,0.16)]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border-accent bg-surface text-xl font-bold text-accent">
                     2
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h3 className="text-h3 tracking-h3 font-semibold text-ink">
                     Tier 2
                   </h3>
                 </div>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                <p className="text-ink-muted mb-4">
                   <strong>Client-Initiated Support</strong>
                 </p>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-sm text-ink-muted leading-relaxed">
                   You will be present to start sessions and enter any necessary
                   credentials. Great for hands-on support and training sessions.
                 </p>
-                <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                <div className="mt-6 pt-4 border-t border-hairline">
+                  <p className="text-sm text-ink-muted">
                     ✓ On-demand sessions
                     <br />
                     ✓ Full control
@@ -502,8 +502,8 @@ export default function RemoteSupportPlanPage() {
               </div>
             </div>
 
-            <div className="relative mt-6 overflow-hidden rounded-xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_58%)] p-4 shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.09),transparent_60%)] dark:shadow-[0_18px_36px_rgba(2,6,23,0.28)] dark:ring-white/5">
-              <p className="text-gray-700 dark:text-gray-300 text-sm">
+            <div className="relative mt-6 overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card">
+              <p className="text-ink-muted text-sm">
                 <strong>Both tiers available as:</strong> Subscription (includes
                 member benefits, discounts, and after-hours priority) or
                 Pay-As-You-Go (standard rates, one device limit, no member
@@ -514,26 +514,26 @@ export default function RemoteSupportPlanPage() {
 
           {/* View Remote Services */}
           <section
-            className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60"
+            className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="view-remote-services"
           >
             <h2
               id="view-remote-services"
-              className="text-2xl font-semibold mb-4"
+              className="text-h2 tracking-h2 font-semibold text-ink mb-4"
             >
               View Remote Services
             </h2>
-            <div className="relative mt-3 overflow-hidden rounded-2xl border border-slate-200/80 bg-white/76 p-6 text-center shadow-[0_16px_38px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-sky-400/18 dark:bg-slate-950/74 dark:shadow-[0_22px_48px_rgba(2,6,23,0.36)] dark:ring-white/5">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.06),transparent_54%)] dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.12),transparent_52%)]" />
+            <div className="relative mt-3 overflow-hidden rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] p-6 text-center shadow-card">
               <div className="relative">
-                <p className="text-gray-900 dark:text-white mb-4">
+                <p className="text-ink mb-4">
                   Once enrolled, you can use remote sessions for
                   troubleshooting, malware cleanup, guided training, and
                   selected security or privacy work.
                 </p>
                 <Link
                   href="/services/remote"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-sky-600 hover:bg-sky-700 dark:border dark:border-sky-400/18 dark:bg-sky-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(125,211,252,0.14),transparent_62%)] dark:shadow-[0_14px_28px_rgba(2,132,199,0.18)] dark:ring-1 dark:ring-white/5 dark:backdrop-blur-sm dark:hover:-translate-y-0.5 dark:hover:border-sky-400/28 dark:hover:bg-sky-900/72 dark:hover:shadow-[0_18px_34px_rgba(2,132,199,0.24)] text-white font-semibold transition-all shadow-md hover:shadow-lg"
+                  style={{ touchAction: "manipulation" }}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-contrast font-semibold transition-all shadow-md hover:bg-accent-hover hover:shadow-lg touch-manipulation"
                 >
                   View Remote Services
                   <ArrowRight className="w-5 h-5" aria-hidden="true" />
@@ -544,25 +544,25 @@ export default function RemoteSupportPlanPage() {
 
           {/* CTA */}
           <section
-            className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60"
+            className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="enroll"
           >
-            <h2 id="enroll" className="text-2xl font-semibold mb-4">
+            <h2 id="enroll" className="text-h2 tracking-h2 font-semibold text-ink mb-4">
               Ready to Enroll
             </h2>
-            <div className="relative mt-3 overflow-hidden rounded-2xl border border-slate-200/80 bg-white/76 p-8 text-center shadow-[0_16px_38px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-sky-400/18 dark:bg-slate-950/74 dark:shadow-[0_22px_48px_rgba(2,6,23,0.36)] dark:ring-white/5">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.06),transparent_54%)] dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.12),transparent_52%)]" />
+            <div className="relative mt-3 overflow-hidden rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] p-8 text-center shadow-card">
               <div className="relative">
-                <p className="text-lg mb-2 font-semibold text-gray-900 dark:text-white">
+                <p className="text-lg mb-2 font-semibold text-ink">
                   Get Started with Remote Support
                 </p>
-                <p className="text-sm mb-6 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
+                <p className="text-sm mb-6 max-w-2xl mx-auto text-ink-muted">
                   Initial on-site setup and device enrollment are handled
                   locally as part of getting the plan in place.
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-lg border border-slate-200/80 bg-white/88 px-6 py-3 text-blue-700 font-semibold shadow-[0_10px_22px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white dark:border-sky-400/20 dark:bg-slate-900/80 dark:text-sky-200 dark:shadow-[0_14px_28px_rgba(2,6,23,0.26)] dark:ring-white/5 dark:hover:border-sky-400/30 dark:hover:bg-slate-900"
+                  style={{ touchAction: "manipulation" }}
+                  className="inline-flex items-center gap-2 rounded-lg border border-hairline bg-surface px-6 py-3 text-accent font-semibold shadow-card transition hover:-translate-y-0.5 hover:border-accent touch-manipulation"
                 >
                   Request Remote Setup
                   <svg
@@ -579,7 +579,7 @@ export default function RemoteSupportPlanPage() {
                     />
                   </svg>
                 </Link>
-                <p className="mt-4 text-xs text-gray-600 dark:text-gray-400">
+                <p className="mt-4 text-xs text-ink-muted">
                   * Within our local service area (Ocala, Belleview, The
                   Villages).
                 </p>
@@ -589,27 +589,27 @@ export default function RemoteSupportPlanPage() {
 
           {/* More devices */}
           <section
-            className="pt-6 sm:pt-8 border-t border-gray-200/60 dark:border-gray-700/60"
+            className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="more-devices"
             id="more-devices"
           >
-            <h2 className="text-2xl font-semibold">
+            <h2 className="text-h2 tracking-h2 font-semibold text-ink">
               Need Coverage for More Devices?
             </h2>
-            <p className="mt-2 text-gray-700 dark:text-gray-300">
+            <p className="mt-2 text-ink-muted">
               Our Remote Support Plan includes up to 14 enrolled devices. This
               is plenty for most homes and small offices. If you have a larger
               setup, we can extend coverage with custom device limits and access
               tiers.
             </p>
-            <p className="mt-2 text-gray-700 dark:text-gray-300">
+            <p className="mt-2 text-ink-muted">
               Expanded plans are tailored to your needs, with any additional
               setup or service costs discussed up front, no surprises.
             </p>
-            <p className="mt-2 text-gray-700 dark:text-gray-300">
+            <p className="mt-2 text-ink-muted">
               <Link
                 href="/contact"
-                className="text-blue-600 dark:text-sky-400 hover:underline"
+                className="text-accent hover:underline"
               >
                 Let&apos;s talk about your requirements
               </Link>{" "}

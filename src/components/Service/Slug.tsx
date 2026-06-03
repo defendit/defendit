@@ -30,6 +30,7 @@ import {
   BreadCrumbs,
   FaqSection,
 } from "@/components";
+import { Card } from "@/components/Card";
 
 export type ServiceContent = {
   id: string;
@@ -56,11 +57,11 @@ export type ServiceContent = {
   }[];
 };
 
-export type ServiceSlugProps = {
+export type ServiceSlugProps = Readonly<{
   service: ServiceContent;
   related?: { label: string; slug: string }[];
   remote?: boolean;
-};
+}>;
 
 const INLINE_LINK_PATTERN = /\[([^[\]]+)\]\((\/[^)\s]+)\)/g;
 
@@ -86,7 +87,7 @@ function renderInlineLinks(text: string): ReactNode {
       <Link
         key={`${href}-${idx}-${start}`}
         href={href}
-        className="font-medium text-blue-700 underline underline-offset-2 transition hover:text-blue-800 dark:text-sky-300 dark:hover:text-sky-200"
+        className="font-medium text-accent underline underline-offset-2 transition hover:text-accent-hover"
       >
         {label}
       </Link>,
@@ -183,25 +184,29 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
         url={canonical}
         canonical={canonical}
         keywords={service.keywords.join(", ")}
-        structuredData={{ "@graph": structuredGraph }}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@graph": structuredGraph,
+        }}
       />
 
       <PageContainer>
-        <div className="max-w-4xl mx-auto w-full py-8 sm:py-10 space-y-6 sm:space-y-7 px-3 sm:px-6 text-left rounded-lg shadow-lg bg-gray-50/10 dark:bg-slate-950/20 z-0">
+        <div className="max-w-4xl mx-auto w-full py-8 sm:py-10 space-y-6 sm:space-y-7 px-3 sm:px-6 text-left">
           <BreadCrumbs items={crumbs} baseUrl="https://www.wedefendit.com" />
 
           {/* Hero Section with Icons */}
-          <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/78 px-5 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.08)] ring-1 ring-white/75 backdrop-blur-md dark:border-sky-400/18 dark:bg-slate-950/78 dark:shadow-[0_24px_60px_rgba(2,6,23,0.42)] dark:ring-white/5 sm:px-6 sm:py-8">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.08),transparent_54%)] dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.16),transparent_52%)]" />
-            <div className="pointer-events-none absolute left-1/2 top-0 h-24 w-52 -translate-x-1/2 rounded-full bg-sky-300/25 blur-3xl dark:bg-sky-400/16" />
+          <Card
+            wash
+            className="relative overflow-hidden px-5 py-6 sm:px-6 sm:py-8"
+          >
             <div className="relative space-y-5">
-              <div className="inline-flex items-center gap-2 rounded-full border border-sky-300/60 bg-white/70 px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-sky-700 shadow-[0_8px_20px_rgba(56,189,248,0.12)] backdrop-blur-sm dark:border-sky-400/18 dark:bg-slate-900/70 dark:text-sky-300 dark:shadow-[0_12px_28px_rgba(2,132,199,0.16)] sm:px-4 sm:text-xs sm:tracking-[0.28em]">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border-accent bg-surface px-3 py-2 text-eyebrow font-semibold uppercase tracking-eyebrow text-accent sm:px-4">
                 {isRemote ? "Remote Service" : "Local Service"}
               </div>
 
               {service.icons && service.icons.length > 0 && (
                 <div className="flex flex-wrap items-center gap-3">
-                  {service.icons.map((iconName, idx) => {
+                  {service.icons.map((iconName) => {
                     const name = iconName
                       .split("-")
                       .map((p) => p.charAt(0).toUpperCase() + p.slice(1))
@@ -210,10 +215,13 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
                     const LucideIcon = (Icons as any)[name];
                     return LucideIcon ? (
                       <div
-                        key={idx}
-                        className="flex h-12 w-12 items-center justify-center rounded-lg border border-sky-200/80 bg-sky-100/85 shadow-[0_8px_18px_rgba(59,130,246,0.12)] dark:border-sky-400/14 dark:bg-slate-800/88 dark:shadow-[0_10px_22px_rgba(2,132,199,0.14)]"
+                        key={iconName}
+                        className="flex h-12 w-12 items-center justify-center rounded-lg border border-border-accent bg-surface"
                       >
-                        <LucideIcon className="w-6 h-6 text-blue-700 dark:text-sky-300" />
+                        <LucideIcon
+                          className="w-6 h-6 text-accent"
+                          strokeWidth={1.25}
+                        />
                       </div>
                     ) : null;
                   })}
@@ -221,20 +229,18 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
               )}
 
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold leading-tight text-slate-950 dark:text-white sm:text-4xl lg:text-[2.75rem]">
+                <h1 className="text-display tracking-display font-semibold text-ink">
                   {service.title}
                 </h1>
-                <p className="text-base text-slate-600 dark:text-slate-300 sm:text-lg">
-                  {service.headline}
-                </p>
+                <p className="text-lead text-ink-muted">{service.headline}</p>
               </div>
             </div>
-          </div>
+          </Card>
 
           {hasDYK && (
-            <div className="mt-4 rounded-lg border border-yellow-600/30 bg-yellow-500/10 dark:bg-yellow-700/20 p-4 sm:p-5">
-              <h2 className="text-lg sm:text-xl font-semibold text-yellow-900 dark:text-yellow-100 inline-flex items-center gap-2">
-                <Lightbulb className="h-6 w-6 text-yellow-400" />
+            <div className="mt-4 rounded-lg border border-border-accent bg-surface p-4 sm:p-5">
+              <h2 className="text-h3 tracking-h3 font-semibold text-ink inline-flex items-center gap-2">
+                <Lightbulb className="h-6 w-6 text-accent" />
                 {first!.heading}
               </h2>
               {Array.isArray(first!.paragraph) ? (
@@ -242,7 +248,7 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
                   {first!.paragraph.map((t, i) => (
                     <p
                       key={i}
-                      className="text-sm sm:text-base text-yellow-900/90 dark:text-yellow-50"
+                      className="text-sm sm:text-base text-ink-muted"
                     >
                       {renderInlineLinks(t)}
                     </p>
@@ -250,7 +256,7 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
                 </div>
               ) : (
                 first!.paragraph && (
-                  <p className="mt-2 text-sm sm:text-base text-yellow-900/90 dark:text-yellow-50">
+                  <p className="mt-2 text-sm sm:text-base text-ink-muted">
                     {renderInlineLinks(first!.paragraph)}
                   </p>
                 )
@@ -273,20 +279,20 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
                     {section.paragraph.map((text, i) => (
                       <p
                         key={i}
-                        className="text-gray-700 dark:text-gray-300 text-sm sm:text-base"
+                        className="text-ink-muted text-sm sm:text-base"
                       >
                         {renderInlineLinks(text)}
                       </p>
                     ))}
                   </div>
                 ) : (
-                  <p className="mt-2 text-gray-700 dark:text-gray-300 text-sm sm:text-base">
+                  <p className="mt-2 text-ink-muted text-sm sm:text-base">
                     {renderInlineLinks(section.paragraph)}
                   </p>
                 ))}
 
               {section.items && (
-                <ul className="mt-3 list-disc pl-5 sm:pl-6 text-gray-700 dark:text-gray-300 text-sm sm:text-base space-y-2 marker:text-sky-500 dark:marker:text-sky-400">
+                <ul className="mt-3 list-disc pl-5 sm:pl-6 text-ink-muted text-sm sm:text-base space-y-2 marker:text-accent">
                   {section.items.map((item, i) => (
                     <li key={i}>{renderInlineLinks(item)}</li>
                   ))}
@@ -300,14 +306,14 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
           )}
 
           {service.requiresPlan && (
-            <div className="mt-6 rounded-lg border border-sky-400/30 bg-sky-100/40 dark:bg-sky-900/20 p-4 sm:p-5 text-sky-900 dark:text-sky-100 text-sm flex flex-col items-center">
+            <div className="mt-6 rounded-lg border border-border-accent bg-surface p-4 sm:p-5 text-ink text-sm flex flex-col items-center">
               <span>
                 This service is available exclusively to Remote Service Plan
                 members.
               </span>
               <Link
                 href="/services/remote/remote-support-plan"
-                className="inline-block mt-2 px-3 py-1.5 rounded border border-sky-300 dark:border-sky-700 bg-sky-50 dark:bg-sky-950 text-sky-700 dark:text-sky-300 font-medium hover:underline transition"
+                className="inline-block mt-2 px-3 py-1.5 rounded border border-border-accent bg-surface text-accent font-medium hover:underline transition"
               >
                 Learn more
               </Link>
@@ -315,53 +321,52 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
           )}
 
           {/* What to Expect Section */}
-          <section className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/76 p-6 shadow-[0_16px_38px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-sky-400/18 dark:bg-slate-950/74 dark:shadow-[0_22px_48px_rgba(2,6,23,0.36)] dark:ring-white/5 sm:p-8">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.06),transparent_54%)] dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.12),transparent_52%)]" />
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">
+          <Card as="section" wash className="relative overflow-hidden p-6 sm:p-8">
+            <h2 className="text-h2 tracking-h2 font-semibold mb-6 sm:mb-8 text-center text-ink">
               What to Expect
             </h2>
 
             <div className="relative grid gap-6 sm:grid-cols-3 sm:gap-8">
-              <div className="flex flex-col items-center space-y-3 rounded-xl border border-slate-200/80 bg-white/70 px-4 py-5 text-center shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/65 backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-900/60 dark:shadow-[0_16px_32px_rgba(2,6,23,0.28)] dark:ring-white/5">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-sky-300/70 bg-sky-100/85 text-2xl font-bold text-sky-700 shadow-[0_8px_18px_rgba(59,130,246,0.12)] dark:border-sky-400/18 dark:bg-slate-800/90 dark:text-sky-300 dark:shadow-[0_10px_24px_rgba(2,132,199,0.16)]">
+              <div className="flex flex-col items-center space-y-3 rounded-xl border border-hairline bg-surface-inset px-4 py-5 text-center">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-border-accent bg-surface text-2xl font-bold text-accent">
                   1
                 </div>
-                <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                <h3 className="font-semibold text-lg text-ink">
                   Tell Us What&apos;s Going On
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-ink-muted">
                   Call, text, or send a message with the problem you need help
                   with.
                 </p>
               </div>
 
-              <div className="flex flex-col items-center space-y-3 rounded-xl border border-slate-200/80 bg-white/70 px-4 py-5 text-center shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/65 backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-900/60 dark:shadow-[0_16px_32px_rgba(2,6,23,0.28)] dark:ring-white/5">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-sky-300/70 bg-sky-100/85 text-2xl font-bold text-sky-700 shadow-[0_8px_18px_rgba(59,130,246,0.12)] dark:border-sky-400/18 dark:bg-slate-800/90 dark:text-sky-300 dark:shadow-[0_10px_24px_rgba(2,132,199,0.16)]">
+              <div className="flex flex-col items-center space-y-3 rounded-xl border border-hairline bg-surface-inset px-4 py-5 text-center">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-border-accent bg-surface text-2xl font-bold text-accent">
                   2
                 </div>
-                <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                <h3 className="font-semibold text-lg text-ink">
                   We Review the Need
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-ink-muted">
                   We talk through the issue, recommend the right service, and
                   give a clear quote before work begins when scope is clear.
                 </p>
               </div>
 
-              <div className="flex flex-col items-center space-y-3 rounded-xl border border-slate-200/80 bg-white/70 px-4 py-5 text-center shadow-[0_10px_24px_rgba(15,23,42,0.08)] ring-1 ring-white/65 backdrop-blur-sm dark:border-slate-700/70 dark:bg-slate-900/60 dark:shadow-[0_16px_32px_rgba(2,6,23,0.28)] dark:ring-white/5">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-sky-300/70 bg-sky-100/85 text-2xl font-bold text-sky-700 shadow-[0_8px_18px_rgba(59,130,246,0.12)] dark:border-sky-400/18 dark:bg-slate-800/90 dark:text-sky-300 dark:shadow-[0_10px_24px_rgba(2,132,199,0.16)]">
+              <div className="flex flex-col items-center space-y-3 rounded-xl border border-hairline bg-surface-inset px-4 py-5 text-center">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-border-accent bg-surface text-2xl font-bold text-accent">
                   3
                 </div>
-                <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                <h3 className="font-semibold text-lg text-ink">
                   Choose the Next Step
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-ink-muted">
                   Book the visit, remote session, or follow-up that makes sense
                   for your situation.
                 </p>
               </div>
             </div>
-          </section>
+          </Card>
 
           <div className="mt-10 w-full flex flex-col items-stretch sm:items-center justify-center gap-6 sm:gap-8 text-left sm:text-center">
             <div className="w-full">
@@ -371,9 +376,9 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
             {internalLinks && internalLinks.length > 0 && (
               <nav
                 aria-label="Related services"
-                className="text-sm text-gray-700 dark:text-gray-300 max-w-full overflow-x-auto px-0 sm:px-1 mt-2"
+                className="text-sm text-ink-muted max-w-full overflow-x-auto px-0 sm:px-1 mt-2"
               >
-                <h3 className="mb-3 text-lg font-semibold text-blue-700 dark:text-sky-300">
+                <h3 className="mb-3 text-lg font-semibold text-accent">
                   Related services:
                 </h3>
                 <ul className="flex flex-wrap items-stretch sm:items-center justify-start sm:justify-center gap-2 max-w-full">
@@ -383,7 +388,7 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
                         href={`/services/${
                           isRemote ? `remote/${r.slug}` : r.slug
                         }`}
-                        className="w-full sm:w-auto inline-block rounded-lg border border-sky-300 dark:border-sky-700 px-4 py-2 bg-gray-50 dark:bg-slate-900 text-sky-700 dark:text-sky-300 font-medium hover:bg-sky-50 dark:hover:bg-sky-800/30 transition whitespace-normal text-center"
+                        className="w-full sm:w-auto inline-block rounded-lg border border-hairline px-4 py-2 bg-surface text-accent font-medium hover:border-accent transition whitespace-normal text-center"
                       >
                         {r.label}
                       </Link>
@@ -396,7 +401,7 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
             <div className="flex flex-wrap items-stretch sm:items-center justify-start sm:justify-center gap-3 text-sm">
               <Link
                 href={isRemote ? "/services/remote" : "/services"}
-                className="w-full sm:w-auto inline-block rounded-lg border border-sky-300 dark:border-sky-700 px-4 py-2 bg-gray-50 dark:bg-slate-900 text-sky-700 dark:text-sky-300 font-medium hover:bg-sky-100 dark:hover:bg-sky-900/40 transition whitespace-normal text-center"
+                className="w-full sm:w-auto inline-block rounded-lg border border-hairline px-4 py-2 bg-surface text-accent font-medium hover:border-accent transition whitespace-normal text-center"
               >
                 View All Services
               </Link>

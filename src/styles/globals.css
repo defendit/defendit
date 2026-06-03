@@ -13,9 +13,177 @@ party without express written consent.
 */
 
 @import "tailwindcss";
-@tailwind utilities;
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ============================================================================
+   Design tokens — DIS-DESIGN-AND-BRAND-STANDARDS v1.0.
+   Role values live as CSS custom properties so a single token flips with the
+   theme; :root holds the LIGHT values, .dark overrides to DARK (the site adds
+   .dark to <html> by default). Accent hues are unchanged from the prior site
+   (light #2563eb / dark #38bdf8); this only consolidates the drifting
+   gray/slate neutrals and surface opacities into one value per role.
+   ========================================================================== */
+:root {
+  /* grounds & surfaces */
+  --ground: #f3f4f6;
+  --surface: rgb(255 255 255 / 0.8);
+  --surface-hover: rgb(255 255 255 / 0.92);
+  --surface-inset: rgb(248 250 252 / 0.85);
+
+  /* lines */
+  --hairline: rgb(203 213 225 / 0.8);
+  --border-accent: rgb(37 99 235 / 0.55);
+
+  /* text (ink) — primary/secondary/dim roles; verified for WCAG AA against
+     ground/surface at the Phase-2 gate */
+  --ink: #0f172a;
+  --ink-muted: #44505f;
+  --ink-dim: #5a6473;
+
+  /* accent (one value per role, unchanged hue) */
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-contrast: #ffffff;
+
+  /* status — darkened on light so they hold AA as text, not just as icons */
+  --danger: #b91c1c;
+  --success: #15803d;
+
+  /* the single optional faint card wash */
+  --wash: radial-gradient(circle at top, rgb(37 99 235 / 0.05), transparent 58%);
+
+  /* elevation: one shadow, not a stack */
+  --elevation-card: 0 12px 30px rgb(15 23 42 / 0.08);
+  --elevation-card-hover: 0 18px 38px rgb(15 23 42 / 0.12);
+
+  /* Base typography — system stack + rendering hints. font-family comes from
+     --font-sans (see @theme below); the prior "Inter" reference was never
+     actually loaded. */
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark {
+  --ground: #0f172a;
+  --surface: rgb(15 23 42 / 0.58);
+  --surface-hover: rgb(15 23 42 / 0.74);
+  --surface-inset: rgb(2 6 23 / 0.62);
+
+  --hairline: rgb(51 65 85 / 0.7);
+  --border-accent: rgb(56 189 248 / 0.3);
+
+  --ink: #f1f5f9;
+  --ink-muted: #cbd5e1;
+  --ink-dim: #94a3b8;
+
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+  --accent-contrast: #082f49;
+
+  --danger: #f87171;
+  --success: #4ade80;
+
+  --wash: radial-gradient(circle at top, rgb(56 189 248 / 0.09), transparent 60%);
+
+  --elevation-card: 0 18px 36px rgb(2 6 23 / 0.3);
+  --elevation-card-hover: 0 24px 46px rgb(2 6 23 / 0.36);
+}
+
+html {
+  background-color: #f3f4f6;
+}
+
+html.dark {
+  background-color: #0f172a;
+}
+
+/* ============================================================================
+   Expose the tokens to Tailwind. `inline` makes the generated utilities emit
+   var(--token) (e.g. `bg-surface` -> background-color: var(--surface)), so they
+   re-resolve live when .dark changes the underlying value. Plain @theme would
+   bake the :root value and break dark mode — the critical v4 distinction.
+   ========================================================================== */
+@theme inline {
+  /* color roles */
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-inset: var(--surface-inset);
+  --color-hairline: var(--hairline);
+  --color-border-accent: var(--border-accent);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-dim: var(--ink-dim);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-contrast: var(--accent-contrast);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+
+  /* elevation */
+  --shadow-card: var(--elevation-card);
+  --shadow-card-hover: var(--elevation-card-hover);
+
+  /* font — system stack, no web font (retires the unloaded "Inter" reference) */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* fluid type steps — weight is applied via font-semibold at the call site */
+  --text-display: clamp(2rem, 6.5vw, 4.25rem);
+  --text-display--line-height: 1.04;
+  --text-h2: clamp(1.75rem, 4.5vw, 3rem);
+  --text-h2--line-height: 1.08;
+  --text-h3: clamp(1.15rem, 1.8vw, 1.5rem);
+  --text-h3--line-height: 1.25;
+  --text-lead: clamp(1.0625rem, 1.5vw, 1.25rem);
+  --text-lead--line-height: 1.55;
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.4;
+
+  /* tracking — tightens as type grows; widens for the eyebrow label */
+  --tracking-display: -0.035em;
+  --tracking-h2: -0.025em;
+  --tracking-h3: -0.015em;
+  --tracking-eyebrow: 0.2em;
+
+  /* radius */
+  --radius-card: 12px;
+  --radius-figure: 14px;
+  --radius-feature: 18px;
+
+  /* bounded measures */
+  --container-page: 78rem;
+  --container-readable: 56ch;
+  --container-feature: 40ch;
+}
+
+/* Line icons render one weight thinner than the lucide default (2) to match the
+   refinement of the type system (DIS-DESIGN §10). */
+svg.lucide {
+  stroke-width: 1.25;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Honor a reduced-motion preference globally for smooth scrolling; per-element
+   transitions/transforms are neutralized with the motion-reduce: variant. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}
+
+/* Game art (Digital House / GRIDRUNNER) depends on these — leave untouched. */
 @layer utilities {
   .glow-hover {
     @apply hover:drop-shadow-[0_0_80px_rgba(59,130,246,0.4)] dark:hover:drop-shadow-[0_0_80px_rgba(14,165,233,0.3)] transition-all duration-300 ease-in-out;
@@ -24,20 +192,6 @@ party without express written consent.
   .glow {
     @apply drop-shadow-[0_0_90px_rgba(59,130,246,0.36)] dark:drop-shadow-[0_0_80px_rgba(14,165,233,0.3)];
   }
-}
-
-* {
-  scroll-behavior: smooth;
-}
-
-:root {
-  font-family: "Inter", sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* style scroll bars */

@@ -80,8 +80,8 @@ function DesktopNavItem({
   const cooldownRef = useRef(false);
   const active = isBranchActive(item, current);
   const baseClass = active
-    ? "text-blue-500 dark:text-sky-400 font-semibold underline underline-offset-4"
-    : "hover:text-blue-500 dark:hover:text-sky-400 text-gray-800 dark:text-gray-200 hover:underline underline-offset-4 font-semibold";
+    ? "text-accent font-semibold underline underline-offset-4"
+    : "hover:text-accent text-ink hover:underline underline-offset-4 font-semibold";
 
   if (!item.children || item.children.length === 0) {
     return (
@@ -140,8 +140,8 @@ function DesktopNavItem({
             open ? "rotate-180" : ""
           } ${
             active
-              ? "text-blue-500 dark:text-sky-400"
-              : "text-gray-800 dark:text-gray-200"
+              ? "text-accent"
+              : "text-ink"
           }`}
         >
           ▾
@@ -154,7 +154,7 @@ function DesktopNavItem({
             : "pointer-events-none opacity-0"
         }`}
       >
-        <div className="min-w-48 rounded-lg border border-slate-200 bg-white p-1.5 shadow-lg dark:border-gray-800 dark:bg-gray-900">
+        <div className="min-w-48 rounded-lg border border-hairline bg-ground p-1.5 shadow-lg">
           <ul className="flex flex-col text-sm">
             {item.children.map((child) => {
               const childActive = hrefExact(child.href, current);
@@ -167,8 +167,8 @@ function DesktopNavItem({
                     className={[
                       "block whitespace-nowrap rounded-md px-3 py-2 font-medium transition-colors",
                       childActive
-                        ? "text-blue-500 dark:text-sky-400"
-                        : "text-gray-800 hover:text-blue-500 dark:text-gray-200 dark:hover:text-sky-400",
+                        ? "text-accent"
+                        : "text-ink hover:text-accent",
                     ].join(" ")}
                   >
                     {child.name}
@@ -200,8 +200,8 @@ function MobileNavItem({
           title={`${item.name} - Defend I.T. Solutions`}
           className={
             active
-              ? "text-blue-500 dark:text-sky-400 font-semibold underline underline-offset-4"
-              : "hover:text-blue-500 dark:hover:text-sky-400 text-gray-700 dark:text-gray-300 hover:underline underline-offset-4 font-semibold"
+              ? "text-accent font-semibold underline underline-offset-4"
+              : "hover:text-accent text-ink hover:underline underline-offset-4 font-semibold"
           }
         >
           {item.name}
@@ -221,8 +221,8 @@ function MobileNavItem({
         className={[
           "flex w-full items-center justify-between gap-3 font-semibold",
           branchActive
-            ? "text-blue-500 dark:text-sky-400"
-            : "text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-sky-400",
+            ? "text-accent"
+            : "text-ink hover:text-accent",
         ].join(" ")}
       >
         <span className={branchActive ? "underline underline-offset-4" : ""}>
@@ -238,7 +238,7 @@ function MobileNavItem({
         </span>
       </button>
       {open && (
-        <ul className="mt-4 ml-2 space-y-4 border-l border-gray-300 dark:border-gray-700 pl-4">
+        <ul className="mt-4 ml-2 space-y-4 border-l border-hairline pl-4">
           {item.children.map((child) => {
             const childActive = hrefExact(child.href, current);
             return (
@@ -248,8 +248,8 @@ function MobileNavItem({
                   title={`${child.name} - Defend I.T. Solutions`}
                   className={
                     childActive
-                      ? "text-blue-500 dark:text-sky-400 font-semibold underline underline-offset-4"
-                      : "hover:text-blue-500 dark:hover:text-sky-400 text-gray-700 dark:text-gray-300 hover:underline underline-offset-4 font-semibold"
+                      ? "text-accent font-semibold underline underline-offset-4"
+                      : "hover:text-accent text-ink hover:underline underline-offset-4 font-semibold"
                   }
                 >
                   {child.name}
@@ -334,8 +334,10 @@ function MobileBar({ pathname }: { pathname: string }) {
       <button
         type="button"
         onClick={toggleMenu}
-        className="rounded-md p-2 text-2xl text-black transition hover:bg-black/5 dark:text-gray-300 dark:hover:bg-white/5 dark:hover:text-sky-500"
+        className="rounded-md p-2 text-2xl text-ink transition hover:bg-ink/5 hover:text-accent"
         aria-controls="mobile-drawer"
+        aria-expanded={menuOpen}
+        aria-label="Open menu"
       >
         &#9776;
       </button>
@@ -349,18 +351,19 @@ function MobileBar({ pathname }: { pathname: string }) {
         <div
           id="mobile-drawer"
           onClick={(e) => e.stopPropagation()}
-          className={`absolute left-0 top-0 h-full w-[82vw] max-w-sm border-r border-slate-200/80 bg-white/95 shadow-xl backdrop-blur-md transition-transform duration-300 dark:border-slate-700/70 dark:bg-gray-900/95 ${
+          className={`absolute left-0 top-0 h-full w-[82vw] max-w-sm border-r border-hairline bg-ground/95 shadow-xl backdrop-blur-md transition-transform duration-300 ${
             menuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <button
             onClick={toggleMenu}
-            className="absolute top-4 right-4 text-3xl text-slate-700 hover:text-blue-500 dark:text-white dark:hover:text-blue-500"
+            aria-label="Close menu"
+            className="absolute top-4 right-4 text-3xl text-ink hover:text-accent"
           >
             &times;
           </button>
 
-          <ul className="flex flex-col space-y-6 p-5 pt-16 text-base bg-white/96 dark:bg-gray-900/95">
+          <ul className="flex flex-col space-y-6 p-5 pt-16 text-base bg-ground/95">
             <RenderNavItems
               navItems={navItems}
               pathname={pathname}
@@ -377,11 +380,11 @@ export function Navbar() {
   const { pathname } = useRouter();
 
   return (
-    <nav className="flex w-full items-center justify-between px-4 py-2 sm:px-5 lg:sticky lg:top-0 lg:z-50 lg:border-b lg:border-gray-300 lg:p-4 lg:dark:border-gray-800">
+    <nav className="flex w-full items-center justify-between px-4 py-2 sm:px-5 lg:sticky lg:top-0 lg:z-50 lg:border-b lg:border-hairline lg:p-4">
       <Link
         href="/"
         title="Defend I.T. Solutions Home"
-        className="max-w-[72vw] truncate text-sm font-semibold hover:text-blue-600 dark:hover:text-blue-400 sm:max-w-none sm:text-base"
+        className="max-w-[72vw] truncate text-sm font-semibold hover:text-accent sm:max-w-none sm:text-base"
       >
         {name}&trade;
       </Link>
