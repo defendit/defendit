@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Service area map placeholder">
+  <rect width="1200" height="675" fill="#0f1b2e"/>
+  <g stroke="#1e3350" stroke-width="2">
+    <path d="M0 170h1200M0 340h1200M0 510h1200M240 0v675M480 0v675M720 0v675M960 0v675"/>
+  </g>
+  <g transform="translate(600 300)" fill="none" stroke="#4ecbff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0 70c0 0 46-50 46-92A46 46 0 1 0 -46 -22C-46 20 0 70 0 70Z"/>
+    <circle cx="0" cy="-22" r="16"/>
+  </g>
+  <text x="600" y="430" fill="#97a4bd" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" text-anchor="middle">Service area map</text>
+</svg>

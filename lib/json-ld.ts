@@ -27,8 +27,9 @@ export const localBusinessLd = {
   logo: "https://www.wedefendit.com/logo.svg",
   url: "https://www.wedefendit.com/",
   telephone: phone,
-  ...(address.type !== "mailing"
-    ? {
+  ...(address.type === "mailing"
+    ? {}
+    : {
         address: {
           "@type": "PostalAddress",
           streetAddress: street,
@@ -37,8 +38,7 @@ export const localBusinessLd = {
           postalCode: zip,
           addressCountry: "US",
         },
-      }
-    : {}),
+      }),
   areaServed: service_areas,
   contactPoint: {
     "@type": "ContactPoint",
@@ -184,6 +184,7 @@ export const sigintProductLd = {
     "USGS seismic monitoring",
     "NASA FIRMS fire detection",
     "NOAA severe weather alerts",
+    "NOAA National Hurricane Center tropical cyclone tracking",
     "GDELT conflict and crisis events",
     "World news aggregation (RSS)",
     "Cross-source correlation engine",
@@ -209,31 +210,31 @@ export const sigintProductLd = {
     name: "Defend I.T. Solutions LLC",
     url: "https://www.wedefendit.com",
   },
-  offers: [
-    {
-      "@type": "Offer",
-      name: "Community",
-      description:
-        "Free, self-hosted. All data sources, correlation engine, all pane types, 7-day rolling window.",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      url: "https://www.wedefendit.com/sigint#pricing",
-    },
-    {
-      "@type": "Offer",
-      name: "Pro",
-      description:
-        "Hosted service with desktop app, persistent database, geofenced alerts, custom alert rules, 90-day history, and MCP support.",
-      price: "29",
-      priceCurrency: "USD",
-      priceValidUntil: "2027-12-31",
-      billingIncrement: "P1M",
-      availability: "https://schema.org/PreOrder",
-      url: "https://www.wedefendit.com/sigint#pricing",
-    },
-  ],
   softwareVersion: "1.0",
-  license: "https://www.wedefendit.com/sigint#pricing",
   isAccessibleForFree: true,
+};
+
+// O-Tether is a custom-built hardware appliance presented as a case study under
+// the Custom Solutions service, not an off-the-shelf product. schema.org/Product
+// with NO `offers` (it is not for sale), related to the parent Service.
+export const oTetherProductLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "o-tether",
+  category: "Network Security Appliance",
+  url: "https://www.wedefendit.com/services/custom-solutions/o-tether",
+  image: "https://www.wedefendit.com/o-tether-hero.webp",
+  description:
+    "A custom-built network security appliance that bridges an iPhone's connection into a hardened travel Wi-Fi network. Default-deny firewall, DNS and IP threat-intelligence filtering, deep-packet flow detection, and an inline intrusion-prevention system, with signed-release integrity and a fail-closed posture throughout.",
+  brand: { "@type": "Brand", name: "Defend I.T. Solutions" },
+  manufacturer: {
+    "@type": "Organization",
+    name: "Defend I.T. Solutions LLC",
+    url: "https://www.wedefendit.com",
+  },
+  isRelatedTo: {
+    "@type": "Service",
+    name: "Custom Technology Project Planning",
+    url: "https://www.wedefendit.com/services/custom-solutions",
+  },
 };

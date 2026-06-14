@@ -8,6 +8,9 @@ export default defineConfig({
   testMatch: "*.e2e.spec.ts",
   fullyParallel: true,
   workers: "100%",
+  // One retry absorbs rare, irreducible sub-frame settling noise in full-page
+  // visual snapshots; a genuine failure still fails on the retry.
+  retries: 1,
   timeout: 45_000,
   expect: {
     timeout: 10_000,

@@ -4,6 +4,11 @@
 
 import { expect, test } from "@playwright/test";
 import { assertTouchTargets } from "./helpers/assertions";
+import { blockThirdParty } from "./helpers/network";
+
+test.beforeEach(async ({ page }) => {
+  await blockThirdParty(page);
+});
 
 const PAGES = [
   { name: "Home", path: "/" },
@@ -11,6 +16,10 @@ const PAGES = [
   { name: "Services", path: "/services" },
   { name: "Contact", path: "/contact" },
   { name: "Awareness", path: "/awareness" },
+  {
+    name: "O-Tether (Custom Solutions)",
+    path: "/services/custom-solutions/o-tether",
+  },
   { name: "Digital House", path: "/awareness/digital-house" },
 ];
 

@@ -124,7 +124,7 @@ export default function About() {
       />
 
       <PageContainer>
-        <div className="max-w-3xl mx-auto w-full p-3 sm:p-4 space-y-8 sm:space-y-10">
+        <div className="max-w-5xl mx-auto w-full p-3 sm:p-4 space-y-8 sm:space-y-10">
           <BreadCrumbs
             includeJsonLd={false}
             items={[{ name: "Home", href: "/" }, { name: "About" }]}

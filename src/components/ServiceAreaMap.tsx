@@ -40,6 +40,7 @@ export default function ServiceAreaMap() {
         zoom: 9,
         zoomControl: true,
         attributionControl: true,
+        scrollWheelZoom: false,
       });
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -77,8 +78,10 @@ export default function ServiceAreaMap() {
 
       <div
         ref={mapRef}
+        data-testid="service-area-map"
         className="w-full aspect-[16/9] rounded-lg overflow-hidden
-                   border border-gray-300 dark:border-gray-700 shadow-md"
+                   border border-gray-300 dark:border-gray-700 shadow-md
+                   bg-[url('/map-placeholder.svg')] bg-cover bg-center bg-no-repeat"
       />
 
       <p className="text-xs text-gray-500 dark:text-gray-500 text-center">

@@ -39,7 +39,7 @@ export const DEVICE_TIPS: Record<DeviceId, Record<ZoneId, string>> = {
   },
   "guest-phone": {
     main: "A visitor's phone can now see everything on your network.",
-    guest: "Perfect. Your guest gets internet without seeing your stuff.",
+    guest: "Perfect. Your guest gets Internet without seeing your stuff.",
     iot: "Better than Main, but visitors really belong on their own network.",
   },
   printer: {

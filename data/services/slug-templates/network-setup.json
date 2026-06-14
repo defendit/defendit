@@ -4,13 +4,13 @@
   "headline": "Reliable Wi-Fi and network setup for homes and small offices.",
   "description": "Wi-Fi and home network setup for better coverage, speed, and reliability in Ocala, Belleview, The Villages, and nearby Central Florida communities, including router, mesh, wired network, and access point installation.",
   "metaTitle": "Wi-Fi & Network Setup in Ocala & The Villages | Defend I.T. Solutions",
-  "metaDescription": "Improve weak Wi-Fi, dead zones, and unreliable home internet with router, mesh, access point, and wired network setup in Central Florida.",
+  "metaDescription": "Improve weak Wi-Fi, dead zones, and unreliable home Internet with router, mesh, access point, and wired network setup in Central Florida.",
   "keywords": [
     "Wi-Fi setup Ocala FL",
     "home network installation Ocala",
     "Wi-Fi setup Belleview FL",
     "network setup The Villages FL",
-    "secure home internet",
+    "secure home Internet",
     "router and mesh Wi-Fi installation",
     "wired network setup",
     "Wi-Fi troubleshooting",
@@ -28,7 +28,7 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Wi-Fi problems are often caused by placement, layout, interference, and equipment choices, not just your internet plan.",
+        "Wi-Fi problems are often caused by placement, layout, interference, and equipment choices, not just your Internet plan.",
         "A well-designed network can improve streaming, video calls, printer connectivity, and smart-device reliability without constant troubleshooting.",
         "Mesh systems, access points, and wired backhaul can solve coverage problems that a single router cannot."
       ]
@@ -46,7 +46,7 @@
         "You have dead zones, weak signal, buffering, or dropped video calls in parts of the home",
         "A new router, mesh kit, modem, or access point needs to be installed and configured",
         "Smart TVs, printers, cameras, or work devices keep disconnecting or struggle to join the network",
-        "You moved, changed internet providers, or added devices and the current setup no longer fits",
+        "You moved, changed Internet providers, or added devices and the current setup no longer fits",
         "You want a cleaner, more reliable home network but are not sure what equipment or layout makes sense"
       ]
     },
@@ -78,7 +78,10 @@
     }
   ],
   "internalLinks": [
-    { "label": "Home Network Security & Wi-Fi Hardening", "slug": "home-network-security" },
+    {
+      "label": "Home Network Security & Wi-Fi Hardening",
+      "slug": "home-network-security"
+    },
     { "label": "Smart Home Setup & Security", "slug": "smart-home-setup" },
     { "label": "On-Site Tech Support", "slug": "onsite-tech-support" }
   ],
@@ -89,7 +92,7 @@
     },
     {
       "question": "Can better setup improve weak Wi-Fi without changing providers?",
-      "answer": "Often, yes. Placement, interference, outdated hardware, and poor configuration cause many home network problems. A better setup can improve real-world performance even when the internet plan stays the same."
+      "answer": "Often, yes. Placement, interference, outdated hardware, and poor configuration cause many home network problems. A better setup can improve real-world performance even when the Internet plan stays the same."
     },
     {
       "question": "Is this different from Home Network Security?",
@@ -114,9 +117,5 @@
     "label": "Get My Network Set Up",
     "link": "/contact#schedule-service"
   },
-  "icons": [
-    "router",
-    "ethernet-port",
-    "house-plug"
-  ]
+  "icons": ["router", "ethernet-port", "house-plug"]
 }

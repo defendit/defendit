@@ -40,7 +40,9 @@ export default function SigintPrivacy() {
           3035 SE MARICAMP RD UNIT 104-205, Ocala, FL 34471
         </p>
 
-        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Purpose</h2>
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
+          Purpose
+        </h2>
         <p>
           The purpose of this privacy policy (&quot;Privacy Policy&quot;) is to
           inform users of our Site of the following:
@@ -57,7 +59,9 @@ export default function SigintPrivacy() {
           our Site.
         </p>
 
-        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Consent</h2>
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
+          Consent
+        </h2>
         <p>By using our Site users agree that they consent to:</p>
         <ol className="list-decimal ml-6 my-2">
           <li>The conditions set out in this Privacy Policy</li>
@@ -274,7 +278,9 @@ export default function SigintPrivacy() {
           <li>Right to object.</li>
         </ol>
 
-        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Children</h2>
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
+          Children
+        </h2>
         <p>
           The minimum age to use our website is 13 years of age. We do not
           knowingly collect or use personal data from children under 16 years of
@@ -352,7 +358,7 @@ export default function SigintPrivacy() {
           website. Its purpose is to collect data relating to the user&apos;s
           browsing habits. You can choose to be notified each time a cookie is
           transmitted. You can also choose to disable cookies entirely in your
-          internet browser, but this may decrease the quality of your user
+          Internet browser, but this may decrease the quality of your user
           experience.
         </p>
         <p className="mt-2">
@@ -411,7 +417,9 @@ export default function SigintPrivacy() {
           (CNIL), France.
         </p>
 
-        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Contact</h2>
+        <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
+          Contact
+        </h2>
         <p>For questions or concerns about this Privacy Policy, contact:</p>
         <p className="my-2">
           Anthony Tropeano

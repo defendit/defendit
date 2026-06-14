@@ -34,7 +34,9 @@ export default function Privacy() {
         {street}, {city}, {state} {zip}
       </p>
 
-      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Purpose</h2>
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
+        Purpose
+      </h2>
       <p>
         The purpose of this privacy policy (&quot;Privacy Policy&quot;) is to
         inform users of our Site of the following:
@@ -51,7 +53,9 @@ export default function Privacy() {
         our Site.
       </p>
 
-      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Consent</h2>
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
+        Consent
+      </h2>
       <p>By using our Site users agree that they consent to:</p>
       <ol className="list-decimal ml-6 my-2">
         <li>The conditions set out in this Privacy Policy</li>
@@ -214,7 +218,9 @@ export default function Privacy() {
         requirements for transferring personal data internationally.
       </p>
 
-      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">Children</h2>
+      <h2 className="text-h3 font-semibold uppercase border-b border-hairline my-4">
+        Children
+      </h2>
       <p>
         The minimum age to use our website is 13 years of age. We do not
         knowingly collect or use personal data from children under 13 years of
@@ -269,10 +275,7 @@ export default function Privacy() {
           Receiving waiting list and product launch notification emails. You can
           opt-out by clicking the unsubscribe link at the bottom of any email or
           by emailing{" "}
-          <a
-            href={`mailto:${privacy_email}`}
-            className="text-accent underline"
-          >
+          <a href={`mailto:${privacy_email}`} className="text-accent underline">
             {privacy_email}
           </a>
           .
@@ -287,7 +290,7 @@ export default function Privacy() {
         website. Its purpose is to collect data relating to the user&apos;s
         browsing habits. You can choose to be notified each time a cookie is
         transmitted. You can also choose to disable cookies entirely in your
-        internet browser, but this may decrease the quality of your user
+        Internet browser, but this may decrease the quality of your user
         experience.
       </p>
       <p className="mt-2">We use the following types of cookies on our Site:</p>

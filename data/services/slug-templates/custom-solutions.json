@@ -1,9 +1,9 @@
 {
   "id": "custom-solutions",
-  "title": "Custom Technology Project Planning",
+  "title": "Custom Solutions",
   "headline": "Start with a consultation when the job does not fit a standard service page.",
-  "description": "Custom technology project planning for homeowners and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities. This page is for projects that need planning before implementation, especially when privacy, networking, storage, access, or multiple devices are involved.",
-  "metaTitle": "Custom Technology Project Planning in Ocala, Belleview & The Villages | Defend I.T. Solutions",
+  "description": "Custom solutions for homeowners and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities. This page is for projects that need planning before implementation, especially when privacy, networking, storage, access, or multiple devices are involved.",
+  "metaTitle": "Custom Solutions in Ocala, Belleview & The Villages | Defend I.T. Solutions",
   "metaDescription": "Consultation and implementation planning for privacy-focused networking, self-hosted, and specialized home or small-business technology projects in Central Florida.",
   "keywords": [
     "custom IT solutions Ocala FL",
@@ -23,11 +23,7 @@
     "The Villages FL",
     "Central Florida"
   ],
-  "icons": [
-    "puzzle",
-    "monitor-cog",
-    "user"
-  ],
+  "icons": ["puzzle", "monitor-cog", "user"],
   "sections": [
     {
       "heading": "Did You Know?",
@@ -57,7 +53,8 @@
     {
       "heading": "What We Do",
       "paragraph": [
-        "We start with a consultation, define the real need, and recommend a practical path forward. Some jobs turn into a normal service visit. Others need staged planning, implementation, or follow-up work."
+        "We start with a consultation, define the real need, and recommend a practical path forward. Some jobs turn into a normal service visit. Others need staged planning, implementation, or follow-up work.",
+        "For a real example, see [O-Tether](/services/custom-solutions/o-tether): a custom appliance we built so one household gets secure Internet on the road."
       ],
       "items": [
         "Clarify the goal, constraints, and budget before recommending a solution",
@@ -70,13 +67,13 @@
     {
       "heading": "When Another Service May Be a Better Fit",
       "paragraph": [
-        "Choose Custom Technology Project Planning when the project is real but does not fit neatly into [Computer Repair](/services/computer-repair), [Virus & Malware Removal](/services/virus-removal), [Wi-Fi & Network Setup](/services/network-setup), or [Smart Home Setup & Security](/services/smart-home-setup). If the need is still straightforward, one of the standard local service pages will usually be the faster starting point. This page works best for special cases, planning-heavy work, and projects with multiple moving parts."
+        "Choose Custom Solutions when the project is real but does not fit neatly into [Computer Repair](/services/computer-repair), [Virus & Malware Removal](/services/virus-removal), [Wi-Fi & Network Setup](/services/network-setup), or [Smart Home Setup & Security](/services/smart-home-setup). If the need is still straightforward, one of the standard local service pages will usually be the faster starting point. This page works best for special cases, planning-heavy work, and projects with multiple moving parts."
       ]
     },
     {
       "heading": "Local Availability",
       "paragraph": [
-        "Custom technology project planning is available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We start by clarifying the goal, constraints, and options so the project has a practical path forward instead of a vague pile of ideas."
+        "Custom solutions are available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We start by clarifying the goal, constraints, and options so the project has a practical path forward instead of a vague pile of ideas."
       ]
     }
   ],

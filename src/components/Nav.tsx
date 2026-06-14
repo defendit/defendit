@@ -32,7 +32,15 @@ type NavItem = Readonly<{
 const navItems: ReadonlyArray<NavItem> = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
+  {
+    name: "Services",
+    href: "/services",
+    children: [
+      { name: "Overview", href: "/services" },
+      { name: "Remote Services", href: "/services/remote" },
+      { name: "Custom Solutions", href: "/services/custom-solutions" },
+    ],
+  },
   { name: "SIGINT", href: "/sigint" },
   {
     name: "Awareness",

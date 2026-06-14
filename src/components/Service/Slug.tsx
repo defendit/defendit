@@ -191,7 +191,7 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
       />
 
       <PageContainer>
-        <div className="max-w-4xl mx-auto w-full py-8 sm:py-10 space-y-6 sm:space-y-7 px-3 sm:px-6 text-left">
+        <div className="max-w-5xl mx-auto w-full py-8 sm:py-10 space-y-6 sm:space-y-7 px-3 sm:px-6 text-left">
           <BreadCrumbs items={crumbs} baseUrl="https://www.wedefendit.com" />
 
           {/* Hero Section with Icons */}

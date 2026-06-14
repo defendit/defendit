@@ -68,7 +68,7 @@ export default function RemoteSupportPlanPage() {
       <JsonLdScript jsonLd={faqLd} />
       <PageContainer>
         {/* Left by default on mobile; larger screens inherit existing look */}
-        <main className="max-w-4xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left">
+        <main className="max-w-5xl mx-auto py-8 sm:py-10 space-y-6 sm:space-y-7 px-4 sm:px-6 text-left">
           <BreadCrumbs
             items={[
               { name: "Home", href: "/" },
@@ -190,7 +190,10 @@ export default function RemoteSupportPlanPage() {
             className="pt-6 sm:pt-8 first:pt-0 border-t border-hairline first:border-t-0"
             aria-labelledby="why-plan"
           >
-            <h2 id="why-plan" className="text-h2 tracking-h2 font-semibold text-ink">
+            <h2
+              id="why-plan"
+              className="text-h2 tracking-h2 font-semibold text-ink"
+            >
               Why a Support Plan
             </h2>
             <p className="mt-2 text-ink-muted">
@@ -211,7 +214,10 @@ export default function RemoteSupportPlanPage() {
             className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="tech-approach"
           >
-            <h2 id="tech-approach" className="text-h2 tracking-h2 font-semibold text-ink">
+            <h2
+              id="tech-approach"
+              className="text-h2 tracking-h2 font-semibold text-ink"
+            >
               Technical Approach
             </h2>
             <div className="mt-3 grid gap-4 sm:grid-cols-2">
@@ -238,7 +244,7 @@ export default function RemoteSupportPlanPage() {
                     </h3>
                     <p className="text-sm text-ink-muted">
                       Remote access services live on our private network and are
-                      not exposed to the public internet.
+                      not exposed to the public Internet.
                     </p>
                   </div>
                 </div>
@@ -402,7 +408,10 @@ export default function RemoteSupportPlanPage() {
             className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="included"
           >
-            <h2 id="included" className="text-h2 tracking-h2 font-semibold text-ink">
+            <h2
+              id="included"
+              className="text-h2 tracking-h2 font-semibold text-ink"
+            >
               What Is Included
             </h2>
             <ul className="mt-2 list-disc pl-5 sm:pl-6 text-ink-muted text-sm sm:text-base space-y-2 marker:text-accent">
@@ -422,7 +431,10 @@ export default function RemoteSupportPlanPage() {
             className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="eligibility"
           >
-            <h2 id="eligibility" className="text-h2 tracking-h2 font-semibold text-ink">
+            <h2
+              id="eligibility"
+              className="text-h2 tracking-h2 font-semibold text-ink"
+            >
               Who Is Eligible
             </h2>
             <p className="mt-2 text-ink-muted">
@@ -437,7 +449,10 @@ export default function RemoteSupportPlanPage() {
             className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="tiered-support"
           >
-            <h2 id="tiered-support" className="text-h2 tracking-h2 font-semibold text-ink mb-4">
+            <h2
+              id="tiered-support"
+              className="text-h2 tracking-h2 font-semibold text-ink mb-4"
+            >
               Tiered Support Options
             </h2>
             <p className="mt-2 text-ink-muted mb-6">
@@ -547,7 +562,10 @@ export default function RemoteSupportPlanPage() {
             className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="enroll"
           >
-            <h2 id="enroll" className="text-h2 tracking-h2 font-semibold text-ink mb-4">
+            <h2
+              id="enroll"
+              className="text-h2 tracking-h2 font-semibold text-ink mb-4"
+            >
               Ready to Enroll
             </h2>
             <div className="relative mt-3 overflow-hidden rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] p-8 text-center shadow-card">
@@ -607,10 +625,7 @@ export default function RemoteSupportPlanPage() {
               setup or service costs discussed up front, no surprises.
             </p>
             <p className="mt-2 text-ink-muted">
-              <Link
-                href="/contact"
-                className="text-accent hover:underline"
-              >
+              <Link href="/contact" className="text-accent hover:underline">
                 Let&apos;s talk about your requirements
               </Link>{" "}
               and design a plan that fits.

@@ -7,6 +7,11 @@
  */
 
 import { expect, test, type Page } from "@playwright/test";
+import { blockThirdParty } from "./helpers/network";
+
+test.beforeEach(async ({ page }) => {
+  await blockThirdParty(page);
+});
 
 const ROUTE = "/awareness/digital-house";
 
@@ -25,6 +30,10 @@ const SITE_PAGES = [
   { name: "services", path: "/services" },
   { name: "contact", path: "/contact" },
   { name: "awareness", path: "/awareness" },
+  {
+    name: "custom-solutions-o-tether",
+    path: "/services/custom-solutions/o-tether",
+  },
 ];
 
 type Theme = "light" | "dark";
@@ -49,8 +58,65 @@ async function applyTheme(page: Page, theme: Theme) {
 
 async function stabilize(page: Page) {
   await page.addStyleTag({
-    content:
+    content: [
       "*,*::before,*::after{animation-duration:0s!important;transition-duration:0s!important;scroll-behavior:auto!important}",
+      // Mock the Leaflet service-area map (network-blocked in beforeEach) with a
+      // fixed-height box so async map init can't shift full-page screenshot
+      // height between runs. The placeholder <img> injected below fills it.
+      "[data-testid='service-area-map']{aspect-ratio:auto!important;height:420px!important;overflow:hidden}",
+      "[data-testid='service-area-map'] > :not(img){visibility:hidden!important}",
+      ".grecaptcha-badge{display:none!important}",
+    ].join(""),
+  });
+  await page.evaluate(() => {
+    for (const el of document.querySelectorAll(
+      "[data-testid='service-area-map']",
+    )) {
+      const img = document.createElement("img");
+      img.src = "/map-placeholder.svg";
+      img.alt = "";
+      img.style.cssText =
+        "width:100%;height:100%;object-fit:cover;display:block";
+      el.replaceChildren(img);
+    }
+  });
+}
+
+/**
+ * Wait for the page to reach a stable layout before screenshotting: all images
+ * finished loading, then full-page height unchanged across several animation
+ * frames. Prevents flaky full-page snapshots where async content (images,
+ * aspect-ratio media) settles after `networkidle` and shifts the page height.
+ */
+async function settle(page: Page) {
+  await page.evaluate(async () => {
+    await Promise.all(
+      Array.from(document.images).map((img) =>
+        img.complete
+          ? Promise.resolve()
+          : new Promise<void>((resolve) => {
+              img.addEventListener("load", () => resolve(), { once: true });
+              img.addEventListener("error", () => resolve(), { once: true });
+            }),
+      ),
+    );
+    await new Promise<void>((resolve) => {
+      let lastHeight = -1;
+      let stableFrames = 0;
+      let totalFrames = 0;
+      const tick = () => {
+        const height = document.documentElement.scrollHeight;
+        if (height === lastHeight) stableFrames += 1;
+        else {
+          stableFrames = 0;
+          lastHeight = height;
+        }
+        totalFrames += 1;
+        if (stableFrames >= 8 || totalFrames > 150) resolve();
+        else requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
   });
 }
 
@@ -86,6 +152,7 @@ test.describe("Visual: site pages", () => {
           await page.goto(pg.path, { waitUntil: "networkidle" });
           await stabilize(page);
           await page.waitForTimeout(300);
+          await settle(page);
           await expect(page).toHaveScreenshot(
             `${pg.name}-${theme}-${vp.name}.png`,
             {

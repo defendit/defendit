@@ -48,12 +48,15 @@
       "paragraph": [
         "This is for people who want guided help using computers, phones, online services, or security basics more confidently.",
         "We work with individuals, couples, and families. No technical background required.",
-        "There is no software to install, and no support plan is required. All you need is an internet connection and a willingness to learn."
+        "There is no software to install, and no support plan is required. All you need is an Internet connection and a willingness to learn."
       ]
     }
   ],
   "internalLinks": [
-    { "label": "Remote IT & Cybersecurity Tutoring", "slug": "remote-tech-tutoring" },
+    {
+      "label": "Remote IT & Cybersecurity Tutoring",
+      "slug": "remote-tech-tutoring"
+    },
     { "label": "Remote Tech Support", "slug": "remote-support" },
     {
       "label": "Remote Privacy Hardening & Digital Safety Support",

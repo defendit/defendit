@@ -113,6 +113,18 @@ const ServiceLinks: React.FC<{
           >
             {formatLabel(service)}
           </Link>
+          {!isRemote && service === "custom-solutions" && (
+            <ul className="mt-2 ml-3 space-y-2 border-l border-hairline pl-3">
+              <li>
+                <Link
+                  href="/services/custom-solutions/o-tether"
+                  className={`text-accent hover:underline ${fontSizeClass}`}
+                >
+                  O-Tether Case Study
+                </Link>
+              </li>
+            </ul>
+          )}
         </li>
       ))}
     </>

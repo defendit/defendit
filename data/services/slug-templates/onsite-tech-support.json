@@ -27,7 +27,7 @@
       "heading": "Did You Know?",
       "paragraph": [
         "Many slow computers can be fixed by removing unnecessary startup programs, malware, or misconfigured software.",
-        "Poor router placement or interference can significantly reduce Wi-Fi performance, even on fast internet plans.",
+        "Poor router placement or interference can significantly reduce Wi-Fi performance, even on fast Internet plans.",
         "Overheating and driver issues are common causes of random shutdowns, crashes, and printer errors."
       ]
     },
@@ -111,9 +111,5 @@
     "label": "Book On-Site Support",
     "link": "/contact#schedule-service"
   },
-  "icons": [
-    "badge-check",
-    "home",
-    "wrench"
-  ]
+  "icons": ["badge-check", "home", "wrench"]
 }

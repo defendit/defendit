@@ -70,7 +70,7 @@ export const DEVICES: Device[] = [
     shortName: "Guest",
     category: "guest",
     description:
-      "A visitor's device that only needs short-term internet access.",
+      "A visitor's device that only needs short-term Internet access.",
   },
   {
     id: "printer",
