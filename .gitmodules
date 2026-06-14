@@ -1,0 +1,3 @@
+[submodule ".governance"]
+	path = .governance
+	url = ssh://git@git.wedefendit.local:2222/Defend-IT-Solutions/dis-security-governance.git
