@@ -15,6 +15,8 @@ party without express written consent.
 export function LegalPage({ children }: { children: React.ReactNode }) {
   return (
     <main
+      id="main-content"
+      tabIndex={-1}
       className={`font-sans relative min-h-full flex flex-col items-center justify-start w-full`}
     >
       <section className="max-w-5xl mx-auto px-6 py-12 bg-surface text-ink font-serif text-justify leading-relaxed">

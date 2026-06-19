@@ -14,6 +14,7 @@ party without express written consent.
 
 import Head from "next/head";
 import { LegalPage } from "@/components";
+import { ogImageUrl } from "@/lib/og";
 import data from "../../../data/company-info.json";
 
 const { phone, email, address } = data.contact || {};
@@ -41,7 +42,7 @@ export default function Terms() {
         <meta property="og:type" content="article" />
         <meta
           property="og:image"
-          content="https://www.wedefendit.com/og-image.png"
+          content={ogImageUrl("Terms & Conditions")}
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -55,7 +56,7 @@ export default function Terms() {
         />
         <meta
           name="twitter:image"
-          content="https://www.wedefendit.com/og-image.png"
+          content={ogImageUrl("Terms & Conditions")}
         />
 
         <link rel="canonical" href="https://www.wedefendit.com/terms" />

@@ -18,7 +18,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html
-      lang="en"
+      lang="en-US"
       className="dark text-ink w-screen min-h-screen overflow-x-hidden overflow-y-auto"
     >
       <Head>

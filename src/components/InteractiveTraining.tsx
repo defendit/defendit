@@ -366,27 +366,24 @@ function TrainingCard({ card }: Readonly<{ card: GameCard }>) {
 
 export function InteractiveTraining() {
   return (
-    <section
-      className="pt-6 sm:pt-8 first:pt-0 border-t border-hairline first:border-t-0"
-      aria-labelledby="interactive-training"
-    >
-      <div className="mb-5 text-center">
+    <div aria-labelledby="interactive-training">
+      <div className="max-w-[42rem]">
         <h2
           id="interactive-training"
           className="text-h2 tracking-h2 font-semibold text-ink"
         >
           Interactive Training
         </h2>
-        <p className="mt-2 text-sm text-ink-muted max-w-xl mx-auto">
+        <p className="mt-4 text-ink-muted leading-relaxed">
           Hands-on exercises that teach one core security idea at a time. Play
           at your own pace. No sign-in required.
         </p>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {GAMES.map((game) => (
           <TrainingCard key={game.title} card={game} />
         ))}
       </div>
-    </section>
+    </div>
   );
 }

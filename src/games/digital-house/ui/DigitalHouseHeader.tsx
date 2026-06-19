@@ -45,7 +45,7 @@ export function DigitalHouseHeader({ onOpenHelp }: DigitalHouseHeaderProps) {
                 style={{ touchAction: "manipulation" }}
                 className={[
                   "touch-manipulation rounded-full px-2 py-0.5 text-[8px] font-bold uppercase tracking-wider transition-colors min-[400px]:px-2.5 min-[400px]:text-[9px] min-[820px]:px-3 min-[820px]:py-1 min-[820px]:text-[11px]",
-                  active ? "bg-accent text-accent-contrast shadow-sm" : "text-ink-muted hover:text-ink",
+                  active ? "bg-accent-fill text-accent-contrast shadow-sm" : "text-ink-muted hover:text-ink",
                 ].join(" ")}
               >
                 {lvl.short}

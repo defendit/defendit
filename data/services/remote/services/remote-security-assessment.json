@@ -14,7 +14,6 @@
     "Online security check"
   ],
   "url": "/services/remote/remote-security-assessment",
-  "image": "https://www.wedefendit.com/og-image.png",
   "serviceArea": ["Ocala FL", "Belleview FL", "The Villages FL", "Central Florida"],
   "sections": [
     {
@@ -42,7 +41,7 @@
     {
       "heading": "How It Works",
       "paragraph": [
-        "We walk through the areas that usually create avoidable risk—updates, accounts, browsers, backups, and device settings—and give you a prioritized list of what to fix first.",
+        "We walk through the areas that usually create avoidable risk (updates, accounts, browsers, backups, and device settings) and give you a prioritized list of what to fix first.",
         "We connect securely and walk through your devices in real time, guiding you through each step of the audit.",
         "Nothing is collected or stored. You stay in full control of your data the entire time.",
         "At the end, you receive a summary with prioritized improvements tailored to your specific setup."

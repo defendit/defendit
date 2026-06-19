@@ -18,6 +18,7 @@ import companyInfo from "../../data/company-info.json";
 import { Meta, PageContainer } from "@/components";
 import { InteractiveTraining } from "@/components/InteractiveTraining";
 import { Card } from "@/components/Card";
+import { ThemedImage } from "@/components/ThemedImage";
 
 const { contact } = companyInfo;
 
@@ -35,60 +36,40 @@ function BenefitCard({ icon, title, description, link }: BenefitCardProps) {
       href={link}
       interactive
       wash
-      className="group relative flex flex-col items-center overflow-hidden p-6 text-center"
+      className="group relative flex flex-col overflow-hidden p-6 text-left"
     >
-      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-border-accent bg-surface transition-transform duration-200 group-hover:scale-110">
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-border-accent bg-surface">
         {icon}
       </div>
-      <h3 className="text-h3 tracking-h3 font-semibold text-ink mb-2">
-        {title}
-      </h3>
-      <p className="text-ink-muted text-sm leading-relaxed">{description}</p>
-      <span className="mt-auto pt-4 inline-flex items-center gap-1 text-sm font-medium text-accent group-hover:underline">
+      <h3 className="text-h3 tracking-h3 font-semibold text-ink">{title}</h3>
+      <p className="mt-2 text-ink-muted text-sm leading-relaxed">
+        {description}
+      </p>
+      <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent group-hover:underline">
         Learn more <ArrowRight className="w-4 h-4" />
       </span>
     </Card>
   );
 }
 
-function TrustBar() {
-  const points = [
-    "Florida LLC & Insured",
-    "Local to Central Florida",
-    "Clear Quotes Before Work Begins",
-    "No Pressure Sales",
-  ];
-
-  return (
-    <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-ink-muted py-6 border-y border-hairline">
-      {points.map((point) => (
-        <div key={point} className="flex items-center gap-2">
-          <ShieldCheck className="h-4 w-4 text-success" aria-hidden />
-          <span>{point}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 export default function Home() {
   const benefits = [
     {
-      icon: <ShieldCheck className="w-8 h-8 text-accent" />,
+      icon: <ShieldCheck className="w-6 h-6 text-accent" />,
       title: "Protect",
       description:
         "Get practical help with scam prevention, account safety, and safer home technology choices without the fear tactics.",
       link: "/services/scam-protection",
     },
     {
-      icon: <Wrench className="w-8 h-8 text-accent" />,
+      icon: <Wrench className="w-6 h-6 text-accent" />,
       title: "Fix",
       description:
         "Clean up malware, repair slow or unstable computers, fix software problems, and recover from the kind of tech issues that disrupt everyday life.",
       link: "/services/computer-repair",
     },
     {
-      icon: <House className="w-8 h-8 text-accent" />,
+      icon: <House className="w-6 h-6 text-accent" />,
       title: "Support",
       description:
         "Get in-home help with Wi-Fi, printers, new devices, and day-to-day tech problems when you want one visit to sort things out.",
@@ -104,7 +85,7 @@ export default function Home() {
       <Meta
         title="Computer Repair, Virus Removal & Local Tech Support in Central Florida | Defend I.T. Solutions"
         description="Computer repair, virus removal, scam protection, Wi-Fi help, on-site tech support, and account safety for homeowners, retirees, and small businesses in Ocala, The Villages, and Belleview."
-        image="https://www.wedefendit.com/og-image.png"
+        ogImageTitle="Cybersecurity & Tech Support"
         url="https://www.wedefendit.com/"
         canonical="https://www.wedefendit.com/"
         keywords="computer repair Ocala FL, virus removal The Villages FL, scam protection Belleview FL, Wi-Fi help Central Florida, on-site tech support Ocala, password manager setup Central Florida, local tech support"
@@ -112,149 +93,187 @@ export default function Home() {
       />
 
       <PageContainer>
-        {/* Hero Section */}
-        <header className="mx-auto max-w-5xl px-4 py-5 text-center sm:px-6 sm:py-8 md:py-10">
-          <h1 className="mx-auto mb-4 max-w-4xl text-balance text-display tracking-display font-semibold text-ink">
-            Cybersecurity and Tech Support for Homes and Small Businesses
-          </h1>
-          <p className="mx-auto mb-8 max-w-3xl text-lead text-ink-muted">
-            Proudly serving Ocala, Belleview, and The Villages
-          </p>
+        {/* Hero: full-bleed image with overlaid copy */}
+        <section className="relative isolate -mx-3 flex min-h-[20rem] w-full items-start overflow-hidden sm:mx-0 sm:min-h-[34rem] sm:items-center lg:min-h-[40rem]">
+          <ThemedImage
+            dark="/img/home/home-hero-dark.jpg"
+            light="/img/home/home-hero-light.jpg"
+            alt="A Central Florida home and storefront with connected, protected devices"
+            sizes="100vw"
+            priority
+            className="object-cover object-bottom"
+          />
+          {/* Readability scrim on the left where the copy sits, plus top/bottom
+              fades so the image dissolves into the bg (light + dark). */}
+          <div className="absolute inset-0 bg-gradient-to-t from-ground via-ground/75 to-ground/40 lg:hidden" />
+          <div className="absolute inset-0 hidden bg-gradient-to-r from-ground via-ground/85 to-transparent to-80% lg:block" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ground to-transparent to-[22%]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ground to-transparent to-[18%]" />
 
-          {/* Primary CTA */}
-          <div className="flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
-            <Link
-              href="/contact"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-base font-semibold text-accent-contrast shadow-lg transition-all hover:bg-accent-hover hover:shadow-xl sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
-            >
-              <Phone className="w-5 h-5" />
-              Request Local Help
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-lg border-2 border-hairline px-6 py-3.5 text-base font-semibold text-ink transition-all hover:border-accent sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
-            >
-              View Services
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </header>
-
-        <TrustBar />
-
-        {/* What We Do Section */}
-        <section className="py-16 px-4 sm:py-20">
-          <h2 className="text-h2 tracking-h2 font-semibold text-center text-ink mb-4">
-            What We Do
-          </h2>
-          <p className="text-center text-ink-muted max-w-readable mx-auto mb-10 leading-relaxed">
-            We help with everyday tech problems and the security issues that
-            come with them. That means malware cleanup, scam help, Wi-Fi
-            trouble, device setup, and safer systems for homes and small
-            businesses without the jargon or pressure.
-          </p>
-
-          <div className="grid max-w-2xl gap-6 mx-auto lg:max-w-5xl lg:grid-cols-3">
-            {benefits.map((benefit) => (
-              <BenefitCard key={benefit.title} {...benefit} />
-            ))}
-          </div>
-        </section>
-
-        <section className="py-16 px-6 sm:py-20 max-w-6xl">
-          <InteractiveTraining />
-        </section>
-
-        <section className="py-16 px-4 sm:py-20">
-          <Card
-            wash
-            className="max-w-4xl mx-auto relative overflow-hidden px-6 py-7 sm:px-8 sm:py-8 lg:px-11 lg:pt-10 lg:pb-9"
-          >
-            <div className="max-w-3xl">
-              <h2 className="text-h2 tracking-h2 font-semibold text-ink">
-                Why Choose Defend I.T. Solutions?
-              </h2>
-
-              <p className="mt-6 max-w-readable text-lead text-ink-muted">
-                Defend I.T. Solutions brings a security-minded approach to the
-                kind of tech problems people actually run into. The work is
-                local, straightforward, and built around clear recommendations
-                instead of upsells or scare tactics.
+          <div className="relative mx-auto w-full max-w-7xl px-5 py-8 sm:px-6 lg:py-10">
+            <div className="max-w-xl lg:max-w-2xl">
+              <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
+                Ocala · Belleview · The Villages
+              </p>
+              <h1 className="mt-4 text-balance text-display tracking-display font-semibold text-ink">
+                Cybersecurity and Tech Support for{" "}
+                <span className="text-accent">Homes and Small Businesses</span>
+              </h1>
+              <p className="mt-4 max-w-lg text-lead text-ink-muted">
+                Local, security-minded help with the everyday tech problems
+                people actually run into. On-site or remote, no jargon, no
+                pressure.
               </p>
 
-              <div className="mt-8 grid gap-x-10 gap-y-5 text-ink-muted md:grid-cols-2">
-                <div className="space-y-5">
+              {/* Primary CTA */}
+              <div className="mt-6 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-fill px-6 py-3.5 text-base font-semibold text-accent-contrast shadow-lg transition-all hover:bg-accent-fill-hover hover:shadow-xl sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
+                >
+                  <Phone className="w-5 h-5" />
+                  Request Local Help
+                </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg border-2 border-hairline bg-ground/50 px-6 py-3.5 text-base font-semibold text-ink backdrop-blur-sm transition-all hover:border-accent sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
+                >
+                  View Services
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+
+              {/* Trust badges */}
+              <ul className="mt-6 flex flex-wrap gap-2.5">
+                {[
+                  "Florida LLC & Insured",
+                  "Local to Central Florida",
+                  "Clear Quotes Before Work Begins",
+                  "No Pressure Sales",
+                ].map((point) => (
+                  <li
+                    key={point}
+                    className="inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/70 px-3.5 py-1.5 text-sm text-ink-muted backdrop-blur-sm"
+                  >
+                    <ShieldCheck className="h-4 w-4 text-success" aria-hidden />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* What We Do Section */}
+        <section className="w-full py-12 sm:py-16">
+          <div className="mx-auto w-full max-w-6xl px-5 sm:px-6">
+            <div className="max-w-[42rem]">
+              <h2 className="text-h2 tracking-h2 font-semibold text-ink">
+                What We Do
+              </h2>
+              <p className="mt-4 text-ink-muted leading-relaxed">
+                We help with everyday tech problems and the security issues that
+                come with them. That means malware cleanup, scam help, Wi-Fi
+                trouble, device setup, and safer systems for homes and small
+                businesses without the jargon or pressure.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {benefits.map((benefit) => (
+                <BenefitCard key={benefit.title} {...benefit} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full py-12 sm:py-16">
+          <div className="mx-auto w-full max-w-6xl px-5 sm:px-6">
+            <InteractiveTraining />
+          </div>
+        </section>
+
+        {/* Why: copy + checklist beside a phone card */}
+        <section className="w-full py-12 sm:py-16">
+          <div className="mx-auto w-full max-w-6xl px-5 sm:px-6">
+            <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
+              <div>
+                <h2 className="text-h2 tracking-h2 font-semibold text-ink">
+                  Why Choose Defend I.T. Solutions?
+                </h2>
+
+                <p className="mt-5 max-w-readable text-lead text-ink-muted">
+                  Defend I.T. Solutions brings a security-minded approach to the
+                  kind of tech problems people actually run into. The work is
+                  local, straightforward, and built around clear recommendations
+                  instead of upsells or scare tactics.
+                </p>
+
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {[
                     "Local to Central Florida",
                     "Security-first recommendations",
+                    "Clear quotes before work begins",
+                    "No pressure sales",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3">
-                      <span
-                        aria-hidden
-                        className="text-accent text-xl flex-shrink-0"
-                      >
-                        •
+                      <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md border border-border-accent bg-surface">
+                        <ShieldCheck
+                          className="h-3.5 w-3.5 text-success"
+                          aria-hidden
+                        />
                       </span>
-                      <p className="text-base font-medium sm:text-lg">{item}</p>
+                      <p className="font-medium text-ink">{item}</p>
                     </div>
                   ))}
                 </div>
-                <div className="space-y-5">
-                  {["Clear quotes before work begins", "No pressure sales"].map(
-                    (item) => (
-                      <div key={item} className="flex items-start gap-3">
-                        <span
-                          aria-hidden
-                          className="text-accent text-xl flex-shrink-0"
-                        >
-                          •
-                        </span>
-                        <p className="text-base font-medium sm:text-lg">
-                          {item}
-                        </p>
-                      </div>
-                    ),
-                  )}
-                </div>
-              </div>
 
-              <div className="mt-10 flex flex-col gap-6 border-t border-hairline pt-6 md:flex-row md:items-end md:justify-between">
-                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium">
+                <div className="mt-8 flex flex-wrap gap-3">
                   <Link
                     href="/about"
-                    className="inline-flex items-center gap-1 text-accent transition hover:underline"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-hairline px-5 py-3 font-semibold text-ink transition hover:border-accent"
                   >
                     About Defend I.T. Solutions
-                    <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
                     href="/services"
-                    className="inline-flex items-center gap-1 text-accent transition hover:underline"
+                    className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-hairline px-5 py-3 font-semibold text-ink transition hover:border-accent"
                   >
                     View Services
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
-
-                <div className="flex flex-col items-start gap-2 md:items-end">
-                  <a
-                    href={telHref}
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-5 py-3.5 text-base font-semibold text-accent-contrast shadow-lg transition-all hover:bg-accent-hover hover:shadow-xl md:w-auto"
-                  >
-                    <Phone className="w-5 h-5 flex-shrink-0" />
-                    {displayPhone}
-                  </a>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-accent transition hover:underline"
-                  >
-                    More Contact Options
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
               </div>
+
+              {/* Phone card */}
+              <Card wash className="px-6 py-9 text-center sm:px-8">
+                <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
+                  Talk to a local tech
+                </p>
+                <a
+                  href={telHref}
+                  className="mt-4 block text-3xl font-semibold tracking-tight text-ink transition hover:text-accent sm:text-4xl"
+                >
+                  {displayPhone}
+                </a>
+                <p className="mt-3 text-sm text-ink-muted">{contact.hours}</p>
+                <a
+                  href={telHref}
+                  className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-fill px-6 py-3.5 font-semibold text-accent-contrast shadow-lg transition-all hover:bg-accent-fill-hover hover:shadow-xl"
+                >
+                  <Phone className="h-5 w-5" />
+                  Call Now
+                </a>
+                <Link
+                  href="/contact"
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent transition hover:underline"
+                >
+                  More Contact Options
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Card>
             </div>
-          </Card>
+          </div>
         </section>
       </PageContainer>
     </>

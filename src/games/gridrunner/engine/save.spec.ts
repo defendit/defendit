@@ -2,12 +2,39 @@
 Copyright © 2026 Defend I.T. Solutions LLC. All Rights Reserved.
 */
 
-// @vitest-environment happy-dom
-
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { loadSaveSummary } from "./save";
 
 const SAVE_KEY = "dis-gridrunner-save";
+
+type LocalStorageStub = {
+  getItem: (key: string) => string | null;
+  setItem: (key: string, value: string) => void;
+  removeItem: (key: string) => void;
+  clear: () => void;
+  key: (i: number) => string | null;
+  length: number;
+};
+
+function createLocalStorageStub(): LocalStorageStub {
+  const store = new Map<string, string>();
+  return {
+    get length() {
+      return store.size;
+    },
+    getItem: (key) => store.get(key) ?? null,
+    setItem: (key, value) => {
+      store.set(key, value);
+    },
+    removeItem: (key) => {
+      store.delete(key);
+    },
+    clear: () => {
+      store.clear();
+    },
+    key: (i) => Array.from(store.keys())[i] ?? null,
+  };
+}
 
 const MOCK_SAVE = {
   version: 1,
@@ -36,8 +63,38 @@ const MOCK_SAVE = {
 };
 
 describe("loadSaveSummary", () => {
+  const originalLocalStorage = Object.getOwnPropertyDescriptor(
+    globalThis,
+    "localStorage",
+  );
+  const originalWindow = Object.getOwnPropertyDescriptor(globalThis, "window");
+
   beforeEach(() => {
-    localStorage.clear();
+    Object.defineProperty(globalThis, "localStorage", {
+      configurable: true,
+      writable: true,
+      value: createLocalStorageStub(),
+    });
+    // save.ts gates reads behind `typeof window !== "undefined"` for SSR
+    // safety, so a window must exist for the localStorage path to run.
+    Object.defineProperty(globalThis, "window", {
+      configurable: true,
+      writable: true,
+      value: globalThis,
+    });
+  });
+
+  afterEach(() => {
+    if (originalLocalStorage) {
+      Object.defineProperty(globalThis, "localStorage", originalLocalStorage);
+    } else {
+      Reflect.deleteProperty(globalThis, "localStorage");
+    }
+    if (originalWindow) {
+      Object.defineProperty(globalThis, "window", originalWindow);
+    } else {
+      Reflect.deleteProperty(globalThis, "window");
+    }
   });
 
   it("returns null when no save exists", () => {

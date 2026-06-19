@@ -21,7 +21,7 @@ import {
   ServiceAreaAndBooking,
 } from "@/components";
 import { ServiceCard } from "@/components/Service/Card";
-import { Card } from "@/components/Card";
+import { HeroBanner } from "@/components/HeroBanner";
 import { localBusinessLd } from "@/lib/json-ld";
 
 export type Service = {
@@ -159,7 +159,8 @@ export default function ServicePage(props: ServicesPageProps) {
       <Meta {...metaWithStructured} />
 
       <PageContainer>
-        <div className="max-w-7xl mx-auto w-full px-3 py-8 sm:px-4 sm:py-10 lg:px-6 space-y-8 sm:space-y-10">
+        {/* Breadcrumbs: contained, above the full-bleed hero */}
+        <div className="mx-auto w-full max-w-6xl px-4 pt-1 sm:px-6">
           <BreadCrumbs
             includeJsonLd={false}
             items={
@@ -176,43 +177,40 @@ export default function ServicePage(props: ServicesPageProps) {
             }
             baseUrl="https://www.wedefendit.com"
           />
+        </div>
 
-          {/* Header */}
-          <Card
-            as="header"
-            wash
-            className="relative overflow-hidden px-5 py-6 text-center sm:px-6 sm:py-8"
-          >
-            <div className="inline-flex items-center gap-2 rounded-full border border-border-accent bg-surface px-3 py-2 text-eyebrow font-semibold uppercase tracking-eyebrow text-accent sm:px-4">
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.25}
-                viewBox="0 0 24 24"
-                aria-hidden
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                />
-              </svg>
-              Serving Central Florida
-            </div>
+        {/* Hero: full-bleed, like home (about image as a placeholder for now) */}
+        <HeroBanner
+          dark={
+            isRemote
+              ? "/img/about/about-hero-dark.jpg"
+              : "/img/locations/ocala-hero-dark.jpg"
+          }
+          light={
+            isRemote
+              ? "/img/about/about-hero-light.jpg"
+              : "/img/locations/ocala-hero-light.jpg"
+          }
+          alt={`${h1}, Defend I.T. Solutions`}
+        >
+          <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
+            Serving Central Florida
+          </p>
+          <h1 className="mt-4 text-balance text-display tracking-display font-semibold text-ink">
+            {h1}
+          </h1>
+          <p className="mt-5 max-w-lg text-lead text-ink-muted">
+            {isRemote
+              ? "Some problems can be handled well online. This section covers remote sessions for local clients, guided training, and plan-based follow-up support."
+              : "Start with the problem you need solved. We focus on clear, practical help for homes and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities."}
+          </p>
+        </HeroBanner>
 
-            <h1 className="mt-5 text-balance text-display tracking-display font-semibold text-ink">
-              {h1}
-            </h1>
-
-            <p className="mx-auto mt-4 max-w-readable text-lead text-ink-muted">
-              {isRemote
-                ? "Some problems can be handled well online. This section covers remote sessions for local clients, guided training, and plan-based follow-up support."
-                : "Start with the problem you need solved. We focus on clear, practical help for homes and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities."}
-            </p>
-          </Card>
-
+        <div className="max-w-7xl mx-auto w-full px-3 pb-10 sm:px-4 lg:px-6 space-y-8 sm:space-y-10">
           {/* Grid */}
+          <h2 className="sr-only">
+            {isRemote ? "Remote services" : "Our services"}
+          </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service: Service) => (
               <ServiceCard

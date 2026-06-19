@@ -13,7 +13,7 @@ party without express written consent.
 */
 
 /*
- * O-Tether — a case study of the Custom Solutions service, nested under
+ * O-Tether: a case study of the Custom Solutions service, nested under
  * /services/custom-solutions. Uses the same shell as the ServiceSlug pages
  * (centered max-w-5xl column, left-aligned content, Card hero, border-t section
  * dividers) so it reads as a sibling of the other service pages. Copy lives in
@@ -22,7 +22,7 @@ party without express written consent.
  */
 
 import Link from "next/link";
-import Image from "next/image";
+import { HeroBanner } from "@/components/HeroBanner";
 import { Fragment } from "react";
 import {
   Cable,
@@ -97,7 +97,7 @@ const crumbs = [
 
 const SECTION = "border-t border-hairline pt-8 sm:pt-10";
 const PRIMARY_BTN =
-  "inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-accent-contrast shadow-card transition hover:bg-accent-hover hover:shadow-card-hover";
+  "inline-flex items-center justify-center gap-2 rounded-lg bg-accent-fill px-6 py-3 font-semibold text-accent-contrast shadow-card transition hover:bg-accent-fill-hover hover:shadow-card-hover";
 const SECONDARY_BTN =
   "inline-flex items-center justify-center gap-2 rounded-lg border border-hairline px-6 py-3 font-semibold text-ink transition hover:border-border-accent hover:text-accent";
 
@@ -121,53 +121,45 @@ export default function OTetherCaseStudy() {
       />
 
       <PageContainer>
-        <div className="max-w-5xl mx-auto w-full py-8 sm:py-10 space-y-8 sm:space-y-10 px-3 sm:px-6 text-left">
+        {/* Breadcrumbs: contained, above the full-bleed hero */}
+        <div className="mx-auto w-full max-w-6xl px-4 pt-4 sm:px-6">
           <BreadCrumbs items={crumbs} baseUrl="https://www.wedefendit.com" />
+        </div>
 
-          {/* ── Hero ──────────────────────────────────────────────── */}
-          <Card as="header" wash className="relative overflow-hidden px-5 py-6 sm:px-8 sm:py-10">
-            <div className="space-y-5">
-              <span className="inline-flex items-center gap-2 rounded-full border border-border-accent bg-surface px-3 py-2 text-eyebrow font-semibold uppercase tracking-eyebrow text-accent sm:px-4">
-                {hero.eyebrow}
+        {/* Hero: full-bleed, like the other heroes */}
+        <HeroBanner
+          dark={hero.image.src}
+          light="/img/services/o-tether-hero-light.jpg"
+          alt={hero.image.alt}
+        >
+          <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
+            {hero.eyebrow}
+          </p>
+          <h1 className="mt-4 text-balance text-display tracking-display font-semibold text-ink">
+            {hero.title}
+          </h1>
+          <p className="mt-5 max-w-lg text-lead text-ink-muted">
+            {hero.subtitle}
+          </p>
+          <p className="mt-6 border-t border-hairline pt-5 text-base font-medium text-ink">
+            {hero.kicker.map((line) => (
+              <span key={line} className="block">
+                {line}
               </span>
-              <div className="space-y-3">
-                <h1 className="text-display tracking-display font-semibold text-ink text-balance">
-                  {hero.title}
-                </h1>
-                <p className="max-w-readable text-lead text-ink-muted">
-                  {hero.subtitle}
-                </p>
-              </div>
-              <p className="border-t border-hairline pt-5 text-base font-medium text-ink">
-                {hero.kicker.map((line) => (
-                  <span key={line} className="block">
-                    {line}
-                  </span>
-                ))}
-              </p>
-              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Link href={cta.primary.href} className={PRIMARY_BTN}>
-                  {cta.primary.label}
-                  <ArrowRight className="h-5 w-5" aria-hidden />
-                </Link>
-                <Link href={cta.secondary.href} className={SECONDARY_BTN}>
-                  {cta.secondary.label}
-                </Link>
-              </div>
-            </div>
-          </Card>
+            ))}
+          </p>
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:justify-end">
+            <Link href={cta.primary.href} className={PRIMARY_BTN}>
+              {cta.primary.label}
+              <ArrowRight className="h-5 w-5" aria-hidden />
+            </Link>
+            <Link href={cta.secondary.href} className={SECONDARY_BTN}>
+              {cta.secondary.label}
+            </Link>
+          </div>
+        </HeroBanner>
 
-          {/* ── Hero image ────────────────────────────────────────── */}
-          <figure className="relative aspect-[16/10] w-full overflow-hidden rounded-feature border border-hairline bg-surface">
-            <Image
-              src={hero.image.src}
-              alt={hero.image.alt}
-              fill
-              sizes="(min-width: 896px) 896px, 100vw"
-              className="object-cover"
-              priority
-            />
-          </figure>
+        <div className="max-w-5xl mx-auto w-full py-8 sm:py-10 space-y-8 sm:space-y-10 px-3 sm:px-6 text-left">
 
           {/* ── The problem ───────────────────────────────────────── */}
           <section className={SECTION} aria-labelledby="ot-overview">

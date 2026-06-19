@@ -1,7 +1,7 @@
 /*
 Copyright © 2026 Defend I.T. Solutions LLC. All Rights Reserved.
 
-Contract tests for <Eyebrow>. Behavior and semantics only — no recipe-class or
+Contract tests for <Eyebrow>. Behavior and semantics only, no recipe-class or
 DOM-shape assertions, no snapshots (guardrails/test-policy.md).
 */
 

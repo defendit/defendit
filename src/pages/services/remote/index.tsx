@@ -24,7 +24,8 @@ export default function RemoteServicesPage() {
         description:
           "Remote tech tutoring, online training, privacy help, and plan-based remote support from Defend I.T. Solutions. Tutoring and training are available online, while support-plan services are for Central Florida clients.",
         url: "https://www.wedefendit.com/services/remote",
-        image: "https://www.wedefendit.com/og-image.png",
+        ogImageTitle: "Remote Tech Support & Training",
+        imageAlt: "Remote Tech Support & Training, Defend I.T. Solutions",
         keywords:
           "remote tech support, online tech training, remote cybersecurity tutoring, remote privacy help, remote malware removal, Central Florida remote support plan, online computer help",
       }}

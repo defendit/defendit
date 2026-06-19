@@ -14,11 +14,8 @@ party without express written consent.
 
 import jsonData from "@/data/services/list.json";
 import { Service, ServicePage } from "@/components/Service";
-// import { useLocationRedirect } from "@/hooks/useLocationRedirect";
 
 export default function ServicesPage() {
-  // useLocationRedirect(true); // auto-redirects if match found
-
   const canonical = "https://www.wedefendit.com/services";
   const services = jsonData.services as Service[]; // expects { name, slug, description? }
 
@@ -29,7 +26,9 @@ export default function ServicesPage() {
           "Computer Repair, Virus Removal & Wi-Fi Help in Central Florida | Defend I.T. Solutions",
         description:
           "Practical, local help with computer repair, virus removal, scam protection, Wi-Fi and home network issues, on-site tech support, and password manager setup for homes and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities",
-        image: "https://www.wedefendit.com/og-image.png",
+        ogImageTitle: "Cybersecurity & Tech Support",
+        imageAlt:
+          "Cybersecurity & Tech Support, Defend I.T. Solutions, Central Florida",
         url: canonical,
         canonical,
         keywords:

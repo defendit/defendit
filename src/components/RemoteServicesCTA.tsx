@@ -35,7 +35,7 @@ export default function RemoteServicesCTA(props: RemoteServicesCTAProps) {
             </p>
             <Link
               href="/services/remote/remote-support-plan"
-              className="mt-2 whitespace-nowrap rounded-lg bg-accent px-6 py-4 text-sm font-semibold text-accent-contrast shadow-sm transition hover:bg-accent-hover sm:text-md touch-manipulation"
+              className="mt-2 whitespace-nowrap rounded-lg bg-accent-fill px-6 py-4 text-sm font-semibold text-accent-contrast shadow-sm transition hover:bg-accent-fill-hover sm:text-md touch-manipulation"
               style={{ touchAction: "manipulation" }}
             >
               Remote Support Plans →

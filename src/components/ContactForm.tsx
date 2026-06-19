@@ -137,6 +137,7 @@ export function ContactForm({
   if (status === "success") {
     return (
       <div
+        role="status"
         className={`flex flex-col items-center justify-center gap-3 py-10 px-6 rounded-lg bg-success/10 border border-success/40 ${className}`}
       >
         <Check className="w-8 h-8 text-success" />
@@ -198,11 +199,15 @@ export function ContactForm({
               }}
               placeholder="Your name"
               maxLength={100}
+              aria-invalid={fieldErrors.name ? true : undefined}
+              aria-describedby={fieldErrors.name ? "contact-name-error" : undefined}
               className={`${FIELD_BASE} ${FIELD_OK}`}
             />
           </div>
           {fieldErrors.name && (
-            <p className="mt-1 text-xs text-danger">{fieldErrors.name}</p>
+            <p id="contact-name-error" role="alert" className="mt-1 text-xs text-danger">
+              {fieldErrors.name}
+            </p>
           )}
         </div>
 
@@ -225,13 +230,19 @@ export function ContactForm({
                 if (status === "error") setStatus("idle");
               }}
               placeholder="your@email.com"
+              aria-invalid={fieldErrors.email ? true : undefined}
+              aria-describedby={
+                fieldErrors.email ? "contact-email-error" : undefined
+              }
               className={`${FIELD_BASE} ${
                 fieldErrors.email ? FIELD_ERROR : FIELD_OK
               }`}
             />
           </div>
           {fieldErrors.email && (
-            <p className="mt-1 text-xs text-danger">{fieldErrors.email}</p>
+            <p id="contact-email-error" role="alert" className="mt-1 text-xs text-danger">
+              {fieldErrors.email}
+            </p>
           )}
         </div>
 
@@ -255,6 +266,10 @@ export function ContactForm({
               placeholder="How can we help?"
               rows={5}
               maxLength={5000}
+              aria-invalid={fieldErrors.message ? true : undefined}
+              aria-describedby={
+                fieldErrors.message ? "contact-message-error" : undefined
+              }
               className={`${FIELD_BASE} resize-y ${
                 fieldErrors.message ? FIELD_ERROR : FIELD_OK
               }`}
@@ -262,7 +277,9 @@ export function ContactForm({
           </div>
           <div className="flex justify-between mt-1">
             {fieldErrors.message ? (
-              <p className="text-xs text-danger">{fieldErrors.message}</p>
+              <p id="contact-message-error" role="alert" className="text-xs text-danger">
+                {fieldErrors.message}
+              </p>
             ) : (
               <span />
             )}
@@ -275,7 +292,7 @@ export function ContactForm({
           type="submit"
           disabled={status === "loading"}
           style={{ touchAction: "manipulation" }}
-          className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-contrast font-semibold shadow-lg hover:bg-accent-hover hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation"
+          className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent-fill text-accent-contrast font-semibold shadow-lg hover:bg-accent-fill-hover hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation"
         >
           {status === "loading" ? (
             <Loader2 className="w-4 h-4 animate-spin" />
@@ -286,7 +303,9 @@ export function ContactForm({
         </button>
 
         {status === "error" && (
-          <p className="text-xs text-danger text-center">{errorMsg}</p>
+          <p role="alert" className="text-xs text-danger text-center">
+            {errorMsg}
+          </p>
         )}
       </form>
       <p className="mt-3 text-xs text-ink-dim text-center">

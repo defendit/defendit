@@ -33,6 +33,10 @@ export function readServiceJson(filePath: string) {
   return JSON.parse(fileContents);
 }
 
+function publicFileExists(src: string): boolean {
+  return fs.existsSync(path.join(process.cwd(), "public", src));
+}
+
 export const getStaticPathsForServices: GetStaticPaths = async () => {
   const files = fs.readdirSync(TEMPLATES_DIR);
   const paths = files
@@ -48,6 +52,19 @@ export function makeGetStaticSlugProps(): GetStaticProps {
     if (!fs.existsSync(filePath)) return { notFound: true };
 
     const service = readServiceJson(filePath);
+
+    if (Array.isArray(service.sections)) {
+      service.sections = service.sections.map(
+        (section: { image?: { src: string; alt: string } }) => {
+          if (!section.image || publicFileExists(section.image.src)) {
+            return section;
+          }
+          const copy = { ...section };
+          delete copy.image;
+          return copy;
+        },
+      );
+    }
 
     let related = service.related || [];
     if (related.length > 3) {

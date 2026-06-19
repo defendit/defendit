@@ -67,6 +67,7 @@ export function WaitlistForm({
   if (status === "success") {
     return (
       <div
+        role="status"
         className={`flex flex-col items-center justify-center gap-1.5 py-3 px-4 rounded-lg bg-success/10 border border-success/40 text-center ${className}`}
       >
         <div className="flex items-center gap-2 text-success text-sm font-medium">
@@ -91,6 +92,7 @@ export function WaitlistForm({
           <input
             type="email"
             required
+            aria-label="Email address"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
@@ -104,7 +106,7 @@ export function WaitlistForm({
           type="submit"
           disabled={status === "loading"}
           style={{ touchAction: "manipulation" }}
-          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-contrast text-sm font-semibold shadow-lg hover:bg-accent-hover hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap touch-manipulation"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-accent-fill text-accent-contrast text-sm font-semibold shadow-lg hover:bg-accent-fill-hover hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap touch-manipulation"
         >
           {status === "loading" ? (
             <Loader2 className="w-4 h-4 animate-spin" />
@@ -115,7 +117,9 @@ export function WaitlistForm({
         </button>
       </form>
       {status === "error" && (
-        <p className="mt-2 text-xs text-danger">{errorMsg}</p>
+        <p role="alert" className="mt-2 text-xs text-danger">
+          {errorMsg}
+        </p>
       )}
       <p className="mt-2 text-xs text-ink-dim">Protected by reCAPTCHA.</p>
     </div>

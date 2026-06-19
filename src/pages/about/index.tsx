@@ -13,6 +13,8 @@ party without express written consent.
 */
 import Link from "next/link";
 import { localBusinessLd } from "@/lib/json-ld";
+import { ogImageUrl } from "@/lib/og";
+import { HeroBanner } from "@/components/HeroBanner";
 import type { ComponentType, SVGProps } from "react";
 import { ShieldCheck, MapPin, MessageCircle, ArrowRight } from "lucide-react";
 import { PageContainer, Meta, BookOnline, BreadCrumbs } from "@/components";
@@ -99,7 +101,7 @@ export default function About() {
     url: canonical,
     primaryImageOfPage: {
       "@type": "ImageObject",
-      url: "https://www.wedefendit.com/og-image.png",
+      url: ogImageUrl("About Defend I.T. Solutions"),
     },
     about: {
       ...localBusinessLd,
@@ -113,7 +115,6 @@ export default function About() {
       <Meta
         title="About Defend I.T. Solutions | Cybersecurity & IT Support in Ocala, Belleview & The Villages"
         description="Learn about Defend I.T. Solutions, a local cybersecurity and IT support company serving Ocala, Belleview, The Villages, and surrounding Central Florida communities with privacy-first, on-site tech support."
-        image="https://www.wedefendit.com/og-image.png"
         url={canonical}
         canonical={canonical}
         keywords="Defend I.T. Solutions, cybersecurity Ocala FL, IT support Belleview FL, IT support The Villages FL, local tech support Central Florida, privacy-focused IT services"
@@ -124,32 +125,34 @@ export default function About() {
       />
 
       <PageContainer>
-        <div className="max-w-5xl mx-auto w-full p-3 sm:p-4 space-y-8 sm:space-y-10">
+        {/* Breadcrumbs: contained, above the full-bleed hero */}
+        <div className="mx-auto w-full max-w-6xl px-4 pt-1 sm:px-6">
           <BreadCrumbs
             includeJsonLd={false}
             items={[{ name: "Home", href: "/" }, { name: "About" }]}
           />
+        </div>
 
-          {/* Hero Section */}
-          <Card
-            as="header"
-            wash
-            className="relative overflow-hidden px-5 py-6 text-center sm:px-6 sm:py-8"
-          >
-            <div className="inline-flex items-center gap-2 rounded-full border border-border-accent bg-surface px-3 py-2 text-eyebrow font-semibold uppercase tracking-eyebrow text-accent sm:px-4">
-              <MapPin className="w-4 h-4" aria-hidden />
-              Locally Owned &amp; Operated
-            </div>
+        {/* Hero: full-bleed, exactly like the homepage */}
+        <HeroBanner
+          dark="/img/home/home-hero-dark.jpg"
+          light="/img/home/home-hero-light.jpg"
+          alt="A Central Florida home and storefront with connected, protected devices"
+        >
+          <p className="inline-flex items-center gap-2 text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
+            <MapPin className="h-4 w-4" aria-hidden />
+            Locally Owned &amp; Operated
+          </p>
+          <h1 className="mt-4 text-balance text-display tracking-display font-semibold text-ink">
+            About Defend I.T. Solutions
+          </h1>
+          <p className="mt-5 max-w-lg text-lead text-ink-muted">
+            Local cybersecurity and IT support serving Ocala, Belleview, The
+            Villages, and surrounding Central Florida.
+          </p>
+        </HeroBanner>
 
-            <h1 className="mt-5 text-balance text-display tracking-display font-semibold text-ink">
-              About Defend I.T. Solutions
-            </h1>
-
-            <p className="mx-auto mt-4 max-w-readable text-lead text-ink-muted">
-              Local cybersecurity and IT support serving Ocala, Belleview, The
-              Villages, and surrounding Central Florida.
-            </p>
-          </Card>
+        <div className="max-w-5xl mx-auto w-full px-3 pb-3 sm:px-4 space-y-8 sm:space-y-10">
 
           <Card
             as="section"
@@ -161,9 +164,9 @@ export default function About() {
               Who we are
             </h2>
             <p className="text-lead text-ink">
-              Defend I.T. Solutions is a founder-led local business based in
-              Ocala, serving homeowners and small businesses across Ocala,
-              Belleview, and The Villages.
+              Defend I.T. Solutions is a founder-led local business serving
+              homeowners and small businesses across Ocala, Belleview, and The
+              Villages. We come to you, so there&apos;s no shop to drive to.
             </p>
 
             <p className="text-lead mt-4 text-ink-muted">
@@ -203,7 +206,7 @@ export default function About() {
             </p>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-contrast font-semibold transition-all shadow-lg hover:bg-accent-hover hover:shadow-xl"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent-fill text-accent-contrast font-semibold transition-all shadow-lg hover:bg-accent-fill-hover hover:shadow-xl"
             >
               View Local Services
               <ArrowRight className="w-5 h-5" />

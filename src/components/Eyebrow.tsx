@@ -13,7 +13,7 @@ party without express written consent.
 */
 
 /*
- * Eyebrow — the single eyebrow/kicker label treatment from
+ * Eyebrow: the single eyebrow/kicker label treatment from
  * DIS-DESIGN-AND-BRAND-STANDARDS §6.2c: 0.75rem, semibold, uppercase, accent
  * color, and one fixed 0.2em tracking (resolving the prior 0.18/0.25/0.28em
  * drift). Renders a <p> by default; pass `as="span"` for inline use.

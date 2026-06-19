@@ -17,7 +17,6 @@
     "cybersecurity education Florida"
   ],
   "url": "/services/scam-protection",
-  "image": "https://www.wedefendit.com/og-image.png",
   "serviceArea": [
     "Ocala FL",
     "Belleview FL",
@@ -48,7 +47,11 @@
         "A parent or older relative in The Villages or nearby needs safer device settings and clearer guidance",
         "You clicked something suspicious, gave information to the wrong person, or are no longer sure what is safe",
         "You want practical scam education without jargon, pressure, or fear-based marketing"
-      ]
+      ],
+      "image": {
+        "src": "/img/services/scareware-lock-dark.jpg",
+        "alt": "A computer screen locked by a scam pop-up"
+      }
     },
     {
       "heading": "What We Do",

@@ -6,7 +6,7 @@
     "subtitle": "A family on the move wanted one safe network everywhere they went, without another monthly bill. So we built a small appliance that turns their own phones into a secure home network.",
     "kicker": ["No apps. No accounts. No dashboards. No hidden fees."],
     "image": {
-      "src": "/o-tether-hero.webp",
+      "src": "/img/services/o-tether-hero-dark.webp",
       "alt": "The O-Tether appliance with a network cable connected"
     }
   },
@@ -91,7 +91,7 @@
   "architecture": {
     "eyebrow": "What we built",
     "title": "A Bespoke UTM Appliance",
-    "intro": "It began as a spare single-board computer the household already owned. The repurposed UTM provides active-threat protection and is comprised of various layers:",
+    "intro": "It began as a spare single-board computer the household already owned. The repurposed UTM provides active-threat protection and comprises five layers:",
     "layers": [
       {
         "icon": "Cable",
@@ -114,7 +114,7 @@
       {
         "icon": "Activity",
         "tag": "L4",
-        "name": "Flow detection",
+        "name": "Flow classification",
         "description": "Every connection is classified and watched, so unusual traffic stands out."
       },
       {

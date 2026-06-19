@@ -1,0 +1,173 @@
+{
+  "id": "the-villages",
+  "slug": "the-villages",
+  "city": "The Villages",
+  "state": "FL",
+  "metaTitle": "Cybersecurity & Tech Support in The Villages, FL | Defend I.T. Solutions",
+  "metaDescription": "Calm, local tech and security help for The Villages, FL. Scam and pop-up cleanup, virus removal, Wi-Fi and device setup, explained simply, with no pressure.",
+  "keywords": [
+    "tech support The Villages FL",
+    "computer help The Villages FL",
+    "scam protection The Villages FL",
+    "senior tech support The Villages",
+    "virus removal The Villages FL",
+    "Wi-Fi setup The Villages FL",
+    "in-home computer help The Villages Florida",
+    "tech support scam help The Villages",
+    "cybersecurity The Villages FL"
+  ],
+  "eyebrow": "Service Area",
+  "h1": "Cybersecurity & Tech Support in The Villages, FL",
+  "headline": "One of the most scam-targeted places in the country. We help you stay ahead of it.",
+  "heroImage": {
+    "src": "/img/locations/the-villages-hero-dark.jpg",
+    "alt": "A Central Florida home with its laptop, router, and phone protected under a security shield"
+  },
+  "banner": {
+    "src": "/img/locations/security-banner-dark.jpg",
+    "alt": "Abstract circuit board with a security shield"
+  },
+  "intro": [
+    "The Villages is one of the largest retirement communities in the country. That's exactly why the scammers work it so hard. We help you see it coming, and put it right when it gets through.",
+    "The rest is ordinary: a printer that won't print, Wi-Fi that dies at the back of the house, a tablet the grandkids set up wrong. We come to you, make it work, and leave you able to use it. No pressure, no jargon."
+  ],
+  "areaServed": [
+    "The Villages FL",
+    "Lady Lake FL",
+    "Wildwood FL",
+    "Summerfield FL",
+    "Central Florida"
+  ],
+  "coverage": {
+    "townSquares": [
+      "Spanish Springs",
+      "Lake Sumter Landing",
+      "Brownwood",
+      "Sawgrass Grove",
+      "Eastport"
+    ],
+    "nearbyTowns": ["Lady Lake", "Wildwood", "Summerfield"]
+  },
+  "sections": [
+    {
+      "heading": "Why people call us",
+      "paragraph": [
+        "You don't need to become an expert. You need someone you trust to fix it and tell you, plainly, what was actually wrong."
+      ],
+      "items": [
+        "We come to you, across The Villages and the nearby towns.",
+        "We explain it simply, and write it down when that helps.",
+        "You get a clear quote before any work starts.",
+        "No upsells, no pressure, no jargon."
+      ]
+    },
+    {
+      "heading": "The scams we see most",
+      "paragraph": [
+        "If you live here, you've already gotten the call. The Villages is the target, and these are the ones we clean up after most."
+      ],
+      "items": [
+        "Lock-screen pop-ups that say you're infected, with a number to call now.",
+        "Cold calls from a fake Microsoft, Apple, Amazon, or bank 'fraud department.'",
+        "Gift-card and wire-transfer demands to fix an account that was never broken.",
+        "Romance, grandparent, and impersonation scams aimed at people living alone.",
+        "Remote-access software a stranger talked you into installing."
+      ],
+      "image": {
+        "src": "/img/services/scareware-lock-dark.jpg",
+        "alt": "A computer screen locked by a scam pop-up"
+      }
+    },
+    {
+      "heading": "Everyday tech help",
+      "paragraph": [
+        "Most days there's no scam in sight. It's just getting the everyday tech to behave."
+      ],
+      "items": [
+        "Wi-Fi that reaches the lanai and the guest room, and printers that print.",
+        "A new phone, tablet, or computer set up with everything moved across.",
+        "Email and accounts straightened out after a scam scare.",
+        "A sluggish computer checked over and sped back up."
+      ]
+    },
+    {
+      "heading": "On-site or remote, how it works",
+      "paragraph": [
+        "Tell us what's wrong and we come to you. Local clients can also enroll in our Remote Support Plan, so future fixes are handled remotely, with no second visit. Either way: a device that works, and a straight answer on what happened."
+      ],
+      "image": {
+        "src": "/img/services/how-it-works-dark.jpg",
+        "alt": "Three steps: book an appointment, on-site or remote service, then a secured device"
+      }
+    },
+    {
+      "heading": "Where we work",
+      "paragraph": [
+        "We cover all five town squares (Spanish Springs, Lake Sumter Landing, Brownwood, Sawgrass Grove, and Eastport), plus Lady Lake, Wildwood, Summerfield, and the surrounding Central Florida area."
+      ]
+    }
+  ],
+  "services": [
+    {
+      "label": "Scam & Fraud Protection",
+      "slug": "scam-protection",
+      "summary": "Help after a scam call or pop-up, and how to stop the next one."
+    },
+    {
+      "label": "Virus & Malware Removal",
+      "slug": "virus-removal",
+      "summary": "Cleanup for pop-ups, fake warnings, and infected machines."
+    },
+    {
+      "label": "On-Site Tech Support",
+      "slug": "onsite-tech-support",
+      "summary": "Someone at your door who sorts it out in person."
+    },
+    {
+      "label": "Wi-Fi & Network Setup",
+      "slug": "network-setup",
+      "summary": "Home Wi-Fi and devices, set up to stay working."
+    },
+    {
+      "label": "Password Manager Setup & Account Safety",
+      "slug": "password-management",
+      "summary": "Simpler, safer logins, and account help after a scam."
+    },
+    {
+      "label": "Computer Repair",
+      "slug": "computer-repair",
+      "summary": "A slow or failing computer, brought back."
+    }
+  ],
+  "testimonials": [],
+  "faq": [
+    {
+      "question": "Do you come to homes inside The Villages?",
+      "answer": "Yes, across The Villages and the nearby towns. We come to you, on-site."
+    },
+    {
+      "question": "Can you help me remotely without coming out first?",
+      "answer": "Remote support is for local clients, and the setup is done in person, so the first visit is on-site. After that, most fixes happen remotely through our Remote Support Plan, including same-day and after-hours help where available."
+    },
+    {
+      "question": "I got a pop-up saying my computer is infected and to call a number. What should I do?",
+      "answer": "Don't call it, and don't let anyone connect in. It's one of the most common scams here. Switch the device off if you can, and we'll check whether anything's actually wrong."
+    },
+    {
+      "question": "Someone called saying they were from Microsoft or my bank. Is that real?",
+      "answer": "Almost never. Real companies don't call out of the blue to fix your computer or ask for gift cards. If you already gave them access or information, we'll help you get the accounts locked back down."
+    },
+    {
+      "question": "Do I need to be good with technology to work with you?",
+      "answer": "No. We work at your pace and explain things simply, and write the steps down if that helps."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "It depends on the work. You get a clear quote before we start. No surprises."
+    }
+  ],
+  "cta": {
+    "label": "Get Local Help in The Villages",
+    "link": "/contact#schedule-service"
+  }
+}

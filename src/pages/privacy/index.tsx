@@ -1,4 +1,6 @@
+import Head from "next/head";
 import { LegalPage } from "@/components";
+import { ogImageUrl } from "@/lib/og";
 import companyInfo from "../../../data/company-info.json";
 
 const { contact } = companyInfo;
@@ -7,10 +9,38 @@ const { street, city, state, zip } = address || {};
 
 export default function Privacy() {
   return (
-    <LegalPage>
-      <h1 className="text-h2 font-semibold text-center border-b border-hairline pb-4 mb-6 uppercase tracking-wider">
-        www.wedefendit.com Privacy Policy
-      </h1>
+    <>
+      <Head>
+        <title>Privacy Policy | Defend I.T. Solutions</title>
+        <meta
+          name="description"
+          content="The Defend I.T. Solutions privacy policy: what data the site collects, how it is used, who it is shared with, and your rights over it."
+        />
+        <meta name="robots" content="noindex, follow" />
+        <meta property="og:title" content="Privacy Policy | Defend I.T." />
+        <meta
+          property="og:description"
+          content="What we collect, how we use it, who we share it with, and your rights over your data."
+        />
+        <meta property="og:url" content="https://www.wedefendit.com/privacy" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={ogImageUrl("Privacy Policy")} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy | Defend I.T." />
+        <meta
+          name="twitter:description"
+          content="What we collect, how we use it, who we share it with, and your rights over your data."
+        />
+        <meta name="twitter:image" content={ogImageUrl("Privacy Policy")} />
+
+        <link rel="canonical" href="https://www.wedefendit.com/privacy" />
+      </Head>
+
+      <LegalPage>
+        <h1 className="text-h2 font-semibold text-center border-b border-hairline pb-4 mb-6 uppercase tracking-wider">
+          www.wedefendit.com Privacy Policy
+        </h1>
 
       <p className="text-center mb-4">
         <strong>Type of website:</strong> Service-based business website
@@ -351,5 +381,6 @@ export default function Privacy() {
         {street}, {city}, {state} {zip}
       </p>
     </LegalPage>
+    </>
   );
 }

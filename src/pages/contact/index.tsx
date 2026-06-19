@@ -13,6 +13,7 @@ party without express written consent.
 */
 import { useEffect, useState } from "react";
 import { localBusinessLd } from "@/lib/json-ld";
+import { ogImageUrl } from "@/lib/og";
 import companyInfo from "../../../data/company-info.json";
 import {
   Meta,
@@ -165,7 +166,7 @@ function SecureContactCard({
             type="button"
             onClick={() => setShowPGP(!showPGP)}
             style={{ touchAction: "manipulation" }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded bg-accent text-accent-contrast text-sm font-medium shadow transition-all hover:bg-accent-hover touch-manipulation"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded bg-accent-fill text-accent-contrast text-sm font-medium shadow transition-all hover:bg-accent-fill-hover touch-manipulation"
             aria-controls="pgp-panel"
             aria-expanded={showPGP}
           >
@@ -199,7 +200,7 @@ function SecureContactCard({
                   rel="noopener noreferrer"
                   download
                   style={{ touchAction: "manipulation" }}
-                  className="inline-block rounded bg-accent px-4 py-2 text-accent-contrast font-medium text-sm shadow transition-all hover:bg-accent-hover touch-manipulation"
+                  className="inline-block rounded bg-accent-fill px-4 py-2 text-accent-contrast font-medium text-sm shadow transition-all hover:bg-accent-fill-hover touch-manipulation"
                 >
                   Download Public PGP Key
                 </a>
@@ -248,7 +249,7 @@ const contactPageLd = {
   url: canonical,
   primaryImageOfPage: {
     "@type": "ImageObject",
-    url: "https://www.wedefendit.com/og-image.png",
+    url: ogImageUrl("Contact Defend I.T. Solutions"),
   },
   about: {
     ...localBusinessLd,
@@ -287,7 +288,6 @@ export default function ContactPage() {
       <Meta
         url={canonical}
         canonical={canonical}
-        image="https://www.wedefendit.com/og-image.png"
         title="Contact Defend I.T. Solutions | Ocala, The Villages & Belleview"
         description="Contact Defend I.T. Solutions for local computer repair, virus removal, scam protection, Wi-Fi help, and on-site tech support in Ocala, The Villages, and Belleview."
         keywords="contact computer repair Ocala FL, virus removal The Villages, scam protection Belleview FL, Wi-Fi help Central Florida, local tech support, secure contact PGP"

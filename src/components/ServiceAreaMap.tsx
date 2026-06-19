@@ -81,7 +81,7 @@ export default function ServiceAreaMap() {
         data-testid="service-area-map"
         className="w-full aspect-[16/9] rounded-lg overflow-hidden
                    border border-gray-300 dark:border-gray-700 shadow-md
-                   bg-[url('/map-placeholder.svg')] bg-cover bg-center bg-no-repeat"
+                   bg-[url('/img/map-placeholder.svg')] bg-cover bg-center bg-no-repeat"
       />
 
       <p className="text-xs text-gray-500 dark:text-gray-500 text-center">

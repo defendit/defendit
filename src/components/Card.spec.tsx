@@ -1,7 +1,7 @@
 /*
 Copyright © 2026 Defend I.T. Solutions LLC. All Rights Reserved.
 
-Contract tests for <Card>. They assert behavior and semantics only — never the
+Contract tests for <Card>. They assert behavior and semantics only, never the
 Tailwind recipe classes or DOM shape (forbidden by guardrails/test-policy.md:
 those break on a styling refactor while the behavior is identical). No snapshots.
 */

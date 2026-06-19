@@ -20,6 +20,8 @@ import {
   localBusinessLd,
 } from "@/lib/json-ld";
 import Link from "next/link";
+import { ogImageUrl } from "@/lib/og";
+import { ThemedImage } from "@/components/ThemedImage";
 import { Lightbulb } from "lucide-react";
 import * as Icons from "lucide-react";
 import type { ReactNode } from "react";
@@ -31,6 +33,8 @@ import {
   FaqSection,
 } from "@/components";
 import { Card } from "@/components/Card";
+import { DomeGrid } from "@/components/DomeGrid";
+import { HowItWorks } from "@/components/HowItWorks";
 
 export type ServiceContent = {
   id: string;
@@ -41,7 +45,6 @@ export type ServiceContent = {
   metaDescription?: string;
   keywords: string[];
   url: string;
-  image: string;
   requiresPlan?: boolean;
   icons?: string[];
   serviceArea?: string[];
@@ -54,6 +57,7 @@ export type ServiceContent = {
     heading: string;
     paragraph?: string | string[];
     items?: string[];
+    image?: { src: string; alt: string };
   }[];
 };
 
@@ -124,7 +128,7 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
 
   const serviceLd = generateServiceLd({
     name: service.title,
-    image: service.image,
+    image: ogImageUrl(service.title),
     keywords: service.keywords,
     description: service.metaDescription || service.description,
     url: `https://www.wedefendit.com${service.url}`,
@@ -179,8 +183,8 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
       <Meta
         title={metaTitle}
         description={metaDescription}
-        image={service.image}
-        imageAlt={`${service.title} — Defend I.T. Solutions`}
+        ogImageTitle={service.title}
+        imageAlt={`${service.title}, Defend I.T. Solutions`}
         url={canonical}
         canonical={canonical}
         keywords={service.keywords.join(", ")}
@@ -199,6 +203,9 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
             wash
             className="relative overflow-hidden px-5 py-6 sm:px-6 sm:py-8"
           >
+            {/* Decorative constellation-dome behind the copy */}
+            <DomeGrid className="pointer-events-none absolute inset-x-0 top-0 h-[calc(100%+3rem)] w-full text-accent opacity-55 dark:opacity-100" />
+
             <div className="relative space-y-5">
               <div className="inline-flex items-center gap-2 rounded-full border border-border-accent bg-surface px-3 py-2 text-eyebrow font-semibold uppercase tracking-eyebrow text-accent sm:px-4">
                 {isRemote ? "Remote Service" : "Local Service"}
@@ -298,6 +305,17 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
                   ))}
                 </ul>
               )}
+
+              {section.image && (
+                <figure className="fade-image relative mt-4 aspect-[16/9] w-full overflow-hidden">
+                  <ThemedImage
+                    dark={section.image.src}
+                    alt={section.image.alt}
+                    sizes="(min-width: 1024px) 960px, 100vw"
+                    className="object-cover"
+                  />
+                </figure>
+              )}
             </section>
           ))}
 
@@ -320,53 +338,8 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
             </div>
           )}
 
-          {/* What to Expect Section */}
-          <Card as="section" wash className="relative overflow-hidden p-6 sm:p-8">
-            <h2 className="text-h2 tracking-h2 font-semibold mb-6 sm:mb-8 text-center text-ink">
-              What to Expect
-            </h2>
-
-            <div className="relative grid gap-6 sm:grid-cols-3 sm:gap-8">
-              <div className="flex flex-col items-center space-y-3 rounded-xl border border-hairline bg-surface-inset px-4 py-5 text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-border-accent bg-surface text-2xl font-bold text-accent">
-                  1
-                </div>
-                <h3 className="font-semibold text-lg text-ink">
-                  Tell Us What&apos;s Going On
-                </h3>
-                <p className="text-sm text-ink-muted">
-                  Call, text, or send a message with the problem you need help
-                  with.
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center space-y-3 rounded-xl border border-hairline bg-surface-inset px-4 py-5 text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-border-accent bg-surface text-2xl font-bold text-accent">
-                  2
-                </div>
-                <h3 className="font-semibold text-lg text-ink">
-                  We Review the Need
-                </h3>
-                <p className="text-sm text-ink-muted">
-                  We talk through the issue, recommend the right service, and
-                  give a clear quote before work begins when scope is clear.
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center space-y-3 rounded-xl border border-hairline bg-surface-inset px-4 py-5 text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-border-accent bg-surface text-2xl font-bold text-accent">
-                  3
-                </div>
-                <h3 className="font-semibold text-lg text-ink">
-                  Choose the Next Step
-                </h3>
-                <p className="text-sm text-ink-muted">
-                  Book the visit, remote session, or follow-up that makes sense
-                  for your situation.
-                </p>
-              </div>
-            </div>
-          </Card>
+          {/* How It Works */}
+          <HowItWorks />
 
           <div className="mt-10 w-full flex flex-col items-stretch sm:items-center justify-center gap-6 sm:gap-8 text-left sm:text-center">
             <div className="w-full">

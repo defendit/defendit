@@ -13,265 +13,149 @@ party without express written consent.
 */
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import companyInfo from "../../data/company-info.json";
+import { Logo } from "./Icons";
 
-const { copy, contact, copy_start_year } = companyInfo;
+const { copy, contact, description, copy_start_year } = companyInfo;
 
-const commonServices = [
-  "computer-repair",
-  "custom-solutions",
-  "data-recovery",
-  "home-network-security",
-  "network-setup",
-  "onsite-tech-support",
-  "password-management",
-  "pc-upgrades",
-  "scam-protection",
-  "smart-home-setup",
-  "software-troubleshooting",
-  "virus-removal",
+const services: { slug: string; label: string }[] = [
+  { slug: "computer-repair", label: "Computer Repair" },
+  { slug: "virus-removal", label: "Virus & Malware Removal" },
+  { slug: "scam-protection", label: "Scam Protection" },
+  { slug: "onsite-tech-support", label: "Onsite Tech Support" },
+  { slug: "home-network-security", label: "Home Network Security" },
+  { slug: "smart-home-setup", label: "Smart Home Setup" },
 ];
 
-const remoteServices = [
-  "remote-support-plan",
-  "remote-support",
-  "remote-privacy-hardening",
-  "remote-security-assessment",
-  "remote-tech-tutoring",
-  "remote-training",
-  "remote-virus-removal",
+const company: { href: string; label: string }[] = [
+  { href: "/about", label: "About" },
+  { href: "/services/remote", label: "Remote Services" },
+  { href: "/service-areas", label: "Service Areas" },
+  { href: "/awareness", label: "Awareness" },
+  { href: "/sigint", label: "SIGINT Dashboard" },
+  { href: "/contact", label: "Contact" },
 ];
-
-const formatLabel = (slug: string) =>
-  slug
-    .split("-")
-    .map((w) => w[0].toUpperCase() + w.slice(1))
-    .join(" ");
 
 const formatCopyYear = (line: string) => {
   const currentYear = new Date().getFullYear();
   const startYear = copy_start_year || currentYear;
-
-  if (startYear >= currentYear) {
-    return line.replace("{{year}}", `${currentYear}`);
-  }
-
-  // otherwise, return a range
-  return line.replace("{{year}}", `${startYear}-${currentYear}`);
+  const stamp =
+    startYear >= currentYear ? `${currentYear}` : `${startYear}-${currentYear}`;
+  return line.replace("{{year}}", stamp);
 };
 
-const AccordionSection: React.FC<{
-  title: string;
-  id: "services" | "remote" | "company" | "legal";
-  openSection: string | null;
-  setOpenSection: React.Dispatch<
-    React.SetStateAction<"services" | "remote" | "company" | "legal" | null>
-  >;
-  children: React.ReactNode;
-}> = ({ title, id, openSection, setOpenSection, children }) => (
+const Column: React.FC<{ title: string; children: React.ReactNode }> = ({
+  title,
+  children,
+}) => (
   <div>
-    <button
-      type="button"
-      aria-expanded={openSection === id}
-      className="w-full flex items-center justify-between px-4 py-3 text-ink text-sm"
-      onClick={() => setOpenSection(openSection === id ? null : id)}
+    <h2 className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
+      {title}
+    </h2>
+    <ul className="mt-4 space-y-2.5">{children}</ul>
+  </div>
+);
+
+const FooterLink: React.FC<{ href: string; label: string }> = ({
+  href,
+  label,
+}) => (
+  <li>
+    <Link
+      href={href}
+      className="text-sm text-ink-muted transition hover:text-ink"
     >
-      <span className="font-semibold">{title}</span>
-      <span aria-hidden className="text-accent">
-        {openSection === id ? "−" : "+"}
-      </span>
-    </button>
-    {openSection === id && <div className="px-4 pb-3">{children}</div>}
-  </div>
+      {label}
+    </Link>
+  </li>
 );
-
-const DesktopColumn: React.FC<{
-  title: string;
-  children: React.ReactNode;
-}> = ({ title, children }) => (
-  <div>
-    <h4 className="font-semibold mb-3 text-ink">{title}</h4>
-    <ul className="space-y-2">{children}</ul>
-  </div>
-);
-
-const ServiceLinks: React.FC<{
-  services: string[];
-  isMobile?: boolean;
-  isRemote?: boolean;
-}> = ({ services, isMobile = false, isRemote = false }) => {
-  const fontSizeClass = isMobile ? "text-xs" : "text-sm";
-
-  return (
-    <>
-      {services.map((service) => (
-        <li key={service}>
-          <Link
-            href={`/services/${isRemote ? `remote/${service}` : service}`}
-            className={`text-accent hover:underline ${fontSizeClass}`}
-          >
-            {formatLabel(service)}
-          </Link>
-          {!isRemote && service === "custom-solutions" && (
-            <ul className="mt-2 ml-3 space-y-2 border-l border-hairline pl-3">
-              <li>
-                <Link
-                  href="/services/custom-solutions/o-tether"
-                  className={`text-accent hover:underline ${fontSizeClass}`}
-                >
-                  O-Tether Case Study
-                </Link>
-              </li>
-            </ul>
-          )}
-        </li>
-      ))}
-    </>
-  );
-};
 
 export const Footer: React.FC = () => {
-  const [openSection, setOpenSection] = useState<
-    null | "services" | "remote" | "company" | "legal"
-  >(null);
+  const telHref = `tel:${contact.phone.replaceAll(/\D/g, "")}`;
+  const { address } = contact;
 
   return (
-    <footer className="w-full max-w-8xl p-6 mt-12 text-ink-dim text-xs md:text-sm border-t border-hairline">
-      <div className="max-w-7xl mx-auto space-y-8">
-        <div className="rounded-lg md:hidden divide-y divide-hairline">
-          <AccordionSection
-            title="Services"
-            id="services"
-            openSection={openSection}
-            setOpenSection={setOpenSection}
-          >
-            <ul className="space-y-2">
-              <ServiceLinks isMobile services={commonServices} />
-            </ul>
-          </AccordionSection>
+    <footer className="w-full border-t border-hairline">
+      <div className="mx-auto w-full max-w-6xl px-5 pb-8 pt-16 sm:px-6">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
+          {/* Brand */}
+          <div className="max-w-xs">
+            <Link
+              href="/"
+              title="Defend I.T. Solutions Home"
+              className="inline-flex items-center gap-2.5"
+            >
+              <Logo className="h-9 w-9 text-ink dark:text-accent" />
+              <span className="text-base font-semibold text-ink">
+                Defend I.T. Solutions
+              </span>
+            </Link>
+            <p className="mt-4 text-sm leading-relaxed text-ink-muted">
+              {description}
+            </p>
+          </div>
 
-          <AccordionSection
-            title="Remote Services"
-            id="remote"
-            openSection={openSection}
-            setOpenSection={setOpenSection}
-          >
-            <ul className="space-y-2">
-              <ServiceLinks services={remoteServices} isMobile isRemote />
-            </ul>
-          </AccordionSection>
+          <Column title="Services">
+            {services.map((s) => (
+              <FooterLink
+                key={s.slug}
+                href={`/services/${s.slug}`}
+                label={s.label}
+              />
+            ))}
+            <FooterLink href="/services" label="All Services →" />
+          </Column>
 
-          <AccordionSection
-            title="Company"
-            id="company"
-            openSection={openSection}
-            setOpenSection={setOpenSection}
-          >
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <Link href="/sigint">SIGINT Dashboard</Link>
-              </li>
-              <li>
-                <Link href="/awareness">Awareness</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
-          </AccordionSection>
+          <Column title="Company">
+            {company.map((c) => (
+              <FooterLink key={c.href} href={c.href} label={c.label} />
+            ))}
+          </Column>
 
-          <AccordionSection
-            title="Legal"
-            id="legal"
-            openSection={openSection}
-            setOpenSection={setOpenSection}
-          >
-            <ul className="space-y-2">
-              <li>
-                <Link href="/privacy">Privacy Policy</Link>
+          <Column title="Contact">
+            <li>
+              <a
+                href={telHref}
+                className="text-sm text-ink-muted transition hover:text-ink"
+              >
+                {contact.phone.replace("+1 ", "")}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`mailto:${contact.email}`}
+                className="text-sm text-ink-muted transition hover:text-ink"
+              >
+                {contact.email}
+              </a>
+            </li>
+            {address && (
+              <li className="text-sm leading-relaxed text-ink-muted">
+                {address.street}
+                <br />
+                {address.city}, {address.state} {address.zip}
               </li>
-              <li>
-                <Link href="/privacy/sigint">SIGINT Privacy Policy</Link>
-              </li>
-              <li>
-                <Link href="/terms">Terms of Service</Link>
-              </li>
-            </ul>
-          </AccordionSection>
+            )}
+          </Column>
         </div>
 
-        <div className="hidden md:block">
-          <div className="px-6 py-4 flex justify-around gap-10">
-            <DesktopColumn title="Services">
-              <ServiceLinks services={commonServices} />
-            </DesktopColumn>
-
-            <DesktopColumn title="Remote Services">
-              <ServiceLinks services={remoteServices} isRemote={true} />
-            </DesktopColumn>
-
-            <DesktopColumn title="Company">
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <Link href="/sigint">SIGINT Dashboard</Link>
-              </li>
-              <li>
-                <Link href="/awareness">Awareness</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
-            </DesktopColumn>
-
-            <DesktopColumn title="Legal">
-              <li>
-                <Link href="/privacy">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link href="/privacy/sigint">SIGINT Privacy Policy</Link>
-              </li>
-              <li>
-                <Link href="/terms">Terms of Service</Link>
-              </li>
-            </DesktopColumn>
+        {/* Bar */}
+        <div className="mt-14 flex flex-col gap-3 border-t border-hairline pt-6 text-xs text-ink-dim sm:flex-row sm:items-center sm:justify-between">
+          <p>{formatCopyYear(copy[0])}</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <Link href="/privacy" className="transition hover:text-ink">
+              Privacy
+            </Link>
+            <Link href="/terms" className="transition hover:text-ink">
+              Terms
+            </Link>
+            <Link href="/privacy/sigint" className="transition hover:text-ink">
+              SIGINT Privacy
+            </Link>
           </div>
         </div>
-
-        <div className="flex flex-col items-center gap-2 text-xs text-center md:flex-row md:justify-center">
-          {contact.phone && (
-            <a href={`tel:${contact.phone.replaceAll(/[^0-9]/g, "")}`}>
-              {contact.phone.replace("+1", "")}
-            </a>
-          )}
-          {contact.email && (
-            <>
-              <span className="hidden md:inline px-1">•</span>
-              <a href={`mailto:${contact.email}`}>{contact.email}</a>
-            </>
-          )}
-          {contact.address && (
-            <>
-              <span className="hidden md:inline px-1">•</span>
-              <span>
-                {`${contact.address.street}, ${contact.address.city}, ${contact.address.state} ${contact.address.zip}`}
-              </span>
-            </>
-          )}
-        </div>
-
-        <div className="text-center space-y-1 text-ink-dim">
-          {copy.map((line: string, i: number) => (
-            <p key={i} className="text-xs">
-              {formatCopyYear(line)}
-            </p>
-          ))}
-        </div>
+        <p className="mt-3 text-xs text-ink-dim">{copy[1]}</p>
       </div>
     </footer>
   );

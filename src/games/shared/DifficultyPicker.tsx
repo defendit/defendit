@@ -58,7 +58,7 @@ export function DifficultyPicker({
             className={[
               "touch-manipulation rounded-full px-3 py-1.5 transition-colors",
               active
-                ? "bg-accent text-accent-contrast shadow-sm"
+                ? "bg-accent-fill text-accent-contrast shadow-sm"
                 : "text-ink hover:bg-surface-hover",
               disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer",
             ].join(" ")}

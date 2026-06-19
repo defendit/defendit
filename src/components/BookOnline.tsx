@@ -45,7 +45,7 @@ export function BookOnline() {
             {/* Call/Text - Primary */}
             <a
               href={`tel:${tel.replace(/\D/g, "")}`}
-              className="group flex items-center gap-3 rounded-lg bg-accent p-4 text-accent-contrast font-medium shadow-sm transition hover:bg-accent-hover touch-manipulation"
+              className="group flex items-center gap-3 rounded-lg bg-accent-fill p-4 text-accent-contrast font-medium shadow-sm transition hover:bg-accent-fill-hover touch-manipulation"
               style={{ touchAction: "manipulation" }}
             >
               <Phone className="w-5 h-5 flex-shrink-0" aria-hidden="true" />

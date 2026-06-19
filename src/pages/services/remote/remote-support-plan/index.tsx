@@ -60,7 +60,6 @@ export default function RemoteSupportPlanPage() {
         title="Remote Support Service Plan | Defend I.T. Solutions"
         description="Details about our secure, client-only Remote Support Plan. Learn how DIS Connect™, DISNet™, and DISecureLink™ provide professional remote tech support."
         url="https://www.wedefendit.com/remote-support-plan"
-        image="https://www.wedefendit.com/og-image.png"
         keywords="Remote support, secure remote access, local IT support, DISConnect, DISNet, DISecureLink, Defend I.T. Solutions"
       />
 
@@ -548,7 +547,7 @@ export default function RemoteSupportPlanPage() {
                 <Link
                   href="/services/remote"
                   style={{ touchAction: "manipulation" }}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-contrast font-semibold transition-all shadow-md hover:bg-accent-hover hover:shadow-lg touch-manipulation"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent-fill text-accent-contrast font-semibold transition-all shadow-md hover:bg-accent-fill-hover hover:shadow-lg touch-manipulation"
                 >
                   View Remote Services
                   <ArrowRight className="w-5 h-5" aria-hidden="true" />

@@ -13,7 +13,7 @@ party without express written consent.
 */
 
 /*
- * Card — the single source of the restrained surface treatment from
+ * Card: the single source of the restrained surface treatment from
  * DIS-DESIGN-AND-BRAND-STANDARDS §9: one hairline border + ground + one shadow,
  * an optional faint wash, and a subtle -2px hover lift. It replaces the prior
  * stacked shadow+ring+blur+gradient cards so the recipe lives in one place.

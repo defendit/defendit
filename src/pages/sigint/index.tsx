@@ -202,7 +202,7 @@ export default function SigintPage() {
             {/* Hero screenshot */}
             <div className="relative rounded-lg overflow-hidden border border-hairline/50 shadow-2xl shadow-black/50">
               <Image
-                src="/sigint-hero.png"
+                src="/img/sigint/sigint-hero.png"
                 alt="SIGINT dashboard showing live globe with 64,000+ tracked entities, alert log, intel feed, news feed, and video monitoring"
                 width={1920}
                 height={1080}
@@ -370,7 +370,7 @@ export default function SigintPage() {
               <div className="grid md:grid-cols-5 gap-6 items-center">
                 <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl">
                   <Image
-                    src="/sigint-emergency.png"
+                    src="/img/sigint/sigint-emergency.png"
                     alt="SIGINT detecting a 7700 emergency squawk with trail tracking, dossier, and live video feeds"
                     width={1920}
                     height={1080}
@@ -414,7 +414,7 @@ export default function SigintPage() {
                 </div>
                 <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl order-1 md:order-2">
                   <Image
-                    src="/sigint-hijack-trail.png"
+                    src="/img/sigint/sigint-hijack-trail.png"
                     alt="SIGINT tracking a squawk 7500 hijack code with trail rendering and aircraft dossier with photo"
                     width={1920}
                     height={1080}
@@ -427,7 +427,7 @@ export default function SigintPage() {
               <div className="grid md:grid-cols-5 gap-6 items-center">
                 <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl">
                   <Image
-                    src="/sigint-gdelt.png"
+                    src="/img/sigint/sigint-gdelt.png"
                     alt="SIGINT showing GDELT crisis event detail with 60K tracks, video feeds, alerts, and intel feed"
                     width={1920}
                     height={1080}
@@ -471,7 +471,7 @@ export default function SigintPage() {
                 </div>
                 <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl order-1 md:order-2">
                   <Image
-                    src="/sigint-hijack-dossier.png"
+                    src="/img/sigint/sigint-hijack-dossier.png"
                     alt="SIGINT aircraft dossier showing full identity, telemetry, route details for a squawk 7500 aircraft"
                     width={1920}
                     height={1080}

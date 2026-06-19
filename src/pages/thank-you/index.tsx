@@ -14,6 +14,7 @@ party without express written consent.
 
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { ogImageUrl } from "@/lib/og";
 import { CheckCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { PageContainer } from "@/components";
@@ -60,7 +61,7 @@ export default function ThankYouPage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://www.wedefendit.com/og-image.png"
+          content={ogImageUrl("Appointment Confirmed")}
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -74,7 +75,7 @@ export default function ThankYouPage() {
         />
         <meta
           name="twitter:image"
-          content="https://www.wedefendit.com/og-image.png"
+          content={ogImageUrl("Appointment Confirmed")}
         />
 
         <link rel="canonical" href="https://www.wedefendit.com/thank-you" />

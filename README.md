@@ -1,3 +1,10 @@
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://www.wedefendit.com/img/locations/ocala-hero-dark.jpg">
+    <img alt="Defend I.T. Solutions — securing home and small-business networks across Central Florida" src="https://www.wedefendit.com/img/locations/ocala-hero-light.jpg" width="100%">
+  </picture>
+</div>
+
 # Defend I.T. Solutions™ LLC
 
 > **Cybersecurity Services, Managed IT Support, and Digital Protection. Serving Ocala, Belleview, The Villages, and Central Florida.**  
@@ -12,15 +19,16 @@
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [About the Founder](#about-the-founder)
-  - [Residential Services](#residential-services)
-  - [Business Services](#business-services)
+  - [Services](#services)
+  - [Security Awareness](#security-awareness)
   - [Coverage Area](#coverage-area)
   - [Contact](#contact)
   - [Legal](#legal)
 
 ## Overview
 
-**Defend I.T. Solutions™** is a cybersecurity-first IT service provider helping homeowners, retirees, and small businesses protect their networks, devices, and data from modern threats.  
+**Defend I.T. Solutions™** is a cybersecurity-first IT service provider helping homeowners, retirees, and small businesses protect their networks, devices, and data from modern threats.
+
 We combine enterprise-grade security practices with clear, jargon-free support for both residential and business clients.
 
 - ✅ Registered Florida LLC
@@ -34,8 +42,8 @@ We combine enterprise-grade security practices with clear, jargon-free support f
 
 Founder and Lead Engineer: **Anthony Tropeano**
 
-- **Master of Science in Computer Science (Cyber Operations)** — Current Student, _Dakota State University (DSU)_
-- **Bachelor of Applied Science in Cyber Operations (Cyber Engineering Emphasis)** — _Summa Cum Laude (2026)_, _University of Arizona_
+- **Master of Science in Artificial Intelligence (Data Science Concentration)** — Incoming Fall 2026, _Nova Southeastern University_
+- **Bachelor of Applied Science in Cyber Operations (Cyber Engineering Emphasis)** — _Summa Cum Laude, December 2025_, _University of Arizona_ · NSA CAE-CO designated program
 - Full-stack web developer
 - Experienced in **offensive** and **defensive** security operations
 
@@ -45,36 +53,49 @@ Founder and Lead Engineer: **Anthony Tropeano**
 - Digital forensics and malware analysis
 - Network architecture, assessment and hardening
 - Incident response and threat containment
-- Secure software development (Python, C, JavaScript/TypeScript)
+- Secure software development (Rust, Python, C/C++, TypeScript/JavaScript)
 - Security automation and compliance consulting
 
-## Residential Services
+## Services
 
-We offer in-person and remote services for homeowners, retirees, and residential clients:
+In-person, on-site, and remote technology and security services for homeowners, retirees, and small businesses across Central Florida.
 
-- Computer repair and optimization
-- Virus, malware, and ransomware removal
-- Secure home Wi-Fi and network setup
-- Network hardening and IoT lockdown
-- Backup and data recovery solutions
-- Password management and account security
-- Scam and fraud protection training
-- Technology setup and configuration
-- Custom privacy and security solutions
+Full catalog: [wedefendit.com/services](https://www.wedefendit.com/services)
 
-## Business Services
+**On-Site & Local**
 
-We help small and medium-sized businesses protect operations, data, and client trust:
+- [Computer Repair](https://www.wedefendit.com/services/computer-repair)
+- [Virus Removal](https://www.wedefendit.com/services/virus-removal)
+- [Data Recovery](https://www.wedefendit.com/services/data-recovery)
+- [PC Upgrades](https://www.wedefendit.com/services/pc-upgrades)
+- [Software Troubleshooting](https://www.wedefendit.com/services/software-troubleshooting)
+- [Network Setup](https://www.wedefendit.com/services/network-setup)
+- [Home Network Security](https://www.wedefendit.com/services/home-network-security)
+- [Smart Home Setup](https://www.wedefendit.com/services/smart-home-setup)
+- [Password Management](https://www.wedefendit.com/services/password-management)
+- [Scam Protection](https://www.wedefendit.com/services/scam-protection)
+- [On-Site Tech Support](https://www.wedefendit.com/services/onsite-tech-support)
 
-- Managed IT services and ongoing support
-- Business network security and monitoring
-- HIPAA, PCI, and industry compliance consulting
-- Email security and phishing prevention
-- Data backup and disaster recovery planning
-- Firewall and VPN configuration
-- Ransomware prevention and incident response
-- IT infrastructure setup and cabling
-- Security audits and employee training
+**Remote** — [wedefendit.com/services/remote](https://www.wedefendit.com/services/remote)
+
+- [Remote Support](https://www.wedefendit.com/services/remote/remote-support)
+- [Remote Support Plan](https://www.wedefendit.com/services/remote/remote-support-plan)
+- [Remote Virus Removal](https://www.wedefendit.com/services/remote/remote-virus-removal)
+- [Remote Security Assessment](https://www.wedefendit.com/services/remote/remote-security-assessment)
+- [Remote Privacy Hardening](https://www.wedefendit.com/services/remote/remote-privacy-hardening)
+- [Remote Tech Tutoring](https://www.wedefendit.com/services/remote/remote-tech-tutoring)
+- [Remote Training](https://www.wedefendit.com/services/remote/remote-training)
+
+**Custom Solutions** — [wedefendit.com/services/custom-solutions](https://www.wedefendit.com/services/custom-solutions)
+
+- [O-Tether](https://www.wedefendit.com/services/custom-solutions/o-tether) — five-layer inline UTM appliance that turns any router into a secure travel network
+
+## Security Awareness
+
+Free, in-house educational games mapping real attacker behavior onto gameplay — [wedefendit.com/awareness](https://www.wedefendit.com/awareness)
+
+- [Digital House](https://www.wedefendit.com/awareness/digital-house)
+- [GridRunner](https://www.wedefendit.com/awareness/gridrunner)
 
 ## Coverage Area
 
@@ -90,7 +111,7 @@ We help small and medium-sized businesses protect operations, data, and client t
 ## Legal
 
 © 2026 **Defend I.T. Solutions LLC**. All rights reserved.  
-**Defend I.T.™** and **Defend I.T. Solutions™** are registered trademarks.  
+**Defend I.T.™** and **Defend I.T. Solutions™** are trademarks of Defend I.T. Solutions LLC.  
 Unauthorized use of these names, branding, or proprietary materials is prohibited.
 
 This repository and its contents are property of **Defend I.T. Solutions LLC**.  

@@ -1,0 +1,175 @@
+{
+  "id": "belleview",
+  "slug": "belleview",
+  "city": "Belleview",
+  "state": "FL",
+  "metaTitle": "Cybersecurity & Tech Support in Belleview, FL | Defend I.T. Solutions",
+  "metaDescription": "Local, founder-led tech and security help in Belleview, FL. Scam and pop-up cleanup, virus removal, Wi-Fi and device setup, and computer repair. We come to you, in plain English, with no upsell.",
+  "keywords": [
+    "tech support Belleview FL",
+    "computer repair Belleview FL",
+    "virus removal Belleview FL",
+    "scam protection Belleview FL",
+    "Wi-Fi setup Belleview FL",
+    "in-home computer help Belleview Florida",
+    "senior tech support Belleview",
+    "small business IT support Belleview FL",
+    "cybersecurity Belleview FL"
+  ],
+  "eyebrow": "Service Area",
+  "h1": "Cybersecurity & Tech Support in Belleview, FL",
+  "headline": "The scams that hit The Villages hit Belleview too. We're who you call.",
+  "heroImage": {
+    "src": "/img/locations/belleview-hero-dark.jpg",
+    "alt": "A Belleview home with its laptop, router, and phone connected under a glowing network dome"
+  },
+  "banner": {
+    "src": "/img/locations/security-banner-dark.jpg",
+    "alt": "Abstract circuit board with a security shield"
+  },
+  "intro": [
+    "Belleview sits on the edge of The Villages, one of the most scam-targeted communities in the country. The fake pop-ups, the \"Microsoft\" callers, the gift-card demands: they don't stop at the line. Cleaning that up is a big part of what we do here.",
+    "The rest is quieter. A slow computer, Wi-Fi that won't stay up, a new device nobody set up right. We come to you, make it work, and tell you what was going on."
+  ],
+  "areaServed": [
+    "Belleview FL",
+    "Summerfield FL",
+    "Ocala FL",
+    "Lady Lake FL",
+    "Central Florida"
+  ],
+  "coverage": {
+    "townSquares": [
+      "Belleview",
+      "Lake Weir",
+      "Ocklawaha"
+    ],
+    "nearbyTowns": [
+      "Summerfield",
+      "Ocala",
+      "Lady Lake"
+    ]
+  },
+  "sections": [
+    {
+      "heading": "Why people call us",
+      "paragraph": [
+        "You don't need to understand any of it. You need someone who comes out, fixes it, and tells you what was actually wrong."
+      ],
+      "items": [
+        "We come to you, across Belleview, Summerfield, and the Lake Weir area. Local, not a call center.",
+        "We explain what went wrong in plain terms, and leave you notes if you want them.",
+        "You get a clear price before we start. No surprise fees.",
+        "We fix what needs fixing, and tell you what can wait."
+      ]
+    },
+    {
+      "heading": "The scams we see most",
+      "paragraph": [
+        "Living next to The Villages means living next to the people who target it. These are the scams we see most."
+      ],
+      "items": [
+        "Pop-ups warning your computer is infected, pushing you to call 'support.'",
+        "Out-of-nowhere calls from a fake Microsoft, Apple, Amazon, or your bank.",
+        "Gift-card or wire-transfer demands to clear up a 'problem' on your account.",
+        "Romance, grandparent, and impersonation scams.",
+        "Remote-access tools left running by a previous 'helper.'"
+      ],
+      "image": {
+        "src": "/img/services/scareware-lock-dark.jpg",
+        "alt": "A computer screen locked by a scam pop-up"
+      }
+    },
+    {
+      "heading": "Everyday tech help",
+      "paragraph": [
+        "Not all of it is a scam. Most of it is making things work again."
+      ],
+      "items": [
+        "Home Wi-Fi, printers, and streaming that stop dropping out.",
+        "A new device set up and your old files carried over.",
+        "Inboxes and logins straightened out after something felt off.",
+        "An aging computer looked at before you decide to replace it."
+      ]
+    },
+    {
+      "heading": "On-site or remote, how it works",
+      "paragraph": [
+        "Tell us what's wrong and we come to you. Once you're set up, you can move to our Remote Support Plan, so the next fix happens remotely with no second trip. Either way, you get a device that works and a straight answer."
+      ],
+      "image": {
+        "src": "/img/services/how-it-works-dark.jpg",
+        "alt": "Three steps: book an appointment, on-site or remote service, then a secured device"
+      }
+    },
+    {
+      "heading": "Where we work",
+      "paragraph": [
+        "We cover Belleview and the nearby communities, Summerfield, Lake Weir, and Ocklawaha, and out toward Ocala and The Villages."
+      ]
+    }
+  ],
+  "services": [
+    {
+      "label": "Scam & Fraud Protection",
+      "slug": "scam-protection",
+      "summary": "Help after a scam call or pop-up, and how to stop the next one."
+    },
+    {
+      "label": "Virus & Malware Removal",
+      "slug": "virus-removal",
+      "summary": "Cleanup for pop-ups, fake warnings, and infected machines."
+    },
+    {
+      "label": "On-Site Tech Support",
+      "slug": "onsite-tech-support",
+      "summary": "Someone at your door who sorts it out in person."
+    },
+    {
+      "label": "Wi-Fi & Network Setup",
+      "slug": "network-setup",
+      "summary": "Home Wi-Fi and devices, set up to stay working."
+    },
+    {
+      "label": "Password Manager Setup & Account Safety",
+      "slug": "password-management",
+      "summary": "Simpler, safer logins, and account help after a scam."
+    },
+    {
+      "label": "Computer Repair",
+      "slug": "computer-repair",
+      "summary": "A slow or failing computer, brought back."
+    }
+  ],
+  "testimonials": [],
+  "faq": [
+    {
+      "question": "Do you come to homes and businesses in Belleview?",
+      "answer": "Yes, across Belleview, Summerfield, and the Lake Weir area. We come to you."
+    },
+    {
+      "question": "Can you help me remotely without coming out first?",
+      "answer": "Your first visit is on-site, since we set up the secure connection in person. From there, most fixes are handled remotely on the Remote Support Plan, often same-day or after-hours."
+    },
+    {
+      "question": "I got a pop-up saying my computer is infected and to call a number. What should I do?",
+      "answer": "Don't call it, and don't let anyone connect in. It's a common scam. Turn the computer off if you can, and we'll check whether anything's actually wrong."
+    },
+    {
+      "question": "Someone called saying they were from Microsoft or my bank. Is that real?",
+      "answer": "Almost never. Real companies don't cold-call to fix your computer or ask for gift cards. If you already let someone in or handed over details, we'll help you lock the accounts back down."
+    },
+    {
+      "question": "Do I need to be good with technology to work with you?",
+      "answer": "Not at all. We go at your pace and keep it plain. No talking down, and we'll write the steps out when it helps."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "It comes down to the work, and you'll have a clear quote before we start. No surprises, and nothing pushed that you don't need."
+    }
+  ],
+  "cta": {
+    "label": "Get Local Help in Belleview",
+    "link": "/contact#schedule-service"
+  }
+}

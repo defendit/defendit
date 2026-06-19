@@ -13,6 +13,7 @@ party without express written consent.
 */
 
 import companyInfo from "@/data/company-info.json";
+import { ogImageUrl } from "@/lib/og";
 
 const { name, contact, service_areas } = companyInfo;
 const { phone, email, address } = contact;
@@ -23,8 +24,8 @@ export const localBusinessLd = {
   "@type": "LocalBusiness",
   "@id": "https://www.wedefendit.com/#organization",
   name,
-  image: "https://www.wedefendit.com/og-image.png",
-  logo: "https://www.wedefendit.com/logo.svg",
+  image: ogImageUrl("Cybersecurity & Tech Support"),
+  logo: "https://www.wedefendit.com/img/logo.svg",
   url: "https://www.wedefendit.com/",
   telephone: phone,
   ...(address.type === "mailing"
@@ -49,6 +50,26 @@ export const localBusinessLd = {
     availableLanguage: "English",
   },
 };
+
+// Same NAP/organization as localBusinessLd, but with areaServed narrowed to a
+// single service-area landing page's city plus its nearby towns. Used by the
+// /service-areas/<city> pages so the LocalBusiness node reflects the local
+// focus of the page while keeping one source of truth for name, telephone,
+// and contact details (company-info.json).
+export function generateLocalBusinessLd(
+  areaServed: string[],
+  image?: string,
+): object {
+  return {
+    ...localBusinessLd,
+    ...(image ? { image } : {}),
+    areaServed,
+    contactPoint: {
+      ...localBusinessLd.contactPoint,
+      areaServed,
+    },
+  };
+}
 
 export type Crumb = {
   name: string;
@@ -174,8 +195,8 @@ export const sigintProductLd = {
   applicationSubCategory: "OSINT Intelligence Platform",
   operatingSystem: "Web, Windows, macOS, Linux",
   url: "https://www.wedefendit.com/sigint",
-  image: "https://www.wedefendit.com/sigint-hijack-dossier.png",
-  screenshot: "https://www.wedefendit.com/sigint-hero.png",
+  image: "https://www.wedefendit.com/img/sigint/sigint-hijack-dossier.png",
+  screenshot: "https://www.wedefendit.com/img/sigint/sigint-hero.png",
   description:
     "Real-time OSINT dashboard with live aircraft, vessel, seismic, fire, weather, and conflict event tracking on an interactive globe. Correlation engine, anomaly detection, and multi-source intelligence analysis.",
   featureList: [
@@ -223,7 +244,7 @@ export const oTetherProductLd = {
   name: "o-tether",
   category: "Network Security Appliance",
   url: "https://www.wedefendit.com/services/custom-solutions/o-tether",
-  image: "https://www.wedefendit.com/o-tether-hero.webp",
+  image: "https://www.wedefendit.com/img/services/o-tether-hero-dark.webp",
   description:
     "A custom-built network security appliance that bridges an iPhone's connection into a hardened travel Wi-Fi network. Default-deny firewall, DNS and IP threat-intelligence filtering, deep-packet flow detection, and an inline intrusion-prevention system, with signed-release integrity and a fail-closed posture throughout.",
   brand: { "@type": "Brand", name: "Defend I.T. Solutions" },

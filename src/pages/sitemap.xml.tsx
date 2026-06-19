@@ -14,6 +14,7 @@ const REMOTE_SERVICE_DIR = path.join(
   "data/services/remote/services",
 );
 const REMOTE_PAGE_DIR = path.join(process.cwd(), "src/pages/services/remote");
+const LOCATION_DIR = path.join(process.cwd(), "data/locations");
 const PAGE_EXTENSIONS = new Set([".tsx", ".ts", ".jsx", ".js"]);
 
 function readJsonSlugs(dir: string) {
@@ -125,6 +126,8 @@ function priorityForRoute(route: string) {
   if (route.startsWith("services/") && !route.startsWith("services/remote")) {
     return "0.85";
   }
+  if (route.startsWith("service-areas/")) return "0.85";
+  if (route === "service-areas") return "0.80";
   if (route === "awareness" || route === "services/remote") return "0.80";
   if (route === "about" || route.startsWith("services/remote/")) return "0.70";
   if (route === "privacy" || route === "terms") return "0.30";
@@ -145,12 +148,19 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
       ...readNestedIndexSlugs(REMOTE_PAGE_DIR),
     ]),
   ).sort((a, b) => a.localeCompare(b));
+  const locationSlugs = readJsonSlugs(LOCATION_DIR);
   const localServiceRoutes = serviceSlugs.map((slug) => `services/${slug}`);
   const remoteServiceRoutes = remoteSlugs.map(
     (slug) => `services/remote/${slug}`,
   );
+  const locationRoutes = locationSlugs.map((slug) => `service-areas/${slug}`);
   const routes = Array.from(
-    new Set([...pageRoutes, ...localServiceRoutes, ...remoteServiceRoutes]),
+    new Set([
+      ...pageRoutes,
+      ...localServiceRoutes,
+      ...remoteServiceRoutes,
+      ...locationRoutes,
+    ]),
   ).sort((a, b) => {
     const priorityDelta =
       Number.parseFloat(priorityForRoute(b)) -

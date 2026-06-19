@@ -54,7 +54,7 @@ export function ThemeToggle({ placement = "fixed" }: ThemeToggleProps) {
   const buttonClass =
     placement === "inline"
       ? "inline-flex h-8 w-8 items-center justify-center rounded-full border border-hairline bg-surface p-1.5 text-ink shadow-sm transition-colors hover:cursor-pointer hover:border-border-accent hover:bg-surface-hover hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.5)]"
-      : "fixed bottom-1 left-2 z-[150] rounded-full bg-surface p-2 text-xl text-ink shadow-md transition-colors hover:cursor-pointer hover:bg-surface-hover hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.5)] lg:bottom-auto lg:left-auto lg:right-4 lg:top-2 lg:z-15";
+      : "fixed bottom-1 left-2 z-[150] rounded-full bg-surface p-2 text-xl text-ink shadow-md transition-colors hover:cursor-pointer hover:bg-surface-hover hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.5)] lg:bottom-auto lg:left-auto lg:right-4 lg:top-2 lg:z-[60]";
 
   return (
     <button

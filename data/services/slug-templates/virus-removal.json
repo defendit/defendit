@@ -17,7 +17,6 @@
     "cybersecurity cleanup services"
   ],
   "url": "/services/virus-removal",
-  "image": "https://www.wedefendit.com/og-image.png",
   "serviceArea": [
     "Ocala FL",
     "Belleview FL",
@@ -49,12 +48,16 @@
         "Security software is disabled, downloads fail, or system settings keep changing back",
         "You are seeing suspicious login alerts, spam being sent, or accounts being accessed unexpectedly",
         "The computer became unstable right after opening an attachment, clicking a suspicious link, or allowing someone remote access"
-      ]
+      ],
+      "image": {
+        "src": "/img/services/signs-of-infection-dark.jpg",
+        "alt": "An infected laptop showing fake alerts with security disabled"
+      }
     },
     {
       "heading": "What We Do",
       "paragraph": [
-        "This service is for systems that feel wrong—unexpected pop-ups, fake warnings, new toolbars, login weirdness, or computers that suddenly slowed down after something suspicious was opened or installed."
+        "This service is for systems that feel wrong: unexpected pop-ups, fake warnings, new toolbars, login weirdness, or computers that suddenly slowed down after something suspicious was opened or installed."
       ],
       "items": [
         "Remove common malware, adware, and browser hijackers",
