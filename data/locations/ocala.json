@@ -28,7 +28,7 @@
     "alt": "Abstract circuit board with a security shield"
   },
   "intro": [
-    "We work across Ocala and Marion County, from the 55+ communities off SR-200 (On Top of the World, Oak Run, Stone Creek, SummerGlen) to families and small businesses in town.",
+    "We work across Ocala and Marion County, from the 55+ communities (On Top of the World, Oak Run, Stone Creek, SummerGlen) to families and small businesses in town.",
     "Most tech problems aren't complicated. They need someone who shows up, fixes it, and explains it in plain English. We come to you, on-site or remote."
   ],
   "areaServed": [
@@ -46,11 +46,7 @@
       "SummerGlen",
       "Downtown Ocala"
     ],
-    "nearbyTowns": [
-      "Belleview",
-      "Summerfield",
-      "Silver Springs"
-    ]
+    "nearbyTowns": ["Belleview", "Summerfield", "Silver Springs"]
   },
   "sections": [
     {
@@ -107,7 +103,7 @@
     {
       "heading": "Where we work",
       "paragraph": [
-        "We cover Ocala and Marion County: the 55+ communities off SR-200 (On Top of the World, Oak Run, Stone Creek, SummerGlen), plus Belleview and Summerfield."
+        "We cover Ocala and Marion County: the 55+ communities (On Top of the World, Oak Run, Stone Creek, SummerGlen), plus Belleview and Summerfield."
       ]
     }
   ],
