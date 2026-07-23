@@ -21,9 +21,9 @@ const { copy, contact, description, copy_start_year } = companyInfo;
 
 const services: { slug: string; label: string }[] = [
   { slug: "computer-repair", label: "Computer Repair" },
-  { slug: "virus-removal", label: "Virus & Malware Removal" },
+  { slug: "virus-removal", label: "Virus and Malware Removal" },
   { slug: "scam-protection", label: "Scam Protection" },
-  { slug: "onsite-tech-support", label: "Onsite Tech Support" },
+  { slug: "onsite-tech-support", label: "On-Site Tech Support" },
   { slug: "home-network-security", label: "Home Network Security" },
   { slug: "smart-home-setup", label: "Smart Home Setup" },
 ];
@@ -32,7 +32,7 @@ const company: { href: string; label: string }[] = [
   { href: "/about", label: "About" },
   { href: "/services/remote", label: "Remote Services" },
   { href: "/service-areas", label: "Service Areas" },
-  { href: "/awareness", label: "Awareness" },
+  { href: "/awareness", label: "Security Awareness" },
   { href: "/sigint", label: "SIGINT Dashboard" },
   { href: "/contact", label: "Contact" },
 ];
@@ -73,7 +73,6 @@ const FooterLink: React.FC<{ href: string; label: string }> = ({
 
 export const Footer: React.FC = () => {
   const telHref = `tel:${contact.phone.replaceAll(/\D/g, "")}`;
-  const { address } = contact;
 
   return (
     <footer className="w-full border-t border-hairline">
@@ -104,7 +103,7 @@ export const Footer: React.FC = () => {
                 label={s.label}
               />
             ))}
-            <FooterLink href="/services" label="All Services →" />
+            <FooterLink href="/services" label="View All Services" />
           </Column>
 
           <Column title="Company">
@@ -130,13 +129,6 @@ export const Footer: React.FC = () => {
                 {contact.email}
               </a>
             </li>
-            {address && (
-              <li className="text-sm leading-relaxed text-ink-muted">
-                {address.street}
-                <br />
-                {address.city}, {address.state} {address.zip}
-              </li>
-            )}
           </Column>
         </div>
 
@@ -145,13 +137,13 @@ export const Footer: React.FC = () => {
           <p>{formatCopyYear(copy[0])}</p>
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             <Link href="/privacy" className="transition hover:text-ink">
-              Privacy
+              Privacy Policy
             </Link>
             <Link href="/terms" className="transition hover:text-ink">
-              Terms
+              Terms of Use
             </Link>
             <Link href="/privacy/sigint" className="transition hover:text-ink">
-              SIGINT Privacy
+              SIGINT Privacy Policy
             </Link>
           </div>
         </div>

@@ -2,10 +2,10 @@
   "id": "remote-security-assessment",
   "requiresPlan": true,
   "title": "Remote Security Assessment",
-  "headline": "Evaluate and strengthen your setup remotely.",
-  "description": "A guided remote review of the security basics for local clients with a support plan.",
-  "metaTitle": "Remote Security Assessment for Central Florida Plan Members | Defend I.T. Solutions",
-  "metaDescription": "Review devices, accounts, updates, browser settings, and backup posture with a remote security assessment for Central Florida Remote Support Plan members.",
+  "headline": "Review security settings on an enrolled device and get prioritized next steps.",
+  "description": "A guided remote review of updates, accounts, browsers, backups, and device settings for Central Florida Remote Support Plan clients.",
+  "metaTitle": "Remote Security Assessment for Central Florida Plan Clients",
+  "metaDescription": "Review updates, accounts, browsers, backups, and device settings remotely, then receive prioritized security steps for enrolled devices.",
   "keywords": [
     "Remote security audit",
     "Remote vulnerability scan",
@@ -14,69 +14,88 @@
     "Online security check"
   ],
   "url": "/services/remote/remote-security-assessment",
-  "serviceArea": ["Ocala FL", "Belleview FL", "The Villages FL", "Central Florida"],
+  "serviceArea": [
+    "Ocala FL",
+    "Belleview FL",
+    "The Villages FL",
+    "Central Florida"
+  ],
   "sections": [
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Many devices and operating systems appear secure on the surface, but default settings often leave unnecessary services running or expose hidden attack surfaces.",
-        "Misconfigured firewalls, missing updates, reused passwords, and third-party browser plugins are among the most common entry points for attackers.",
-        "Even basic home or office systems can leak sensitive data, run outdated software, or rely on settings that have not been reviewed in years."
+        "Missing updates, weak account recovery, and unnecessary browser extensions can create avoidable risk.",
+        "Security software cannot protect an account that uses a reused password or an unsafe recovery method.",
+        "A backup should be checked regularly so you know it can restore the files that matter."
       ]
     },
     {
       "heading": "What We Review",
       "paragraph": [
-        "We take a comprehensive look at your system settings, device posture, and digital habits to find weaknesses before someone else does."
+        "We review the security controls that matter most for the selected enrolled devices and accounts."
       ],
       "items": [
-        "Check system updates, software versions, and installed applications for known risks",
-        "Review firewall rules, antivirus behavior, and telemetry settings",
-        "Inspect account security, password use, and MFA configuration",
-        "Evaluate browser extensions, plugin risks, and privacy settings",
-        "Assess backup strategy, encryption practices, and disaster readiness",
-        "Deliver a written report with clear, ranked action items you can take immediately"
+        "Operating system and application updates",
+        "Installed applications and browser extensions",
+        "Account passwords, multi-factor authentication, and recovery methods",
+        "Firewall and security software settings",
+        "Device encryption and backup status",
+        "A written summary with prioritized next steps"
       ]
     },
     {
-      "heading": "How It Works",
+      "heading": "What to Expect",
       "paragraph": [
-        "We walk through the areas that usually create avoidable risk (updates, accounts, browsers, backups, and device settings) and give you a prioritized list of what to fix first.",
-        "We connect securely and walk through your devices in real time, guiding you through each step of the audit.",
-        "Nothing is collected or stored. You stay in full control of your data the entire time.",
-        "At the end, you receive a summary with prioritized improvements tailored to your specific setup."
+        "This service requires an active Remote Support Plan and an enrolled device.",
+        "We review the agreed areas during a secure remote session and explain what we are checking.",
+        "After the session, you receive a practical summary that separates urgent work from later improvements."
       ]
     }
   ],
   "internalLinks": [
-    { "label": "Remote Support Service Plan", "slug": "remote-support-plan" },
     {
-      "label": "Remote Privacy Hardening & Digital Safety Support",
+      "label": "Remote Support Plan",
+      "slug": "remote-support-plan"
+    },
+    {
+      "label": "Remote Privacy and Digital Safety",
       "slug": "remote-privacy-hardening"
     },
-    { "label": "Remote Virus & Malware Removal", "slug": "remote-virus-removal" }
+    {
+      "label": "Remote Virus and Malware Removal",
+      "slug": "remote-virus-removal"
+    }
   ],
   "faq": [
     {
-      "question": "Do I need a Remote Support Plan for this service?",
-      "answer": "Yes. Remote security assessments are available only to clients with an active Remote Support Plan."
+      "question": "Do I need the Remote Support Plan for this service?",
+      "answer": "Yes. Remote Security Assessments are available only for devices enrolled in an active Remote Support Plan."
     },
     {
-      "question": "What do you look at during a remote security assessment?",
-      "answer": "The assessment can include operating system updates, installed software, account protection, browser settings, backups, firewall behavior, and other practical security controls."
+      "question": "What do you review during the assessment?",
+      "answer": "The scope can include updates, installed software, account protection, browser settings, security software, device encryption, and backups."
     },
     {
-      "question": "Will I get clear next steps afterward?",
-      "answer": "Yes. You receive a practical summary with prioritized recommendations so you know what matters most and what to fix first."
+      "question": "Will I receive clear next steps?",
+      "answer": "Yes. You receive a written summary with prioritized actions so you know what to address first."
     }
   ],
   "related": [
-    { "label": "Remote Support Service Plan", "slug": "remote-support-plan" },
-    { "label": "Remote Privacy Hardening", "slug": "remote-privacy-hardening" },
-    { "label": "Remote Virus Removal", "slug": "remote-virus-removal" }
+    {
+      "label": "Remote Support Plan",
+      "slug": "remote-support-plan"
+    },
+    {
+      "label": "Remote Privacy and Digital Safety",
+      "slug": "remote-privacy-hardening"
+    },
+    {
+      "label": "Remote Virus and Malware Removal",
+      "slug": "remote-virus-removal"
+    }
   ],
   "cta": {
-    "label": "Book My Assessment",
+    "label": "Schedule a Security Assessment",
     "link": "/contact#schedule-service"
   }
 }

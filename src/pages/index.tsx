@@ -41,11 +41,11 @@ function BenefitCard({ icon, title, description, link }: BenefitCardProps) {
       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-border-accent bg-surface">
         {icon}
       </div>
-      <h3 className="text-h3 tracking-h3 font-semibold text-ink">{title}</h3>
+      <h3 className="text-h3 tracking-h3 font-semibold text-ink lg:min-h-[3.5rem]">{title}</h3>
       <p className="mt-2 text-ink-muted text-sm leading-relaxed">
         {description}
       </p>
-      <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent group-hover:underline">
+      <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-medium text-accent group-hover:underline">
         Learn more <ArrowRight className="w-4 h-4" />
       </span>
     </Card>
@@ -56,23 +56,23 @@ export default function Home() {
   const benefits = [
     {
       icon: <ShieldCheck className="w-6 h-6 text-accent" />,
-      title: "Protect",
+      title: "Scam and Account Protection",
       description:
-        "Get practical help with scam prevention, account safety, and safer home technology choices without the fear tactics.",
+        "Learn to recognize scams, secure your accounts, and reduce the risk of fraud and account theft.",
       link: "/services/scam-protection",
     },
     {
       icon: <Wrench className="w-6 h-6 text-accent" />,
-      title: "Fix",
+      title: "Computer Repair and Virus Removal",
       description:
-        "Clean up malware, repair slow or unstable computers, fix software problems, and recover from the kind of tech issues that disrupt everyday life.",
+        "Fix slow, unstable, or infected computers. We troubleshoot software, remove malware, and explain the problem clearly.",
       link: "/services/computer-repair",
     },
     {
       icon: <House className="w-6 h-6 text-accent" />,
-      title: "Support",
+      title: "On-Site Tech Support",
       description:
-        "Get in-home help with Wi-Fi, printers, new devices, and day-to-day tech problems when you want one visit to sort things out.",
+        "Get help with Wi-Fi, printers, new devices, smart home equipment, and other everyday tech problems.",
       link: "/services/onsite-tech-support",
     },
   ];
@@ -83,8 +83,8 @@ export default function Home() {
   return (
     <>
       <Meta
-        title="Computer Repair, Virus Removal & Local Tech Support in Central Florida | Defend I.T. Solutions"
-        description="Computer repair, virus removal, scam protection, Wi-Fi help, on-site tech support, and account safety for homeowners, retirees, and small businesses in Ocala, The Villages, and Belleview."
+        title="Central Florida Cybersecurity and Tech Support | Defend I.T. Solutions"
+        description="Local computer repair, virus removal, Wi-Fi help, scam protection, and cybersecurity for homes and small businesses in Ocala, Belleview, and The Villages."
         ogImageTitle="Cybersecurity & Tech Support"
         url="https://www.wedefendit.com/"
         canonical="https://www.wedefendit.com/"
@@ -113,16 +113,16 @@ export default function Home() {
           <div className="relative mx-auto w-full max-w-7xl px-5 py-8 sm:px-6 lg:py-10">
             <div className="max-w-xl lg:max-w-2xl">
               <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
-                Ocala · Belleview · The Villages
+                Serving Ocala, Belleview, and The Villages
               </p>
               <h1 className="mt-4 text-balance text-display tracking-display font-semibold text-ink">
-                Cybersecurity and Tech Support for{" "}
+                Local Cybersecurity and Tech Support for{" "}
                 <span className="text-accent">Homes and Small Businesses</span>
               </h1>
               <p className="mt-4 max-w-lg text-lead text-ink-muted">
-                Local, security-minded help with the everyday tech problems
-                people actually run into. On-site or remote, no jargon, no
-                pressure.
+                Get on-site help with computer repair, virus removal, scam
+                protection, Wi-Fi, and account security. We explain the problem,
+                your options, and the cost before work begins.
               </p>
 
               {/* Primary CTA */}
@@ -169,13 +169,12 @@ export default function Home() {
           <div className="mx-auto w-full max-w-6xl px-5 sm:px-6">
             <div className="max-w-[42rem]">
               <h2 className="text-h2 tracking-h2 font-semibold text-ink">
-                What We Do
+                Local Cybersecurity and Tech Support Services
               </h2>
               <p className="mt-4 text-ink-muted leading-relaxed">
-                We help with everyday tech problems and the security issues that
-                come with them. That means malware cleanup, scam help, Wi-Fi
-                trouble, device setup, and safer systems for homes and small
-                businesses without the jargon or pressure.
+                We repair computers, remove viruses and malware, secure accounts
+                and home networks, help clients avoid scams, and set up connected
+                devices.
               </p>
             </div>
 
@@ -199,22 +198,21 @@ export default function Home() {
             <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-14">
               <div>
                 <h2 className="text-h2 tracking-h2 font-semibold text-ink">
-                  Why Choose Defend I.T. Solutions?
+                  Why Choose Defend I.T. Solutions
                 </h2>
 
                 <p className="mt-5 max-w-readable text-lead text-ink-muted">
-                  Defend I.T. Solutions brings a security-minded approach to the
-                  kind of tech problems people actually run into. The work is
-                  local, straightforward, and built around clear recommendations
-                  instead of upsells or scare tactics.
+                  We approach every service call with security in mind. You get
+                  clear explanations, practical recommendations, and only the
+                  work you need.
                 </p>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {[
-                    "Local to Central Florida",
-                    "Security-first recommendations",
+                    "Local service in Central Florida",
+                    "Security-focused recommendations",
                     "Clear quotes before work begins",
-                    "No pressure sales",
+                    "No pressure or scare tactics",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3">
                       <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md border border-border-accent bg-surface">
@@ -248,7 +246,7 @@ export default function Home() {
               {/* Phone card */}
               <Card wash className="px-6 py-9 text-center sm:px-8">
                 <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
-                  Talk to a local tech
+                  Talk to a Local Technician
                 </p>
                 <a
                   href={telHref}

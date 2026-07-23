@@ -47,18 +47,18 @@ describe("digital house summary helpers", () => {
 
     const wins = scanWins(placements);
 
-    expect(wins).toContain("Guest access is on its own separate network.");
+    expect(wins).toContain("Guest access is separated from personal devices.");
     expect(wins).toContain(
       "Both cameras are separated from your personal devices.",
     );
     expect(wins).toContain(
-      "Work and personal devices are together on the same network.",
+      "Work and personal devices share the Main network.",
     );
     expect(wins).toContain(
-      "Entertainment devices are separated from your personal stuff.",
+      "Entertainment devices are separated from personal devices.",
     );
     expect(wins).toContain(
-      "Printer is separated from your personal devices where it belongs.",
+      "The printer is separated from personal devices.",
     );
   });
 
@@ -79,10 +79,10 @@ describe("digital house summary helpers", () => {
     });
 
     expect(scanRisks(placements, result, "easy")).toContain(
-      "Easy mode doesn't let you create a separate guest network.",
+      "Easy mode does not include a separate Guest network.",
     );
     expect(scanImprovements(placements, result, "easy")).toContain(
-      "Easy mode doesn't have a guest network. Try Medium or Hard to separate visitor devices.",
+      "Easy mode does not include a Guest network. Try Medium or Hard to separate visitor devices.",
     );
   });
 
@@ -111,7 +111,7 @@ describe("digital house summary helpers", () => {
     );
 
     expect(risks).toContain(
-      "Camera on Main. A camera facing the street can see your personal devices.",
+      "A camera shares the Main network with personal devices.",
     );
     expect(
       risks.some((risk) => risk.includes("more access than it needs")),
@@ -149,9 +149,9 @@ describe("digital house summary helpers", () => {
     );
 
     expect(items.map((item) => item.label)).toEqual([
-      "Easy mode doesn't let you create a separate guest network.",
+      "Easy mode does not include a separate Guest network.",
       "A camera still has more access than it needs.",
-      "Everything is on one network. If any device gets hacked, the rest are exposed.",
+      "All devices share one network, so one compromised device could put others at risk.",
     ]);
   });
 
@@ -186,7 +186,7 @@ describe("digital house summary helpers", () => {
 
     expect(result.total).toBe(88);
     expect(scanRisks(placements, result, "easy")).toContain(
-      "Easy mode doesn't let you create a separate guest network.",
+      "Easy mode does not include a separate Guest network.",
     );
   });
 

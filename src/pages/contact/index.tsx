@@ -46,8 +46,8 @@ function HeadingSection() {
         Contact Defend I.T. Solutions
       </h1>
       <h2 className="mx-auto mb-6 mt-2 max-w-readable text-lead text-ink-muted">
-        Tell us what is going on, and we&apos;ll point you in the right
-        direction.
+        Tell us what you need help with, and we will help you choose the
+        right service.
       </h2>
     </header>
   );
@@ -59,7 +59,7 @@ function PrimaryContact() {
       <Phone className="w-16 h-16 text-accent" />
       <div className="space-y-2">
         <h2 className="text-h2 tracking-h2 font-semibold text-ink">
-          Call or Text Us
+          Call or Text
         </h2>
         <a
           href={`tel:${phone.replace(/[^0-9]/g, "")}`}
@@ -68,7 +68,7 @@ function PrimaryContact() {
           {phone.replace("+1", "")}
         </a>
         <p className="text-sm text-ink-muted">
-          Available for calls and text messages
+          Use this number for questions, scheduling, and service updates.
         </p>
       </div>
     </div>
@@ -88,7 +88,7 @@ function ContactInfoCard() {
           <Mail className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
           <div>
             <h4 className="font-semibold text-ink">
-              Standard Email
+              General Questions
             </h4>
             <a
               href={`mailto:${email}`}
@@ -123,7 +123,7 @@ function ContactInfoCard() {
               Mailing Address
             </h4>
             <p className="text-xs text-ink-dim mb-2">
-              Mailing address only • We operate on-site or remotely
+              Mailing address only. No customer storefront.
             </p>
             <address className="text-sm not-italic leading-relaxed text-ink-muted">
               <strong>{name}</strong>
@@ -155,11 +155,11 @@ function SecureContactCard({
         <ShieldCheck className="w-8 h-8 text-accent flex-shrink-0 mt-1" />
         <div className="flex-1">
           <h3 className="text-h3 tracking-h3 font-semibold text-ink mb-2">
-            Need Secure Communication?
+            Send Sensitive Information Securely
           </h3>
           <p className="text-sm text-ink-muted mb-4">
-            For sensitive inquiries, we support PGP-encrypted email
-            communication.
+            Use our PGP public key to encrypt sensitive email before
+            sending it.
           </p>
 
           <button
@@ -288,9 +288,9 @@ export default function ContactPage() {
       <Meta
         url={canonical}
         canonical={canonical}
-        title="Contact Defend I.T. Solutions | Ocala, The Villages & Belleview"
-        description="Contact Defend I.T. Solutions for local computer repair, virus removal, scam protection, Wi-Fi help, and on-site tech support in Ocala, The Villages, and Belleview."
-        keywords="contact computer repair Ocala FL, virus removal The Villages, scam protection Belleview FL, Wi-Fi help Central Florida, local tech support, secure contact PGP"
+        title="Contact Defend I.T. | Tech Support in Ocala and The Villages"
+        description="Call, text, or message Defend I.T. Solutions for computer repair, cybersecurity, scam help, Wi-Fi, and tech support in Ocala, Belleview, and The Villages."
+        keywords="contact tech support Ocala FL, computer repair Ocala, cybersecurity help The Villages, scam help Belleview FL, Wi-Fi support Central Florida, Defend I.T. Solutions"
         structuredData={{
           "@context": "https://schema.org",
           "@graph": [breadcrumbLd, contactPageLd],
@@ -326,7 +326,8 @@ export default function ContactPage() {
               </div>
             </div>
             <p className="text-sm text-ink-muted mb-6">
-              Tell us what you need help with and we&apos;ll get back to you.
+              Describe the problem, the device, and how you prefer to be
+              contacted. Do not include passwords or security codes.
             </p>
             <ContactForm className="max-w-xl mx-auto" />
           </section>

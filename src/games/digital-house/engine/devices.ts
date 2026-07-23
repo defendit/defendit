@@ -46,7 +46,7 @@ export const DEVICES: Device[] = [
     shortName: "Laptop",
     category: "trusted",
     description:
-      "Your primary work machine. Handles sensitive accounts and data.",
+      "Your main work computer, which contains sensitive accounts and data.",
   },
   {
     id: "personal-phone",
@@ -54,7 +54,7 @@ export const DEVICES: Device[] = [
     shortName: "Phone",
     category: "trusted",
     description:
-      "Your daily driver with banking, email, and authenticator apps.",
+      "Your phone, with banking, email, and authentication apps.",
   },
   {
     id: "tablet",
@@ -62,7 +62,7 @@ export const DEVICES: Device[] = [
     shortName: "Tablet",
     category: "trusted",
     description:
-      "A personal device you use for reading, browsing, and light work.",
+      "A personal device used for browsing, reading, and light work.",
   },
   {
     id: "guest-phone",
@@ -70,7 +70,7 @@ export const DEVICES: Device[] = [
     shortName: "Guest",
     category: "guest",
     description:
-      "A visitor's device that only needs short-term Internet access.",
+      "A visitor's device that only needs temporary internet access.",
   },
   {
     id: "printer",
@@ -78,14 +78,14 @@ export const DEVICES: Device[] = [
     shortName: "Printer",
     category: "gray-area",
     description:
-      "A home printer. Works anywhere, but rarely patched and often a quiet weak spot.",
+      "A printer that may receive security updates less often than your computer or phone.",
   },
   {
     id: "smart-tv",
     name: "Smart TV",
     shortName: "TV",
     category: "entertainment",
-    description: "A connected TV with streaming apps and built-in microphones.",
+    description: "A connected TV that runs streaming apps and communicates with online services.",
   },
   {
     id: "smart-speaker",
@@ -93,14 +93,14 @@ export const DEVICES: Device[] = [
     shortName: "Speaker",
     category: "entertainment",
     description:
-      "An always-listening voice assistant tied to other smart home gear.",
+      "A voice assistant connected to online services and other smart home devices.",
   },
   {
     id: "game-console",
     name: "Game console",
     shortName: "Console",
     category: "entertainment",
-    description: "A console used for games, streaming, and chat.",
+    description: "A console used for gaming, streaming, and voice chat.",
   },
   {
     id: "doorbell-camera",
@@ -108,7 +108,7 @@ export const DEVICES: Device[] = [
     shortName: "Doorbell",
     category: "camera",
     description:
-      "An exterior camera covering the front entry. Internet-facing by design.",
+      "An internet-connected camera at your front door.",
   },
   {
     id: "camera-hub",
@@ -116,7 +116,7 @@ export const DEVICES: Device[] = [
     shortName: "Cameras",
     category: "camera",
     description:
-      "Indoor cameras and the hub that records them. Private video inside the home.",
+      "Indoor cameras and a hub that stores or manages private video.",
   },
 ];
 

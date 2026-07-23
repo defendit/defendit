@@ -226,7 +226,7 @@ function resolveEnemyTurn(
       fmt(
         turn,
         "WARN",
-        `${battle.enemy.def.name} used ${move.name}. Power increased.`,
+        `${battle.enemy.def.name} used ${move.name}. Restored 5 HP.`,
       ),
     );
     return {
@@ -247,7 +247,7 @@ function resolveEnemyTurn(
       fmt(
         turn,
         "MISS",
-        `${battle.enemy.def.name} used ${move.name}... missed.`,
+        `${battle.enemy.def.name} used ${move.name} but missed.`,
       ),
     );
   } else {

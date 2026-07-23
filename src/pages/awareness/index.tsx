@@ -43,11 +43,11 @@ export default function AwarenessPage() {
   const awarenessPageLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Cybersecurity Awareness for Seniors | Defend I.T. Solutions",
+    name: "Online Safety and Scam Prevention for Seniors | Defend I.T.",
     url: canonical,
     primaryImageOfPage: {
       "@type": "ImageObject",
-      url: ogImageUrl("Cybersecurity Awareness for Seniors"),
+      url: ogImageUrl("Online Safety and Scam Prevention for Seniors"),
     },
     about: localBusinessLd, // from your json-ld.ts shared definition
   };
@@ -56,23 +56,23 @@ export default function AwarenessPage() {
     {
       name: "Who is this guide for?",
       acceptedAnswer:
-        "Retirees, seniors, caregivers, and community groups in Central Florida. It is written in plain English with practical steps.",
+        "Seniors, family members, caregivers, and community groups in Central Florida. The guidance uses plain English and practical steps.",
     },
     {
-      name: "Do you collect data on this page?",
+      name: "Is this guide free?",
       acceptedAnswer:
-        "No. There is no tracking on this page. It is education only.",
+        "Yes. The guide is free to read and share with family, friends, and community members.",
     },
   ]);
 
   return (
     <>
       <Meta
-        title="Cybersecurity Awareness for Seniors | Defend I.T. Solutions"
-        description="Practical safety tips and scam prevention guidance for retirees and seniors in Ocala, The Villages, and nearby communities."
+        title="Online Safety and Scam Prevention for Seniors | Defend I.T."
+        description="Learn how to spot scams, protect online accounts, and browse more safely with plain-English guidance for seniors and families in Central Florida."
         url={canonical}
         canonical={canonical}
-        keywords="cybersecurity for seniors, scam prevention, phishing, Ocala, The Villages, free training"
+        keywords="online safety for seniors, scam prevention Ocala FL, cybersecurity awareness The Villages, phishing prevention, senior technology training Central Florida"
         structuredData={{
           "@context": "https://schema.org",
           "@graph": [breadcrumbLd, awarenessPageLd, faqLd],
@@ -110,14 +110,14 @@ export default function AwarenessPage() {
           position="object-[center_90%]"
         >
           <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
-            Free Educational Resource
+            Free Cybersecurity Guide
           </p>
           <h1 className="mt-4 text-balance text-display tracking-display font-semibold text-ink">
-            Online Safety Tips for Seniors, Families, and Community Groups
+            Online Safety and Scam Prevention for Seniors and Families
           </h1>
           <p className="mt-5 max-w-lg text-lead text-ink-muted">
-            Plain-English guidance on scams, safer browsing, stronger accounts,
-            and everyday habits that reduce risk.
+            Learn how to recognize common scams, protect important accounts, and
+            make safer choices online.
           </p>
         </HeroBanner>
 
@@ -146,23 +146,23 @@ export default function AwarenessPage() {
                   id="cta"
                   className="text-h2 tracking-h2 font-semibold mb-4 text-ink"
                 >
-                  Want a Free Group Training?
+                  Request Free Group Training
                 </h2>
                 <p className="text-md text-ink-muted mb-6 max-w-2xl mx-auto">
-                  Defend I.T. Solutions offers free cybersecurity awareness
-                  sessions for senior centers, churches, clubs, and community
-                  groups across Central Florida.
+                  Free cybersecurity awareness sessions are available for senior
+                  centers, churches, clubs, and community groups across Central
+                  Florida.
                 </p>
                 <p className="text-sm text-ink-muted mb-6 max-w-2xl mx-auto">
-                  These sessions are designed to be simple, practical, and easy
-                  to follow, with clear explanations and time for questions.
+                  Each session uses plain English, practical examples, and time
+                  for questions.
                 </p>
                 <Link
                   href="/contact"
                   style={{ touchAction: "manipulation" }}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent-fill text-accent-contrast font-semibold transition-all shadow-lg hover:bg-accent-fill-hover hover:shadow-xl touch-manipulation"
                 >
-                  Request a Free Training
+                  Request Group Training
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -179,8 +179,8 @@ export default function AwarenessPage() {
                   </svg>
                 </Link>
                 <p className="mt-4 text-sm text-ink-muted">
-                  Free for groups of 25 or more. Individual sessions are also
-                  available for a small fee.
+                  Free for groups of 25 or more. Individual training is available
+                  as a paid service.
                 </p>
               </div>
             </Card>

@@ -44,28 +44,28 @@ export function coachSteps(
   const steps: CoachStepConfig[] = [
     {
       target: "[data-testid='dh-house-panel']",
-      heading: "Build a secure home network",
-      body: "Your home has three network zones: Main for personal and work devices, Guest for visitor access, and IoT for smart devices. Putting the wrong devices on the same network creates real security risk.",
+      heading: "Build a safer home network",
+      body: "Your home network has three zones: Main for personal and work devices, Guest for visitors, and IoT for smart devices. Separating them helps limit unnecessary access.",
       position: "below",
     },
     {
       target: inventoryTarget,
-      heading: "Drag devices into rooms",
-      body: "Drag each device from the inventory into the room where it belongs. Your security score adjusts in real time based on which zone each device lands on.",
+      heading: "Place devices in rooms",
+      body: "Drag each device from the inventory into a room. Your score changes based on the network zone assigned to that room.",
       position: mobile ? "above" : "below",
     },
     {
       target: "[data-testid='dh-score-hud']",
-      heading: "Watch your score",
-      body: "Each placement affects privacy, blast radius, and recovery. The analysis card shows what went right or wrong after every move.",
+      heading: "Understand your score",
+      body: "Each placement affects the modeled privacy, impact, and recovery scores. The analysis card explains each result.",
       position: "below",
     },
   ];
   if (difficulty !== "easy") {
     steps.push({
       target: "[data-testid='dh-house-panel']",
-      heading: "Set your zones",
-      body: "On this difficulty, rooms start without a zone. Set each room's zone before placing devices by using the zone chip in the corner of each room.",
+      heading: "Assign network zones",
+      body: "Some rooms start without a network zone. Before placing devices, use the button in each room to assign Main, Guest, or IoT.",
       position: "below",
     });
   }
@@ -86,7 +86,7 @@ export const HOME_NETWORK_ROOKIE: Badge = {
   id: "home-network-rookie",
   gameId: "digital-house",
   name: "Home Network Rookie",
-  description: "Completed The Digital House",
+  description: "Completed The Digital House exercise",
   tier: "bronze",
   condition: "Place every device to finish a run",
 };
@@ -95,7 +95,7 @@ export const NETWORK_ARCHITECT: Badge = {
   id: "network-architect",
   gameId: "digital-house",
   name: "Network Architect",
-  description: "Completed The Digital House on Hard with a score of 70+",
+  description: "Completed The Digital House on Hard with a score of 70 or higher",
   tier: "gold",
   condition: "Finish Hard difficulty with an overall score of 70 or more",
 };

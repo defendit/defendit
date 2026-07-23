@@ -22,21 +22,21 @@ import { Card } from "@/components/Card";
 
 const valueData = [
   {
-    title: "Security First",
+    title: "Practical Security",
     description:
-      "We recommend sensible protections that fit the situation, not generic checklists or enterprise overkill.",
+      "We recommend protections that fit the problem, the devices, and the budget.",
     icon: ShieldCheck,
   },
   {
-    title: "Local and Personal",
+    title: "Local, Personal Service",
     description:
-      "No call centers. No outsourced scripts. Just real local support from a business that works in this community.",
+      "Work directly with a local technician. We do not use call centers or outsourced support scripts.",
     icon: MapPin,
   },
   {
-    title: "Clear, Honest Support",
+    title: "Clear Recommendations",
     description:
-      "We explain what is wrong, what matters, and what can wait so you can make a decision without pressure.",
+      "We explain the problem, the available options, and what can wait so you can make an informed decision.",
     icon: MessageCircle,
   },
 ] as const;
@@ -113,11 +113,11 @@ export default function About() {
   return (
     <>
       <Meta
-        title="About Defend I.T. Solutions | Cybersecurity & IT Support in Ocala, Belleview & The Villages"
-        description="Learn about Defend I.T. Solutions, a local cybersecurity and IT support company serving Ocala, Belleview, The Villages, and surrounding Central Florida communities with privacy-first, on-site tech support."
+        title="About Defend I.T. | Ocala Cybersecurity and Tech Support"
+        description="Meet Defend I.T. Solutions, a local cybersecurity and tech support company serving Ocala, Belleview, The Villages, and nearby Central Florida communities."
         url={canonical}
         canonical={canonical}
-        keywords="Defend I.T. Solutions, cybersecurity Ocala FL, IT support Belleview FL, IT support The Villages FL, local tech support Central Florida, privacy-focused IT services"
+        keywords="local cybersecurity company Ocala FL, tech support Ocala, computer help Belleview FL, tech support The Villages FL, Central Florida computer services, Defend I.T. Solutions"
         structuredData={{
           "@context": "https://schema.org",
           "@graph": [breadcrumbLd, aboutPageLd],
@@ -137,18 +137,18 @@ export default function About() {
         <HeroBanner
           dark="/img/home/home-hero-dark.jpg"
           light="/img/home/home-hero-light.jpg"
-          alt="A Central Florida home and storefront with connected, protected devices"
+          alt="Central Florida homes and connected devices protected by cybersecurity services"
         >
           <p className="inline-flex items-center gap-2 text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
             <MapPin className="h-4 w-4" aria-hidden />
-            Locally Owned &amp; Operated
+            Locally Owned and Operated
           </p>
           <h1 className="mt-4 text-balance text-display tracking-display font-semibold text-ink">
             About Defend I.T. Solutions
           </h1>
           <p className="mt-5 max-w-lg text-lead text-ink-muted">
-            Local cybersecurity and IT support serving Ocala, Belleview, The
-            Villages, and surrounding Central Florida.
+            Local cybersecurity and tech support for homes and small businesses
+            in Ocala, Belleview, The Villages, and nearby communities.
           </p>
         </HeroBanner>
 
@@ -164,23 +164,24 @@ export default function About() {
               Who we are
             </h2>
             <p className="text-lead text-ink">
-              Defend I.T. Solutions is a founder-led local business serving
-              homeowners and small businesses across Ocala, Belleview, and The
-              Villages. We come to you, so there&apos;s no shop to drive to.
+              Defend I.T. Solutions is a founder-led business serving homes and
+              small businesses in Ocala, Belleview, The Villages, and nearby
+              Central Florida communities. Service is available on-site or by
+              arranged pickup and return. Remote support is available for
+              enrolled clients, with online training and tutoring offered
+              separately.
             </p>
 
             <p className="text-lead mt-4 text-ink-muted">
-              The focus is practical help with malware, scam prevention, Wi-Fi
-              issues, device setup, safer account habits, and the day-to-day
-              technology problems that waste time and create stress.
+              We help with computer repair, malware removal, scam recovery, Wi-Fi
+              and network problems, account security, device setup, and other
+              everyday technology needs.
             </p>
 
             <p className="text-lead mt-4 text-ink-muted">
-              This business exists because too many people are expected to trust
-              devices and networks they were never given enough information to
-              judge. The goal is to solve the problem, reduce avoidable risk,
-              and leave people with technology that feels easier to use and
-              easier to trust.
+              Our goal is to solve the immediate problem, reduce avoidable risk,
+              and explain the result in plain English. You should know what
+              changed, why it matters, and what to do next.
             </p>
           </Card>
 
@@ -189,7 +190,7 @@ export default function About() {
               id="core-values"
               className="text-h2 tracking-h2 font-semibold text-ink mb-4"
             >
-              Our Core Values
+              How We Work
             </h2>
             <RenderValues />
           </section>
@@ -197,18 +198,17 @@ export default function About() {
           {/* Services CTA */}
           <Card wash className="relative overflow-hidden p-8 text-center">
             <h2 className="text-h2 tracking-h2 font-semibold mb-4 text-ink">
-              Explore Our Services
+              Find the Right Service
             </h2>
             <p className="text-ink-muted mb-6 max-w-readable mx-auto">
-              From computer repair and malware cleanup to scam protection and
-              Wi-Fi help, explore the local services we offer across Central
-              Florida.
+              Explore local help with computer repair, virus and malware removal,
+              scam protection, Wi-Fi, account security, and on-site tech support.
             </p>
             <Link
               href="/services"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent-fill text-accent-contrast font-semibold transition-all shadow-lg hover:bg-accent-fill-hover hover:shadow-xl"
             >
-              View Local Services
+              View Services
               <ArrowRight className="w-5 h-5" />
             </Link>
           </Card>

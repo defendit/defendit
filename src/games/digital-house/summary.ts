@@ -83,7 +83,7 @@ function guestRiskItem(
   if (difficulty === "easy") {
     return {
       id: "guest-phone",
-      label: "Easy mode doesn't let you create a separate guest network.",
+      label: "Easy mode does not include a separate Guest network.",
     };
   }
 
@@ -91,13 +91,13 @@ function guestRiskItem(
     return {
       id: "guest-phone",
       label:
-        "The guest phone is on your personal network where it shouldn't be.",
+        "The guest phone shares the Main network with personal devices.",
     };
   }
 
   return {
     id: "guest-phone",
-    label: "The guest phone isn't on its own separate network yet.",
+    label: "The guest phone is not on the Guest network.",
   };
 }
 
@@ -122,8 +122,8 @@ function trustedRiskItem(findings: PlacementFinding[]): OpenRiskItem {
       id: "trusted-critical",
       label:
         criticalCount === 1
-          ? "One of your personal devices is sitting on the smart device network."
-          : "Your personal devices are sitting on the smart device network.",
+          ? "A personal device is on the IoT network."
+          : "Personal devices are on the IoT network.",
       count: criticalCount > 1 ? criticalCount : undefined,
     };
   }
@@ -132,8 +132,8 @@ function trustedRiskItem(findings: PlacementFinding[]): OpenRiskItem {
     id: "trusted-wrong",
     label:
       findings.length === 1
-        ? "One of your personal devices isn't on the main network."
-        : "Some of your personal devices aren't on the main network.",
+        ? "A personal device is not on the Main network."
+        : "Some personal devices are not on the Main network.",
     count: findings.length > 1 ? findings.length : undefined,
   };
 }
@@ -142,7 +142,7 @@ function printerRiskItem(finding: PlacementFinding): OpenRiskItem {
   if (finding.actualZone === "main") {
     return {
       id: "printer-main",
-      label: "The printer is still on your personal network.",
+      label: "The printer shares the Main network with personal devices.",
     };
   }
 
@@ -182,7 +182,7 @@ export function scanWins(placements: PlacementMap): string[] {
   const wins: string[] = [];
 
   if (zoneOf(placements, "guest-phone") === "guest") {
-    wins.push("Guest access is on its own separate network.");
+    wins.push("Guest access is separated from personal devices.");
   }
   if (
     zoneOf(placements, "doorbell-camera") === "iot" &&
@@ -194,18 +194,18 @@ export function scanWins(placements: PlacementMap): string[] {
     zoneOf(placements, "work-laptop") === "main" &&
     zoneOf(placements, "personal-phone") === "main"
   ) {
-    wins.push("Work and personal devices are together on the same network.");
+    wins.push("Work and personal devices share the Main network.");
   }
   if (
     zoneOf(placements, "smart-tv") === "iot" &&
     zoneOf(placements, "smart-speaker") === "iot" &&
     zoneOf(placements, "game-console") === "iot"
   ) {
-    wins.push("Entertainment devices are separated from your personal stuff.");
+    wins.push("Entertainment devices are separated from personal devices.");
   }
   if (zoneOf(placements, "printer") === "iot") {
     wins.push(
-      "Printer is separated from your personal devices where it belongs.",
+      "The printer is separated from personal devices.",
     );
   }
   if (wins.length === 0) {
@@ -296,27 +296,27 @@ export function scanImprovements(
   if (firstFinding(result, (finding) => finding.deviceId === "guest-phone")) {
     improvements.add(
       difficulty === "easy"
-        ? "Easy mode doesn't have a guest network. Try Medium or Hard to separate visitor devices."
-        : "Move the guest phone onto the Guest network.",
+        ? "Easy mode does not include a Guest network. Try Medium or Hard to separate visitor devices."
+        : "Move the guest phone to the Guest network.",
     );
   }
 
   if (findingsFor(result, isCameraFinding).length > 0) {
-    improvements.add("Move cameras to the IoT zone.");
+    improvements.add("Move cameras to the IoT network.");
   }
 
   if (findingsFor(result, isEntertainmentFinding).length > 0) {
-    improvements.add("Move smart TVs, speakers, and consoles onto IoT.");
+    improvements.add("Move TVs, smart speakers, and consoles to the IoT network.");
   }
 
   if (findingsFor(result, isTrustedFinding).length > 0) {
     improvements.add(
-      "Move laptops, phones, and tablets back onto the Main network.",
+      "Move personal devices to the Main network.",
     );
   }
 
   if (firstFinding(result, (finding) => finding.deviceId === "printer")) {
-    improvements.add("Move the printer onto the IoT network.");
+    improvements.add("Move the printer to the IoT network.");
   }
 
   if (comboById(result, "single-zone-dump")) {
@@ -325,7 +325,7 @@ export function scanImprovements(
 
   if (improvements.size === 0) {
     improvements.add(
-      "Solid layout. Turn on two-step verification on all your accounts.",
+      "No high-priority issues in this layout. Protect important accounts with multifactor authentication.",
     );
   }
 

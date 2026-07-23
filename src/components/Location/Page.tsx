@@ -206,7 +206,7 @@ export function LocationPage({ location }: LocationPageProps) {
 
           <section className={SECTION} aria-labelledby="local-services">
             <h2 id="local-services" className="text-h2 tracking-h2 font-semibold text-ink">
-              Services we provide in {location.city}
+              Services Available in {location.city}
             </h2>
             <ul className="mt-5 grid list-none gap-3 p-0 sm:grid-cols-2">
               {location.services.map((svc) => (
@@ -269,15 +269,15 @@ export function LocationPage({ location }: LocationPageProps) {
             )}
             <div className={hasBanner ? "relative max-w-md text-left" : "relative"}>
               <h2 className="text-h2 tracking-h2 font-semibold text-ink text-balance">
-                Local tech help in {location.city}
+                Get Local Tech Help in {location.city}
               </h2>
               <p
                 className={`mt-4 max-w-readable text-ink-muted ${
                   hasBanner ? "" : "mx-auto"
                 }`}
               >
-                Call, text, or book online, and we will help you sort it out, on-site or
-                remotely.
+                Call, text, or book online. We provide on-site service and arranged pickup
+                and drop-off. Enrolled clients can also request remote support.
               </p>
               <div
                 className={`mt-8 flex flex-col gap-3 sm:flex-row ${
@@ -291,7 +291,7 @@ export function LocationPage({ location }: LocationPageProps) {
                   <ArrowRight className="h-5 w-5" aria-hidden />
                 </Link>
                 <Link href="/awareness" className={SECONDARY_BTN} style={TOUCH}>
-                  Free online safety tips
+                  View Online Safety Tips
                 </Link>
               </div>
             </div>

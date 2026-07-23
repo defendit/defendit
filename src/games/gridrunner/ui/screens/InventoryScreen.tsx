@@ -48,12 +48,12 @@ export function InventoryScreen({
                   Slot {i + 1}: {toolDisplayName(tool)}
                 </span>
                 <span className="text-xs text-[#aabbcc]">
-                  {TYPE_LABELS[tool.type]} -- Pwr {tool.power} / Acc {tool.accuracy}% / EN {tool.energyCost}
+                  {TYPE_LABELS[tool.type]} · Pwr {tool.power} · Acc {tool.accuracy}% · EN {tool.energyCost}
                 </span>
               </div>
             ) : (
               <span className="text-xs text-[#4a5568]">
-                Slot {i + 1} -- Empty
+                Slot {i + 1} · Empty
               </span>
             )}
           </div>
@@ -79,7 +79,7 @@ export function InventoryScreen({
                   {toolDisplayName(tool)}
                 </span>
                 <span className="text-xs text-[#aabbcc]">
-                  {TYPE_LABELS[tool.type]} -- Pwr {tool.power} / Acc {tool.accuracy}% / EN {tool.energyCost}
+                  {TYPE_LABELS[tool.type]} · Pwr {tool.power} · Acc {tool.accuracy}% · EN {tool.energyCost}
                 </span>
                 <div className="flex flex-wrap gap-1 pt-1">
                   {equippedTools.map((_, i) => (

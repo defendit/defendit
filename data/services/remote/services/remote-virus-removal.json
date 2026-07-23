@@ -1,11 +1,11 @@
 {
   "id": "remote-virus-removal",
-  "title": "Remote Virus & Malware Removal",
-  "headline": "Remove threats without anyone stepping foot inside.",
+  "title": "Remote Virus and Malware Removal",
+  "headline": "Remove supported malware, pop-ups, and browser hijackers from an enrolled device.",
   "requiresPlan": true,
-  "description": "Remote malware cleanup for enrolled devices when secure access is already in place.",
-  "metaTitle": "Remote Virus & Malware Removal for Central Florida Plan Members | Defend I.T. Solutions",
-  "metaDescription": "Remote malware cleanup for Central Florida Remote Support Plan members, including spyware, browser hijacks, fake antivirus tools, and post-cleanup guidance to reduce reinfection.",
+  "description": "Remote virus and malware cleanup for enrolled devices when the computer can still connect safely through the Remote Support Plan.",
+  "metaTitle": "Remote Malware Removal for Central Florida Plan Clients",
+  "metaDescription": "Remove supported malware, pop-ups, browser hijackers, and unwanted software remotely from devices enrolled in the Remote Support Plan.",
   "keywords": [
     "Remote virus removal",
     "Online malware cleanup",
@@ -14,64 +14,84 @@
     "Online PC cleaning"
   ],
   "url": "/services/remote/remote-virus-removal",
-  "serviceArea": ["Ocala FL", "Belleview FL", "The Villages FL", "Central Florida"],
+  "serviceArea": [
+    "Ocala FL",
+    "Belleview FL",
+    "The Villages FL",
+    "Central Florida"
+  ],
   "sections": [
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Modern threats like spyware, keyloggers, and fileless malware often avoid detection by traditional antivirus tools.",
-        "Some infections survive resets and reinstalls by embedding into startup tasks, boot sectors, or profile data.",
-        "Remote cleanup using professional tools can be just as effective as an in-person service when done correctly and securely."
+        "Malware can change browser settings, install unwanted software, or run automatically when the computer starts.",
+        "Remote cleanup is possible only when the device can start and connect safely.",
+        "Severe infections, damaged systems, or computers that cannot be trusted after cleanup may require local service or a clean rebuild."
       ]
     },
     {
       "heading": "What We Remove",
       "items": [
-        "Viruses, trojans, and worm infections",
-        "Spyware, adware, and browser redirects",
-        "Fake antivirus tools and system bloatware",
-        "Keyloggers, clipboard grabbers, and tracking agents",
-        "Rootkits and persistence-based malware that resist standard removal methods"
+        "Common malware, adware, and unwanted software",
+        "Browser hijackers, fake alerts, and unauthorized extensions",
+        "Suspicious startup items and scheduled tasks",
+        "Unwanted remote-access software",
+        "Supported persistence mechanisms found during cleanup"
       ]
     },
     {
-      "heading": "How It Works",
+      "heading": "What to Expect",
       "paragraph": [
-        "If the device can still be reached safely, we can clean up many common infections remotely and then close the settings or habits that helped cause the problem.",
-        "During your initial setup visit, we install a secure access tool with your consent. Once active, you can request help anytime, and we clean your system remotely.",
-        "You stay in control throughout the process. Every session requires your approval, and you can watch live or disconnect at any time."
+        "This service requires an active Remote Support Plan and an enrolled device.",
+        "We first determine whether remote cleanup is safe and appropriate. If it is not, we stop and recommend the right local service.",
+        "Access follows the permissions selected during enrollment. We explain what we find, what we remove, and which account or software changes should follow."
       ]
     }
   ],
   "internalLinks": [
-    { "label": "Remote Support Service Plan", "slug": "remote-support-plan" },
-    { "label": "Remote Security Assessment", "slug": "remote-security-assessment" },
-    { "label": "Remote Tech Support", "slug": "remote-support" }
-  ],
-  "faq": [
     {
-      "question": "Do I need a Remote Support Plan first?",
-      "answer": "Yes. Remote virus removal is available only to clients who already have an active Remote Support Plan and secure remote access in place."
+      "label": "Remote Support Plan",
+      "slug": "remote-support-plan"
     },
-    {
-      "question": "Can all malware be removed remotely?",
-      "answer": "Many common infections can be handled remotely, but some severe cases may require deeper recovery steps or a different approach depending on the condition of the system."
-    },
-    {
-      "question": "Do you help reduce reinfection after cleanup?",
-      "answer": "Yes. Cleanup is only part of the service. We also review safer settings and next steps to help keep the same problem from happening again."
-    }
-  ],
-  "related": [
-    { "label": "Remote Support Service Plan", "slug": "remote-support-plan" },
     {
       "label": "Remote Security Assessment",
       "slug": "remote-security-assessment"
     },
-    { "label": "Remote Support", "slug": "remote-support" }
+    {
+      "label": "Remote Tech Support",
+      "slug": "remote-support"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Do I need the Remote Support Plan first?",
+      "answer": "Yes. Remote Virus and Malware Removal is available only for devices enrolled in an active Remote Support Plan."
+    },
+    {
+      "question": "Can all malware be removed remotely?",
+      "answer": "No. Remote cleanup works only when the device can connect safely and the infection is within the supported recovery scope. Some cases require local service or a clean rebuild."
+    },
+    {
+      "question": "What happens after the cleanup?",
+      "answer": "We explain what was found, review safer settings, and identify any password, account, update, or backup steps that should follow."
+    }
+  ],
+  "related": [
+    {
+      "label": "Remote Support Plan",
+      "slug": "remote-support-plan"
+    },
+    {
+      "label": "Remote Security Assessment",
+      "slug": "remote-security-assessment"
+    },
+    {
+      "label": "Remote Tech Support",
+      "slug": "remote-support"
+    }
   ],
   "cta": {
-    "label": "Schedule My Virus Removal",
+    "label": "Request Remote Malware Removal",
     "link": "/contact#schedule-service"
   }
 }

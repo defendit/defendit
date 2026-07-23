@@ -196,7 +196,7 @@ export function BootScreen({
                 aria-label="Delete save data"
                 className="gr-font-mono rounded-sm border border-[#ff003c]/30 px-1.5 py-0.5 text-[10px] text-[#ff003c]/60 active:brightness-150"
               >
-                DEL
+                DELETE
               </button>
             )}
           </div>

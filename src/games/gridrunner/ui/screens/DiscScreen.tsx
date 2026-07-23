@@ -33,10 +33,10 @@ const TYPE_CHART = [
 ] as const;
 
 const TYPE_DESCRIPTIONS: Record<string, string> = {
-  recon: "Recon tools gather intelligence. In the real world, security teams use these to map networks and find weaknesses before attackers do. In battle, Recon is strong against Persistence but weak against Defense.",
-  exploit: "Exploit tools attack directly. In the real world, penetration testers use these to prove a vulnerability is real, not theoretical. In battle, Exploit is strong against Defense but weak against Persistence.",
-  defense: "Defense tools protect and detect. In the real world, these are the firewalls, intrusion detection systems, and malware scanners that guard every network. In battle, Defense is strong against Exploit but weak against Recon.",
-  persistence: "Persistence tools maintain access over time. In the real world, attackers use these to stay hidden inside a network after breaking in. In battle, Persistence is strong against Recon but weak against Exploit.",
+  recon: "Security teams use reconnaissance to map systems and identify weaknesses. In battle, Recon is strong against Persistence but weak against Defense.",
+  exploit: "Penetration testers use controlled exploits to confirm that a vulnerability can be used. In battle, Exploit is strong against Defense but weak against Persistence.",
+  defense: "Defensive tools help block, detect, and investigate attacks. In battle, Defense is strong against Exploit but weak against Recon.",
+  persistence: "Threat actors use persistence techniques to maintain access after a compromise. In battle, Persistence is strong against Recon but weak against Exploit.",
 };
 
 /* ------------------------------------------------------------------ */
@@ -58,7 +58,7 @@ function ToolsTab({ equippedTools, inventory }: Readonly<{ equippedTools: (ToolI
 
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-xs text-[#aabbcc]">Tap a tool to learn what it does. These are real cybersecurity tools used by professionals.</p>
+      <p className="text-xs text-[#aabbcc]">Select a tool to learn about it. These entries cover tools used by security professionals and threat actors.</p>
       {uniqueTools.map((tool) => {
         const info = getToolInfo(tool.baseToolId);
         const isOpen = expanded === tool.baseToolId;
@@ -91,7 +91,7 @@ function TypesTab() {
   const [expanded, setExpanded] = useState<string | null>(null);
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-xs text-[#aabbcc]">Every tool has a type. Match your type to the enemy weakness for bonus damage.</p>
+      <p className="text-xs text-[#aabbcc]">Each tool has a type. Match it to the enemy weakness for bonus damage.</p>
       {TYPE_CHART.map((row) => {
         const isOpen = expanded === row.type;
         return (
@@ -156,7 +156,7 @@ export function DiscScreen({ onClose, equippedTools, inventory }: DiscScreenProp
         {activeTab === "types" && <TypesTab />}
         {(activeTab === "threats" || activeTab === "killchain" || activeTab === "intel") && (
           <div className="flex flex-1 items-center justify-center">
-            <p className="gr-font-mono text-sm text-[#aabbcc]">??? LOCKED -- Keep playing to unlock</p>
+            <p className="gr-font-mono text-sm text-[#aabbcc]">LOCKED. Keep playing to unlock.</p>
           </div>
         )}
       </div>

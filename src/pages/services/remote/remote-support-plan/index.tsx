@@ -28,22 +28,22 @@ export default function RemoteSupportPlanPage() {
     {
       question: "Do you require a VPN?",
       answer:
-        "No. DISecureLink routes only support traffic with split tunneling. Regular browsing stays on your normal connection.",
+        "No. DISecureLink uses split tunneling, so only approved support traffic enters the support network. Normal browsing stays on your regular connection.",
     },
     {
       question: "Can you access my devices at any time?",
       answer:
-        "Access is consent-based. You choose unattended or on-demand. Permissions are scoped per device.",
+        "That depends on the selected access option. Client-initiated access starts when you request a session. Unattended access is limited to enrolled devices that you authorize and can be revoked.",
     },
     {
       question: "Is my data visible to third parties?",
       answer:
-        "Sessions are encrypted. We do not sell or share client data. Access is limited to verified technicians.",
+        "Remote sessions are encrypted and limited to authorized technicians. We do not sell or share client data.",
     },
     {
       question: "Can non-local clients enroll?",
       answer:
-        "No. Enrollment requires on-site verification in our service area.",
+        "No. Enrollment requires an in-person setup visit within our Central Florida service area.",
     },
   ];
 
@@ -57,10 +57,10 @@ export default function RemoteSupportPlanPage() {
   return (
     <>
       <Meta
-        title="Remote Support Service Plan | Defend I.T. Solutions"
-        description="Details about our secure, client-only Remote Support Plan. Learn how DIS Connect™, DISNet™, and DISecureLink™ provide professional remote tech support."
-        url="https://www.wedefendit.com/remote-support-plan"
-        keywords="Remote support, secure remote access, local IT support, DISConnect, DISNet, DISecureLink, Defend I.T. Solutions"
+        title="Remote Support Plan for Central Florida | Defend I.T. Solutions"
+        description="Secure remote tech support for verified local clients in Ocala, Belleview, and The Villages. Compare access options, enrollment requirements, and included services."
+        url="https://www.wedefendit.com/services/remote/remote-support-plan"
+        keywords="Remote Support Plan, secure remote tech support, remote computer help, Ocala, Belleview, The Villages, DISecureLink"
       />
 
       <JsonLdScript jsonLd={localBusinessLd} />
@@ -99,16 +99,17 @@ export default function RemoteSupportPlanPage() {
                   d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                 />
               </svg>
-              Local Clients Only
+              Available to Verified Local Clients
             </div>
 
             <h1 className="relative text-display tracking-display font-semibold text-ink">
-              Remote Support Service Plan
+              Remote Support Plan
             </h1>
 
             <p className="relative max-w-readable text-lead text-ink-muted">
-              Private remote support for verified local clients who want faster
-              follow-up help without giving up control.
+              Get secure follow-up support on enrolled devices after an in-person
+              setup visit. Choose client-initiated or authorized unattended
+              access.
             </p>
 
             {/* Feature Highlights - Now Visual Cards */}
@@ -130,7 +131,7 @@ export default function RemoteSupportPlanPage() {
                   </svg>
                 </div>
                 <span className="text-sm font-medium text-ink">
-                  Encrypted Sessions
+                  Encrypted Remote Sessions
                 </span>
               </div>
 
@@ -151,7 +152,7 @@ export default function RemoteSupportPlanPage() {
                   </svg>
                 </div>
                 <span className="text-sm font-medium text-ink">
-                  Consent-Based Access
+                  Access You Control
                 </span>
               </div>
 
@@ -178,7 +179,7 @@ export default function RemoteSupportPlanPage() {
                   </svg>
                 </div>
                 <span className="text-sm font-medium text-ink">
-                  Local Enrollment
+                  In-Person Enrollment
                 </span>
               </div>
             </div>
@@ -193,22 +194,20 @@ export default function RemoteSupportPlanPage() {
               id="why-plan"
               className="text-h2 tracking-h2 font-semibold text-ink"
             >
-              Why a Support Plan
+              Why Use a Support Plan
             </h2>
             <p className="mt-2 text-ink-muted">
-              We use a private remote support environment for enrolled local
-              clients and approved devices. The point is simple: make follow-up
-              help faster and easier without turning remote access into a
-              free-for-all.
+              Remote access needs a secure connection, an enrolled device, and clear
+              permissions. The plan provides that foundation so approved
+              follow-up work can happen without another on-site visit.
             </p>
             <p className="mt-2 text-ink-muted">
-              The plan covers the secure setup behind that access, including
-              enrollment, provisioning, upkeep, and support capacity reserved
-              for plan clients.
+              Plan fees cover device enrollment, secure access infrastructure,
+              maintenance, and support capacity reserved for plan clients.
             </p>
           </section>
 
-          {/* Technical Approach */}
+          {/* How Remote Access Is Protected */}
           <section
             className="pt-6 sm:pt-8 border-t border-hairline"
             aria-labelledby="tech-approach"
@@ -217,7 +216,7 @@ export default function RemoteSupportPlanPage() {
               id="tech-approach"
               className="text-h2 tracking-h2 font-semibold text-ink"
             >
-              Technical Approach
+              How Remote Access Is Protected
             </h2>
             <div className="mt-3 grid gap-4 sm:grid-cols-2">
               <div className="relative overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card transition duration-200 hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover">
@@ -242,8 +241,8 @@ export default function RemoteSupportPlanPage() {
                       Private Infrastructure
                     </h3>
                     <p className="text-sm text-ink-muted">
-                      Remote access services live on our private network and are
-                      not exposed to the public Internet.
+                      Remote support services run on private company infrastructure and are
+                      not open directly to the public internet.
                     </p>
                   </div>
                 </div>
@@ -271,8 +270,8 @@ export default function RemoteSupportPlanPage() {
                       Scoped Access
                     </h3>
                     <p className="text-sm text-ink-muted">
-                      The support tunnel is limited to approved service routes;
-                      normal browsing stays on your regular connection.
+                      DISecureLink routes only approved support traffic. Normal browsing
+                      stays on your regular connection.
                     </p>
                   </div>
                 </div>
@@ -300,8 +299,8 @@ export default function RemoteSupportPlanPage() {
                       Layered Protection
                     </h3>
                     <p className="text-sm text-ink-muted">
-                      Session encryption runs inside the private tunnel for
-                      defense in depth.
+                      Remote sessions are encrypted inside the private support
+                      connection.
                     </p>
                   </div>
                 </div>
@@ -326,11 +325,11 @@ export default function RemoteSupportPlanPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-ink mb-1">
-                      Least-Privilege Control
+                      Device-Level Access Control
                     </h3>
                     <p className="text-sm text-ink-muted">
-                      Access is consent-based and limited to enrolled devices;
-                      enrollment and revocation are handled per device.
+                      Access is limited to enrolled devices and the permissions selected for
+                      each device. Authorization can be revoked.
                     </p>
                   </div>
                 </div>
@@ -355,11 +354,11 @@ export default function RemoteSupportPlanPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-ink mb-1">
-                      Network Isolation
+                      Restricted Network Paths
                     </h3>
                     <p className="text-sm text-ink-muted">
-                      Segmented zones with default-deny rules; only explicit
-                      service paths are allowed.
+                      Default-deny network rules block traffic except for approved support
+                      services.
                     </p>
                   </div>
                 </div>
@@ -390,11 +389,11 @@ export default function RemoteSupportPlanPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-ink mb-1">
-                      Operational Hardening
+                      Maintained Systems
                     </h3>
                     <p className="text-sm text-ink-muted">
-                      Ongoing monitoring, maintenance, and updates performed by
-                      our team.
+                      We monitor, patch, and maintain the systems used to provide remote
+                      support.
                     </p>
                   </div>
                 </div>
@@ -414,14 +413,14 @@ export default function RemoteSupportPlanPage() {
               What Is Included
             </h2>
             <ul className="mt-2 list-disc pl-5 sm:pl-6 text-ink-muted text-sm sm:text-base space-y-2 marker:text-accent">
-              <li>Priority scheduling for common remote issues</li>
-              <li>Secure remote sessions with consent-based access</li>
+              <li>Priority scheduling for supported remote issues</li>
+              <li>Encrypted remote sessions under the selected access option</li>
               <li>
-                On-demand or unattended support options, depending on the plan
+                Client-initiated or authorized unattended support, depending on the plan
               </li>
-              <li>Enrollment for approved devices</li>
-              <li>Lower remote labor rates for subscription members</li>
-              <li>After-hours help for urgent issues, where available</li>
+              <li>Enrollment and secure setup for approved devices</li>
+              <li>Reduced remote labor rates for subscription members</li>
+              <li>After-hours support for urgent issues when available</li>
             </ul>
           </section>
 
@@ -437,9 +436,9 @@ export default function RemoteSupportPlanPage() {
               Who Is Eligible
             </h2>
             <p className="mt-2 text-ink-muted">
-              This plan is for local clients in Ocala, Belleview, The Villages,
-              and nearby areas. Devices must be enrolled locally before remote
-              support is available.
+              This plan is available to clients in Ocala, Belleview, The Villages,
+              and nearby communities. Enrollment includes in-person client and
+              device verification before remote support is available.
             </p>
           </section>
 
@@ -452,11 +451,10 @@ export default function RemoteSupportPlanPage() {
               id="tiered-support"
               className="text-h2 tracking-h2 font-semibold text-ink mb-4"
             >
-              Tiered Support Options
+              Remote Access Options
             </h2>
             <p className="mt-2 text-ink-muted mb-6">
-              Our Remote Support Plan is flexible, with tiers based on how you
-              prefer to connect:
+              Choose how remote sessions can start on each enrolled device:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -471,19 +469,19 @@ export default function RemoteSupportPlanPage() {
                   </h3>
                 </div>
                 <p className="text-ink-muted mb-4">
-                  <strong>Fully Asynchronous Remote Support</strong>
+                  <strong>Authorized Unattended Access</strong>
                 </p>
                 <p className="text-sm text-ink-muted leading-relaxed">
-                  We can connect without you being present once devices are
-                  enrolled and permissions are set. Perfect for updates,
-                  maintenance, and non-urgent fixes.
+                  After enrollment and authorization, we can connect without you
+                  starting each session. This option fits scheduled
+                  maintenance, updates, and approved non-urgent work.
                 </p>
                 <div className="mt-6 pt-4 border-t border-hairline">
                   <p className="text-sm text-ink-muted">
-                    ✓ Unattended access
+                    ✓ Authorized unattended access
                     <br />
-                    ✓ After-hours support
-                    <br />✓ Automated maintenance
+                    ✓ Scheduled or after-hours work when available
+                    <br />✓ Automated maintenance when included
                   </p>
                 </div>
               </div>
@@ -499,17 +497,18 @@ export default function RemoteSupportPlanPage() {
                   </h3>
                 </div>
                 <p className="text-ink-muted mb-4">
-                  <strong>Client-Initiated Support</strong>
+                  <strong>Client-Initiated Access</strong>
                 </p>
                 <p className="text-sm text-ink-muted leading-relaxed">
-                  You will be present to start sessions and enter any necessary
-                  credentials. Great for hands-on support and training sessions.
+                  You start each session and remain available to enter credentials or
+                  answer questions. This option fits live troubleshooting and
+                  guided support.
                 </p>
                 <div className="mt-6 pt-4 border-t border-hairline">
                   <p className="text-sm text-ink-muted">
-                    ✓ On-demand sessions
+                    ✓ You start each session
                     <br />
-                    ✓ Full control
+                    ✓ Credentials stay with you
                     <br />✓ Live interaction
                   </p>
                 </div>
@@ -518,10 +517,10 @@ export default function RemoteSupportPlanPage() {
 
             <div className="relative mt-6 overflow-hidden rounded-card border border-hairline bg-surface bg-[image:var(--wash)] p-4 shadow-card">
               <p className="text-ink-muted text-sm">
-                <strong>Both tiers available as:</strong> Subscription (includes
-                member benefits, discounts, and after-hours priority) or
-                Pay-As-You-Go (standard rates, one device limit, no member
-                discounts).
+                <strong>Both access options are available as:</strong> Subscription
+                plans include member rates and priority benefits. Pay-As-You-Go
+                uses standard rates, covers one enrolled device, and does not
+                include member discounts.
               </p>
             </div>
           </section>
@@ -540,9 +539,10 @@ export default function RemoteSupportPlanPage() {
             <div className="relative mt-3 overflow-hidden rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] p-6 text-center shadow-card">
               <div className="relative">
                 <p className="text-ink mb-4">
-                  Once enrolled, you can use remote sessions for
-                  troubleshooting, malware cleanup, guided training, and
-                  selected security or privacy work.
+                  Enrolled clients can use remote sessions for software
+                  troubleshooting, malware cleanup, security assessments, and
+                  privacy settings. Training and tutoring are booked separately
+                  and do not require the plan.
                 </p>
                 <Link
                   href="/services/remote"
@@ -565,23 +565,23 @@ export default function RemoteSupportPlanPage() {
               id="enroll"
               className="text-h2 tracking-h2 font-semibold text-ink mb-4"
             >
-              Ready to Enroll
+              Enroll in the Remote Support Plan
             </h2>
             <div className="relative mt-3 overflow-hidden rounded-feature border border-hairline bg-surface bg-[image:var(--wash)] p-8 text-center shadow-card">
               <div className="relative">
                 <p className="text-lg mb-2 font-semibold text-ink">
-                  Get Started with Remote Support
+                  Start with an In-Person Setup
                 </p>
                 <p className="text-sm mb-6 max-w-2xl mx-auto text-ink-muted">
-                  Initial on-site setup and device enrollment are handled
-                  locally as part of getting the plan in place.
+                  We verify the client, enroll approved devices, and configure the
+                  selected access option during a local setup visit.
                 </p>
                 <Link
                   href="/contact"
                   style={{ touchAction: "manipulation" }}
                   className="inline-flex items-center gap-2 rounded-lg border border-hairline bg-surface px-6 py-3 text-accent font-semibold shadow-card transition hover:-translate-y-0.5 hover:border-accent touch-manipulation"
                 >
-                  Request Remote Setup
+                  Request Plan Enrollment
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -597,8 +597,8 @@ export default function RemoteSupportPlanPage() {
                   </svg>
                 </Link>
                 <p className="mt-4 text-xs text-ink-muted">
-                  * Within our local service area (Ocala, Belleview, The
-                  Villages).
+                  Available within our local service area: Ocala, Belleview, and The
+                  Villages.
                 </p>
               </div>
             </div>
@@ -614,20 +614,18 @@ export default function RemoteSupportPlanPage() {
               Need Coverage for More Devices?
             </h2>
             <p className="mt-2 text-ink-muted">
-              Our Remote Support Plan includes up to 14 enrolled devices. This
-              is plenty for most homes and small offices. If you have a larger
-              setup, we can extend coverage with custom device limits and access
-              tiers.
+              The standard Remote Support Plan covers up to 14 enrolled devices. If
+              you need more, we can define custom device limits and access
+              options.
             </p>
             <p className="mt-2 text-ink-muted">
-              Expanded plans are tailored to your needs, with any additional
-              setup or service costs discussed up front, no surprises.
+              We explain any additional setup, plan, or service costs before
+              enrollment.
             </p>
             <p className="mt-2 text-ink-muted">
               <Link href="/contact" className="text-accent hover:underline">
-                Let&apos;s talk about your requirements
-              </Link>{" "}
-              and design a plan that fits.
+                Contact us about additional devices
+              </Link>.
             </p>
           </section>
 

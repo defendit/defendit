@@ -77,18 +77,18 @@ export default async function handler(
   const { email, tier = "individual", captchaToken } = req.body as Body;
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return res.status(400).json({ error: "Valid email required" });
+    return res.status(400).json({ error: "Enter a valid email address." });
   }
 
   if (!captchaToken) {
-    return res.status(400).json({ error: "Captcha required" });
+    return res.status(400).json({ error: "Complete the CAPTCHA." });
   }
 
   const listId = LIST_IDS[tier] ?? LIST_IDS.individual;
 
   const captchaValid = await verifyCaptcha(captchaToken);
   if (!captchaValid) {
-    return res.status(403).json({ error: "Captcha verification failed" });
+    return res.status(403).json({ error: "We could not verify the CAPTCHA. Please try again." });
   }
 
   const result = await addToBrevo(email, listId);
@@ -100,7 +100,7 @@ export default async function handler(
   }
 
   if (result === "failed") {
-    return res.status(500).json({ error: "Failed to add to waitlist" });
+    return res.status(500).json({ error: "We could not add you to the list. Please try again." });
   }
 
   return res.status(200).json({ ok: true });

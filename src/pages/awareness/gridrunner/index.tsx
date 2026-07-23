@@ -22,8 +22,8 @@ export default function GridRunnerPage() {
   return (
     <>
       <Meta
-        title="GRIDRUNNER | Defend I.T. Solutions"
-        description="A cyberpunk RPG where you battle real-world APT groups, collect security tools, and defend the grid. Free to play."
+        title="GRIDRUNNER: Cybersecurity RPG | Defend I.T. Solutions"
+        description="Play a free cybersecurity RPG. Battle threats based on real cases, collect cybersecurity tools, and defend the grid in your browser."
         url={canonical}
         canonical={canonical}
       />

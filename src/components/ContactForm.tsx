@@ -25,18 +25,18 @@ import {
 import { useRecaptcha } from "@/hooks/useRecaptcha";
 
 const TOPICS = [
-  { value: "general", label: "General Inquiry" },
+  { value: "general", label: "General Question" },
   { value: "computer_repair", label: "Computer Repair" },
-  { value: "virus_removal", label: "Virus & Malware Removal" },
-  { value: "network_security", label: "Home Network Security & Wi-Fi Hardening" },
-  { value: "scam_protection", label: "Scam & Fraud Protection" },
-  { value: "data_recovery", label: "Data Recovery & Backup Help" },
+  { value: "virus_removal", label: "Virus and Malware Removal" },
+  { value: "network_security", label: "Home Network and Wi-Fi Security" },
+  { value: "scam_protection", label: "Scam and Fraud Protection" },
+  { value: "data_recovery", label: "Data Recovery and Backup Help" },
   { value: "onsite_support", label: "On-Site Tech Support" },
   { value: "remote_support", label: "Remote Support" },
-  { value: "smart_home", label: "Smart Home Setup & Security" },
+  { value: "smart_home", label: "Smart Home Setup and Security" },
   { value: "sigint_pro", label: "SIGINT Pro" },
   { value: "sigint_enterprise", label: "SIGINT Enterprise" },
-  { value: "sigint_community", label: "SIGINT Community" },
+  { value: "sigint_community", label: "SIGINT Community Edition" },
   { value: "other", label: "Other" },
 ];
 
@@ -74,21 +74,21 @@ export function ContactForm({
     const errors: Record<string, string> = {};
 
     if (!email.trim()) {
-      errors.email = "Email is required";
+      errors.email = "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
-      errors.email = "Please enter a valid email address";
+      errors.email = "Enter a valid email address.";
     }
 
     if (!message.trim()) {
-      errors.message = "Message is required";
+      errors.message = "Message is required.";
     } else if (message.trim().length < 10) {
-      errors.message = "Message must be at least 10 characters";
+      errors.message = "Enter at least 10 characters.";
     } else if (message.length > 5000) {
-      errors.message = "Message too long (5000 char max)";
+      errors.message = "Message cannot exceed 5,000 characters.";
     }
 
     if (name.trim().length > 100) {
-      errors.name = "Name too long (100 char max)";
+      errors.name = "Name cannot exceed 100 characters.";
     }
 
     setFieldErrors(errors);
@@ -125,7 +125,7 @@ export function ContactForm({
         setFieldErrors({});
       } else {
         const data = await res.json().catch(() => ({}));
-        setErrorMsg(data.error || "Something went wrong");
+        setErrorMsg(data.error || "We could not send your message. Please try again.");
         setStatus("error");
       }
     } catch {
@@ -141,16 +141,16 @@ export function ContactForm({
         className={`flex flex-col items-center justify-center gap-3 py-10 px-6 rounded-lg bg-success/10 border border-success/40 ${className}`}
       >
         <Check className="w-8 h-8 text-success" />
-        <p className="text-success font-semibold">Message sent!</p>
+        <p className="text-success font-semibold">Message sent.</p>
         <p className="text-sm text-ink-muted">
-          We&apos;ll get back to you shortly.
+          We will reply as soon as possible.
         </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
           className="mt-2 text-sm text-accent hover:text-accent-hover hover:underline transition-colors"
         >
-          Send another message
+          Send Another Message
         </button>
       </div>
     );
@@ -263,7 +263,7 @@ export function ContactForm({
                   setFieldErrors((p) => ({ ...p, message: "" }));
                 if (status === "error") setStatus("idle");
               }}
-              placeholder="How can we help?"
+              placeholder="Describe the problem and the help you need."
               rows={5}
               maxLength={5000}
               aria-invalid={fieldErrors.message ? true : undefined}
@@ -309,7 +309,7 @@ export function ContactForm({
         )}
       </form>
       <p className="mt-3 text-xs text-ink-dim text-center">
-        Protected by reCAPTCHA. Your message goes directly to our team.
+        Protected by reCAPTCHA. Never send passwords or security codes.
       </p>
     </div>
   );

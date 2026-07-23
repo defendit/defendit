@@ -2,23 +2,23 @@
   "top5": [
     {
       "icon": "ShieldCheck",
-      "title": "Check for a Secure Website",
-      "description": "Before entering passwords, payment details, or other sensitive information, look for https:// and the padlock icon in your browser."
+      "title": "Check the Website Address",
+      "description": "Before signing in or paying, read the full website address. A padlock means the connection is encrypted, but it does not prove that the site is legitimate."
     },
     {
       "icon": "ExternalLink",
-      "title": "Be Careful with Links",
-      "description": "Do not click unexpected links in emails, text messages, pop-ups, or social media messages. When possible, preview the link first and make sure it goes where you expect."
+      "title": "Pause Before Opening Links",
+      "description": "Unexpected links can lead to fake login or payment pages. Open the official app or type a known website address instead."
     },
     {
       "icon": "KeyRound",
-      "title": "Use Strong, Unique Passwords",
-      "description": "Use a different password for every important account. Longer passwords are safer, and a reputable password manager can help you create and store them securely."
+      "title": "Use Unique Passwords",
+      "description": "Use a different long password for each important account. A reputable password manager can create and store them for you."
     },
     {
       "icon": "Lock",
-      "title": "Turn On Extra Account Protection",
-      "description": "Enable multi-factor authentication whenever it is available. An authenticator app or passkey is usually best, but even text-message verification is better than having no extra protection at all."
+      "title": "Turn On Multi-Factor Authentication",
+      "description": "Choose a passkey or authenticator app when available. Text-message codes are a useful fallback when stronger options are not offered."
     }
   ]
 }

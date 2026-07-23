@@ -1,10 +1,10 @@
 {
   "id": "software-troubleshooting",
-  "title": "Software Troubleshooting & Installs",
-  "headline": "Fix Windows and Mac software problems without jumping straight to a full wipe.",
-  "description": "Professional software installation and troubleshooting for Windows and macOS systems, including clean installs, driver fixes, update recovery, login issues, and application repair for homeowners and small businesses in Ocala, Belleview, The Villages, and surrounding Central Florida areas.",
-  "metaTitle": "Software Troubleshooting & Installs in Ocala & The Villages | Defend I.T. Solutions",
-  "metaDescription": "Fix Windows and macOS update failures, driver problems, broken apps, login issues, and unstable software in Central Florida without defaulting to a full wipe.",
+  "title": "Software Troubleshooting and Installation",
+  "headline": "Fix failed updates, broken applications, driver problems, and sign-in issues without starting with a full reset.",
+  "description": "Software troubleshooting and installation for Windows and macOS computers in Ocala, Belleview, The Villages, and nearby communities, including updates, drivers, applications, and sign-in problems.",
+  "metaTitle": "Software Troubleshooting in Ocala, Belleview, and The Villages",
+  "metaDescription": "Fix failed Windows or macOS updates, driver problems, broken applications, and sign-in issues in Ocala, Belleview, and The Villages.",
   "keywords": [
     "software troubleshooting Ocala FL",
     "software troubleshooting Belleview FL",
@@ -23,61 +23,57 @@
     "The Villages FL",
     "Central Florida"
   ],
-  "icons": [
-    "cpu",
-    "settings",
-    "terminal"
-  ],
+  "icons": ["cpu", "settings", "terminal"],
   "sections": [
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Many software problems that look like hardware failure are actually caused by bad updates, driver conflicts, or startup misconfiguration.",
-        "A failed installation does not always require wiping the computer or losing your files.",
-        "Background services, login items, and broken update states can make an otherwise healthy system feel unstable or unusable."
+        "Failed updates, driver conflicts, and startup settings can make a healthy computer appear to have a hardware problem.",
+        "Many software problems can be repaired without erasing the computer or personal files.",
+        "Old startup programs and conflicting utilities can cause slow performance, errors, and unstable behavior."
       ]
     },
     {
       "heading": "Who This Helps",
       "paragraph": [
-        "This service is for homeowners, remote workers, and small business users dealing with update failures, broken applications, driver issues, or operating systems that no longer behave the way they should.",
-        "It is a good fit when the device still powers on but normal use is blocked by software errors, crashes, loops, failed installs, or persistent login problems."
+        "This service is for homes and small businesses dealing with failed updates, broken applications, driver errors, sign-in problems, or an unstable operating system.",
+        "Choose it when the computer powers on but normal work is blocked by software errors or repeated failures."
       ]
     },
     {
-      "heading": "Signs You Need Software Troubleshooting Help",
+      "heading": "Signs You Need Software Troubleshooting",
       "items": [
-        "Windows or macOS updates fail repeatedly or leave the system unstable",
-        "Applications crash, refuse to open, or behave unpredictably after an install or update",
-        "Drivers are missing, wrong, or causing devices to stop working properly",
-        "You are stuck in a login loop, startup repair loop, or failed-update recovery cycle",
-        "The system is cluttered with old software, startup junk, or conflicting tools"
+        "Windows or macOS updates fail or leave the computer unstable",
+        "Applications crash, will not open, or stopped working after an update",
+        "Missing or incorrect drivers prevent hardware from working",
+        "The computer is stuck in a sign-in, startup repair, or update loop",
+        "Old programs, startup items, or conflicting tools are slowing the system"
       ]
     },
     {
       "heading": "What We Do",
       "paragraph": [
-        "We diagnose software-side problems, stabilize the system, and explain what changed so it is easier to keep running."
+        "We identify the software problem, repair supported issues, and explain any major changes before making them."
       ],
       "items": [
-        "Repair Windows and macOS install issues without defaulting to a full wipe when avoidable",
-        "Fix driver conflicts, missing drivers, and update-related instability",
-        "Recover from failed updates, rollback loops, and broken boot states",
-        "Install, repair, remove, or reconfigure misbehaving applications",
-        "Clean up startup clutter, leftover software, and conflicting utilities",
-        "Use clean installs or reset paths only when they are truly the safer option"
+        "Repair supported Windows and macOS update and installation problems",
+        "Correct missing, outdated, or conflicting drivers",
+        "Recover from failed updates and startup repair loops",
+        "Install, repair, remove, or reconfigure applications",
+        "Remove unnecessary startup items and conflicting software",
+        "Use a clean installation or reset only when it is the safer option"
       ]
     },
     {
       "heading": "When Another Service May Be a Better Fit",
       "paragraph": [
-        "Choose Software Troubleshooting & Installs when the main issue is updates, apps, drivers, logins, or system configuration. If the problem points to failing hardware, [Computer Repair](/services/computer-repair) is usually the better starting point. If you suspect an active infection, [Virus & Malware Removal](/services/virus-removal) should usually come first. If you are trying to protect important files before a major reinstall, [Data Recovery & Backup Help](/services/data-recovery) may also be relevant."
+        "Choose Software Troubleshooting and Installation for updates, applications, drivers, sign-ins, and system settings. For failing hardware, choose [Computer Repair](/services/computer-repair). If the computer may be infected, choose [Virus and Malware Removal](/services/virus-removal). If important files need protection before major work, choose [Data Recovery and Backup Help](/services/data-recovery)."
       ]
     },
     {
       "heading": "Local Availability",
       "paragraph": [
-        "Software troubleshooting is available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We explain what changed, avoid unnecessary resets when possible, and keep your data in mind before taking major corrective steps."
+        "Software troubleshooting is available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We avoid unnecessary resets and consider your files before major repairs."
       ]
     }
   ],
@@ -87,26 +83,26 @@
       "slug": "computer-repair"
     },
     {
-      "label": "Virus & Malware Removal",
+      "label": "Virus and Malware Removal",
       "slug": "virus-removal"
     },
     {
-      "label": "Data Recovery & Backup Help",
+      "label": "Data Recovery and Backup Help",
       "slug": "data-recovery"
     }
   ],
   "faq": [
     {
-      "question": "Can you fix software issues without wiping the computer?",
-      "answer": "Often, yes. Many update failures, driver problems, and application issues can be corrected without a full reinstall. If a wipe or clean install is truly the best option, we explain why first."
+      "question": "Can you fix software problems without wiping the computer?",
+      "answer": "Often. Many update, driver, application, and sign-in problems can be repaired without a full reinstall. If a clean installation is safer, we explain why first."
     },
     {
       "question": "Can you help with Windows updates and driver problems?",
-      "answer": "Yes. We can help with failed updates, rollback loops, missing drivers, incorrect drivers, and the instability that often follows them."
+      "answer": "Yes. We can troubleshoot failed updates, rollback loops, missing drivers, incorrect drivers, and related instability."
     },
     {
-      "question": "Do you work on both Windows and Mac systems?",
-      "answer": "Yes. We help with software issues on both Windows and macOS systems, including installs, updates, application errors, and system cleanup."
+      "question": "Do you work on both Windows and Mac computers?",
+      "answer": "Yes. We support common software problems on Windows and macOS, including installations, updates, applications, sign-ins, and system cleanup."
     }
   ],
   "related": [
@@ -115,16 +111,16 @@
       "slug": "computer-repair"
     },
     {
-      "label": "Data Recovery & Backup Help",
+      "label": "Data Recovery and Backup Help",
       "slug": "data-recovery"
     },
     {
-      "label": "Virus & Malware Removal",
+      "label": "Virus and Malware Removal",
       "slug": "virus-removal"
     }
   ],
   "cta": {
-    "label": "Schedule Software Help",
+    "label": "Schedule Software Support",
     "link": "/contact#schedule-service"
   }
 }

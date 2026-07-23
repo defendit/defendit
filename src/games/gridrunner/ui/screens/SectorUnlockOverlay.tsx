@@ -35,23 +35,22 @@ export function SectorUnlockOverlay({ onClose }: SectorUnlockOverlayProps) {
             SECTOR 02 DETECTED
           </h3>
           <p className="gr-font-mono text-xs text-[#aabbcc]">
-            Trace extends beyond this boundary
+            The trace continues beyond this boundary
           </p>
         </div>
       </header>
 
       <section>
         <p className="gr-font-mono text-xs leading-snug text-[#e0e0e0]">
-          With the Lazarus laundering cell cleared, the eastern gate has gone
-          quiet. You sense the grid keeps going -- more sectors, more threat
-          actors, more infrastructure to defend.
+          With the laundering cell cleared, the eastern gate is quiet. The grid
+          continues beyond it, with more sectors and threats.
         </p>
       </section>
 
       <section>
         <p className="gr-font-mono text-xs leading-snug text-[#aabbcc]">
-          But this firmware ends here. Sector 02 and beyond ship in a future
-          release. Thanks for running the grid, operator.
+          Sector 02 is not available in this release. Thanks for running the
+          grid, operator.
         </p>
       </section>
 

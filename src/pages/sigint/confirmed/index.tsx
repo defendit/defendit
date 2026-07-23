@@ -8,8 +8,8 @@ export default function ConfirmedPage() {
   return (
     <>
       <Meta
-        title="You're Confirmed | SIGINT Dashboard™"
-        description="Your SIGINT Dashboard waiting list signup has been confirmed."
+        title="Email Confirmed | SIGINT Dashboard"
+        description="Your email address is confirmed for SIGINT Dashboard project updates."
         url="https://www.wedefendit.com/sigint/confirmed"
         canonical="https://www.wedefendit.com/sigint/confirmed"
         noindex
@@ -22,17 +22,16 @@ export default function ConfirmedPage() {
           </div>
 
           <h1 className="text-h2 tracking-h2 font-semibold text-ink mb-4">
-            You&rsquo;re on the list.
+            Your email is confirmed.
           </h1>
 
           <p className="text-lead text-ink-muted mb-3 leading-relaxed">
-            Your email is confirmed. We&rsquo;ll let you know when new SIGINT
-            Dashboard features ship.
+            We will send you updates about SIGINT Dashboard development and
+            releases.
           </p>
 
           <p className="text-xs sm:text-sm text-ink-dim mb-8 sm:mb-10">
-            In the meantime, check out the live demo or head back to the SIGINT
-            page.
+            You can review the project demo or return to the SIGINT page.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -44,7 +43,7 @@ export default function ConfirmedPage() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-lg border border-success/40 hover:border-success bg-success/10 hover:bg-success/20 text-ink text-base sm:text-lg font-medium transition-all touch-manipulation"
             >
               <Globe className="w-5 h-5" />
-              Try Live Demo
+              Open Project Demo
             </a>
             <Link
               href="/sigint"

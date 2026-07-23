@@ -2,10 +2,10 @@
   "id": "remote-support",
   "requiresPlan": true,
   "title": "Remote Tech Support",
-  "headline": "Instant help without a house call.",
-  "description": "Remote help for software, settings, and everyday computer problems once secure access is in place.",
-  "metaTitle": "Remote Tech Support for Central Florida Plan Members | Defend I.T. Solutions",
-  "metaDescription": "Secure remote help for Central Florida Remote Support Plan members. Resolve software issues, login problems, email sync, printer setup, and everyday computer problems without a house call.",
+  "headline": "Get help with software, settings, email, printers, and other everyday computer problems on an enrolled device.",
+  "description": "Secure remote help for software, settings, accounts, printers, and everyday computer problems on devices enrolled in the Remote Support Plan.",
+  "metaTitle": "Remote Tech Support for Central Florida Plan Clients",
+  "metaDescription": "Get secure remote help with software, sign-ins, email, printers, settings, and other computer problems through the Remote Support Plan.",
   "keywords": [
     "Remote tech support",
     "Online computer help",
@@ -14,65 +14,88 @@
     "Fix computer remotely"
   ],
   "url": "/services/remote/remote-support",
-  "serviceArea": ["Ocala FL", "Belleview FL", "The Villages FL", "Central Florida"],
+  "serviceArea": [
+    "Ocala FL",
+    "Belleview FL",
+    "The Villages FL",
+    "Central Florida"
+  ],
   "sections": [
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Most software and system issues can be resolved remotely without needing to bring in your computer or schedule an on-site technician.",
-        "Our remote access tools are encrypted, require your permission before starting, and show you everything that happens during the session.",
-        "You can watch the session live, ask questions in real time, and disconnect instantly if you ever feel uncomfortable."
+        "Many software, account, and settings problems can be solved without handling the computer in person.",
+        "Remote access is limited to devices enrolled through the Remote Support Plan.",
+        "The selected access tier determines whether you start each session or authorize unattended support."
       ]
     },
     {
       "heading": "What We Help With",
       "paragraph": [
-        "Remote support is ideal for troubleshooting everyday tech problems, making system adjustments, or getting hands-on help with apps and settings."
+        "Remote support is for problems that do not require hands-on hardware work."
       ],
       "items": [
-        "Email and account setup problems",
+        "Email, account, and sign-in problems",
         "Printer and peripheral setup",
-        "Software issues and settings cleanup",
-        "Browser problems and pop-up cleanup",
-        "General troubleshooting for already-enrolled devices"
+        "Software errors, updates, and settings",
+        "Browser problems and unwanted pop-ups",
+        "General troubleshooting on enrolled devices"
       ]
     },
     {
-      "heading": "How It Works",
+      "heading": "What to Expect",
       "paragraph": [
-        "This service is for issues that do not need hands-on hardware work. We connect securely, work through the problem with you or on your behalf depending on the plan, and leave you with clear next steps.",
-        "We begin with a one-time visit to securely install and configure your remote access software.",
-        "After that, you can request support anytime. No waiting, no confusion.",
-        "We only connect when you approve the session, and you stay in control the entire time."
+        "We connect through the secure access configured during local enrollment.",
+        "Client-initiated sessions start when you request them. Unattended support is available only for authorized devices under the selected plan.",
+        "You can ask questions during a live session and see the work as it happens.",
+        "If the problem requires physical repair or local service, we explain the next step."
       ]
     }
   ],
   "internalLinks": [
-    { "label": "Remote Support Service Plan", "slug": "remote-support-plan" },
-    { "label": "Remote Virus & Malware Removal", "slug": "remote-virus-removal" },
-    { "label": "Remote Security Assessment", "slug": "remote-security-assessment" }
+    {
+      "label": "Remote Support Plan",
+      "slug": "remote-support-plan"
+    },
+    {
+      "label": "Remote Virus and Malware Removal",
+      "slug": "remote-virus-removal"
+    },
+    {
+      "label": "Remote Security Assessment",
+      "slug": "remote-security-assessment"
+    }
   ],
   "faq": [
     {
       "question": "Do I need the Remote Support Plan first?",
-      "answer": "Yes. Remote tech support is available only to clients with an active Remote Support Plan, which starts with an initial setup visit."
+      "answer": "Yes. Remote Tech Support is available only for devices enrolled in an active Remote Support Plan. Enrollment begins with a local setup visit."
     },
     {
-      "question": "What kinds of problems can you fix remotely?",
-      "answer": "Remote sessions are a good fit for software errors, update failures, login issues, email syncing, settings changes, printer setup, and many other everyday computer problems."
+      "question": "What problems can you fix remotely?",
+      "answer": "Remote sessions can address many software, update, sign-in, email, printer, browser, and settings problems. Hardware repair and other hands-on work require local service."
     },
     {
-      "question": "Is remote access secure?",
-      "answer": "Yes. Sessions use secure remote access tools, require your approval before connecting, and let you watch the work in real time."
+      "question": "Can you access my device without permission?",
+      "answer": "Access follows the permissions selected during enrollment. Client-initiated sessions start when you request them. Unattended access is limited to authorized devices under the selected plan and can be revoked."
     }
   ],
   "related": [
-    { "label": "Remote Support Service Plan", "slug": "remote-support-plan" },
-    { "label": "Remote Virus Removal", "slug": "remote-virus-removal" },
-    { "label": "Remote Security Assessment", "slug": "remote-security-assessment" }
+    {
+      "label": "Remote Support Plan",
+      "slug": "remote-support-plan"
+    },
+    {
+      "label": "Remote Virus and Malware Removal",
+      "slug": "remote-virus-removal"
+    },
+    {
+      "label": "Remote Security Assessment",
+      "slug": "remote-security-assessment"
+    }
   ],
   "cta": {
-    "label": "Get Started with Remote Support Today",
+    "label": "Request Remote Tech Support",
     "link": "/contact#schedule-service"
   }
 }

@@ -36,13 +36,13 @@ export const getStaticProps: GetStaticProps = getStaticLocationsIndexProps;
 type ServiceAreasIndexProps = Readonly<{ locations: LocationSummary[] }>;
 
 export default function ServiceAreasIndex({ locations }: ServiceAreasIndexProps) {
-  const crumbs = [{ name: "Home", href: "/" }, { name: "Service Areas" }];
+  const crumbs = [{ name: "Home", href: "/" }, { name: "Serving Central Florida" }];
 
   return (
     <>
       <Meta
-        title="Service Areas | Defend I.T. Solutions"
-        description="Local cybersecurity and tech support across Central Florida, including The Villages and the surrounding communities."
+        title="Central Florida Cybersecurity and Tech Support Service Areas"
+        description="Find local computer repair, virus removal, Wi-Fi help, scam protection, and on-site tech support in Ocala, Belleview, The Villages, and nearby communities."
         url={CANONICAL}
         canonical={CANONICAL}
       />
@@ -63,11 +63,11 @@ export default function ServiceAreasIndex({ locations }: ServiceAreasIndexProps)
             Service Areas
           </p>
           <h1 className="mt-4 text-balance text-display tracking-display font-semibold text-ink">
-            Local help across Central Florida
+            Local Cybersecurity and Tech Support Near You
           </h1>
           <p className="mt-5 max-w-lg text-lead text-ink-muted">
-            On-site and remote cybersecurity and tech support for homes and small
-            businesses across our Central Florida service areas.
+            We provide on-site help for homes and small businesses in Ocala,
+            Belleview, The Villages, and nearby communities.
           </p>
         </HeroBanner>
 

@@ -23,16 +23,16 @@ type Step = Readonly<{ title: string; body: string }>;
 
 const STEPS: ReadonlyArray<Step> = [
   {
-    title: "Reach out",
-    body: "Call, text, or send a message describing what you need help with.",
+    title: "Tell us what is happening",
+    body: "Call, text, or send a message with a brief description of the problem.",
   },
   {
-    title: "On-site or remote",
-    body: "We come to your home or business to help in person. Clients who have already had an on-site visit can also get remote support for quick follow-ups.",
+    title: "Confirm the service",
+    body: "We confirm whether you need an on-site visit, arranged pickup and drop-off, or remote support for an enrolled client.",
   },
   {
-    title: "Book the next step",
-    body: "We recommend the right service and book the visit or follow-up that fits your situation.",
+    title: "Schedule the work",
+    body: "We explain the expected work and cost, then schedule the service that fits your situation.",
   },
 ];
 
@@ -47,8 +47,8 @@ export function HowItWorks() {
           How It Works
         </h2>
         <p className="mt-4 text-ink-muted leading-relaxed">
-          From the first call to a solved problem, the process is simple and no
-          pressure.
+          Tell us what is happening. We will help identify the right service and
+          explain what comes next.
         </p>
       </div>
 
@@ -56,7 +56,7 @@ export function HowItWorks() {
         <figure className="fade-image relative aspect-[16/9] w-full overflow-hidden">
           <ThemedImage
             dark="/img/services/how-it-works-dark.jpg"
-            alt="Three steps: reach out, an on-site or remote visit, then a secured device"
+            alt="Three steps: describe the problem, confirm the service, and schedule the work"
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />

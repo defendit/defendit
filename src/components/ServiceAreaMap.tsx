@@ -72,8 +72,9 @@ export default function ServiceAreaMap() {
       </h2>
 
       <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto">
-        We provide on-site and remote support across Ocala, Belleview, The
-        Villages, and nearby Central Florida communities.
+        On-site service and Remote Support Plan enrollment are available in Ocala,
+        Belleview, The Villages, and nearby communities. Online training and
+        tutoring are available across the United States.
       </p>
 
       <div

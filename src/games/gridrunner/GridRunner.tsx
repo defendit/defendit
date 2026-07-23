@@ -29,10 +29,10 @@ import { TutorialPrompt } from "./ui/screens/TutorialPrompt";
 import { BattleTransition } from "./ui/shared/BattleTransition";
 
 const ONBOARDING_COPY: Record<string, string> = {
-  loot: "You found a new tool! Open your Inventory (press I) to equip it. Better tools mean more damage.",
-  shop: "Welcome to the shop. Spend Bits to buy new tools. Higher-level tools unlock as you level up.",
-  disc: "Your Identity Disc just updated. Press Shift+D to open it anytime. It records everything you learn.",
-  boss: "Warning: boss ahead. Make sure your tools are equipped and your HP is full before stepping on that tile.",
+  loot: "You found a tool. Open Inventory or press I to equip it. Its stats determine damage, accuracy, and energy use.",
+  shop: "Spend Bits to buy tools. More tools become available as you level up.",
+  disc: "Identity Disc updated. Open it from the menu or press Shift+D to review tools and intel.",
+  boss: "Boss ahead. Equip your tools and restore your HP before moving forward.",
 };
 import { zoneNames } from "./data/sectors";
 

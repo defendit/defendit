@@ -3,8 +3,8 @@
   "slug": "ocala",
   "city": "Ocala",
   "state": "FL",
-  "metaTitle": "Cybersecurity & Tech Support in Ocala, FL | Defend I.T. Solutions",
-  "metaDescription": "Local, founder-led tech and security help in Ocala, FL. Scam and pop-up cleanup, virus removal, Wi-Fi and device setup, and computer repair. We come to you, in plain English, with no upsell.",
+  "metaTitle": "Cybersecurity and Tech Support in Ocala, FL",
+  "metaDescription": "Local computer repair, virus removal, Wi-Fi help, scam protection, and on-site tech support for homes and small businesses in Ocala and Marion County.",
   "keywords": [
     "tech support Ocala FL",
     "computer repair Ocala FL",
@@ -16,9 +16,9 @@
     "small business IT support Ocala FL",
     "cybersecurity Ocala FL"
   ],
-  "eyebrow": "Service Area",
-  "h1": "Cybersecurity & Tech Support in Ocala, FL",
-  "headline": "We come to you, fix the problem, and tell you what was actually wrong.",
+  "eyebrow": "Serving Ocala and Marion County",
+  "h1": "Cybersecurity and Tech Support in Ocala, FL",
+  "headline": "Local computer repair, virus removal, Wi-Fi help, scam protection, and on-site tech support throughout Ocala and Marion County.",
   "heroImage": {
     "src": "/img/locations/ocala-hero-dark.jpg",
     "alt": "An Ocala home in horse country with its laptop, router, and phone connected under a glowing network dome"
@@ -28,8 +28,8 @@
     "alt": "Abstract circuit board with a security shield"
   },
   "intro": [
-    "We work across Ocala and Marion County, from the 55+ communities (On Top of the World, Oak Run, Stone Creek, SummerGlen) to families and small businesses in town.",
-    "Most tech problems aren't complicated. They need someone who shows up, fixes it, and explains it in plain English. We come to you, on-site or remote."
+    "Defend I.T. Solutions provides on-site cybersecurity and tech support throughout Ocala and Marion County, including On Top of the World, Oak Run, Stone Creek, SummerGlen, and nearby communities.",
+    "We help homes and small businesses with computer problems, malware, scams, Wi-Fi, account security, and connected devices. We explain the problem, your options, and the cost before work begins."
   ],
   "areaServed": [
     "Ocala FL",
@@ -46,32 +46,36 @@
       "SummerGlen",
       "Downtown Ocala"
     ],
-    "nearbyTowns": ["Belleview", "Summerfield", "Silver Springs"]
+    "nearbyTowns": [
+      "Belleview",
+      "Summerfield",
+      "Silver Springs"
+    ]
   },
   "sections": [
     {
-      "heading": "Why people call us",
+      "heading": "Why Ocala Clients Call Us",
       "paragraph": [
-        "You don't need to understand it. You need someone who fixes it, tells you the truth about what was wrong, and isn't working an angle on you."
+        "You do not need to diagnose the problem before contacting us. Tell us what is happening, and we will help identify the right service."
       ],
       "items": [
-        "We come to you, anywhere in Ocala and Marion County. Local, not a call center.",
-        "We tell you what's wrong in plain English, and write it down if you want it.",
-        "Clear quote before any work starts. No surprise fees.",
-        "We recommend what you need, and tell you when something can wait or isn't worth fixing."
+        "On-site service throughout Ocala and Marion County",
+        "Clear explanations of the problem and available options",
+        "A clear quote before work begins",
+        "Practical recommendations, including when repair or replacement is not worthwhile"
       ]
     },
     {
-      "heading": "The scams we see most",
+      "heading": "Common Scams and Security Problems",
       "paragraph": [
-        "Scammers go after Ocala's retirees hard, because it works. These are the ones we clean up after most."
+        "Fake security alerts, impersonation calls, phishing messages, and unauthorized remote access are common reasons clients ask for help."
       ],
       "items": [
-        "Pop-ups that say your computer is infected, with a number to call.",
-        "Callers pretending to be Microsoft, Apple, Amazon, or your bank.",
-        "Demands for gift cards or wire transfers to fix an account.",
-        "Romance, grandparent, and impersonation scams.",
-        "Remote-access software left behind by someone you shouldn't have trusted."
+        "Fake virus or security alerts that display a phone number",
+        "Calls or messages pretending to come from a bank, technology company, delivery service, or government agency",
+        "Requests for gift cards, cryptocurrency, wire transfers, or other unusual payments",
+        "Phishing messages that imitate account warnings, invoices, or delivery notices",
+        "Remote-access software installed by an unknown or untrusted person"
       ],
       "image": {
         "src": "/img/services/scareware-lock-dark.jpg",
@@ -79,95 +83,95 @@
       }
     },
     {
-      "heading": "Everyday tech help",
+      "heading": "Everyday Computer and Network Help",
       "paragraph": [
-        "Most of what we do is quieter than that. It's making things work again."
+        "We also handle routine problems that make computers, networks, and connected devices difficult to use."
       ],
       "items": [
-        "Wi-Fi, printers, and smart TVs that stay working.",
-        "A new computer, tablet, or phone, set up with your files moved over.",
-        "Email and accounts cleaned up after a scare.",
-        "A slow computer looked over and tuned up."
+        "Fix weak Wi-Fi, printer problems, and unreliable connected devices",
+        "Set up a computer, phone, or tablet and transfer accessible files",
+        "Resolve email, sign-in, and account problems",
+        "Diagnose slow, crashing, overheating, or non-booting computers"
       ]
     },
     {
-      "heading": "On-site or remote, how it works",
+      "heading": "How Local and Remote Support Work",
       "paragraph": [
-        "Tell us what's wrong and we come to you. Once you're set up, you can move to our Remote Support Plan, so the next fix happens remotely with no second trip. Either way, you get a device that works and a straight answer."
+        "Tell us what is happening, and we will help identify the right service. Most local clients begin with on-site help or arranged pickup and drop-off. Remote Support Plan enrollment starts with an in-person setup visit."
       ],
       "image": {
         "src": "/img/services/how-it-works-dark.jpg",
-        "alt": "Three steps: book an appointment, on-site or remote service, then a secured device"
+        "alt": "Three steps: describe the problem, confirm the service, and schedule the work"
       }
     },
     {
-      "heading": "Where we work",
+      "heading": "Ocala Service Area",
       "paragraph": [
-        "We cover Ocala and Marion County: the 55+ communities (On Top of the World, Oak Run, Stone Creek, SummerGlen), plus Belleview and Summerfield."
+        "We serve Ocala and Marion County, including On Top of the World, Oak Run, Stone Creek, SummerGlen, Downtown Ocala, Silver Springs, Belleview, and Summerfield."
       ]
     }
   ],
   "services": [
     {
-      "label": "Scam & Fraud Protection",
+      "label": "Scam and Fraud Protection",
       "slug": "scam-protection",
-      "summary": "Help after a scam call or pop-up, and how to stop the next one."
+      "summary": "Review suspicious calls, messages, or pop-ups, secure affected accounts, and learn what to watch for next."
     },
     {
-      "label": "Virus & Malware Removal",
+      "label": "Virus and Malware Removal",
       "slug": "virus-removal",
-      "summary": "Cleanup for pop-ups, fake warnings, and infected machines."
+      "summary": "Remove supported malware, browser hijackers, fake alerts, and unwanted software from an infected computer."
     },
     {
       "label": "On-Site Tech Support",
       "slug": "onsite-tech-support",
-      "summary": "Someone at your door who sorts it out in person."
+      "summary": "Get in-person help with computers, Wi-Fi, printers, accounts, and connected devices."
     },
     {
-      "label": "Wi-Fi & Network Setup",
+      "label": "Wi-Fi and Network Setup",
       "slug": "network-setup",
-      "summary": "Home Wi-Fi and devices, set up to stay working."
+      "summary": "Improve weak coverage, dropped connections, router placement, and new network equipment."
     },
     {
-      "label": "Password Manager Setup & Account Safety",
+      "label": "Password Manager Setup and Account Security",
       "slug": "password-management",
-      "summary": "Simpler, safer logins, and account help after a scam."
+      "summary": "Set up a password manager, replace reused passwords, and organize multi-factor authentication and recovery."
     },
     {
       "label": "Computer Repair",
       "slug": "computer-repair",
-      "summary": "A slow or failing computer, brought back."
+      "summary": "Diagnose slow, crashing, overheating, damaged, or non-booting laptops and desktops."
     }
   ],
   "testimonials": [],
   "faq": [
     {
-      "question": "Do you come to homes and businesses in Ocala?",
-      "answer": "Yes, anywhere in Ocala and Marion County. We come to you."
+      "question": "Do you provide on-site service in Ocala?",
+      "answer": "Yes. We serve homes and small businesses throughout Ocala and Marion County. Arranged pickup and drop-off may also be available when that fits the work better."
     },
     {
-      "question": "Can you help me remotely without coming out first?",
-      "answer": "The first visit is on-site, because we set up the secure connection in person. After that, most fixes happen remotely through our Remote Support Plan, same-day and after-hours when we can."
+      "question": "Can you help remotely without visiting first?",
+      "answer": "Plan-based remote support requires an in-person enrollment visit. Online training and tutoring are separate services and do not require the Remote Support Plan."
     },
     {
-      "question": "I got a pop-up saying my computer is infected and to call a number. What should I do?",
-      "answer": "Don't call the number, and don't let anyone connect to your computer. It's a common scam. Power it off if you can, and we'll check whether anything's actually wrong."
+      "question": "A pop-up says my computer is infected and tells me to call. What should I do?",
+      "answer": "Do not call the number or allow anyone to connect to the computer. Close the browser if possible. If someone already connected, disconnect the computer from the internet and turn it off, then contact us for help."
     },
     {
-      "question": "Someone called saying they were from Microsoft or my bank. Is that real?",
-      "answer": "Almost never. Real companies don't call out of the blue to fix your computer or ask for gift cards. If you already gave someone access or information, we can help you lock the accounts back down."
+      "question": "Someone called claiming to be my bank or a technology company. How can I verify the call?",
+      "answer": "End the call and contact the organization through a phone number on its official website, your account statement, or the back of your card. Do not use a number provided by the caller."
     },
     {
-      "question": "Do I need to be good with technology to work with you?",
-      "answer": "No. We work at your pace and explain things in plain English. No talking down, and we'll write the steps down if that helps."
+      "question": "Do I need to understand the technical problem before contacting you?",
+      "answer": "No. Describe what you see, when it started, and which devices are affected. We will help identify the right starting point and explain the options in plain English."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Depends on the work, and you get a clear quote before we start. No surprises, and we won't push anything you don't need."
+      "question": "How much does service cost?",
+      "answer": "The cost depends on the work. We explain the expected price before service begins and do not add work without discussing it with you."
     }
   ],
   "cta": {
-    "label": "Get Local Help in Ocala",
+    "label": "Request Local Help in Ocala",
     "link": "/contact#schedule-service"
   }
 }

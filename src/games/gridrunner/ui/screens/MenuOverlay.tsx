@@ -14,26 +14,26 @@ const MENU_ITEMS = [
   {
     id: "disc",
     label: "DISC",
-    desc: "Identity Disc encyclopedia",
+    desc: "Review tools and types",
     battleOk: true,
   },
   {
     id: "inventory",
     label: "INVENTORY",
-    desc: "View and equip tools",
+    desc: "Equip and manage tools",
     battleOk: true,
   },
   {
     id: "operator",
     label: "OPERATOR",
-    desc: "Stats, badges, level",
+    desc: "View stats, badges, and level",
     battleOk: true,
   },
   { id: "save", label: "SAVE", desc: "Save your progress", battleOk: false },
   {
     id: "settings",
     label: "SETTINGS",
-    desc: "Audio and controls",
+    desc: "Change audio settings",
     battleOk: true,
   },
 ] as const;

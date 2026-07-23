@@ -1,10 +1,10 @@
 {
   "id": "onsite-tech-support",
   "title": "On-Site Tech Support",
-  "headline": "In-home tech help when one problem has turned into three.",
-  "description": "Some jobs are simply easier to sort out in person. We come to you, work through the issue, and help get things back into a sane state.",
-  "metaTitle": "On-Site Tech Support in Ocala & The Villages | Defend I.T. Solutions",
-  "metaDescription": "House-call tech support for computers, Wi-Fi, printers, new devices, and general troubleshooting in Central Florida. Clear in-person help without the repair-shop hassle.",
+  "headline": "Get in-person help with computers, Wi-Fi, printers, new devices, and other everyday technology problems.",
+  "description": "On-site tech support for computers, Wi-Fi, printers, new devices, account access, and connected devices in Ocala, Belleview, The Villages, and nearby communities.",
+  "metaTitle": "On-Site Tech Support in Ocala, Belleview, and The Villages",
+  "metaDescription": "Get in-home help with computers, Wi-Fi, printers, new devices, and account access in Ocala, Belleview, The Villages, and nearby communities.",
   "keywords": [
     "on-site tech support Ocala FL",
     "in-home computer help Ocala",
@@ -25,71 +25,80 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Many slow computers can be fixed by removing unnecessary startup programs, malware, or misconfigured software.",
-        "Poor router placement or interference can significantly reduce Wi-Fi performance, even on fast Internet plans.",
-        "Overheating and driver issues are common causes of random shutdowns, crashes, and printer errors."
+        "Slow computers often improve after removing unwanted startup programs, malware, or misconfigured software.",
+        "Router placement, walls, and nearby electronics can weaken Wi-Fi, even with a fast internet plan.",
+        "Overheating, outdated drivers, and software conflicts can cause shutdowns, crashes, and printer problems."
       ]
     },
     {
       "heading": "Who This Helps",
       "paragraph": [
-        "This service is for homeowners, retirees, and small business owners who want someone to come out in person and sort through a problem that may involve more than one device, account, printer, or network issue.",
-        "It is especially helpful when you are not sure which specific service fits yet and want hands-on help without dragging equipment to a shop."
+        "On-site tech support is for homeowners and small businesses that need help with computers, Wi-Fi, printers, accounts, or connected devices.",
+        "It is also a good starting point when several problems are connected or you are not sure which service you need."
       ]
     },
     {
-      "heading": "Signs On-Site Tech Support Is the Right Starting Point",
+      "heading": "When to Choose On-Site Tech Support",
       "items": [
-        "The issue affects multiple devices or seems tied to both the computer and the home network",
-        "You need help setting up a new computer, printer, phone, tablet, or smart device in person",
-        "You want someone to troubleshoot on-site because the problem is hard to explain or reproduce remotely",
-        "You are not sure whether the issue is repair, software, Wi-Fi, account setup, or a mix of problems",
-        "You prefer patient, in-person guidance rather than trying to sort it out alone"
+        "Several devices have the same problem",
+        "A computer, printer, or smart device will not connect to Wi-Fi",
+        "You need in-person help setting up a new computer, printer, phone, tablet, or smart device",
+        "The problem is difficult to explain or reproduce remotely",
+        "You are not sure whether the cause is the device, software, account, or network"
       ]
     },
     {
       "heading": "What We Do",
       "paragraph": [
-        "This service is for the situations that do not fit neatly into one label: a Wi-Fi problem plus a printer issue, a new device that will not talk to the rest of the house, or a handful of smaller problems that are easier to knock out in one visit."
+        "We diagnose the problem where it occurs and focus on the issues that matter most during the visit."
       ],
       "items": [
-        "Troubleshoot problems across multiple devices or rooms",
-        "Set up new devices and make sure they work with the rest of the setup",
-        "Straighten out printers, Wi-Fi, smart-home gear, and account issues",
-        "Clean up settings and small issues that are wasting time day to day",
-        "Recommend a more specific service if the problem turns out to need repair, recovery, or malware cleanup"
+        "Troubleshoot computers, printers, Wi-Fi, accounts, and connected devices",
+        "Set up new equipment and connect it to your existing network and accounts",
+        "Fix settings and connection problems across devices or rooms",
+        "Explain what caused the problem and what to do next",
+        "Recommend a more specific service if the job requires repair, data recovery, or malware removal"
       ]
     },
     {
       "heading": "When Another Service May Be a Better Fit",
       "paragraph": [
-        "Choose On-Site Tech Support when you want broad hands-on help or the problem may span multiple categories. If you already know the main issue is a failing computer, [Computer Repair](/services/computer-repair) may be the better fit. If the main issue is whole-home Wi-Fi performance, [Wi-Fi & Network Setup](/services/network-setup) may be more precise. If the main issue is scam recovery or scam prevention, [Scam & Fraud Protection](/services/scam-protection) may be the better starting point."
+        "Choose On-Site Tech Support when you need broad, in-person help or several issues may be connected. For a slow, damaged, or non-booting computer, choose [Computer Repair](/services/computer-repair). For Wi-Fi coverage, router, or network problems, choose [Wi-Fi and Network Setup](/services/network-setup). For help after a scam or suspicious message, choose [Scam and Fraud Protection](/services/scam-protection)."
       ]
     },
     {
       "heading": "Local Availability",
       "paragraph": [
-        "On-site tech support is available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We explain the work clearly, help prioritize what matters most, and keep the visit focused on practical outcomes."
+        "On-site tech support is available for homes and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities. We explain the problem, your options, and the cost before work begins."
       ]
     }
   ],
   "internalLinks": [
-    { "label": "Computer Repair", "slug": "computer-repair" },
-    { "label": "Wi-Fi & Network Setup", "slug": "network-setup" },
-    { "label": "Scam & Fraud Protection", "slug": "scam-protection" }
+    {
+      "label": "Computer Repair",
+      "slug": "computer-repair"
+    },
+    {
+      "label": "Wi-Fi and Network Setup",
+      "slug": "network-setup"
+    },
+    {
+      "label": "Scam and Fraud Protection",
+      "slug": "scam-protection"
+    }
   ],
   "faq": [
     {
       "question": "Do you come to my home?",
-      "answer": "Yes. This service is designed for on-site visits in Ocala, Belleview, The Villages, and nearby Central Florida communities."
+      "answer": "Yes. We provide on-site service for homes and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities."
     },
     {
       "question": "Can you help with more than one issue during a visit?",
-      "answer": "Usually, yes. On-Site Tech Support is often the best starting point when the problem spans several devices or categories, like a computer issue plus Wi-Fi problems or printer setup."
+      "answer": "Yes, when time allows. We will help you prioritize related issues and address the most important problems first."
     },
     {
       "question": "What if I am not sure which service I need?",
-      "answer": "That is exactly what this page is for. If you need a house call and want someone to assess the situation in person, On-Site Tech Support is the right starting point when the scope is not fully clear yet."
+      "answer": "Choose On-Site Tech Support if you want in-person help and do not yet know whether the problem involves the device, software, account, or network."
     }
   ],
   "related": [
@@ -98,16 +107,16 @@
       "slug": "computer-repair"
     },
     {
-      "label": "Wi-Fi & Network Setup",
+      "label": "Wi-Fi and Network Setup",
       "slug": "network-setup"
     },
     {
-      "label": "Scam & Fraud Protection",
+      "label": "Scam and Fraud Protection",
       "slug": "scam-protection"
     }
   ],
   "cta": {
-    "label": "Book On-Site Support",
+    "label": "Schedule On-Site Support",
     "link": "/contact#schedule-service"
   },
   "icons": ["badge-check", "home", "wrench"]

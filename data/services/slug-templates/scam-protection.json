@@ -1,10 +1,10 @@
 {
   "id": "scam-protection",
-  "title": "Scam & Fraud Protection",
-  "headline": "Practical help spotting scams and knowing what to do next.",
-  "description": "Scam and fraud protection help for households, retirees, caregivers, and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida, with practical guidance on suspicious calls, texts, emails, websites, and payment requests.",
-  "metaTitle": "Scam Protection for Seniors & Families in Central Florida | Defend I.T. Solutions",
-  "metaDescription": "Scam protection and fraud-prevention help for seniors, families, and caregivers in Central Florida. Learn to spot phishing, fake tech support, impersonation, and other common scams.",
+  "title": "Scam and Fraud Protection",
+  "headline": "Learn how to recognize scams, respond to suspicious messages, and protect your accounts.",
+  "description": "Scam and fraud protection for individuals, families, caregivers, and small businesses in Ocala, Belleview, The Villages, and nearby communities.",
+  "metaTitle": "Scam and Fraud Protection in Ocala, Belleview, and The Villages",
+  "metaDescription": "Get practical help with phishing, fake tech support, impersonation, suspicious messages, and account protection in Ocala, Belleview, and The Villages.",
   "keywords": [
     "scam protection Ocala FL",
     "scam protection Belleview FL",
@@ -27,26 +27,26 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Scams rarely look like obvious scams anymore. They often show up as account warnings, delivery problems, tech support messages, family emergencies, or payment requests.",
-        "A lot of fraud succeeds because people are rushed, pressured, or embarrassed - not because they are careless.",
-        "A calm second look, safer account habits, and a few device and browser changes can prevent a lot of avoidable losses."
+        "Scammers often pretend to be banks, delivery companies, government agencies, technology support, or family members.",
+        "Pressure and urgency are deliberate. A message that demands immediate payment, secrecy, or account access should be checked through a trusted contact method.",
+        "Antivirus cannot stop scams that convince someone to send money, share a password, or approve account access."
       ]
     },
     {
       "heading": "Who This Helps",
       "paragraph": [
-        "This service is especially helpful for retirees, older adults, families, and caregivers who want practical help avoiding phone scams, phishing, fake tech support, impersonation attempts, and other everyday fraud risks.",
-        "It is the right fit when the goal is prevention, safer habits, and confidence responding to suspicious messages or callers before damage is done."
+        "This service is for individuals, families, caregivers, and small businesses that want help recognizing phone, email, text, website, and payment scams.",
+        "It can help before a loss, after a close call, or whenever you are unsure whether a message or caller is legitimate."
       ]
     },
     {
       "heading": "Signs Scam Protection Would Help",
       "items": [
-        "You or a family member keep getting suspicious calls, texts, emails, or pop-ups asking for money, passwords, or urgent action",
-        "You want help recognizing fake banks, fake tech support, fake package alerts, and impersonation scams",
-        "A parent or older relative in The Villages or nearby needs safer device settings and clearer guidance",
-        "You clicked something suspicious, gave information to the wrong person, or are no longer sure what is safe",
-        "You want practical scam education without jargon, pressure, or fear-based marketing"
+        "You receive suspicious calls, texts, emails, or pop-ups that demand money, passwords, or immediate action",
+        "You want help recognizing fake banks, package alerts, technology support, or government messages",
+        "You clicked a suspicious link, shared information, or gave someone remote access",
+        "You help a family member who needs clearer guidance and safer device settings",
+        "You want practical scam education without jargon or scare tactics"
       ],
       "image": {
         "src": "/img/services/scareware-lock-dark.jpg",
@@ -56,61 +56,70 @@
     {
       "heading": "What We Do",
       "paragraph": [
-        "We help people understand what a scam is trying to do, what warning signs to watch for, and what to change so the same trick is less likely to work next time."
+        "We review the situation calmly, explain the warning signs, and help reduce the chance that the same tactic works again."
       ],
       "items": [
-        "Walk through common phone, email, text, and website scams using real examples",
-        "Show how to spot urgency, impersonation, fake payment requests, and other pressure tactics",
+        "Explain common phone, email, text, website, and payment scams",
+        "Show how urgency, impersonation, secrecy, and unusual payment requests are used",
         "Review safer settings for computers, phones, browsers, email, and calls",
-        "Help evaluate suspicious messages and explain what to do next",
-        "Clean up risky settings or follow up after a scare or near miss"
+        "Help evaluate suspicious messages and identify the next steps",
+        "Secure risky settings after a scare or close call"
       ]
     },
     {
       "heading": "When Another Service May Be a Better Fit",
       "paragraph": [
-        "Choose Scam & Fraud Protection when the main need is prevention, education, or help responding to suspicious messages.",
-        "If a device is already infected, [Virus & Malware Removal](/services/virus-removal) is usually the better place to start.",
-        "If the main issue is securing accounts, passwords, and multi-factor login after a scare, [Password Manager Setup & Account Safety](/services/password-management) may be the better fit."
+        "Choose Scam and Fraud Protection for prevention, education, or help responding to suspicious messages.",
+        "If a computer may be infected, choose [Virus and Malware Removal](/services/virus-removal).",
+        "If passwords, account access, or multi-factor authentication need attention, choose [Password Manager Setup and Account Security](/services/password-management)."
       ]
     },
     {
       "heading": "Local Availability",
       "paragraph": [
-        "Scam protection sessions are available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We keep the guidance calm, clear, and practical so it is useful for both individuals and families."
+        "Scam protection is available in Ocala, Belleview, The Villages, and nearby Central Florida communities. Sessions are calm, practical, and suitable for individuals, families, caregivers, and small businesses."
       ]
     }
   ],
   "internalLinks": [
-    { "label": "Password Manager Setup & Account Safety", "slug": "password-management" },
-    { "label": "Virus & Malware Removal", "slug": "virus-removal" },
-    { "label": "Home Network Security & Wi-Fi Hardening", "slug": "home-network-security" }
+    {
+      "label": "Password Manager Setup and Account Security",
+      "slug": "password-management"
+    },
+    {
+      "label": "Virus and Malware Removal",
+      "slug": "virus-removal"
+    },
+    {
+      "label": "Home Network and Wi-Fi Security",
+      "slug": "home-network-security"
+    }
   ],
   "faq": [
     {
       "question": "Do I still need scam protection if I already have antivirus?",
-      "answer": "Yes. Many scams do not rely on malware at all. They rely on urgent messages, fake support calls, impersonation, and social pressure. Scam protection is about helping you recognize and stop those tactics before they succeed."
+      "answer": "Yes. Many scams rely on pressure and impersonation instead of malicious software. Antivirus cannot stop you from sending money, sharing information, or approving access in response to a convincing message."
     },
     {
       "question": "Can you help after I clicked a scam link or gave information to someone?",
-      "answer": "Yes. We can help you think through the next steps, secure devices and settings, and point you toward the right follow-up work. Depending on what happened, Virus & Malware Removal or Password Manager Setup & Account Safety may also be important."
+      "answer": "Yes. We can help assess what happened, secure affected devices and settings, and identify the next steps for passwords and accounts. Virus removal or account security work may also be necessary."
     },
     {
       "question": "Is this only for seniors?",
-      "answer": "No. It is useful for anyone, but it is especially valuable for retirees, families, and caregivers who want clearer protection against the kinds of scams that target older adults and less technical users."
+      "answer": "No. Anyone can be targeted. This service is useful for individuals, families, caregivers, and small businesses that want practical help recognizing and responding to scams."
     }
   ],
   "related": [
     {
-      "label": "Password Manager Setup & Account Safety",
+      "label": "Password Manager Setup and Account Security",
       "slug": "password-management"
     },
     {
-      "label": "Home Network Security & Wi-Fi Hardening",
+      "label": "Home Network and Wi-Fi Security",
       "slug": "home-network-security"
     },
     {
-      "label": "Virus & Malware Removal",
+      "label": "Virus and Malware Removal",
       "slug": "virus-removal"
     }
   ],
@@ -118,9 +127,5 @@
     "label": "Schedule Scam Protection Help",
     "link": "/contact#schedule-service"
   },
-  "icons": [
-    "presentation",
-    "glasses",
-    "shield-alert"
-  ]
+  "icons": ["presentation", "glasses", "shield-alert"]
 }

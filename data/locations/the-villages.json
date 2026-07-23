@@ -3,8 +3,8 @@
   "slug": "the-villages",
   "city": "The Villages",
   "state": "FL",
-  "metaTitle": "Cybersecurity & Tech Support in The Villages, FL | Defend I.T. Solutions",
-  "metaDescription": "Calm, local tech and security help for The Villages, FL. Scam and pop-up cleanup, virus removal, Wi-Fi and device setup, explained simply, with no pressure.",
+  "metaTitle": "Cybersecurity and Tech Support in The Villages, FL",
+  "metaDescription": "Patient in-home computer help, virus removal, Wi-Fi support, scam protection, and account security throughout The Villages and nearby communities.",
   "keywords": [
     "tech support The Villages FL",
     "computer help The Villages FL",
@@ -16,9 +16,9 @@
     "tech support scam help The Villages",
     "cybersecurity The Villages FL"
   ],
-  "eyebrow": "Service Area",
-  "h1": "Cybersecurity & Tech Support in The Villages, FL",
-  "headline": "One of the most scam-targeted places in the country. We help you stay ahead of it.",
+  "eyebrow": "Serving The Villages and Nearby Communities",
+  "h1": "Cybersecurity and Tech Support in The Villages, FL",
+  "headline": "Patient in-home help with computers, Wi-Fi, scams, accounts, and connected devices throughout The Villages and nearby communities.",
   "heroImage": {
     "src": "/img/locations/the-villages-hero-dark.jpg",
     "alt": "A Central Florida home with its laptop, router, and phone protected under a security shield"
@@ -28,8 +28,8 @@
     "alt": "Abstract circuit board with a security shield"
   },
   "intro": [
-    "The Villages is one of the largest retirement communities in the country. That's exactly why the scammers work it so hard. We help you see it coming, and put it right when it gets through.",
-    "The rest is ordinary: a printer that won't print, Wi-Fi that dies at the back of the house, a tablet the grandkids set up wrong. We come to you, make it work, and leave you able to use it. No pressure, no jargon."
+    "Defend I.T. Solutions provides patient, in-home tech support throughout The Villages, including Spanish Springs, Lake Sumter Landing, Brownwood, Sawgrass Grove, Eastport, and nearby communities.",
+    "We help with computer problems, malware, suspicious calls and messages, Wi-Fi, account security, and connected devices. We explain each step clearly and give you time to ask questions."
   ],
   "areaServed": [
     "The Villages FL",
@@ -46,32 +46,36 @@
       "Sawgrass Grove",
       "Eastport"
     ],
-    "nearbyTowns": ["Lady Lake", "Wildwood", "Summerfield"]
+    "nearbyTowns": [
+      "Lady Lake",
+      "Wildwood",
+      "Summerfield"
+    ]
   },
   "sections": [
     {
-      "heading": "Why people call us",
+      "heading": "Patient, In-Home Tech Support",
       "paragraph": [
-        "You don't need to become an expert. You need someone you trust to fix it and tell you, plainly, what was actually wrong."
+        "You do not need to diagnose the problem or learn technical terms before asking for help."
       ],
       "items": [
-        "We come to you, across The Villages and the nearby towns.",
-        "We explain it simply, and write it down when that helps.",
-        "You get a clear quote before any work starts.",
-        "No upsells, no pressure, no jargon."
+        "On-site service throughout The Villages and nearby communities",
+        "Clear explanations at a pace that works for you",
+        "Written steps for important settings or tasks when helpful",
+        "A clear quote and practical options before work begins"
       ]
     },
     {
-      "heading": "The scams we see most",
+      "heading": "Scam and Account Protection",
       "paragraph": [
-        "If you live here, you've already gotten the call. The Villages is the target, and these are the ones we clean up after most."
+        "Clients often contact us after a suspicious pop-up, phone call, text message, email, or account warning."
       ],
       "items": [
-        "Lock-screen pop-ups that say you're infected, with a number to call now.",
-        "Cold calls from a fake Microsoft, Apple, Amazon, or bank 'fraud department.'",
-        "Gift-card and wire-transfer demands to fix an account that was never broken.",
-        "Romance, grandparent, and impersonation scams aimed at people living alone.",
-        "Remote-access software a stranger talked you into installing."
+        "Fake virus alerts that display a support phone number",
+        "Calls pretending to come from a bank, technology company, retailer, or government agency",
+        "Requests for gift cards, wire transfers, cryptocurrency, passwords, or account codes",
+        "Family-emergency, romance, and impersonation scams",
+        "Remote-access software installed at the request of an unknown caller"
       ],
       "image": {
         "src": "/img/services/scareware-lock-dark.jpg",
@@ -79,95 +83,95 @@
       }
     },
     {
-      "heading": "Everyday tech help",
+      "heading": "Everyday Technology Help",
       "paragraph": [
-        "Most days there's no scam in sight. It's just getting the everyday tech to behave."
+        "We also solve common technology problems that have nothing to do with a scam."
       ],
       "items": [
-        "Wi-Fi that reaches the lanai and the guest room, and printers that print.",
-        "A new phone, tablet, or computer set up with everything moved across.",
-        "Email and accounts straightened out after a scam scare.",
-        "A sluggish computer checked over and sped back up."
+        "Improve Wi-Fi coverage in living areas, guest rooms, and lanais",
+        "Set up printers, streaming devices, phones, tablets, and computers",
+        "Move accessible files and accounts to a new device",
+        "Diagnose slow, crashing, overheating, or non-booting computers"
       ]
     },
     {
-      "heading": "On-site or remote, how it works",
+      "heading": "How Local and Remote Support Work",
       "paragraph": [
-        "Tell us what's wrong and we come to you. Local clients can also enroll in our Remote Support Plan, so future fixes are handled remotely, with no second visit. Either way: a device that works, and a straight answer on what happened."
+        "Tell us what is happening, and we will help identify the right service. Most local clients begin with on-site help or arranged pickup and drop-off. Remote Support Plan enrollment starts with an in-person setup visit."
       ],
       "image": {
         "src": "/img/services/how-it-works-dark.jpg",
-        "alt": "Three steps: book an appointment, on-site or remote service, then a secured device"
+        "alt": "Three steps: describe the problem, confirm the service, and schedule the work"
       }
     },
     {
-      "heading": "Where we work",
+      "heading": "The Villages Service Area",
       "paragraph": [
-        "We cover all five town squares (Spanish Springs, Lake Sumter Landing, Brownwood, Sawgrass Grove, and Eastport), plus Lady Lake, Wildwood, Summerfield, and the surrounding Central Florida area."
+        "We serve Spanish Springs, Lake Sumter Landing, Brownwood, Sawgrass Grove, Eastport, Lady Lake, Wildwood, Summerfield, and nearby Central Florida communities."
       ]
     }
   ],
   "services": [
     {
-      "label": "Scam & Fraud Protection",
+      "label": "Scam and Fraud Protection",
       "slug": "scam-protection",
-      "summary": "Help after a scam call or pop-up, and how to stop the next one."
+      "summary": "Review suspicious calls, messages, or pop-ups, secure affected accounts, and learn what to watch for next."
     },
     {
-      "label": "Virus & Malware Removal",
+      "label": "Virus and Malware Removal",
       "slug": "virus-removal",
-      "summary": "Cleanup for pop-ups, fake warnings, and infected machines."
+      "summary": "Remove supported malware, browser hijackers, fake alerts, and unwanted software from an infected computer."
     },
     {
       "label": "On-Site Tech Support",
       "slug": "onsite-tech-support",
-      "summary": "Someone at your door who sorts it out in person."
+      "summary": "Get in-person help with computers, Wi-Fi, printers, accounts, and connected devices."
     },
     {
-      "label": "Wi-Fi & Network Setup",
+      "label": "Wi-Fi and Network Setup",
       "slug": "network-setup",
-      "summary": "Home Wi-Fi and devices, set up to stay working."
+      "summary": "Improve weak coverage, dropped connections, router placement, and new network equipment."
     },
     {
-      "label": "Password Manager Setup & Account Safety",
+      "label": "Password Manager Setup and Account Security",
       "slug": "password-management",
-      "summary": "Simpler, safer logins, and account help after a scam."
+      "summary": "Set up a password manager, replace reused passwords, and organize multi-factor authentication and recovery."
     },
     {
       "label": "Computer Repair",
       "slug": "computer-repair",
-      "summary": "A slow or failing computer, brought back."
+      "summary": "Diagnose slow, crashing, overheating, damaged, or non-booting laptops and desktops."
     }
   ],
   "testimonials": [],
   "faq": [
     {
-      "question": "Do you come to homes inside The Villages?",
-      "answer": "Yes, across The Villages and the nearby towns. We come to you, on-site."
+      "question": "Do you provide in-home service throughout The Villages?",
+      "answer": "Yes. We provide on-site service throughout The Villages and nearby communities. Arranged pickup and drop-off may also be available when it fits the work better."
     },
     {
-      "question": "Can you help me remotely without coming out first?",
-      "answer": "Remote support is for local clients, and the setup is done in person, so the first visit is on-site. After that, most fixes happen remotely through our Remote Support Plan, including same-day and after-hours help where available."
+      "question": "Can you help remotely without visiting first?",
+      "answer": "Plan-based remote support requires an in-person enrollment visit. Online training and tutoring are separate services and do not require the Remote Support Plan."
     },
     {
-      "question": "I got a pop-up saying my computer is infected and to call a number. What should I do?",
-      "answer": "Don't call it, and don't let anyone connect in. It's one of the most common scams here. Switch the device off if you can, and we'll check whether anything's actually wrong."
+      "question": "A pop-up says my computer is infected and tells me to call. What should I do?",
+      "answer": "Do not call the number or allow anyone to connect to the computer. Close the browser if possible. If someone already connected, disconnect the computer from the internet and turn it off, then contact us."
     },
     {
-      "question": "Someone called saying they were from Microsoft or my bank. Is that real?",
-      "answer": "Almost never. Real companies don't call out of the blue to fix your computer or ask for gift cards. If you already gave them access or information, we'll help you get the accounts locked back down."
+      "question": "Someone called claiming to be my bank or a technology company. How can I verify the call?",
+      "answer": "End the call and contact the organization through a trusted phone number on its official website, your statement, or the back of your card. Do not use a number provided by the caller."
     },
     {
-      "question": "Do I need to be good with technology to work with you?",
-      "answer": "No. We work at your pace and explain things simply, and write the steps down if that helps."
+      "question": "Do I need to be comfortable with technology?",
+      "answer": "No. We work at your pace, explain each step in plain English, and can write down important instructions when helpful."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "It depends on the work. You get a clear quote before we start. No surprises."
+      "question": "How much does service cost?",
+      "answer": "The cost depends on the work. We explain the expected price before service begins and discuss any additional work with you first."
     }
   ],
   "cta": {
-    "label": "Get Local Help in The Villages",
+    "label": "Request Local Help in The Villages",
     "link": "/contact#schedule-service"
   }
 }

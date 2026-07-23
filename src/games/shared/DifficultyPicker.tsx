@@ -27,9 +27,9 @@ type DifficultyOption = Readonly<{
 }>;
 
 const OPTIONS: ReadonlyArray<DifficultyOption> = [
-  { id: "easy", label: "Easy", hint: "Zones pre-assigned" },
-  { id: "medium", label: "Medium", hint: "Assign some zones" },
-  { id: "hard", label: "Hard", hint: "Architect everything" },
+  { id: "easy", label: "Easy", hint: "Zones are assigned for you" },
+  { id: "medium", label: "Medium", hint: "Assign some network zones" },
+  { id: "hard", label: "Hard", hint: "Assign every network zone" },
 ];
 
 export function DifficultyPicker({

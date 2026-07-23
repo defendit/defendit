@@ -141,7 +141,7 @@ export function EndSummaryModal({
           className="text-center"
         >
           <div className="mb-1 inline-flex items-center gap-1.5 rounded-full border border-sky-300/40 bg-sky-50/90 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.18em] text-sky-700 dark:border-sky-400/25 dark:bg-slate-900/70 dark:text-sky-300">
-            <Sparkles size={11} /> After-Action Report
+            <Sparkles size={11} /> Results
           </div>
           <div
             data-testid="dh-summary-score"
@@ -159,14 +159,14 @@ export function EndSummaryModal({
             {countedScore}
           </div>
           <div className="mt-2 text-[11px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
-            Security Score
+            Network Score
           </div>
           {badge && (
             <div className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-amber-500/10 px-3 py-1 text-[11px] font-bold text-amber-700 shadow-[0_0_20px_rgba(251,191,36,0.25)] dark:text-amber-200">
               <Award size={12} />
               {badge === "architect"
-                ? "Network Architect earned"
-                : "Home Network Rookie earned"}
+                ? "Network Architect badge earned"
+                : "Home Network Rookie badge earned"}
             </div>
           )}
           {!badge && (
@@ -179,21 +179,21 @@ export function EndSummaryModal({
         {/* Sections (staggered) */}
         <div className="mt-5 space-y-2">
           <SummarySection
-            title="What you did well"
+            title="Good choices"
             accent="#4ade80"
             items={wins}
             delay={0.15}
           />
           {risks.length > 0 && (
             <SummarySection
-              title="What still adds risk"
+              title="What to improve"
               accent="#fbbf24"
               items={risks}
               delay={0.27}
             />
           )}
           <SummarySection
-            title="A stronger setup"
+            title="Recommended changes"
             accent="#38bdf8"
             items={improvements}
             delay={0.39}
@@ -210,7 +210,7 @@ export function EndSummaryModal({
             onClick={onTryAgain}
             className="rounded-xl border border-slate-300 bg-white px-4 py-2 text-xs font-bold text-slate-700 transition-colors hover:border-slate-400 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-200 dark:hover:border-slate-500 dark:hover:bg-slate-800"
           >
-            Try Again
+            Play Again
           </button>
           {canTryHarder && (
             <button
@@ -226,7 +226,7 @@ export function EndSummaryModal({
             href="/contact"
             className="rounded-xl bg-linear-to-br from-sky-500 to-sky-700 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-sky-900/30 transition-all hover:-translate-y-0.5 hover:shadow-sky-900/50"
           >
-            Get Help →
+            Ask for Help →
           </Link>
         </div>
 

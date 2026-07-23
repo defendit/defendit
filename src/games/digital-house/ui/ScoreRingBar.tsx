@@ -103,7 +103,7 @@ export function ScoreRingBar({
           </div>
           <div className="flex min-w-0 flex-1 flex-col gap-0.5">
             <MiniBar label="P" value={privacy} />
-            <MiniBar label="B" value={blastRadius} />
+            <MiniBar label="I" value={blastRadius} />
             <MiniBar label="R" value={recovery} />
           </div>
           <div className="shrink-0 text-[10px] font-bold tabular-nums text-slate-500 dark:text-slate-400">
@@ -164,7 +164,7 @@ export function ScoreRingBar({
                 : "text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400"
             }
           >
-            House Meters
+            Network Scores
           </span>
           <div className="flex items-center gap-2">
             <span
@@ -202,7 +202,7 @@ export function ScoreRingBar({
             }
           >
             <Ring value={privacy} label="PRIVACY" size={ringSize} />
-            <Ring value={blastRadius} label="BLAST" size={ringSize} />
+            <Ring value={blastRadius} label="IMPACT" size={ringSize} />
             <Ring value={recovery} label="RECOVERY" size={ringSize} />
           </div>
           {!compact && (

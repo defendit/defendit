@@ -1,11 +1,11 @@
 {
   "id": "remote-privacy-hardening",
   "requiresPlan": true,
-  "title": "Remote Privacy Hardening & Digital Safety Support",
-  "headline": "Protect your digital life no matter where you are.",
-  "description": "A remote session focused on browser, device, messaging, DNS, and VPN privacy settings.",
-  "metaTitle": "Remote Privacy Hardening for Central Florida Plan Members | Defend I.T. Solutions",
-  "metaDescription": "Remote privacy hardening for Central Florida Remote Support Plan members, including browser privacy, encrypted messaging, DNS filtering, VPN guidance, and safer device settings.",
+  "title": "Remote Privacy and Digital Safety",
+  "headline": "Improve privacy settings on enrolled devices without making them difficult to use.",
+  "description": "Remote help with browser, device, messaging, DNS, and VPN privacy settings for Central Florida Remote Support Plan clients.",
+  "metaTitle": "Remote Privacy Help for Central Florida Plan Clients",
+  "metaDescription": "Improve browser, device, messaging, DNS, and VPN privacy settings through a guided remote session for enrolled Central Florida clients.",
   "keywords": [
     "Privacy hardening",
     "Remote privacy support",
@@ -14,65 +14,85 @@
     "VPN and DNS security"
   ],
   "url": "/services/remote/remote-privacy-hardening",
-  "serviceArea": ["Ocala FL", "Belleview FL", "The Villages FL", "Central Florida"],
+  "serviceArea": [
+    "Ocala FL",
+    "Belleview FL",
+    "The Villages FL",
+    "Central Florida"
+  ],
   "sections": [
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Most apps and devices collect personal data by default, even when you turn off basic sharing settings.",
-        "Your IP address, browser fingerprint, and system metadata can be used to track you across sites, even without cookies.",
-        "Popular apps marketed as private often connect to third-party servers unless properly configured or replaced."
+        "Many applications and devices begin with data collection and personalized advertising enabled.",
+        "Browser and device settings can reduce unnecessary tracking without blocking normal daily use.",
+        "A VPN changes who can see parts of your internet traffic, but it does not make every activity anonymous or safe."
       ]
     },
     {
       "heading": "What We Help With",
       "items": [
-        "Configure hardened, privacy-respecting browsers with vetted extensions",
-        "Set up encrypted email and messaging platforms that avoid metadata leakage",
-        "Apply DNS filtering to block trackers, ad networks, and malicious infrastructure",
-        "Choose and configure VPNs, proxies, or anonymization tools based on your needs",
-        "Lock down mobile and desktop systems by disabling telemetry, tracking, and unnecessary services"
+        "Review browser privacy settings and extensions",
+        "Reduce unnecessary device telemetry, advertising identifiers, and location access",
+        "Review privacy settings for messaging and email applications",
+        "Configure DNS filtering when appropriate",
+        "Evaluate VPN settings and explain what they do and do not protect",
+        "Remove unnecessary applications, permissions, and background services"
       ]
     },
     {
-      "heading": "How It Works",
+      "heading": "What to Expect",
       "paragraph": [
-        "This is for people who want cleaner, more private defaults without turning their setup into a science project.",
-        "Once your plan is active, you can schedule a secure remote session and we'll review your current setup together.",
-        "We apply hardened privacy settings using trusted tools and clear explanations every step of the way.",
-        "You stay in full control, with no guesswork, no jargon, and no unnecessary software."
+        "This service requires an active Remote Support Plan and an enrolled device.",
+        "We begin with your privacy goals, review the relevant settings, and explain the available tradeoffs.",
+        "We make only the changes you approve and show you how to manage them afterward."
       ]
     }
   ],
   "internalLinks": [
-    { "label": "Remote Support Service Plan", "slug": "remote-support-plan" },
-    { "label": "Remote Security Assessment", "slug": "remote-security-assessment" },
-    { "label": "Remote Virus & Malware Removal", "slug": "remote-virus-removal" }
-  ],
-  "faq": [
     {
-      "question": "Do I need a Remote Support Plan for privacy hardening?",
-      "answer": "Yes. Remote privacy hardening is available only to clients with an active Remote Support Plan."
+      "label": "Remote Support Plan",
+      "slug": "remote-support-plan"
     },
-    {
-      "question": "What kinds of privacy changes can you help with?",
-      "answer": "This can include browser hardening, DNS filtering, messaging and email privacy settings, VPN guidance, and reducing unnecessary tracking across devices and apps."
-    },
-    {
-      "question": "Will you explain what you change?",
-      "answer": "Yes. The goal is to improve privacy without leaving you confused, so changes are explained in plain English as we go."
-    }
-  ],
-  "related": [
-    { "label": "Remote Support Service Plan", "slug": "remote-support-plan" },
     {
       "label": "Remote Security Assessment",
       "slug": "remote-security-assessment"
     },
-    { "label": "Remote Virus Removal", "slug": "remote-virus-removal" }
+    {
+      "label": "Remote Virus and Malware Removal",
+      "slug": "remote-virus-removal"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Do I need the Remote Support Plan for privacy help?",
+      "answer": "Yes. Remote Privacy and Digital Safety is available only for devices enrolled in an active Remote Support Plan."
+    },
+    {
+      "question": "What privacy settings can you help with?",
+      "answer": "The session can cover browsers, device telemetry, advertising identifiers, messaging, email, DNS filtering, VPN settings, application permissions, and location access."
+    },
+    {
+      "question": "Will you explain each change?",
+      "answer": "Yes. We explain what a setting changes, its limitations, and any effect it may have on normal device use."
+    }
+  ],
+  "related": [
+    {
+      "label": "Remote Support Plan",
+      "slug": "remote-support-plan"
+    },
+    {
+      "label": "Remote Security Assessment",
+      "slug": "remote-security-assessment"
+    },
+    {
+      "label": "Remote Virus and Malware Removal",
+      "slug": "remote-virus-removal"
+    }
   ],
   "cta": {
-    "label": "Start My Privacy Session",
+    "label": "Schedule Privacy Support",
     "link": "/contact#schedule-service"
   }
 }

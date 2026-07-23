@@ -44,7 +44,7 @@ export function OperatorScreen({
         <StatRow label="Bandwidth (SPD)" value={player.bandwidth} />
         <StatRow label="Firewall (DEF)" value={player.firewall} />
         <StatRow label="Bits" value={bits} />
-        <StatRow label="Play Time" value={`${minutes}m`} />
+        <StatRow label="Play time" value={`${minutes}m`} />
       </section>
 
       <section className="mb-4">

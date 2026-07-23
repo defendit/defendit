@@ -138,13 +138,13 @@ export default function SigintPage() {
   return (
     <>
       <Meta
-        title="SIGINT Dashboard™ | Real-Time OSINT Intelligence Platform"
-        description="Track aircraft, ships, earthquakes, fires, weather, and conflict events on a live interactive globe. Free to self-host. Correlation engine, anomaly detection, and scored alerts across 8+ live data sources."
+        title="SIGINT Dashboard | Self-Hosted Real-Time OSINT Platform"
+        description="Explore a self-hosted OSINT dashboard for aircraft, vessels, earthquakes, fires, severe weather, tropical cyclones, events, and world news."
         image="https://www.wedefendit.com/sigint-og.png"
-        imageAlt="SIGINT Dashboard showing live globe with 60,000+ tracked entities, alert scoring, intel feed, and video monitoring"
+        imageAlt="SIGINT Dashboard showing a geospatial globe, alert log, intelligence feed, news, and video panes"
         url="https://www.wedefendit.com/sigint"
         canonical="https://www.wedefendit.com/sigint"
-        keywords="OSINT dashboard, SIGINT, real-time intelligence, aircraft tracking, AIS vessel tracking, earthquake monitoring, fire detection, GDELT, FIRMS, NOAA weather, live globe, situational awareness, threat detection, anomaly detection, correlation engine, open source intelligence, self-hosted OSINT"
+        keywords="self-hosted OSINT dashboard, real-time geospatial intelligence, aircraft tracking, AIS vessel tracking, earthquake monitoring, fire hotspot map, severe weather alerts, tropical cyclone tracking, GDELT events, correlation engine"
         structuredData={sigintProductLd}
       />
       <JsonLdScript
@@ -159,7 +159,7 @@ export default function SigintPage() {
           <header className="text-center pt-4 px-4">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-medium mb-6">
               <Radar className="w-3.5 h-3.5" />
-              <span>OSINT dashboard project by Defend I.T. Solutions</span>
+              <span>OSINT project by Defend I.T. Solutions</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.05] text-ink mb-3">
@@ -169,13 +169,13 @@ export default function SigintPage() {
             </h1>
 
             <p className="text-xl sm:text-2xl md:text-4xl font-medium text-ink-muted mb-6">
-              Real-Time Intelligence, Correlated
+              Real-Time OSINT, Organized
             </p>
 
             <p className="text-base sm:text-lg text-ink-muted max-w-2xl mx-auto mb-8 leading-relaxed">
-              Live aircraft, vessels, weather alerts, earthquakes, fires,
-              conflict events, and news in one interface. Explore the live demo
-              in your browser, or self-host it on your own server.
+              SIGINT combines aircraft, vessel, earthquake, fire, weather,
+              cyclone, event, and news feeds in one interface. Review the
+              project demo or run the community edition on your own server.
             </p>
 
             <div className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap sm:gap-5">
@@ -186,7 +186,7 @@ export default function SigintPage() {
                 className="inline-flex items-center gap-2 rounded-lg border border-emerald-400/85 bg-emerald-100/92 px-8 py-4 text-lg font-medium text-emerald-900 shadow-[0_12px_28px_rgba(16,185,129,0.16)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-emerald-500/90 hover:bg-emerald-100 hover:text-emerald-950 hover:shadow-[0_16px_34px_rgba(16,185,129,0.2)] dark:border-green-500/30 dark:bg-emerald-950/40 dark:text-green-300 dark:shadow-[0_14px_28px_rgba(16,185,129,0.14)] dark:hover:border-green-400 dark:hover:bg-emerald-950/55 dark:hover:text-green-200 dark:hover:shadow-[0_18px_34px_rgba(16,185,129,0.2)]"
               >
                 <Globe className="w-5 h-5" />
-                Live Demo
+                Open Project Demo
               </a>
               <a
                 href="https://github.com/wedefendit/sigint"
@@ -195,7 +195,7 @@ export default function SigintPage() {
                 className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white/80 px-8 py-4 text-lg font-medium text-slate-800 shadow-[0_8px_18px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white hover:text-sky-800 hover:shadow-[0_14px_28px_rgba(15,23,42,0.12)] dark:border-slate-600 dark:bg-slate-950/78 dark:text-slate-200 dark:shadow-[0_14px_28px_rgba(2,6,23,0.22)] dark:hover:border-sky-400/28 dark:hover:bg-slate-900 dark:hover:text-sky-200"
               >
                 <Github className="w-5 h-5" />
-                View on GitHub
+                View Source and Documentation
               </a>
             </div>
 
@@ -203,7 +203,7 @@ export default function SigintPage() {
             <div className="relative rounded-lg overflow-hidden border border-hairline/50 shadow-2xl shadow-black/50">
               <Image
                 src="/img/sigint/sigint-hero.png"
-                alt="SIGINT dashboard showing live globe with 64,000+ tracked entities, alert log, intel feed, news feed, and video monitoring"
+                alt="SIGINT Dashboard showing a globe, alert log, intelligence feed, news feed, and video panes"
                 width={1920}
                 height={1080}
                 className="w-full h-auto"
@@ -213,32 +213,31 @@ export default function SigintPage() {
               <div className="absolute bottom-4 left-4 flex items-center gap-3 text-xs text-ink-muted">
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  LIVE
+                  SESSION VIEW
                 </span>
-                <span>64,354 tracks</span>
-                <span>All sources active</span>
+                <span>Multiple data layers</span>
+                <span>Source availability varies</span>
               </div>
             </div>
           </header>
 
           {/* ── Stats bar ─────────────────────────────────────────── */}
           <section className="grid grid-cols-2 sm:grid-cols-4 gap-8 py-8 border-y border-hairline/50">
-            <Stat value="60K+" label="Live Tracks" />
-            <Stat value="8+" label="Data Sources" />
-            <Stat value="<4min" label="Refresh Cycle" />
-            <Stat value="24/7" label="Monitoring" />
+            <Stat value="8" label="Data Feeds" />
+            <Stat value="2" label="Map Views" />
+            <Stat value="8" label="Workspace Panes" />
+            <Stat value="1" label="Self-Hosted App" />
           </section>
 
           {/* ── Data Sources ──────────────────────────────────────── */}
           <section>
             <div className="text-center mb-10">
               <SectionTag>Intelligence Sources</SectionTag>
-              <SectionTitle>Live Data Feeds. One Dashboard.</SectionTitle>
+              <SectionTitle>Eight Data Feeds. One Workspace.</SectionTitle>
               <p className="text-ink-muted max-w-2xl mx-auto">
-                Every source is fetched, parsed, cached, and rendered
-                automatically. Open the dashboard and see aircraft, vessels,
-                crisis events, weather alerts, fires, quakes, and news in one
-                place instead of chasing half a dozen tabs.
+                The dashboard organizes aircraft, vessel, earthquake, fire,
+                weather, cyclone, event, and news data in one workspace. Source
+                availability depends on upstream services and configuration.
               </p>
             </div>
 
@@ -246,46 +245,46 @@ export default function SigintPage() {
               <SourceCard
                 icon={<Plane className="w-5 h-5" />}
                 name="Aircraft Tracking"
-                description="Live global aircraft positions from OpenSky Network. Callsign, altitude, speed, heading, squawk codes. Military aircraft classification and emergency detection."
-                badge="LIVE"
+                description="Server-proxied aircraft positions from adsb.fi, enriched with callsign, altitude, speed, heading, squawk code, aircraft details, and heuristic military classification."
+                badge="FEED"
                 badgeColor="bg-green-500/20 text-green-300"
               />
               <SourceCard
                 icon={<Ship className="w-5 h-5" />}
                 name="AIS Vessel Tracking"
-                description="Real-time global vessel positions via AIS stream. MMSI, IMO, type, flag, destination, navigation status. WebSocket streaming for near-zero latency."
-                badge="LIVE"
+                description="AIS vessel positions from aisstream.io, including MMSI, IMO, vessel type, flag, destination, and navigation status when available."
+                badge="FEED"
                 badgeColor="bg-green-500/20 text-green-300"
               />
               <SourceCard
                 icon={<Activity className="w-5 h-5" />}
                 name="Seismic Monitoring"
-                description="USGS earthquake data covering the past 7 days. Magnitude, depth, tsunami alerts, felt reports. Pulse rendering scales with magnitude."
+                description="USGS earthquake data from the past seven days, including magnitude, depth, tsunami status, and felt reports."
               />
               <SourceCard
                 icon={<Flame className="w-5 h-5" />}
                 name="Fire Detection"
-                description="NASA FIRMS VIIRS satellite fire hotspot data. Fire radiative power, brightness temperature, confidence levels. 30K–100K+ detections per day globally."
+                description="NASA FIRMS VIIRS fire hotspots with location, brightness, radiative power, and confidence data."
               />
               <SourceCard
                 icon={<AlertTriangle className="w-5 h-5" />}
-                name="Conflict & Crisis Events"
-                description="GDELT 2.0 geolocated news events. Conflict, protests, diplomatic actions scored by severity. 15-minute server-side polling with 7-day rolling window."
+                name="Conflict and Crisis Events"
+                description="GDELT 2.0 geolocated events covering conflict, protests, diplomacy, and other public activity in a rolling seven-day window."
               />
               <SourceCard
                 icon={<CloudLightning className="w-5 h-5" />}
                 name="Severe Weather Alerts"
-                description="NOAA National Weather Service active severe weather alerts. Severity classification, area descriptions, onset/expiry tracking."
+                description="Active U.S. severe weather alerts from the National Weather Service, including severity, affected area, and start and end times."
               />
               <SourceCard
                 icon={<Wind className="w-5 h-5" />}
                 name="Tropical Cyclone Tracking"
-                description="NOAA National Hurricane Center active storms across the Atlantic and Pacific basins. Saffir-Simpson category, position, intensity, and the official forecast track and cone."
+                description="Active Atlantic, Eastern Pacific, and Central Pacific storms from the National Hurricane Center, with position, classification, wind, forecast track, cone, and advisory text."
               />
               <SourceCard
                 icon={<Newspaper className="w-5 h-5" />}
                 name="World News Aggregation"
-                description="RSS feeds from Reuters, NYT, BBC, Al Jazeera, The Guardian, and NPR. Stay informed alongside your data without switching tabs."
+                description="Six RSS news feeds place current reporting beside the geospatial data, alerts, and intelligence products."
               />
             </div>
           </section>
@@ -295,61 +294,60 @@ export default function SigintPage() {
             <div className="text-center mb-10">
               <SectionTag>Capabilities</SectionTag>
               <SectionTitle>
-                More Than a Map. An Intelligence Workstation.
+                From Raw Feeds to a Working View
               </SectionTitle>
               <p className="text-ink-muted max-w-2xl mx-auto">
-                SIGINT is built to reduce context switching and surface what
-                matters faster. The point is not just to show a map. It is to
-                help one person or a small team move from raw feeds to usable
-                awareness.
+                Use the globe, tables, dossiers, alerts, news, and video panes
+                together. Correlation and scoring tools add context without
+                hiding the underlying source data.
               </p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <CapCard
                 icon={<Globe className="w-6 h-6" />}
-                title="Interactive Globe & Flat Map"
-                description="Switch between 3D globe and flat map projections. Smooth animations, trail rendering, and zoom from global overview down to street level with 60K+ tracks."
+                title="Interactive Globe and Flat Map"
+                description="Switch between globe and flat-map projections, inspect recorded trails, and move from a global view to individual tracked items."
               />
               <CapCard
                 icon={<Radar className="w-6 h-6" />}
                 title="Correlation Engine"
-                description="Automatically connects events across sources. Conflict near a fire? Earthquake followed by secondary fires? Military aircraft near a crisis zone? SIGINT finds it."
+                description="Compares events across time and location to create correlation products and context-scored alerts."
               />
               <CapCard
                 icon={<Eye className="w-6 h-6" />}
                 title="Anomaly Detection"
-                description="Learns what's normal for each region over time. A M3.5 in Virginia scores higher than a M5 in Chile because Virginia has no seismic baseline."
+                description="Maintains seven-day regional baselines and raises context scores when current activity differs from recent patterns."
               />
               <CapCard
                 icon={<Layers className="w-6 h-6" />}
                 title="Multi-Pane Layout"
-                description="Split, resize, drag, minimize, and save layout presets. Run the globe, data table, dossier, intel feed, alert log, video, news, and console all at once."
+                description="Split, resize, move, minimize, and save layouts for the globe, data table, dossier, intelligence feed, alerts, video, news, and console."
               />
               <CapCard
                 icon={<Monitor className="w-6 h-6" />}
                 title="Live Video Monitoring"
-                description="Stream live news from thousands of channels. Grid layouts up to 3x3, saved presets, and one-click channel switching."
+                description="Play HLS news streams from the iptv-org directory in grids up to 3 by 3, with saved channel presets."
               />
               <CapCard
                 icon={<Satellite className="w-6 h-6" />}
                 title="Watch Mode"
-                description="Hands-free tour of high-priority events. The globe cycles through scored alerts, syncing every pane automatically."
+                description="Cycle automatically through scored alerts or intelligence products while the related panes stay synchronized."
               />
               <CapCard
                 icon={<Shield className="w-6 h-6" />}
                 title="Entity Dossier"
-                description="Click any track for the full picture. Aircraft photos, routes, vessel details, seismic data, and links to external intelligence sources."
+                description="Open a tracked item to review available identity, route, telemetry, event details, images, and external source links."
               />
               <CapCard
                 icon={<Radio className="w-6 h-6" />}
                 title="Alert Scoring"
-                description="Every alert gets a 1-10 composite score based on severity, regional context, cross-source correlation, and military classification."
+                description="Alerts receive a 1 to 10 composite score based on rule severity, regional context, correlations, and classification."
               />
               <CapCard
                 icon={<Lock className="w-6 h-6" />}
-                title="Secure by Default"
-                description="Token-authenticated API, encrypted cookies, per-IP rate limiting. Every route is protected out of the box."
+                title="Protected API Routes"
+                description="Server-backed data routes use HMAC-signed tokens in HttpOnly cookies and per-client rate limiting. Security headers apply to every response."
               />
             </div>
           </section>
@@ -358,10 +356,10 @@ export default function SigintPage() {
           <section>
             <div className="text-center mb-10">
               <SectionTag>In Action</SectionTag>
-              <SectionTitle>See What SIGINT Sees</SectionTitle>
+              <SectionTitle>See the Workspace in Use</SectionTitle>
               <p className="text-ink-muted max-w-2xl mx-auto">
-                Real screenshots from live sessions, not mockups. Every data
-                point, alert, and video feed is real.
+                These screenshots show captured project sessions. Counts and
+                source availability vary by session.
               </p>
             </div>
 
@@ -383,14 +381,13 @@ export default function SigintPage() {
                     EMERGENCY DETECTION
                   </div>
                   <h3 className="text-xl font-bold text-ink">
-                    Squawk 7700: Instant Alert
+                    Emergency Squawk Alert
                   </h3>
                   <p className="text-sm text-ink-muted leading-relaxed">
-                    A Gulfstream G550 declares emergency over Texas. SIGINT
-                    picks up the squawk, scores the alert, renders the full
-                    trail, and pulls the aircraft dossier with identity,
-                    telemetry, route, and intel links. Four live news streams
-                    running alongside.
+                    This captured session shows a 7700 emergency squawk. The
+                    dashboard scores the alert, draws the recorded trail, and
+                    opens available identity, telemetry, route, and source
+                    links beside the video pane.
                   </p>
                 </div>
               </div>
@@ -403,19 +400,18 @@ export default function SigintPage() {
                     TRAIL TRACKING
                   </div>
                   <h3 className="text-xl font-bold text-ink">
-                    Squawk 7500: Route Reconstruction
+                    Squawk 7500 Trail and Dossier
                   </h3>
                   <p className="text-sm text-ink-muted leading-relaxed">
-                    American Airlines A321 squawking hijack. Trail shows every
-                    recorded position with interpolated waypoints. Dossier pulls
-                    a photo from Planespotters, displays available route info,
-                    and provides LOCATE/FOCUS/SOLO isolation controls.
+                    This session shows a 7500 squawk with recorded positions,
+                    interpolated waypoints, aircraft details, route data when
+                    available, and locate, focus, and isolation controls.
                   </p>
                 </div>
                 <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl order-1 md:order-2">
                   <Image
                     src="/img/sigint/sigint-hijack-trail.png"
-                    alt="SIGINT tracking a squawk 7500 hijack code with trail rendering and aircraft dossier with photo"
+                    alt="SIGINT showing a squawk 7500 alert with a recorded aircraft trail and dossier"
                     width={1920}
                     height={1080}
                     className="w-full h-auto"
@@ -428,7 +424,7 @@ export default function SigintPage() {
                 <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl">
                   <Image
                     src="/img/sigint/sigint-gdelt.png"
-                    alt="SIGINT showing GDELT crisis event detail with 60K tracks, video feeds, alerts, and intel feed"
+                    alt="SIGINT showing a GDELT event beside map, alert, intelligence, and video panes"
                     width={1920}
                     height={1080}
                     className="w-full h-auto"
@@ -440,13 +436,13 @@ export default function SigintPage() {
                     SITUATIONAL AWARENESS
                   </div>
                   <h3 className="text-xl font-bold text-ink">
-                    60K+ Tracks, One Screen
+                    Geospatial Events in Context
                   </h3>
                   <p className="text-sm text-ink-muted leading-relaxed">
-                    Globe view with 60,000+ live entities. A GDELT crisis event
-                    selected showing headline, severity, tone, and source. Four
-                    live video feeds streaming. 546 active alerts. 28,000+
-                    correlated intel items.
+                    A selected GDELT event appears beside the globe, active
+                    alerts, correlated items, news, and video panes. The layout
+                    keeps the source event visible while related context is
+                    reviewed.
                   </p>
                 </div>
               </div>
@@ -459,20 +455,18 @@ export default function SigintPage() {
                     ENTITY DOSSIER
                   </div>
                   <h3 className="text-xl font-bold text-ink">
-                    Full Aircraft Intelligence
+                    Aircraft Details in One Pane
                   </h3>
                   <p className="text-sm text-ink-muted leading-relaxed">
-                    Allegiant Air A319 squawking 7500. Dossier shows full
-                    identity (callsign, ICAO24, type, registration, operator,
-                    manufacturer), live telemetry at 28,750 ft and 494 kn, and
-                    available route information. Intel links to FlightAware,
-                    FR24, and ADS-B Exchange.
+                    The dossier combines callsign, ICAO address, aircraft type,
+                    registration, operator, available route information, current
+                    telemetry, and links to external aircraft sources.
                   </p>
                 </div>
                 <div className="md:col-span-3 rounded-lg overflow-hidden border border-hairline/50 shadow-xl order-1 md:order-2">
                   <Image
                     src="/img/sigint/sigint-hijack-dossier.png"
-                    alt="SIGINT aircraft dossier showing full identity, telemetry, route details for a squawk 7500 aircraft"
+                    alt="SIGINT aircraft dossier showing identity, telemetry, and route details"
                     width={1920}
                     height={1080}
                     className="w-full h-auto"
@@ -486,44 +480,44 @@ export default function SigintPage() {
           <section className="rounded-2xl border border-slate-200/80 bg-white/72 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.05),transparent_60%)] px-6 py-10 shadow-[0_16px_34px_rgba(15,23,42,0.08)] ring-1 ring-white/70 backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/58 dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.08),transparent_62%)] dark:shadow-[0_20px_40px_rgba(2,6,23,0.32)] dark:ring-white/5">
             <div className="text-center mb-8">
               <SectionTag>Architecture</SectionTag>
-              <SectionTitle>Built as a Real Product, Not a Mockup</SectionTitle>
+              <SectionTitle>Designed for Self-Hosting</SectionTitle>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
               <div>
                 <div className="text-2xl font-bold text-ink mb-1">
-                  60K+
+                  Worker Rendering
                 </div>
                 <p className="text-xs text-ink-muted">
-                  Tracks rendered smoothly in live sessions, with the UI staying
-                  responsive under load.
+                  Canvas drawing runs in a Web Worker so mapping work stays off
+                  the main interface thread.
                 </p>
               </div>
               <div>
                 <div className="text-2xl font-bold text-ink mb-1">
-                  Single Deploy
+                  Single Process
                 </div>
                 <p className="text-xs text-ink-muted">
-                  Simple to self-host. One deploy gets the whole dashboard
-                  running on your own server.
+                  One Bun process serves the interface and the server-backed
+                  data routes.
                 </p>
               </div>
               <div>
                 <div className="text-2xl font-bold text-ink mb-1">
-                  Offline Ready
+                  Offline Review
                 </div>
                 <p className="text-xs text-ink-muted">
-                  Installable as a PWA, with fast reloads and cached state for
-                  repeat use.
+                  The PWA can open its cached shell and stored data offline.
+                  Live feeds still require a connection.
                 </p>
               </div>
               <div>
                 <div className="text-2xl font-bold text-ink mb-1">
-                  Open Stack
+                  Self-Hosted
                 </div>
                 <p className="text-xs text-ink-muted">
-                  Self-hostable on your own infrastructure, with your own API
-                  keys and environment.
+                  Run the community edition on your own infrastructure with
+                  your own API keys and environment.
                 </p>
               </div>
             </div>
@@ -532,11 +526,12 @@ export default function SigintPage() {
           {/* ── CTA ───────────────────────────────────────────────── */}
           <section className="text-center py-12">
             <h2 className="text-h2 tracking-h2 font-semibold text-ink mb-4">
-              Ready to See It Live?
+              Explore the SIGINT Project
             </h2>
             <p className="text-ink-muted max-w-xl mx-auto mb-8">
-              SIGINT Dashboard is a live, working project. Try the demo now, or
-              join the waiting list to hear when new features ship.
+              Review the demo, browse the source and documentation, or join the
+              project update list. Demo and data-source availability may vary
+              during development.
             </p>
             <div className="max-w-lg mx-auto mb-6">
               <WaitlistForm />
@@ -549,7 +544,7 @@ export default function SigintPage() {
                 className="inline-flex items-center gap-2 rounded-lg border border-emerald-400/85 bg-emerald-100/92 px-8 py-4 text-lg font-medium text-emerald-900 shadow-[0_12px_28px_rgba(16,185,129,0.16)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-emerald-500/90 hover:bg-emerald-100 hover:text-emerald-950 hover:shadow-[0_16px_34px_rgba(16,185,129,0.2)] dark:border-green-500/30 dark:bg-emerald-950/40 dark:text-green-300 dark:shadow-[0_14px_28px_rgba(16,185,129,0.14)] dark:hover:border-green-400 dark:hover:bg-emerald-950/55 dark:hover:text-green-200 dark:hover:shadow-[0_18px_34px_rgba(16,185,129,0.2)]"
               >
                 <Globe className="w-5 h-5" />
-                Try Live Demo
+                Open Project Demo
               </a>
               <a
                 href="https://github.com/wedefendit/sigint"
@@ -558,7 +553,7 @@ export default function SigintPage() {
                 className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white/80 px-8 py-4 text-lg font-medium text-slate-800 shadow-[0_8px_18px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/80 hover:bg-white hover:text-sky-800 hover:shadow-[0_14px_28px_rgba(15,23,42,0.12)] dark:border-slate-600 dark:bg-slate-950/78 dark:text-slate-200 dark:shadow-[0_14px_28px_rgba(2,6,23,0.22)] dark:hover:border-sky-400/28 dark:hover:bg-slate-900 dark:hover:text-sky-200"
               >
                 <Github className="w-5 h-5" />
-                View on GitHub
+                View Source and Documentation
               </a>
             </div>
           </section>

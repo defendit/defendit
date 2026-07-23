@@ -253,7 +253,7 @@ const GAMES: GameCard[] = [
     href: "/awareness/digital-house",
     title: "The Digital House",
     description:
-      "Place devices into rooms and see how trust, exposure, and recovery shift as you design your home network.",
+      "Build a safer home network. Place connected devices in rooms and network zones, then see how each choice changes risk and recovery.",
     badge: "New",
     meta: "Game · 5 min",
     thumbnail: <HouseThumbnail />,
@@ -262,7 +262,7 @@ const GAMES: GameCard[] = [
     href: "/awareness/gridrunner",
     title: "GRIDRUNNER",
     description:
-      "Navigate cyberspace as a cyber operator. Battle real-world threat actors and collect security tools.",
+      "Explore cyberspace, face threat actors, and learn how cybersecurity tools support investigation and defense.",
     badge: "Demo",
     meta: "RPG · 20-25 min",
     thumbnail: <GridRunnerThumbnail />,
@@ -272,7 +272,7 @@ const GAMES: GameCard[] = [
     href: "/awareness",
     title: "Phish Tank",
     description:
-      "Spot the phishing email before time runs out. Learn the red flags that give away social engineering attacks.",
+      "Review simulated emails, identify phishing signs, and decide which messages are safe before time runs out.",
     badge: "Coming Soon",
     meta: "Quiz · 3 min",
     thumbnail: <PhishTankThumbnail />,
@@ -372,11 +372,11 @@ export function InteractiveTraining() {
           id="interactive-training"
           className="text-h2 tracking-h2 font-semibold text-ink"
         >
-          Interactive Training
+          Interactive Cybersecurity Training
         </h2>
         <p className="mt-4 text-ink-muted leading-relaxed">
-          Hands-on exercises that teach one core security idea at a time. Play
-          at your own pace. No sign-in required.
+          Practice cybersecurity skills with short browser games. Learn at your
+          own pace. No sign-in required.
         </p>
       </div>
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

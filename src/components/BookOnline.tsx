@@ -34,7 +34,7 @@ export function BookOnline() {
               Schedule Service
             </h2>
             <p className="text-ink-muted">
-              Mon-Fri: 9 AM - 6 PM • Sat: 10 AM - 4 PM
+              Monday through Friday, 9 AM to 6 PM • Saturday, 10 AM to 4 PM
             </p>
           </header>
 
@@ -67,7 +67,7 @@ export function BookOnline() {
                 aria-hidden="true"
               />
               <div className="flex-1 text-left">
-                <div className="text-sm text-ink-muted">Send Email</div>
+                <div className="text-sm text-ink-muted">Email Us</div>
                 <div className="font-medium break-all text-accent">
                   {contact.service_email}
                 </div>
@@ -80,7 +80,7 @@ export function BookOnline() {
             <details className="group">
               <summary className="cursor-pointer text-sm text-ink-muted hover:text-accent list-none flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>Prefer to choose a time online? Use Calendly.</span>
+                <span>Choose a time online with Calendly.</span>
               </summary>
 
               <div className="mt-3 pl-6">
@@ -90,7 +90,7 @@ export function BookOnline() {
                   rel="noopener noreferrer"
                   className="inline-block text-sm text-accent hover:underline"
                 >
-                  Continue to Calendly →
+                  Open Calendly →
                 </a>
               </div>
             </details>

@@ -1,10 +1,10 @@
 {
   "id": "pc-upgrades",
-  "title": "Laptop & PC Speed Upgrades",
-  "headline": "Speed up an aging computer with the upgrades that actually make a difference.",
-  "description": "Laptop and PC upgrade help for homeowners and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities. We install SSDs, add RAM, replace worn batteries, and handle thermal service when a good computer is worth keeping.",
-  "metaTitle": "Laptop & PC Speed Upgrades in Ocala & The Villages | Defend I.T. Solutions",
-  "metaDescription": "Speed up aging laptops and desktops with SSD, RAM, battery, and thermal upgrades in Central Florida when replacement is not the smartest next step.",
+  "title": "Laptop and PC Upgrades",
+  "headline": "Improve the speed, storage, battery life, or cooling of a computer that is still worth keeping.",
+  "description": "Laptop and PC upgrades for homes and small businesses in Ocala, Belleview, The Villages, and nearby communities, including SSDs, memory, batteries, storage, and cooling service.",
+  "metaTitle": "Laptop and PC Upgrades in Ocala, Belleview, and The Villages",
+  "metaDescription": "Speed up an aging laptop or desktop with an SSD, more memory, a replacement battery, storage, or cooling service in Central Florida.",
   "keywords": [
     "PC upgrades Ocala FL",
     "PC upgrades Belleview FL",
@@ -23,60 +23,57 @@
     "The Villages FL",
     "Central Florida"
   ],
-  "icons": [
-    "hard-drive",
-    "gauge",
-    "bolt"
-  ],
+  "icons": ["hard-drive", "gauge", "bolt"],
   "sections": [
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "A traditional hard drive is often the biggest reason an older computer feels painfully slow.",
-        "Many laptops and desktops can get a meaningful second life from an SSD, more memory, or battery replacement without replacing the whole machine.",
-        "Heat, dust, and degraded thermal materials can quietly reduce speed and stability even when the rest of the hardware is still usable."
+        "Replacing a mechanical hard drive with an SSD can make an older computer start and respond much faster.",
+        "More memory can improve performance when normal multitasking uses all available RAM.",
+        "Dust, blocked airflow, and worn thermal materials can reduce performance and cause instability."
       ]
     },
     {
       "heading": "Who This Helps",
       "paragraph": [
-        "This service is for people who like their current computer well enough but need it to start faster, respond better, hold a charge longer, or stay usable for a few more years.",
-        "It is especially useful when replacement feels unnecessary, but the system is too slow or frustrating to keep using as-is."
+        "This service is for anyone who wants to keep a working computer but needs better speed, storage, battery life, or cooling.",
+        "Choose it when replacement seems unnecessary and a practical upgrade can extend the useful life of the computer."
       ]
     },
     {
       "heading": "Signs an Upgrade May Be Better Than Replacement",
       "items": [
-        "The computer still works, but everyday tasks feel much slower than they should",
-        "Boot times are long and programs take too long to open",
-        "You run out of memory with normal multitasking",
-        "The battery no longer lasts or the system runs unusually hot",
-        "You want better performance but do not want the expense or hassle of a full replacement"
+        "The computer works but starts slowly or takes too long to open programs",
+        "Normal multitasking uses all available memory",
+        "Storage space is low or the existing drive is slow",
+        "The battery no longer holds a useful charge",
+        "The computer runs hot but is otherwise worth keeping"
       ]
     },
     {
       "heading": "What We Do",
       "paragraph": [
-        "We recommend practical upgrades based on how the computer is actually used, then install and test them so the improvement is noticeable and reliable."
+        "We check compatibility and value before recommending an upgrade, then install and test the supported parts."
       ],
       "items": [
-        "Install SSDs with safe operating system and data migration where appropriate",
-        "Add or replace RAM with compatibility and stability checks",
-        "Replace batteries or expand storage on supported systems",
-        "Perform thermal service and internal cleaning when heat is reducing performance",
-        "Update firmware and verify system stability after the upgrade"
+        "Install SSDs and migrate accessible data when appropriate",
+        "Add or replace compatible memory",
+        "Replace supported batteries or expand storage",
+        "Clean internal components and service cooling when heat affects performance",
+        "Update required firmware and drivers",
+        "Test startup, stability, storage, and temperatures after the work"
       ]
     },
     {
       "heading": "When Another Service May Be a Better Fit",
       "paragraph": [
-        "Choose Laptop & PC Speed Upgrades when the computer is fundamentally worth keeping and the main goal is better speed, storage, memory, battery life, or reduced heat. If the system is crashing, failing to boot, or physically damaged, [Computer Repair](/services/computer-repair) is usually the better starting point. If your highest priority is recovering files, [Data Recovery & Backup Help](/services/data-recovery) may come first."
+        "Choose Laptop and PC Upgrades when the computer works and is worth keeping. If it crashes, will not start, or has physical damage, choose [Computer Repair](/services/computer-repair). If saving files is the first priority, choose [Data Recovery and Backup Help](/services/data-recovery)."
       ]
     },
     {
       "heading": "Local Availability",
       "paragraph": [
-        "Upgrade services are available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We focus on cost-effective upgrades that make sense for the machine instead of pushing replacement when it is not necessary."
+        "Laptop and PC upgrades are available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We recommend upgrades only when the expected improvement justifies the cost."
       ]
     }
   ],
@@ -86,35 +83,35 @@
       "slug": "computer-repair"
     },
     {
-      "label": "Data Recovery & Backup Help",
+      "label": "Data Recovery and Backup Help",
       "slug": "data-recovery"
     },
     {
-      "label": "Software Troubleshooting & Installs",
+      "label": "Software Troubleshooting and Installation",
       "slug": "software-troubleshooting"
     }
   ],
   "faq": [
     {
-      "question": "Is an SSD upgrade really worth it?",
-      "answer": "In many older systems, yes. Replacing a hard drive with an SSD can dramatically improve startup time, responsiveness, and everyday usability for far less than a new computer."
+      "question": "Is an SSD upgrade worth it?",
+      "answer": "It often is for a compatible computer that still uses a mechanical hard drive. An SSD can improve startup time and everyday responsiveness without replacing the entire computer."
     },
     {
-      "question": "Can you tell me if an upgrade is smarter than replacement?",
-      "answer": "Yes. We look at the age of the system, the condition of the hardware, and how you use it before recommending upgrades. If replacement is the more sensible option, we say so."
+      "question": "Can you tell me whether an upgrade is better than replacement?",
+      "answer": "Yes. We consider the age, condition, compatibility, expected improvement, and cost before recommending an upgrade."
     },
     {
-      "question": "Can you migrate my files when upgrading storage?",
-      "answer": "Usually, yes. When the original drive is readable, we can often migrate the operating system and personal files during an SSD or storage upgrade so the transition is smoother."
+      "question": "Can you move my files when upgrading storage?",
+      "answer": "Usually. If the original drive is readable, we can often move the operating system and files to the new storage device."
     }
   ],
   "related": [
     {
-      "label": "Software Troubleshooting & Installs",
+      "label": "Software Troubleshooting and Installation",
       "slug": "software-troubleshooting"
     },
     {
-      "label": "Data Recovery & Backup Help",
+      "label": "Data Recovery and Backup Help",
       "slug": "data-recovery"
     },
     {
@@ -123,7 +120,7 @@
     }
   ],
   "cta": {
-    "label": "Schedule Speed Upgrade",
+    "label": "Schedule a Computer Upgrade",
     "link": "/contact#schedule-service"
   }
 }

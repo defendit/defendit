@@ -401,7 +401,7 @@ export function AfterActionReportButton({
 }: AfterActionReportButtonProps) {
   const wl =
     riskCount === 0
-      ? "No open risk"
+      ? "No open risks"
       : `${riskCount} open risk${riskCount === 1 ? "" : "s"}`;
   return (
     <button
@@ -415,10 +415,10 @@ export function AfterActionReportButton({
     >
       <span className="min-w-0">
         <span className="block text-[12px] font-black uppercase tracking-[0.16em] text-sky-700 dark:text-sky-300">
-          After-Action Report
+          Results
         </span>
         <span className="mt-1 block text-[13px] font-medium leading-snug text-slate-700 dark:text-slate-200">
-          Review what worked, what still adds risk, and the stronger setup.
+          Review your choices and see what to improve.
         </span>
       </span>
       <span className="flex shrink-0 flex-col items-end">

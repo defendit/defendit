@@ -326,14 +326,14 @@ export function ServiceSlug({ service, related, remote }: ServiceSlugProps) {
           {service.requiresPlan && (
             <div className="mt-6 rounded-lg border border-border-accent bg-surface p-4 sm:p-5 text-ink text-sm flex flex-col items-center">
               <span>
-                This service is available exclusively to Remote Service Plan
-                members.
+                This service requires an active Remote Support Plan and an enrolled
+                device.
               </span>
               <Link
                 href="/services/remote/remote-support-plan"
                 className="inline-block mt-2 px-3 py-1.5 rounded border border-border-accent bg-surface text-accent font-medium hover:underline transition"
               >
-                Learn more
+                View Remote Support Plan
               </Link>
             </div>
           )}

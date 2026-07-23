@@ -2,145 +2,133 @@
   "elderly": [
     {
       "title": "QR Code Scams",
-      "description": "Criminals place fake QR codes on signs, flyers, parking meters, or emails to trick you into opening a harmful website, giving away login details, or downloading malware.",
+      "description": "A fake QR code can send you to an imitation payment or login page. Scammers may place one over a real code or include it in an unexpected message or mailing.",
       "prevention": [
-        "Never scan codes from unknown or suspicious sources.",
-        "Be cautious with QR codes in unsolicited emails, mailers, or handouts.",
-        "Use a scanner that previews the link before opening it.",
-        "Check the website address carefully before tapping or clicking.",
-        "Report suspicious QR codes to the FTC."
+        "Do not scan a code from an unexpected message or handout.",
+        "Check for a sticker placed over the original code.",
+        "Preview and read the website address before opening it.",
+        "Use the official app or type a known website address when possible."
       ],
       "icon": "scan-line"
     },
     {
       "title": "The Grandparent Scam",
-      "description": "A scammer pretends to be your grandchild, a police officer, a doctor, or another trusted person and claims there is an emergency. They may ask for money, gift cards, or secrecy. Some now use AI voice cloning to sound more believable.",
+      "description": "A caller or message claims a relative is in trouble and needs money immediately. Scammers may impersonate relatives, police officers, lawyers, or doctors and may use a cloned voice.",
       "prevention": [
-        "Be skeptical of urgent calls asking for money or secrecy.",
-        "Hang up and call the family member back on a known number.",
-        "Never send gift cards, wire transfers, or cryptocurrency to someone you cannot verify.",
-        "Use call blocking and spam protection features when available.",
-        "Report scams to the FTC or local authorities."
+        "End the call and contact the relative on a known number.",
+        "Ask another family member to verify the story.",
+        "Do not send gift cards, cryptocurrency, cash, or wire transfers.",
+        "Treat demands for secrecy or immediate action as warning signs."
       ],
       "icon": "user-check"
     },
     {
       "title": "Home Repair and Contractor Fraud",
-      "description": "Scammers offer fast, cheap, or urgent repairs, especially after storms, collect payment, and disappear. In Florida, unlicensed contracting can be tied to financial fraud.",
+      "description": "After storms or other property damage, an unlicensed contractor may demand a large deposit, perform poor work, or disappear without completing the job.",
       "prevention": [
-        "Do not hire door-to-door contractors without checking credentials.",
-        "Get more than one written estimate before agreeing to work.",
-        "Avoid paying large sums up front.",
-        "Verify licenses through the Florida DBPR.",
-        "Report suspected unlicensed work to DBPR or local law enforcement."
+        "Verify the contractor license and insurance before work begins.",
+        "Get more than one written estimate.",
+        "Use a written contract that defines the work and payment schedule.",
+        "Avoid large upfront payments and unexpected door-to-door offers."
       ],
       "icon": "hammer"
     },
     {
       "title": "Account Takeover Scams",
-      "description": "Hackers use phishing, malware, reused passwords, or leaked credentials to get into your email, bank, shopping, or social accounts. Once inside, they may steal money, lock you out, or impersonate you.",
+      "description": "Criminals use stolen passwords, phishing, or malware to enter email, banking, shopping, or social media accounts. They may change recovery settings, steal money, or impersonate the account owner.",
       "prevention": [
-        "Use strong, unique passwords for important accounts.",
-        "Turn on two-factor authentication for email, banking, and other critical services.",
-        "Do not reuse passwords across websites.",
-        "Watch for suspicious logins or account changes.",
-        "Keep your devices, browser, and security software updated."
+        "Use a unique password for every important account.",
+        "Turn on multi-factor authentication.",
+        "Review login alerts and unexpected account changes promptly.",
+        "If access is lost, contact the provider through its official website."
       ],
       "icon": "lock-open"
     },
     {
       "title": "Fake Check Scams",
-      "description": "You receive a check and are told to deposit it and send some of the money back. Later, the check bounces and you are responsible for the loss.",
+      "description": "A scammer sends a check, asks you to deposit it, and then tells you to return part of the money or buy gift cards. The bank can reverse the deposit after finding that the check is fake.",
       "prevention": [
-        "Never accept checks from strangers, especially overpayment checks.",
-        "Never send cash, gift cards, or wire transfers after depositing a check.",
-        "Verify suspicious checks with your bank before using the money.",
-        "Watch for poor grammar, fake company names, or rushed instructions.",
-        "Avoid anyone pressuring you to act quickly or secretly."
+        "Do not accept an unexpected check from a stranger.",
+        "Do not send money or buy gift cards after depositing a check.",
+        "Ask your bank to review a suspicious check before using the funds.",
+        "Remember that available funds do not prove a check has cleared."
       ],
       "icon": "ticket-slash"
     },
     {
       "title": "Social Media Investment Fraud",
-      "description": "Fraudsters pretend to be investment experts on Facebook, Instagram, YouTube, or messaging apps and promise unusually high returns with little or no risk.",
+      "description": "Posts, ads, or private messages promise high returns with little risk. A fake platform may show profits, then demand more money or fees before allowing a withdrawal.",
       "prevention": [
-        "Be cautious of unsolicited investment offers on social media.",
-        "Verify financial professionals through trusted public resources.",
-        "Treat high-return, low-risk promises as a major red flag.",
-        "Never invest because of romance, flattery, or pressure.",
-        "Report suspected scams to the proper authorities."
+        "Be cautious with investment offers sent through social media or messaging apps.",
+        "Verify the person and company through official regulator websites.",
+        "Treat guaranteed returns and urgent deadlines as warning signs.",
+        "Do not invest because of pressure, romance, or personal flattery."
       ],
       "icon": "bank-note-x"
     },
     {
       "title": "Romance Scams",
-      "description": "Someone builds an online relationship with you, earns your trust, and then invents emergencies or investment opportunities to ask for money.",
+      "description": "Someone forms an online relationship, avoids meeting in person, and then asks for money, account access, or help with an investment.",
       "prevention": [
-        "Be cautious if someone asks for money and you have never met them in person.",
-        "Do not share banking information, gift cards, or sensitive personal details.",
-        "Use reverse image search to help verify profile pictures.",
-        "Talk to someone you trust before sending money.",
-        "If you sent money, contact your bank right away and report the scam."
+        "Do not send money to someone you have not met in person.",
+        "Do not share banking details, passwords, or security codes.",
+        "Use a reverse image search to check profile photos.",
+        "Talk to someone you trust before responding to a financial request."
       ],
       "icon": "heart"
     },
     {
       "title": "Tech Support Scams",
-      "description": "A pop-up, text, email, or phone call claims your computer is infected or hacked. The scammer then tries to get remote access, payment, or personal information.",
+      "description": "A pop-up, call, text, or email claims that a device or account has a serious problem. The scammer asks for remote access, payment, passwords, or security codes.",
       "prevention": [
-        "Real companies do not cold-call you to fix your computer.",
-        "Do not trust phone numbers shown in pop-ups or suspicious emails.",
-        "Never let a stranger remotely access your device.",
-        "Use trusted security software and keep it updated.",
-        "Close the pop-up, disconnect if necessary, and get help from a trusted source."
+        "Do not call a phone number shown in an unexpected pop-up.",
+        "Do not allow remote access after an unsolicited contact.",
+        "Close the browser or restart the device if a warning will not dismiss.",
+        "Contact the company through its official website or ask a trusted technician for help."
       ],
       "icon": "cpu"
     },
     {
       "title": "Robocall and Robotext Scams",
-      "description": "Fake calls and text messages may pretend to be from banks, delivery companies, Medicare, utilities, or government agencies in order to steal money or personal information.",
+      "description": "Automated calls and texts may impersonate banks, delivery companies, utilities, Medicare, or government agencies to collect money or personal information.",
       "prevention": [
-        "Do not press buttons on robocalls. Hang up instead.",
-        "Do not reply to suspicious texts asking for money or account details.",
-        "Use call-blocking and spam-filtering features when possible.",
-        "Verify the caller using a phone number from an official website.",
-        "Report illegal robocalls or scam texts through official reporting channels."
+        "Hang up instead of pressing a button on a suspicious robocall.",
+        "Do not reply to a text that asks for payment or account details.",
+        "Verify the message using a known phone number or official app.",
+        "Use call-blocking and spam-filtering features when available."
       ],
       "icon": "phone-off"
     },
     {
       "title": "Medicare and Health Insurance Scams",
-      "description": "Scammers pretend to be from Medicare or a health insurer to steal ID numbers, banking information, or payments, or to bill for fake services.",
+      "description": "A caller offers free benefits, replacement cards, or medical equipment to obtain Medicare numbers, banking details, or permission to bill for services.",
       "prevention": [
-        "Medicare will not call you unexpectedly to ask for your number or bank details.",
-        "Ignore offers of free services, cards, or benefits you did not request.",
-        "Contact Medicare or your insurer directly using a known number.",
-        "Do not give personal information to anyone who called you first.",
-        "Report suspected scams immediately."
+        "Do not give Medicare or banking details to an unexpected caller.",
+        "Ignore offers for benefits or equipment you did not request.",
+        "Contact Medicare or the insurer using a known phone number.",
+        "Review benefit statements for services you did not receive."
       ],
       "icon": "ambulance"
     },
     {
       "title": "Government Impersonation Scams",
-      "description": "Scammers pretend to be from the IRS, Social Security, Medicare, law enforcement, or another government agency. They use threats, pressure, or fake urgency to demand payment or information.",
+      "description": "A scammer claims to represent the IRS, Social Security, law enforcement, or another agency and threatens arrest, account closure, or lost benefits unless you act immediately.",
       "prevention": [
-        "Government agencies do not call or text to threaten arrest or demand immediate payment.",
-        "Do not give out personal, banking, or tax information to unknown callers.",
-        "Verify suspicious claims by contacting the agency directly using a trusted number.",
-        "Be skeptical of caller ID, since scam calls can be spoofed.",
-        "Report suspicious calls to the appropriate authorities."
+        "Government agencies do not demand gift cards or cryptocurrency.",
+        "End the contact and call the agency using an official number.",
+        "Do not trust caller ID because it can be changed or spoofed.",
+        "Do not share personal, banking, or tax information with an unexpected caller."
       ],
       "icon": "landmark"
     },
     {
       "title": "Phishing",
-      "description": "Phishing messages pretend to come from trusted sources and try to get you to click a link, open an attachment, or reveal login details.",
+      "description": "An email or text imitates a trusted person or business and creates urgency so you will open a link, download a file, or reveal account information.",
       "prevention": [
-        "Do not click links or download files from unexpected messages.",
-        "Watch for urgent language, fake invoices, account warnings, or login prompts.",
-        "Enable extra protection on your email and financial accounts.",
-        "Use trusted security software and keep it current.",
-        "Back up important files in case malware or ransomware is involved."
+        "Do not open unexpected links or attachments.",
+        "Open the official app or type the known website address yourself.",
+        "Check the sender address and message details carefully.",
+        "Report suspicious messages and delete them after verification."
       ],
       "icon": "fish-off"
     }

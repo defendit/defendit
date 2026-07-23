@@ -87,17 +87,17 @@ export function HelpModal({ onDismiss }: HelpModalProps) {
 
         <div className="space-y-3 text-[15px] leading-relaxed text-slate-700 min-[768px]:text-base min-[1024px]:text-[17px] dark:text-slate-200">
           <p>
-            Drag a device into a room to place it. On touch, you can also select
-            a device and then select a room. The board updates in real time so
-            you can see how trust, exposure, and recovery shift.
+            Drag each device into a room. On a touch screen, select a device and
+            then select a room. Your choices change the modeled privacy,
+            impact, and recovery scores.
           </p>
           <p className="text-slate-600 dark:text-slate-300">
-            On Medium and Hard, use the room chips to set{" "}
+            On Medium and Hard, use each room button to assign{" "}
             <strong style={{ color: "#38bdf8" }}>Main</strong>,{" "}
             <strong style={{ color: "#fbbf24" }}>Guest</strong>, or{" "}
-            <strong style={{ color: "#a78bfa" }}>IoT</strong>. Locked chips stay
-            fixed. Drag a placed device to another room, or select it again to
-            move it on touch.
+            <strong style={{ color: "#a78bfa" }}>IoT</strong>. Locked zones cannot
+            be changed. To move a device, drag it to another room or select it
+            again on a touch screen.
           </p>
         </div>
 
@@ -114,7 +114,7 @@ export function HelpModal({ onDismiss }: HelpModalProps) {
               />
               <span>
                 <strong style={{ color: "#38bdf8" }}>Main</strong> is for your
-                trusted everyday devices.
+                personal and work devices you trust.
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -125,7 +125,7 @@ export function HelpModal({ onDismiss }: HelpModalProps) {
               />
               <span>
                 <strong style={{ color: "#fbbf24" }}>Guest</strong> is for
-                visitors and short-term devices.
+                visitors and devices that only need temporary internet access.
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -136,7 +136,7 @@ export function HelpModal({ onDismiss }: HelpModalProps) {
               />
               <span>
                 <strong style={{ color: "#a78bfa" }}>IoT</strong> is for smart
-                devices that should stay contained.
+                devices that do not need access to your personal devices.
               </span>
             </li>
           </ul>
@@ -160,7 +160,7 @@ export function HelpModal({ onDismiss }: HelpModalProps) {
             className="inline-flex touch-manipulation items-center justify-center rounded-xl border border-sky-400/40 bg-sky-500/12 px-5 py-2.5 text-[15px] font-bold text-sky-700 transition-colors hover:bg-sky-500/18 dark:border-sky-400/25 dark:bg-sky-500/10 dark:text-sky-200 dark:hover:bg-sky-500/20"
             style={{ touchAction: "manipulation" }}
           >
-            Dismiss
+            Close
           </button>
         </div>
 

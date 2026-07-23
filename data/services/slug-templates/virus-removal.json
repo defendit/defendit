@@ -1,10 +1,10 @@
 {
   "id": "virus-removal",
-  "title": "Virus & Malware Removal",
-  "headline": "Malware cleanup for computers showing pop-ups, browser hijacks, or other suspicious behavior.",
-  "description": "We remove common infections, explain what happened in plain language, and help close the holes that let it happen.",
-  "metaTitle": "Virus & Malware Removal in Ocala & The Villages | Defend I.T. Solutions",
-  "metaDescription": "Malware cleanup for infected computers in Central Florida, including pop-ups, browser hijacks, spyware removal, and post-cleanup hardening to reduce reinfection.",
+  "title": "Virus and Malware Removal",
+  "headline": "Remove viruses, browser hijackers, unwanted software, and other threats from an infected computer.",
+  "description": "Virus and malware removal for infected computers in Ocala, Belleview, The Villages, and nearby communities, including cleanup, security checks, and guidance after an infection.",
+  "metaTitle": "Virus and Malware Removal in Ocala, Belleview, and The Villages",
+  "metaDescription": "Remove viruses, pop-ups, browser hijackers, spyware, and other malware from infected computers in Ocala, Belleview, The Villages, and nearby communities.",
   "keywords": [
     "virus removal Ocala FL",
     "virus removal Belleview FL",
@@ -27,27 +27,27 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Many modern threats bypass antivirus software by hiding in trusted folders, memory, or scheduled tasks.",
-        "Malware can silently log keystrokes, steal browser data, or connect your device to a botnet without showing obvious symptoms.",
-        "Some infections can survive reboot, antivirus scans, or even factory resets, requiring professional remediation."
+        "Malware does not always cause obvious symptoms. It can change browser settings, capture account information, or run when the computer starts.",
+        "Fake security alerts often try to scare people into calling a phone number, installing software, or paying for unnecessary service.",
+        "Removing the visible pop-up may not remove the software or settings that caused it."
       ]
     },
     {
       "heading": "Who This Helps",
       "paragraph": [
-        "This service is for people dealing with clear signs of infection, such as fake virus alerts, browser redirects, suspicious pop-ups, blocked security tools, unexpected account warnings, or a computer that became unsafe to use.",
-        "It is also the right fit after clicking a suspicious link, opening a risky attachment, installing the wrong thing, or giving remote access to someone you should not have trusted.",
-        "If the main problem is compromise rather than general slowness or hardware failure, Virus & Malware Removal is the right starting point."
+        "This service is for anyone seeing fake alerts, browser redirects, unwanted programs, disabled security tools, or other signs that a computer may be infected.",
+        "It also helps after you open a suspicious attachment, install unsafe software, or give an unknown person remote access to the computer.",
+        "Choose this service when the main concern is whether the computer is safe to use."
       ]
     },
     {
       "heading": "Signs You May Need Virus Removal",
       "items": [
-        "Pop-ups, fake antivirus warnings, or browser redirects keep appearing",
-        "Your browser homepage, search engine, or extensions changed without your permission",
-        "Security software is disabled, downloads fail, or system settings keep changing back",
-        "You are seeing suspicious login alerts, spam being sent, or accounts being accessed unexpectedly",
-        "The computer became unstable right after opening an attachment, clicking a suspicious link, or allowing someone remote access"
+        "Pop-ups, fake security alerts, or browser redirects keep appearing",
+        "Your homepage, search engine, or browser extensions changed without permission",
+        "Security software is disabled or system settings keep changing",
+        "The computer became unstable after you opened a link, attachment, or download",
+        "You gave an unknown person remote access to the computer"
       ],
       "image": {
         "src": "/img/services/signs-of-infection-dark.jpg",
@@ -57,60 +57,74 @@
     {
       "heading": "What We Do",
       "paragraph": [
-        "This service is for systems that feel wrong: unexpected pop-ups, fake warnings, new toolbars, login weirdness, or computers that suddenly slowed down after something suspicious was opened or installed."
+        "We inspect the computer for malicious software and unwanted changes, remove supported threats, and explain the safest next steps."
       ],
       "items": [
-        "Remove common malware, adware, and browser hijackers",
-        "Check for suspicious startup items, extensions, and persistence",
-        "Review account or browser changes made by the infection",
-        "Explain what happened and what to watch for next",
-        "Make practical follow-up recommendations to reduce the chance of reinfection"
+        "Scan for and remove common malware, adware, browser hijackers, and unwanted programs",
+        "Check browsers, startup items, scheduled tasks, and security settings for unauthorized changes",
+        "Review signs that an infection may have affected online accounts",
+        "Explain what we found and whether the computer can still be trusted",
+        "Recommend account changes, software updates, or a clean rebuild when needed"
       ]
     },
     {
       "heading": "When Another Service May Be a Better Fit",
       "paragraph": [
-        "Choose Virus & Malware Removal when the main problem is compromise, suspicious behavior, or a computer that no longer feels safe to use. If the computer is slow but there are no signs of infection, [Computer Repair](/services/computer-repair) or [Software Troubleshooting & Installs](/services/software-troubleshooting) may be the better fit. If you mainly need help securing accounts after phishing, impersonation, or fraud, [Scam & Fraud Protection](/services/scam-protection) or [Password Manager Setup & Account Safety](/services/password-management) may also be part of the right next step."
+        "Choose Virus and Malware Removal when the computer shows signs of infection or no longer feels safe to use. If it is slow or unstable without signs of malware, [Computer Repair](/services/computer-repair) or [Software Troubleshooting and Installation](/services/software-troubleshooting) may be a better fit. For help securing accounts after phishing or fraud, choose [Scam and Fraud Protection](/services/scam-protection) or [Password Manager Setup and Account Security](/services/password-management)."
       ]
     },
     {
       "heading": "Local Availability",
       "paragraph": [
-        "Virus and malware removal is available for customers in Ocala, Belleview, The Villages, and nearby Central Florida communities. We explain the cleanup path clearly, tell you when a rebuild is safer, and avoid the vague scare tactics that often come with generic virus-removal marketing."
+        "Virus and malware removal is available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We explain what we find, what can be cleaned safely, and when a full rebuild is the safer option."
       ]
     }
   ],
   "internalLinks": [
-    { "label": "Computer Repair", "slug": "computer-repair" },
-    { "label": "Password Manager Setup & Account Safety", "slug": "password-management" },
-    { "label": "Scam & Fraud Protection", "slug": "scam-protection" }
+    {
+      "label": "Computer Repair",
+      "slug": "computer-repair"
+    },
+    {
+      "label": "Password Manager Setup and Account Security",
+      "slug": "password-management"
+    },
+    {
+      "label": "Scam and Fraud Protection",
+      "slug": "scam-protection"
+    }
   ],
   "faq": [
     {
       "question": "Can you remove malware without wiping my computer?",
-      "answer": "Often, yes. Many infections can be removed non-destructively. If the system is deeply compromised or cannot be trusted afterward, we explain why a wipe-and-rebuild is the safer option before moving forward."
+      "answer": "Often. Many infections can be removed without erasing the computer. If the system cannot be trusted after cleanup, we explain why a clean rebuild is safer before doing the work."
     },
     {
       "question": "What if I gave someone remote access or entered account information?",
-      "answer": "That can turn a simple infection into an account-security problem too. We can help identify what likely happened, secure the computer, and point you toward the right follow-up steps for passwords, accounts, and scam recovery."
+      "answer": "We can secure the computer and help identify the next steps for passwords, accounts, payments, and scam reporting. The exact response depends on what information or access you shared."
     },
     {
       "question": "Is virus removal the same as general computer repair?",
-      "answer": "Not exactly. Computer Repair is broader and covers hardware, performance, and non-security problems. Virus & Malware Removal is the better fit when the primary issue is compromise, suspicious behavior, or a computer that no longer feels safe to use."
+      "answer": "No. Computer Repair covers hardware, performance, and other technical problems. Virus and Malware Removal focuses on infections, unauthorized changes, and computers that may no longer be safe to use."
     }
   ],
   "related": [
-    { "label": "Computer Repair", "slug": "computer-repair" },
-    { "label": "Password Manager Setup & Account Safety", "slug": "password-management" },
-    { "label": "Scam & Fraud Protection", "slug": "scam-protection" }
+    {
+      "label": "Computer Repair",
+      "slug": "computer-repair"
+    },
+    {
+      "label": "Password Manager Setup and Account Security",
+      "slug": "password-management"
+    },
+    {
+      "label": "Scam and Fraud Protection",
+      "slug": "scam-protection"
+    }
   ],
   "cta": {
-    "label": "Schedule Virus Removal",
+    "label": "Schedule Virus and Malware Removal",
     "link": "/contact#schedule-service"
   },
-  "icons": [
-    "shield-plus",
-    "worm",
-    "alert-triangle"
-  ]
+  "icons": ["shield-plus", "worm", "alert-triangle"]
 }

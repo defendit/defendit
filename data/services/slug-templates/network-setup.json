@@ -1,10 +1,10 @@
 {
   "id": "network-setup",
-  "title": "Wi-Fi & Network Setup",
-  "headline": "Reliable Wi-Fi and network setup for homes and small offices.",
-  "description": "Wi-Fi and home network setup for better coverage, speed, and reliability in Ocala, Belleview, The Villages, and nearby Central Florida communities, including router, mesh, wired network, and access point installation.",
-  "metaTitle": "Wi-Fi & Network Setup in Ocala & The Villages | Defend I.T. Solutions",
-  "metaDescription": "Improve weak Wi-Fi, dead zones, and unreliable home Internet with router, mesh, access point, and wired network setup in Central Florida.",
+  "title": "Wi-Fi and Network Setup",
+  "headline": "Improve Wi-Fi coverage and reliability with the right router, mesh system, access points, or wired connections.",
+  "description": "Wi-Fi and network setup for homes and small offices in Ocala, Belleview, The Villages, and nearby communities, including routers, mesh systems, access points, and wired connections.",
+  "metaTitle": "Wi-Fi and Network Setup in Ocala, Belleview, and The Villages",
+  "metaDescription": "Fix weak Wi-Fi, dead zones, and dropped connections with router, mesh, access point, and wired network setup in Ocala, Belleview, and The Villages.",
   "keywords": [
     "Wi-Fi setup Ocala FL",
     "home network installation Ocala",
@@ -27,84 +27,89 @@
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Wi-Fi problems are often caused by placement, layout, interference, and equipment choices, not just your Internet plan.",
-        "A well-designed network can improve streaming, video calls, printer connectivity, and smart-device reliability without constant troubleshooting.",
-        "Mesh systems, access points, and wired backhaul can solve coverage problems that a single router cannot."
+        "Your internet plan controls the speed coming to your home. Router placement and network equipment control how well that connection reaches your devices.",
+        "Walls, distance, nearby electronics, and crowded Wi-Fi channels can weaken a wireless connection.",
+        "Mesh systems, access points, or wired connections can cover areas that one router cannot reach reliably."
       ]
     },
     {
       "heading": "Who This Helps",
       "paragraph": [
-        "This service is for households and small offices that need better Wi-Fi coverage, more reliable connections, or help setting up routers, mesh systems, wired networking, and connected devices the right way.",
-        "It is the right fit when your main problem is performance, coverage, or getting the network installed and organized correctly."
+        "This service is for homes and small offices with weak signals, dead zones, dropped connections, or new network equipment that needs to be installed.",
+        "Choose it when the main goal is better coverage, speed, reliability, or a clean network setup."
       ]
     },
     {
-      "heading": "Signs You May Need Wi-Fi & Network Setup",
+      "heading": "Signs You May Need Wi-Fi and Network Setup",
       "items": [
-        "You have dead zones, weak signal, buffering, or dropped video calls in parts of the home",
-        "A new router, mesh kit, modem, or access point needs to be installed and configured",
-        "Smart TVs, printers, cameras, or work devices keep disconnecting or struggle to join the network",
-        "You moved, changed Internet providers, or added devices and the current setup no longer fits",
-        "You want a cleaner, more reliable home network but are not sure what equipment or layout makes sense"
+        "Wi-Fi is weak or unreliable in parts of the home or office",
+        "Video calls, streaming, printers, or connected devices frequently lose their connection",
+        "A router, mesh system, modem, switch, or access point needs to be installed",
+        "You moved, changed internet providers, or added devices that the current setup cannot support well",
+        "You need help choosing equipment or deciding where it should go"
       ]
     },
     {
       "heading": "What We Do",
       "paragraph": [
-        "We set up routers, mesh systems, access points, and wired connections so the network works better day to day.",
-        "The focus is coverage, stability, and a clean setup you can actually live with."
+        "We assess the space and how you use the network, then configure the equipment for reliable daily use."
       ],
       "items": [
-        "Router, modem, mesh Wi-Fi, switch, and access point setup",
-        "Placement and configuration changes to improve coverage and reduce interference",
-        "Wired network setup for offices, entertainment systems, and fixed devices",
-        "Basic secure configuration so the network starts in a sane place",
-        "Clear guidance on how devices connect and how to manage the setup going forward"
+        "Install and configure routers, modems, mesh Wi-Fi systems, switches, and access points",
+        "Position network equipment to improve coverage and reduce interference",
+        "Set up wired connections for offices, entertainment systems, and fixed devices",
+        "Apply basic security settings and replace weak defaults",
+        "Show you how devices connect and how to manage the network"
       ]
     },
     {
       "heading": "When This Is the Right Fit",
       "paragraph": [
-        "Choose Wi-Fi & Network Setup when the main goal is better speed, coverage, reliability, or a clean new installation. If your main concern is security hardening, device isolation, and safer settings on an existing network, [Home Network Security & Wi-Fi Hardening](/services/home-network-security) is usually the better fit. If the project centers on cameras, hubs, or smart home automations, [Smart Home Setup & Security](/services/smart-home-setup) may be the better match."
+        "Choose Wi-Fi and Network Setup when you need better coverage, reliability, or a new installation. If an existing network works but needs safer settings and device separation, choose [Home Network and Wi-Fi Security](/services/home-network-security). For cameras, hubs, and home automation, choose [Smart Home Setup and Security](/services/smart-home-setup)."
       ]
     },
     {
       "heading": "Local Availability",
       "paragraph": [
-        "Wi-Fi and network setup is available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We focus on practical setup choices that work for how you actually use your home or office."
+        "Wi-Fi and network setup is available for homes and small offices in Ocala, Belleview, The Villages, and nearby Central Florida communities. We recommend equipment and placement based on the space and how you use it."
       ]
     }
   ],
   "internalLinks": [
     {
-      "label": "Home Network Security & Wi-Fi Hardening",
+      "label": "Home Network and Wi-Fi Security",
       "slug": "home-network-security"
     },
-    { "label": "Smart Home Setup & Security", "slug": "smart-home-setup" },
-    { "label": "On-Site Tech Support", "slug": "onsite-tech-support" }
+    {
+      "label": "Smart Home Setup and Security",
+      "slug": "smart-home-setup"
+    },
+    {
+      "label": "On-Site Tech Support",
+      "slug": "onsite-tech-support"
+    }
   ],
   "faq": [
     {
       "question": "Can you help with mesh Wi-Fi or access points?",
-      "answer": "Yes. We can help set up mesh systems, standalone access points, and other network hardware when a single router is not enough for your space."
+      "answer": "Yes. We can install and configure mesh systems, access points, and other network equipment when one router cannot cover the space reliably."
     },
     {
       "question": "Can better setup improve weak Wi-Fi without changing providers?",
-      "answer": "Often, yes. Placement, interference, outdated hardware, and poor configuration cause many home network problems. A better setup can improve real-world performance even when the Internet plan stays the same."
+      "answer": "Often. If the service reaching the modem is stable, better equipment placement and configuration can improve coverage and reliability without changing the internet plan."
     },
     {
-      "question": "Is this different from Home Network Security?",
-      "answer": "Yes. Wi-Fi & Network Setup focuses on installation, coverage, and reliability. Home Network Security focuses on hardening an existing network with safer settings, segmentation, filtering, and reduced exposure."
+      "question": "Is this different from home network security?",
+      "answer": "Yes. Wi-Fi and Network Setup focuses on installation, coverage, and reliability. Home Network and Wi-Fi Security focuses on safer settings, guest access, device separation, and reduced exposure."
     }
   ],
   "related": [
     {
-      "label": "Home Network Security & Wi-Fi Hardening",
+      "label": "Home Network and Wi-Fi Security",
       "slug": "home-network-security"
     },
     {
-      "label": "Smart Home Setup & Security",
+      "label": "Smart Home Setup and Security",
       "slug": "smart-home-setup"
     },
     {
@@ -113,7 +118,7 @@
     }
   ],
   "cta": {
-    "label": "Get My Network Set Up",
+    "label": "Schedule Network Setup",
     "link": "/contact#schedule-service"
   },
   "icons": ["router", "ethernet-port", "house-plug"]

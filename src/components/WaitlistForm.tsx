@@ -55,7 +55,7 @@ export function WaitlistForm({
         setEmail("");
       } else {
         const data = await res.json().catch(() => ({}));
-        setErrorMsg(data.error || "Something went wrong");
+        setErrorMsg(data.error || "We could not add you to the list. Please try again.");
         setStatus("error");
       }
     } catch {
@@ -72,10 +72,10 @@ export function WaitlistForm({
       >
         <div className="flex items-center gap-2 text-success text-sm font-medium">
           <Mail className="w-4 h-4" />
-          Check your email to confirm your spot.
+          Check your email to confirm your subscription.
         </div>
         <p className="text-xs text-ink-muted">
-          Don&apos;t see it? Check your junk or spam folder.
+          If it does not arrive, check your spam or junk folder.
         </p>
       </div>
     );
@@ -98,7 +98,7 @@ export function WaitlistForm({
               setEmail(e.target.value);
               if (status === "error") setStatus("idle");
             }}
-            placeholder="Enter your email"
+            placeholder="Email address"
             className="w-full pl-10 pr-4 py-3 rounded-lg bg-surface-inset border border-hairline text-ink placeholder-ink-dim text-base focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
           />
         </div>
@@ -113,7 +113,7 @@ export function WaitlistForm({
           ) : (
             <Zap className="w-4 h-4" />
           )}
-          Join Waiting List
+          Get SIGINT Updates
         </button>
       </form>
       {status === "error" && (

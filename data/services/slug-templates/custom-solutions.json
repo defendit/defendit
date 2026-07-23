@@ -1,10 +1,10 @@
 {
   "id": "custom-solutions",
-  "title": "Custom Solutions",
-  "headline": "Start with a consultation when the job does not fit a standard service page.",
-  "description": "Custom solutions for homeowners and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities. This page is for projects that need planning before implementation, especially when privacy, networking, storage, access, or multiple devices are involved.",
-  "metaTitle": "Custom Solutions in Ocala, Belleview & The Villages | Defend I.T. Solutions",
-  "metaDescription": "Consultation and implementation planning for privacy-focused networking, self-hosted, and specialized home or small-business technology projects in Central Florida.",
+  "title": "Custom Technology Solutions",
+  "headline": "Plan technology projects that need more than a standard repair, installation, or service visit.",
+  "description": "Custom technology planning for homes and small businesses in Ocala, Belleview, The Villages, and nearby communities, including networking, storage, privacy, access, and multi-device projects.",
+  "metaTitle": "Custom Technology Solutions in Ocala, Belleview, and The Villages",
+  "metaDescription": "Get consultation and planning for custom home or small-business networking, storage, privacy, access, and multi-device projects in Central Florida.",
   "keywords": [
     "custom IT solutions Ocala FL",
     "cybersecurity consulting Ocala",
@@ -22,71 +22,75 @@
     "The Villages FL",
     "Central Florida"
   ],
-  "icons": ["puzzle", "monitor-cog", "user"],
+  "icons": [
+    "puzzle",
+    "monitor-cog",
+    "user"
+  ],
   "sections": [
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "Some technology problems are not really repair jobs - they are planning jobs.",
-        "The right answer is not always \"buy new hardware\" or \"use the default setup.\"",
-        "A clear plan can save money and frustration when a project involves multiple devices, services, accounts, or security concerns."
+        "Some technology problems need a plan before they need equipment or installation.",
+        "Buying hardware before defining the goal can add cost and complexity without solving the problem.",
+        "A clear plan helps separate required work from optional improvements."
       ]
     },
     {
       "heading": "Who This Helps",
       "paragraph": [
-        "This service is for homeowners and small business owners with specialized projects that do not fit a standard repair, malware cleanup, or simple install visit.",
-        "It works best when you know the goal but need help designing the right setup, choosing the right tools, or implementing a clean, maintainable solution."
+        "This service is for homes and small businesses with technology projects that do not fit a standard repair, cleanup, or installation visit.",
+        "Choose it when the goal is clear but the equipment, design, or implementation path still needs to be defined."
       ]
     },
     {
       "heading": "What This Usually Covers",
       "items": [
-        "Planning a home or small-business setup that involves multiple devices, accounts, or locations",
-        "Projects where privacy, reliability, or cleaner organization matter more than a quick one-off fix",
-        "Technology changes that need a plan before equipment is purchased or installed",
-        "Mixed home and work setups that need clearer separation or safer access",
-        "Situations where the goal is clear but the right approach is not yet"
+        "Projects involving several devices, accounts, rooms, or locations",
+        "Network, storage, backup, privacy, or access requirements that need to work together",
+        "Equipment choices that should be planned before purchase or installation",
+        "Home and work systems that need clearer separation",
+        "Specialized projects that do not match a standard service"
       ]
     },
     {
       "heading": "What We Do",
       "paragraph": [
-        "We start with a consultation, define the real need, and recommend a practical path forward. Some jobs turn into a normal service visit. Others need staged planning, implementation, or follow-up work.",
-        "For a real example, see [O-Tether](/services/custom-solutions/o-tether): a custom appliance we built so one household gets secure Internet on the road."
+        "We begin with a consultation to define the goal, constraints, budget, and simplest workable approach.",
+        "For an example, see [O-Tether](/services/custom-solutions/o-tether), a custom appliance built to give one household a protected travel network through its existing router and an iPhone connection."
       ],
       "items": [
-        "Clarify the goal, constraints, and budget before recommending a solution",
-        "Recommend the simplest workable approach instead of overbuilding",
-        "Plan safer networking, storage, backup, access, or device organization when the job needs it",
-        "Help untangle multi-device or multi-account problems that do not fit a normal repair visit",
-        "Document next steps so you know what happens first, what can wait, and what is optional"
+        "Define the required outcome before recommending equipment",
+        "Identify technical, budget, privacy, and maintenance constraints",
+        "Plan networking, storage, backup, access, or device organization",
+        "Break complex work into clear stages",
+        "Document required, optional, and future steps"
       ]
     },
     {
       "heading": "When Another Service May Be a Better Fit",
       "paragraph": [
-        "Choose Custom Solutions when the project is real but does not fit neatly into [Computer Repair](/services/computer-repair), [Virus & Malware Removal](/services/virus-removal), [Wi-Fi & Network Setup](/services/network-setup), or [Smart Home Setup & Security](/services/smart-home-setup). If the need is still straightforward, one of the standard local service pages will usually be the faster starting point. This page works best for special cases, planning-heavy work, and projects with multiple moving parts."
+        "Choose Custom Technology Solutions when the project does not fit [Computer Repair](/services/computer-repair), [Virus and Malware Removal](/services/virus-removal), [Wi-Fi and Network Setup](/services/network-setup), or [Smart Home Setup and Security](/services/smart-home-setup). A standard service is usually faster when the problem already has a clear scope."
       ]
     },
     {
       "heading": "Local Availability",
       "paragraph": [
-        "Custom solutions are available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We start by clarifying the goal, constraints, and options so the project has a practical path forward instead of a vague pile of ideas."
+        "Custom technology consultations are available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We define the goal and practical options before implementation begins."
       ]
     }
   ],
   "internalLinks": [
     {
-      "label": "Home Network Security & Wi-Fi Hardening",
+      "label": "Home Network and Wi-Fi Security",
       "slug": "home-network-security"
     },
     {
-      "label": "Smart Home Setup & Security",
+      "label": "Smart Home Setup and Security",
       "slug": "smart-home-setup"
     },
     {
-      "label": "Wi-Fi & Network Setup",
+      "label": "Wi-Fi and Network Setup",
       "slug": "network-setup"
     },
     {
@@ -96,34 +100,34 @@
   ],
   "faq": [
     {
-      "question": "How do I know if this is the right page instead of a standard service?",
-      "answer": "If your project does not fit clearly into repair, malware removal, Wi-Fi setup, smart home setup, or another standard service, this is the right starting point. It is meant for planning-heavy or more specialized work."
+      "question": "How do I know whether I need a custom solution?",
+      "answer": "Choose this service when the project does not clearly fit repair, malware removal, network setup, smart home setup, or another standard service. The first step is a consultation to define the work."
     },
     {
-      "question": "Can this start as a consultation before any implementation work?",
-      "answer": "Yes. In many cases the first step is a consultation to define the goal, constraints, and practical options before deciding on any hands-on implementation."
+      "question": "Can we start with a consultation before implementation?",
+      "answer": "Yes. The consultation defines the goal, constraints, options, and expected stages before equipment is purchased or systems are changed."
     },
     {
-      "question": "Do you help with privacy-focused or self-hosted setups?",
-      "answer": "Yes. This page is one of the best fits for projects where privacy, local control, self-hosting, or non-default architecture matters more than a simple consumer setup."
+      "question": "Do you help with privacy-focused or self-hosted systems?",
+      "answer": "Yes, when the project fits our supported services. We can plan systems that prioritize privacy, local control, or self-hosting and explain the maintenance they require."
     }
   ],
   "related": [
     {
-      "label": "Home Network Security & Wi-Fi Hardening",
+      "label": "Home Network and Wi-Fi Security",
       "slug": "home-network-security"
     },
     {
-      "label": "Smart Home Setup & Security",
+      "label": "Smart Home Setup and Security",
       "slug": "smart-home-setup"
     },
     {
-      "label": "Wi-Fi & Network Setup",
+      "label": "Wi-Fi and Network Setup",
       "slug": "network-setup"
     }
   ],
   "cta": {
-    "label": "Request Consultation",
+    "label": "Request a Consultation",
     "link": "/contact#schedule-service"
   }
 }

@@ -23,54 +23,54 @@ import type { ZoneId } from "../engine/zones";
  */
 export const DEVICE_TIPS: Record<DeviceId, Record<ZoneId, string>> = {
   "work-laptop": {
-    main: "Right where it belongs, safe with your other personal devices.",
-    guest: "Can't reach the other devices it needs to work with.",
-    iot: "Sitting next to every smart device in the house.",
+    main: "Good fit. Keep work devices with the devices you trust most.",
+    guest: "Guest networks can block access to printers and other local devices.",
+    iot: "This puts work data on the same network as less trusted smart devices.",
   },
   "personal-phone": {
-    main: "Safe alongside your other personal devices.",
-    guest: "Cut off from the files and apps it needs.",
-    iot: "Sitting next to devices that rarely get security updates.",
+    main: "Good fit. Keep it with the devices you trust most.",
+    guest: "Guest networks can limit access to printers and other local devices.",
+    iot: "This puts personal data near smart devices that may receive fewer updates.",
   },
   tablet: {
-    main: "Good fit with the rest of your daily devices.",
-    guest: "Works for browsing, but can't reach your other devices.",
-    iot: "Sitting next to smart devices it doesn't need to be near.",
+    main: "Good fit. Keep it with your other personal devices.",
+    guest: "Fine for internet access, but local devices may be unavailable.",
+    iot: "This puts a personal device on the smart-device network.",
   },
   "guest-phone": {
-    main: "A visitor's phone can now see everything on your network.",
-    guest: "Perfect. Your guest gets Internet without seeing your stuff.",
-    iot: "Better than Main, but visitors really belong on their own network.",
+    main: "This gives a visitor's device the same network access as your personal devices.",
+    guest: "Good fit. A separate Guest network limits access to personal devices.",
+    iot: "This separates it from Main, but visitor devices belong on the Guest network.",
   },
   printer: {
-    main: "Convenient, but printers rarely get security updates.",
-    guest: "Separated, but harder to actually print to.",
-    iot: "Safer. The printer works fine without access to your personal devices.",
+    main: "Convenient, but printers may receive security updates less often than personal devices.",
+    guest: "This limits access, but your devices may not be able to print.",
+    iot: "Good fit. The IoT network limits its access to personal devices.",
   },
   "smart-tv": {
-    main: "Smart TVs constantly send data back to the manufacturer. Too much access for a TV.",
-    guest: "Still more access to your home than a TV needs.",
-    iot: "Streams fine from here and can't see anything it shouldn't.",
+    main: "This gives a connected TV more access to personal devices than it needs.",
+    guest: "This limits access, but the Guest network is intended for visitors.",
+    iot: "Good fit. The IoT network limits its access to personal devices.",
   },
   "smart-speaker": {
-    main: "An always-listening device with full access to your personal network.",
-    guest: "Limited access, but not really where it belongs either.",
-    iot: "Works exactly the same from here, just much safer.",
+    main: "This gives a voice assistant more access to personal devices than it needs.",
+    guest: "This limits access, but the Guest network is intended for visitors.",
+    iot: "Good fit. The IoT network limits its access to personal devices.",
   },
   "game-console": {
-    main: "Online gaming and voice chat running on your personal network.",
-    guest: "Doesn't really need to be on the guest network.",
-    iot: "Gaming works fine from here, away from your personal devices.",
+    main: "This gives a game console more access to personal devices than it needs.",
+    guest: "This limits access, but the Guest network is intended for visitors.",
+    iot: "Good fit. The IoT network limits its access to personal devices.",
   },
   "doorbell-camera": {
-    main: "A camera facing the street with full access to your personal devices.",
-    guest: "An outdoor camera with more access than it needs.",
-    iot: "Right where it belongs. Works fine, stays separate from everything else.",
+    main: "This gives an internet-connected camera access to personal devices.",
+    guest: "This limits access, but cameras belong with other smart devices.",
+    iot: "Good fit. Separation limits its access to personal devices.",
   },
   "camera-hub": {
-    main: "If someone hacks the camera, they can reach your work files.",
-    guest: "Cameras need their own space, not visitor-level access.",
-    iot: "If someone breaks in through the cameras, the damage stays limited to this network.",
+    main: "A compromised camera could provide a path to personal or work devices.",
+    guest: "This limits access, but cameras belong with other smart devices.",
+    iot: "Good fit. Separation can limit the effect of a camera compromise.",
   },
 };
 
@@ -82,9 +82,9 @@ export const COMBO_TIPS: Record<AppliedCombo["id"], string> = {
   "guest-mixed-with-trusted":
     "A visitor's device is sharing a network with your personal devices.",
   "camera-on-main":
-    "Camera on Main. A camera facing the street can see your personal devices.",
+    "A camera shares the Main network with personal devices.",
   "entertainment-clutter":
-    "Smart devices are cluttering up your personal network.",
+    "Smart devices share the Main network with personal devices.",
   "single-zone-dump":
-    "Everything is on one network. If any device gets hacked, the rest are exposed.",
+    "All devices share one network, so one compromised device could put others at risk.",
 };

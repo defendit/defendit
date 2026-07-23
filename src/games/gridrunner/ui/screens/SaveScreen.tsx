@@ -19,7 +19,7 @@ export function SaveScreen({ onClose, onSave }: SaveScreenProps) {
       variant="dialog"
     >
       <p className="gr-font-mono text-center text-xs text-[#aabbcc]">
-        Progress saves automatically. Use this to force a manual save.
+        Progress saves automatically. Select Save to save now.
       </p>
       <div className="flex gap-2">
         <Button

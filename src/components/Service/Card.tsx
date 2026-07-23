@@ -90,29 +90,31 @@ export function ServiceCard({
       {/* Title */}
       <h3 className="text-h3 tracking-h3 font-semibold text-ink mb-3">{title}</h3>
 
-      {/* Summary - Grows to fill space */}
-      <p className="mb-4 flex-grow text-sm leading-relaxed text-ink-muted">
-        {summary}
-      </p>
+      <div className="mt-auto">
+        {/* Summary */}
+        <p className="mb-4 text-sm leading-relaxed text-ink-muted">
+          {summary}
+        </p>
 
-      {/* CTA - Fixed at bottom */}
-      <div className="border-t border-hairline pt-4">
-        <span className="flex items-center gap-2 text-sm font-medium text-accent transition-all group-hover:gap-3">
-          {cta || "Learn More"}
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.25}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </span>
+        {/* CTA - Fixed at bottom */}
+        <div className="border-t border-hairline pt-4">
+          <span className="flex items-center gap-2 text-sm font-medium text-accent transition-all group-hover:gap-3">
+            {cta || "Learn More"}
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.25}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </span>
+        </div>
       </div>
     </Card>
   );

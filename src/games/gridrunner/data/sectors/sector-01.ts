@@ -406,7 +406,7 @@ const enemies: Record<string, EnemyDef> = {
     moves: [
       { name: "Deface", power: 15, accuracy: 88, weight: 35, description: "Defaces a public-facing site" },
       { name: "Doxx Attempt", power: 20, accuracy: 78, weight: 30, description: "Leaks personal data" },
-      { name: "Manifesto", power: 0, accuracy: 100, weight: 35, description: "Buffs own power 10%" },
+      { name: "Manifesto", power: 0, accuracy: 100, weight: 35, description: "Restores 5 HP" },
     ],
     xpReward: 28,
     bitsReward: 12,
@@ -558,9 +558,9 @@ const intel: Record<string, BossEntry> = {
     sector: "Financial",
     weakness: "defense",
     background:
-      "North Korea's state-sponsored theft operation. The regime treats cybercrime as revenue, running coordinated campaigns against banks, crypto exchanges, and payment networks to fund sanctioned activities.",
+      "Lazarus Group is a North Korean state-sponsored threat group. It targets banks, cryptocurrency companies, and payment systems.",
     operations:
-      "The 2016 Bangladesh Bank heist drained $81 million via fraudulent SWIFT transfers. The 2017 WannaCry ransomware worm crippled hospitals and businesses worldwide. Billions stolen from cryptocurrency platforms since.",
+      "The group has been linked to the 2016 Bangladesh Bank theft, the 2017 WannaCry outbreak, and theft from cryptocurrency companies.",
     badgeId: "bank-buster",
   },
   "trader-traitor": {
@@ -570,9 +570,9 @@ const intel: Record<string, BossEntry> = {
     sector: "Financial / Cryptocurrency",
     weakness: "recon",
     background:
-      "A Lazarus Group sub-cluster identified by US CISA, FBI, and Treasury as TraderTraitor -- focused on cryptocurrency theft and laundering. The DPRK treats stolen crypto as sovereign revenue and uses the proceeds to sustain activities under international sanction.",
+      "TraderTraitor is a North Korean campaign identified by CISA, the FBI, and the U.S. Treasury. It uses social engineering and malicious applications to target cryptocurrency companies.",
     operations:
-      "Executed the Ronin Bridge ($620M) and Harmony Horizon ($100M) heists in 2022. Laundered proceeds through mixers like Tornado Cash (OFAC-sanctioned August 2022) and cross-chain bridges. UN Panel of Experts reports these operations fund DPRK WMD and ballistic missile programs. The Exchange fight is mechanically harder than the Bank -- Lazarus's laundering arm is hardened, compartmentalized, and doesn't hold still long enough for brute force. You have to trace them.",
+      "The campaign has been linked to the 2022 Ronin Bridge and Harmony Horizon thefts. In this game, Recon tools are most effective because the fight centers on tracing transactions.",
     badgeId: "exchange-raider",
   },
 };
@@ -622,7 +622,7 @@ const badges: BadgeDef[] = [
 const zoneNames: Record<string, string> = {
   "sector-01": "THE GRID",
   arcade: "ARCADE",
-  bank: "BANK -- FINANCIAL SECTOR",
+  bank: "BANK: FINANCIAL SECTOR",
   exchange: "CRYPTO EXCHANGE",
 };
 

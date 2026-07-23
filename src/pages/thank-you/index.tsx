@@ -41,10 +41,10 @@ export default function ThankYouPage() {
   return (
     <>
       <Head>
-        <title>Thank You | Appointment Confirmed | Defend I.T. Solutions</title>
+        <title>Appointment Confirmed | Defend I.T. Solutions</title>
         <meta
           name="description"
-          content="Your appointment with Defend I.T. Solutions has been confirmed. We look forward to assisting you with secure, in-person tech support."
+          content="Your appointment with Defend I.T. Solutions is scheduled. Call us if you have questions or need to reschedule."
         />
         <meta
           property="og:title"
@@ -52,7 +52,7 @@ export default function ThankYouPage() {
         />
         <meta
           property="og:description"
-          content="Thanks for booking with Defend I.T. Solutions. We'll be in touch soon!"
+          content="Your appointment with Defend I.T. Solutions is scheduled."
         />
         <meta
           property="og:url"
@@ -71,7 +71,7 @@ export default function ThankYouPage() {
         />
         <meta
           name="twitter:description"
-          content="Your appointment is set. We appreciate your trust in our local tech support services."
+          content="Your appointment is scheduled. Call us if you have questions or need to reschedule."
         />
         <meta
           name="twitter:image"
@@ -89,18 +89,16 @@ export default function ThankYouPage() {
           <CheckCircle className="w-16 h-16 text-success mx-auto" />
 
           <h1 className="text-display tracking-display font-semibold text-ink">
-            Thank You for Booking!
+            Your Appointment Is Scheduled
           </h1>
 
           <p className="text-base sm:text-lg text-ink-muted max-w-xl mx-auto">
-            Your appointment has been successfully scheduled. We appreciate your
-            trust in our services and look forward to assisting you.
+            Your appointment is scheduled. We look forward to helping you.
           </p>
 
           <div className="space-y-2">
             <p className="text-base sm:text-lg text-ink-muted">
-              If you have any questions or need to reschedule, please call us
-              at:
+              Questions or changes? Call us at:
             </p>
             <a
               href={`tel:+${contact.phone.replace(/[^0-9]/g, "")}`}
@@ -111,14 +109,14 @@ export default function ThankYouPage() {
           </div>
 
           <div className="mt-6 text-base sm:text-lg text-ink-muted">
-            Redirecting you to the homepage in{" "}
+            Returning to the home page in{" "}
             <span
               className="inline-block text-xl font-semibold text-ink min-w-[2ch] text-center"
               aria-live="polite"
             >
               {secondsLeft}
             </span>{" "}
-            seconds...
+            seconds.
           </div>
 
           <p className="text-sm text-ink-dim">
@@ -128,7 +126,7 @@ export default function ThankYouPage() {
               onClick={() => router.push("/")}
               className="text-accent hover:underline"
             >
-              click here
+              return to the home page
             </button>
             .
           </p>

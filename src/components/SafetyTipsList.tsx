@@ -29,11 +29,11 @@ export const SafetyTipsList: React.FC = () => {
     <>
       <header className="text-center mb-12">
         <h2 className="text-h2 tracking-h2 font-semibold text-ink">
-          Start with the basics
+          Start With Four Basic Habits
         </h2>
         <p className="mx-auto mt-3 max-w-readable text-lead text-ink-muted">
-          These are the habits and warning signs we talk through most often with
-          local clients and community groups.
+          These simple steps reduce the risk of common account, payment, and
+          identity scams.
         </p>
       </header>
 

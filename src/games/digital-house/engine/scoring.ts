@@ -276,7 +276,7 @@ export function calculateScore(placements: DevicePlacement[]): ScoreResult {
     comboDeltas = addDelta(comboDeltas, COMBO_A_GUEST_WITH_TRUSTED);
     appliedCombos.push({
       id: "guest-mixed-with-trusted",
-      label: "Guest device sharing trust with your daily-use devices",
+      label: "A guest device shares the Main network with personal devices",
       delta: COMBO_A_GUEST_WITH_TRUSTED,
     });
   }
@@ -285,7 +285,7 @@ export function calculateScore(placements: DevicePlacement[]): ScoreResult {
     comboDeltas = addDelta(comboDeltas, COMBO_B_CAMERA_ON_MAIN);
     appliedCombos.push({
       id: "camera-on-main",
-      label: "Camera devices placed inside your main network",
+      label: "Cameras share the Main network with personal devices",
       delta: COMBO_B_CAMERA_ON_MAIN,
     });
   }
@@ -301,7 +301,7 @@ export function calculateScore(placements: DevicePlacement[]): ScoreResult {
       appliedCombos.push({
         id: "entertainment-clutter",
         label:
-          "Entertainment and smart devices sitting next to your work or personal devices",
+          "Entertainment and smart devices share the Main network with personal devices",
         delta,
         count: clutterCount,
       });
@@ -314,7 +314,7 @@ export function calculateScore(placements: DevicePlacement[]): ScoreResult {
       comboDeltas = addDelta(comboDeltas, COMBO_D_SINGLE_ZONE_DUMP);
       appliedCombos.push({
         id: "single-zone-dump",
-        label: "Every device dumped into the same zone",
+        label: "All devices share one network zone",
         delta: COMBO_D_SINGLE_ZONE_DUMP,
       });
     }

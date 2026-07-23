@@ -4,54 +4,54 @@
     {
       "id": "remote-support",
       "title": "Remote Tech Support",
-      "headline": "Remote help for everyday computer and software problems.",
+      "headline": "Remote help with everyday computer and software problems.",
       "icons": ["monitor", "wifi", "headphones"],
       "requiresPlan": true,
-      "summary": "For clients with secure remote access in place, we can handle many software and settings issues without an on-site visit.",
-      "cta": "Request Remote Help"
+      "summary": "Get help with software, settings, email, printers, and other everyday computer problems on an enrolled device.",
+      "cta": "View Remote Tech Support"
     },
     {
       "id": "remote-virus-removal",
-      "title": "Remote Virus & Malware Removal",
-      "headline": "Remote malware cleanup when secure access is already in place.",
+      "title": "Remote Virus and Malware Removal",
+      "headline": "Remote malware cleanup for enrolled devices.",
       "icons": ["shield-plus", "bug", "alert-triangle"],
       "requiresPlan": true,
-      "summary": "When the device can be reached safely, we can clean up pop-ups, browser hijacks, and similar infections through a remote session.",
-      "cta": "Request Remote Malware Help"
+      "summary": "Remove supported malware, pop-ups, and browser hijackers from an enrolled device when a secure remote connection is available.",
+      "cta": "View Remote Malware Removal"
     },
     {
       "id": "remote-training",
-      "title": "1-on-1 Remote Tech Training",
-      "headline": "Private online help for everyday technology.",
+      "title": "One-on-One Remote Tech Training",
+      "headline": "Patient online help with everyday technology.",
       "icons": ["graduation-cap", "mouse-pointer-click", "presentation"],
-      "summary": "Patient one-on-one help for people who want guided support with computers, phones, Internet basics, or common digital tasks.",
-      "cta": "Request Remote Training"
+      "summary": "Get patient online guidance with computers, phones, accounts, internet basics, and common digital tasks. No support plan required.",
+      "cta": "View Remote Training"
     },
     {
       "id": "remote-security-assessment",
       "title": "Remote Security Assessment",
-      "headline": "A guided remote review of the security basics.",
+      "headline": "A guided review of security settings on enrolled devices.",
       "icons": ["shield-check", "search", "alert-circle"],
       "requiresPlan": true,
-      "summary": "We walk through devices, accounts, browsers, updates, and backups to spot weak points and give you a clear list of what to fix first.",
-      "cta": "Request a Security Review"
+      "summary": "Review updates, accounts, browsers, backups, and device settings on an enrolled device, then get prioritized next steps.",
+      "cta": "View Security Assessment"
     },
     {
       "id": "remote-privacy-hardening",
-      "title": "Privacy Hardening & Digital Safety",
-      "headline": "Remote help tightening the privacy settings that matter.",
+      "title": "Remote Privacy and Digital Safety",
+      "headline": "Clear help with privacy settings on enrolled devices.",
       "icons": ["lock", "eye-off", "key-round"],
       "requiresPlan": true,
-      "summary": "A guided session to clean up browser, device, messaging, DNS, and VPN settings without turning it into a lecture.",
-      "cta": "Request Privacy Help"
+      "summary": "Improve browser, device, messaging, DNS, and VPN settings on an enrolled device with an explanation for each change.",
+      "cta": "View Privacy Support"
     },
     {
       "id": "remote-tech-tutoring",
-      "title": "Remote IT & Cybersecurity Tutoring",
-      "headline": "Focused one-on-one help for specific technical topics.",
+      "title": "Remote IT and Cybersecurity Tutoring",
+      "headline": "Focused online help with technical topics.",
       "icons": ["graduation-cap", "laptop", "message-circle"],
-      "summary": "Live remote guidance for students and career changers who want help with a class, project, lab, or specific skill area.",
-      "cta": "Request Tutoring"
+      "summary": "Get live help with an IT or cybersecurity class, certification topic, lab, project, or specific technical skill. No support plan required.",
+      "cta": "View Technical Tutoring"
     }
   ]
 }

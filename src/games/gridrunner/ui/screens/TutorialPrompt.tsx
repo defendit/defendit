@@ -11,9 +11,9 @@ type TutorialPromptProps = Readonly<{
 }>;
 
 const BATTLE_STEP_COPY: Record<1 | 2 | 3, string> = {
-  1: "Select NMAP to scan the enemy. Each tool has a type.",
-  2: "NMAP is a Recon tool. Recon is strong against Persistence (1.5x damage).",
-  3: "Check the battle log below. It shows what happened each turn.",
+  1: "Select Nmap to scan the enemy. Each tool has a type.",
+  2: "Nmap is a Recon tool. Recon deals 1.5 times more damage against Persistence.",
+  3: "The battle log records what happens during each turn.",
 };
 
 export function TutorialPrompt({
@@ -43,7 +43,7 @@ export function TutorialPrompt({
           onClick={onDismiss}
           className="gr-font-mono shrink-0 self-center rounded-sm border border-[#00f0ff] bg-[#0f1b2d] px-2 py-1 text-[10px] font-bold tracking-widest text-[#00f0ff] active:brightness-150"
         >
-          PRESS A
+          CONTINUE
         </button>
       </div>
     </section>

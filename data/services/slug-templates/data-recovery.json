@@ -1,10 +1,10 @@
 {
   "id": "data-recovery",
-  "title": "Data Recovery & Backup Help",
-  "headline": "Recover important files when possible, then set up backups you can trust.",
-  "description": "Data recovery and backup help for deleted files, failing drives, non-booting computers, and fragile backup setups in Ocala, Belleview, The Villages, and nearby Central Florida communities.",
-  "metaTitle": "Data Recovery & Backup Help in Ocala & The Villages | Defend I.T. Solutions",
-  "metaDescription": "Help with deleted files, failing drives, non-booting computers, and encrypted backup setup in Central Florida, with clear guidance on what can and cannot be recovered.",
+  "title": "Data Recovery and Backup Help",
+  "headline": "Recover accessible files when possible, then build a backup plan you can trust.",
+  "description": "Data recovery and backup help for deleted files, failing drives, and non-booting computers in Ocala, Belleview, The Villages, and nearby communities.",
+  "metaTitle": "Data Recovery in Ocala, Belleview, and The Villages",
+  "metaDescription": "Get help with deleted files, failing drives, non-booting computers, data transfers, and reliable backups in Ocala, Belleview, and The Villages.",
   "keywords": [
     "data recovery Ocala FL",
     "data recovery Belleview FL",
@@ -23,62 +23,58 @@
     "The Villages FL",
     "Central Florida"
   ],
-  "icons": [
-    "hard-drive",
-    "clock",
-    "file-check"
-  ],
+  "icons": ["hard-drive", "clock", "file-check"],
   "sections": [
     {
       "heading": "Did You Know?",
       "paragraph": [
-        "A computer that will not boot does not automatically mean the files are gone.",
-        "Drives can fail gradually or all at once, and waiting too long after the first warning signs can make recovery harder.",
-        "A simple, tested backup routine is usually far cheaper and far less stressful than emergency recovery work."
+        "A computer that will not start does not always mean its files are lost.",
+        "Clicking sounds, repeated disconnects, and read errors can signal physical drive failure. Continued use can make recovery less likely.",
+        "A tested backup is more useful than a backup job that has never been checked."
       ]
     },
     {
       "heading": "Who This Helps",
       "paragraph": [
-        "This service is for homeowners and small business owners who have lost files, cannot access important data, or want to stop living one hardware failure away from a major headache.",
-        "It is also a good fit if a computer still works today but stores irreplaceable photos, tax records, bookkeeping files, or family documents without a reliable backup."
+        "This service is for homes and small businesses that lost files, cannot access important data, or have a computer or drive that is beginning to fail.",
+        "It also helps anyone who stores important photos, records, or business files without a backup they trust."
       ]
     },
     {
       "heading": "Signs You May Need Data Recovery or Backup Help",
       "items": [
-        "Important files were deleted, overwritten, or suddenly cannot be opened",
-        "A computer will not boot, but the files on it still matter",
-        "A drive is clicking, disappearing, running slowly, or reporting errors",
-        "You are moving to a new computer and want data transferred safely",
-        "You know your files matter, but there is no backup you trust"
+        "Important files were deleted, overwritten, corrupted, or can no longer be opened",
+        "A computer will not start, but the files on it are still important",
+        "A drive clicks, disconnects, runs unusually slowly, or reports errors",
+        "You need to move files safely to a replacement computer or storage device",
+        "Your important files do not have a tested backup"
       ]
     },
     {
       "heading": "What We Do",
       "paragraph": [
-        "We help recover accessible data when possible, move it safely, and build a cleaner backup plan so future hardware problems are less disruptive."
+        "We assess the storage device, recover accessible data when possible, and explain the safest next step."
       ],
       "items": [
-        "Assess drives and systems to determine whether recovery is realistically possible",
-        "Advise when a failing drive should be powered down and handled more carefully before more damage is done",
-        "Recover deleted, corrupted, or inaccessible files from supported devices when the damage is within reach of software-based recovery",
-        "Safely transfer data to a replacement computer or storage device",
-        "Set up encrypted, automated backups for documents, photos, and critical files",
-        "Design backup routines with local and offsite protection where appropriate",
-        "Explain when a specialty recovery lab is the better next step for severe physical damage"
+        "Determine whether software-based recovery is appropriate",
+        "Advise when a failing drive should be powered down to prevent further damage",
+        "Recover supported deleted, corrupted, or inaccessible files when possible",
+        "Transfer accessible data to a replacement computer or storage device",
+        "Set up encrypted, automated backups for important files",
+        "Use local and offsite backups when the risk and budget support both",
+        "Recommend a specialty recovery lab for severe physical damage"
       ]
     },
     {
       "heading": "When Another Service May Be a Better Fit",
       "paragraph": [
-        "Choose Data Recovery & Backup Help when your top priority is saving files, moving data safely, or putting dependable backups in place. If the computer itself is also slow, damaged, or unstable, [Computer Repair](/services/computer-repair) may be the better starting point. If you mainly want the system to feel faster rather than recover files, [Laptop & PC Speed Upgrades](/services/pc-upgrades) may be the better match."
+        "Choose Data Recovery and Backup Help when saving files, transferring data, or setting up reliable backups is the priority. If the computer itself needs diagnosis or repair, choose [Computer Repair](/services/computer-repair). If the computer works and mainly needs better performance, choose [Laptop and PC Upgrades](/services/pc-upgrades)."
       ]
     },
     {
       "heading": "Local Availability",
       "paragraph": [
-        "Data recovery and backup help is available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We stay honest about what can be recovered, what cannot, and when the safest next step is prevention through better backups."
+        "Data recovery and backup help is available in Ocala, Belleview, The Villages, and nearby Central Florida communities. We explain what may be recoverable, when continued use is risky, and when a specialty lab is the safer choice."
       ]
     }
   ],
@@ -88,26 +84,26 @@
       "slug": "computer-repair"
     },
     {
-      "label": "Virus & Malware Removal",
+      "label": "Virus and Malware Removal",
       "slug": "virus-removal"
     },
     {
-      "label": "Laptop & PC Speed Upgrades",
+      "label": "Laptop and PC Upgrades",
       "slug": "pc-upgrades"
     }
   ],
   "faq": [
     {
-      "question": "Can files be recovered from a computer that will not boot?",
-      "answer": "Often, yes. A system that will not start can still have recoverable data if the storage device is readable. We assess the situation first and explain the realistic recovery path before moving forward."
+      "question": "Can files be recovered from a computer that will not start?",
+      "answer": "Often, if the storage device remains readable. We assess the computer and explain the available recovery options before doing the work."
     },
     {
-      "question": "Should I keep using a drive that is clicking or disappearing?",
-      "answer": "Usually no. Repeated use of a failing drive can make recovery harder. If the files matter, it is safer to stop using it and have the situation assessed before more damage is done."
+      "question": "Should I keep using a drive that clicks or disconnects?",
+      "answer": "No. Continued use can cause more damage and reduce the chance of recovery. Turn the device off and have the drive assessed if the files are important."
     },
     {
       "question": "Can you set up backups after recovery?",
-      "answer": "Yes. In many cases the most valuable part of the job is not only recovering the data you still have, but setting up a backup system so the same scare is much less likely to happen again."
+      "answer": "Yes. We can set up automatic, encrypted backups and show you how to confirm that they are working."
     }
   ],
   "related": [
@@ -116,11 +112,11 @@
       "slug": "computer-repair"
     },
     {
-      "label": "Virus & Malware Removal",
+      "label": "Virus and Malware Removal",
       "slug": "virus-removal"
     },
     {
-      "label": "Laptop & PC Speed Upgrades",
+      "label": "Laptop and PC Upgrades",
       "slug": "pc-upgrades"
     }
   ],

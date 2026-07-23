@@ -42,21 +42,21 @@ export const ZONES: Zone[] = [
     name: "Main Network",
     shortName: "Main",
     description:
-      "For devices you trust most and depend on every day, work and personal.",
+      "For personal and work devices you trust and use every day.",
   },
   {
     id: "guest",
     name: "Guest Network",
     shortName: "Guest",
     description:
-      "For temporary or outside-user access that should not share full trust.",
+      "For visitors and devices that only need temporary internet access.",
   },
   {
     id: "iot",
     name: "Smart Devices / IoT",
     shortName: "IoT",
     description:
-      "For TVs, cameras, speakers, and other connected devices that do not need the reach of your personal or work systems.",
+      "For TVs, cameras, speakers, and other smart devices that do not need access to personal or work devices.",
   },
 ];
 
@@ -65,27 +65,27 @@ export const ROOMS: Room[] = [
     id: "office",
     name: "Office",
     description:
-      "Trusted work zone. Where the laptop lives and the day job happens.",
+      "A workspace for computers, printers, and other office devices.",
   },
   {
     id: "living-room",
     name: "Living Room",
-    description: "Entertainment and family clutter: TV, console, speaker.",
+    description: "A shared space for TVs, consoles, speakers, and personal devices.",
   },
   {
     id: "kitchen",
     name: "Kitchen",
-    description: "Appliances and smart fixtures. A utility space.",
+    description: "A utility space for appliances and smart devices.",
   },
   {
     id: "bedroom",
     name: "Bedroom",
-    description: "Private personal space. Phones and tablets end up here.",
+    description: "A personal space where phones and tablets are often used.",
   },
   {
     id: "entry-exterior",
     name: "Entry / Exterior",
-    description: "The front door, the doorbell camera, and visitor overflow.",
+    description: "An outdoor area for doorbells, cameras, and other entry devices.",
   },
 ];
 

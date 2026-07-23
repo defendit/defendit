@@ -198,14 +198,14 @@ export const sigintProductLd = {
   image: "https://www.wedefendit.com/img/sigint/sigint-hijack-dossier.png",
   screenshot: "https://www.wedefendit.com/img/sigint/sigint-hero.png",
   description:
-    "Real-time OSINT dashboard with live aircraft, vessel, seismic, fire, weather, and conflict event tracking on an interactive globe. Correlation engine, anomaly detection, and multi-source intelligence analysis.",
+    "Self-hosted OSINT dashboard for aircraft, vessels, earthquakes, fires, severe weather, tropical cyclones, geolocated events, and world news. Includes correlation, regional baselines, scored alerts, and a multi-pane workspace.",
   featureList: [
-    "Live aircraft tracking (OpenSky Network)",
+    "Live aircraft tracking (adsb.fi)",
     "AIS vessel tracking",
     "USGS seismic monitoring",
     "NASA FIRMS fire detection",
     "NOAA severe weather alerts",
-    "NOAA National Hurricane Center tropical cyclone tracking",
+    "NHC tropical cyclone tracking, forecast cones, and advisories",
     "GDELT conflict and crisis events",
     "World news aggregation (RSS)",
     "Cross-source correlation engine",
@@ -214,7 +214,7 @@ export const sigintProductLd = {
     "Multi-pane resizable layout",
     "Live HLS video monitoring",
     "Entity dossier with photos and intel links",
-    "Composite alert scoring (1-10)",
+    "Context-scored alerts (1 to 10)",
     "Watch mode (automated globe tour)",
     "Global search with live filtering",
     "Dark and light themes",
@@ -231,7 +231,7 @@ export const sigintProductLd = {
     name: "Defend I.T. Solutions LLC",
     url: "https://www.wedefendit.com",
   },
-  softwareVersion: "1.0",
+  softwareVersion: "0.1.0",
   isAccessibleForFree: true,
 };
 
@@ -241,12 +241,12 @@ export const sigintProductLd = {
 export const oTetherProductLd = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "o-tether",
+  name: "O-Tether",
   category: "Network Security Appliance",
   url: "https://www.wedefendit.com/services/custom-solutions/o-tether",
   image: "https://www.wedefendit.com/img/services/o-tether-hero-dark.webp",
   description:
-    "A custom-built network security appliance that bridges an iPhone's connection into a hardened travel Wi-Fi network. Default-deny firewall, DNS and IP threat-intelligence filtering, deep-packet flow detection, and an inline intrusion-prevention system, with signed-release integrity and a fail-closed posture throughout.",
+    "A custom network security appliance that shares an iPhone connection through a household's existing router. It combines a default-deny firewall, DNS and IP reputation filtering, traffic observation, inline intrusion prevention, and signed manifest verification.",
   brand: { "@type": "Brand", name: "Defend I.T. Solutions" },
   manufacturer: {
     "@type": "Organization",

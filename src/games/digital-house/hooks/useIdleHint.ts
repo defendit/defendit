@@ -19,19 +19,19 @@ const DELAY_COMPLETE = 4_000;
 const DELAY_ZONE_NUDGE = 10_000;
 
 function selectMessage(snap: IdleSnapshot): string | null {
-  if (snap.isComplete) return "All placed. Check your after-action report";
+  if (snap.isComplete) return "All devices placed. Review your results";
   if (
     snap.difficulty !== "easy" &&
     !snap.hasAssignedZone &&
     snap.hasUnzonedRooms &&
     snap.placedCount < 2
   ) {
-    return "Set each room's network zone first. Use the zone chip on each room";
+    return "Before placing devices, use each room button to assign a network zone";
   }
   if (snap.selectedId && snap.selectedName)
-    return `Drop ${snap.selectedName} into a room to place it`;
+    return `Place ${snap.selectedName} in a room`;
   if (snap.placedCount === 0)
-    return "Drag a device from the inventory into a room";
+    return "Place a device from the inventory in a room";
   const remaining = 10 - snap.placedCount;
   return `${remaining} device${remaining === 1 ? "" : "s"} left to place`;
 }

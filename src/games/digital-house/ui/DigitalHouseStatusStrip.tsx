@@ -200,7 +200,7 @@ export function AnalysisStrip({
           </span>
         </span>
         <span className="min-w-0 text-[11px] leading-snug text-slate-500 dark:text-slate-400">
-          Drag a device to a room to begin
+          Place a device in a room to begin
         </span>
       </div>
     </div>

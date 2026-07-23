@@ -57,7 +57,7 @@ export function IntelReportScreen({ bossId, onClose }: IntelReportScreenProps) {
             {boss.name.toUpperCase()}
           </h3>
           <p className="gr-font-mono text-xs text-[#aabbcc]">
-            {boss.nation} -- {boss.sector}
+            {boss.nation} · {boss.sector}
           </p>
         </div>
       </header>
@@ -93,7 +93,7 @@ export function IntelReportScreen({ bossId, onClose }: IntelReportScreenProps) {
             className="gr-font-mono inline-block rounded-sm border border-[#ff6b00] bg-[#1a1006] px-2 py-0.5 text-xs font-bold tracking-widest text-[#ff6b00]"
             data-testid="gr-intel-badge"
           >
-            {badge.label.toUpperCase()} -- {badge.tier.toUpperCase()}
+            {badge.label.toUpperCase()} · {badge.tier.toUpperCase()}
           </span>
         </section>
       )}

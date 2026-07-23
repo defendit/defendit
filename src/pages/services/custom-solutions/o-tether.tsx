@@ -109,11 +109,11 @@ export default function OTetherCaseStudy() {
   return (
     <>
       <Meta
-        title="O-Tether | Custom Network Security Appliance | Defend I.T. Solutions"
-        description="A custom solutions case study: O-Tether, a small appliance we built so a household could get secure travel Internet that presents the same familiar Wi-Fi everywhere, with layered protection working quietly underneath."
+        title="O-Tether Travel Network Security Case Study | Defend I.T."
+        description="See how Defend I.T. built O-Tether, a custom travel network appliance that shares an iPhone connection through familiar Wi-Fi with layered security."
         url={CANONICAL}
         canonical={CANONICAL}
-        keywords="custom network security appliance, travel router security, phone tether firewall, intrusion prevention, threat intelligence filtering, DNS filtering, Defend I.T. Solutions custom solutions"
+        keywords="custom travel network, iPhone tether router, travel Wi-Fi security appliance, custom cybersecurity solution, network security case study, Defend I.T. Solutions"
         structuredData={{
           "@context": "https://schema.org",
           "@graph": [breadcrumbLd, oTetherProductLd],

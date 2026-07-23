@@ -26,7 +26,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 15,
     baseAccuracy: 95,
     baseEnergy: 5,
-    description: "Network scanner -- finds open ports and services",
+    description: "Scans networks for open ports and services",
   },
   {
     id: "wireshark",
@@ -35,7 +35,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 10,
     baseAccuracy: 100,
     baseEnergy: 3,
-    description: "Packet analyzer -- sees what's on the wire",
+    description: "Analyzes network traffic",
   },
   {
     id: "metasploit",
@@ -44,7 +44,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 35,
     baseAccuracy: 75,
     baseEnergy: 15,
-    description: "Exploitation framework -- delivers payloads",
+    description: "Tests vulnerabilities by running controlled exploits",
   },
   {
     id: "firewall-rule",
@@ -53,7 +53,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 12,
     baseAccuracy: 85,
     baseEnergy: 8,
-    description: "Blocks incoming attack, reduces damage",
+    description: "Controls network traffic and can block unwanted connections",
   },
   {
     id: "burp-suite",
@@ -62,7 +62,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 25,
     baseAccuracy: 90,
     baseEnergy: 10,
-    description: "Web app scanner -- finds web vulnerabilities",
+    description: "Tests web applications for security weaknesses",
   },
   {
     id: "yara-rules",
@@ -71,7 +71,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 0,
     baseAccuracy: 90,
     baseEnergy: 6,
-    description: "Pattern matcher -- identifies known malware",
+    description: "Matches files against patterns used to identify malware",
   },
   {
     id: "mimikatz",
@@ -80,7 +80,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 40,
     baseAccuracy: 80,
     baseEnergy: 18,
-    description: "Credential extractor -- dumps passwords from memory",
+    description: "Extracts credentials from Windows memory",
   },
   {
     id: "hashcat",
@@ -89,7 +89,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 30,
     baseAccuracy: 85,
     baseEnergy: 12,
-    description: "Password cracker -- brute forces hashed credentials",
+    description: "Tests password hashes by trying possible passwords",
   },
   {
     id: "ghidra",
@@ -98,7 +98,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 20,
     baseAccuracy: 95,
     baseEnergy: 8,
-    description: "Reverse engineering tool -- analyzes compiled code",
+    description: "Analyzes compiled software",
   },
   {
     id: "cobalt-strike",
@@ -107,7 +107,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 45,
     baseAccuracy: 70,
     baseEnergy: 20,
-    description: "Adversary simulation -- command and control",
+    description: "Simulates adversary activity and command-and-control operations",
   },
   {
     id: "snort-suricata",
@@ -116,7 +116,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 0,
     baseAccuracy: 88,
     baseEnergy: 12,
-    description: "Network IDS -- detects and blocks malicious traffic",
+    description: "Detects and, in some configurations, blocks suspicious network traffic",
   },
   {
     id: "zero-day",
@@ -125,7 +125,7 @@ const BASE_TOOLS: BaseToolDef[] = [
     basePower: 60,
     baseAccuracy: 50,
     baseEnergy: 30,
-    description: "Unknown vulnerability -- no patch exists",
+    description: "Represents a vulnerability without an available fix",
   },
 ];
 

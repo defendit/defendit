@@ -133,8 +133,7 @@ export function DigitalHouse() {
                 className="absolute inset-x-2 bottom-2 z-20 flex justify-center"
               >
                 <div className="rounded-xl border border-amber-400/50 bg-amber-50/95 px-3 py-1.5 text-[12px] font-medium text-amber-800 shadow-lg dark:border-amber-400/30 dark:bg-amber-950/90 dark:text-amber-200">
-                  Set this room&apos;s zone first. Use the zone chip in the
-                  corner.
+                  Assign this room&apos;s network zone before placing a device.
                 </div>
               </div>
             )}

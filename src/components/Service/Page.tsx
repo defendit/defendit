@@ -194,15 +194,17 @@ export default function ServicePage(props: ServicesPageProps) {
           alt={`${h1}, Defend I.T. Solutions`}
         >
           <p className="text-eyebrow font-semibold uppercase tracking-eyebrow text-accent">
-            Serving Central Florida
+            {isRemote
+              ? "Local Support Plans and Nationwide Training"
+              : "Serving Ocala, Belleview, and The Villages"}
           </p>
           <h1 className="mt-4 text-balance text-display tracking-display font-semibold text-ink">
             {h1}
           </h1>
           <p className="mt-5 max-w-lg text-lead text-ink-muted">
             {isRemote
-              ? "Some problems can be handled well online. This section covers remote sessions for local clients, guided training, and plan-based follow-up support."
-              : "Start with the problem you need solved. We focus on clear, practical help for homes and small businesses in Ocala, Belleview, The Villages, and nearby Central Florida communities."}
+              ? "Get secure remote tech support for enrolled devices, or book online technology training and cybersecurity tutoring without a support plan."
+              : "Choose the service that matches your problem. We help homes and small businesses with computer repair, malware removal, Wi-Fi, account security, scam protection, and connected devices."}
           </p>
         </HeroBanner>
 
@@ -227,12 +229,11 @@ export default function ServicePage(props: ServicesPageProps) {
 
           <section className="text-sm text-ink-muted italic text-center max-w-3xl mx-auto">
             <p>
-              Not every problem fits neatly into a service card. If you&apos;re
-              not sure where your issue belongs,{" "}
+              Not sure which service fits?{" "}
               <Link href="/contact" className="text-accent hover:underline">
                 contact us
               </Link>{" "}
-              and we&apos;ll help you choose the right starting point.
+              and we will help you choose the right starting point.
             </p>
           </section>
         </div>

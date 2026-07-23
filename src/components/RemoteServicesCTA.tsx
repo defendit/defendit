@@ -23,7 +23,7 @@ export default function RemoteServicesCTA(props: RemoteServicesCTAProps) {
       {props?.isRemote && (
         <section className="mt-8 flex h-auto w-full flex-col items-start justify-center rounded-md">
           <h3 className="text-ink mb-4 text-left text-base sm:text-2xl font-semibold">
-            Need a Remote Service Plan?
+            Need Ongoing Remote Support?
           </h3>
           <Card
             as="span"
@@ -31,14 +31,14 @@ export default function RemoteServicesCTA(props: RemoteServicesCTAProps) {
             className="flex w-full flex-col items-center justify-center p-4 sm:p-12"
           >
             <p className="my-2 sm:my-4 text-ink text-lg text-center font-semibold">
-              We offer flexible remote support plans tailored to your needs.
+              The Remote Support Plan gives verified local clients secure access to plan-based remote services after device enrollment.
             </p>
             <Link
               href="/services/remote/remote-support-plan"
               className="mt-2 whitespace-nowrap rounded-lg bg-accent-fill px-6 py-4 text-sm font-semibold text-accent-contrast shadow-sm transition hover:bg-accent-fill-hover sm:text-md touch-manipulation"
               style={{ touchAction: "manipulation" }}
             >
-              Remote Support Plans →
+              View Remote Support Plan
             </Link>
           </Card>
         </section>
@@ -50,7 +50,7 @@ export default function RemoteServicesCTA(props: RemoteServicesCTAProps) {
       >
         <h3 className="text-ink mb-4 text-left text-2xl font-semibold">
           {props?.isRemote
-            ? "Looking for More Personable Support?"
+            ? "Need In-Person Help?"
             : "Looking for Remote Service Options?"}
         </h3>
 
@@ -61,7 +61,7 @@ export default function RemoteServicesCTA(props: RemoteServicesCTAProps) {
         >
           <p className="my-2 sm:my-4 text-ink text-lg text-center">
             {props?.isRemote
-              ? "We offer a range of on-site services."
+              ? "View local services for computer repair, network setup, smart home help, and other work that needs an on-site visit."
               : "Explore our remote support options for fast, secure, and personal assistance."}
           </p>
           <Link
@@ -69,7 +69,7 @@ export default function RemoteServicesCTA(props: RemoteServicesCTAProps) {
             className="whitespace-nowrap rounded-lg border border-hairline bg-surface px-6 py-4 text-sm text-ink shadow-sm transition hover:border-accent hover:text-accent sm:text-md touch-manipulation"
             style={{ touchAction: "manipulation" }}
           >
-            {props?.isRemote ? "On-Site Services →" : "Remote Support →"}
+            {props?.isRemote ? "View Local Services" : "Remote Support →"}
           </Link>
         </Card>
       </section>

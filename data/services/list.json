@@ -5,96 +5,96 @@
       "title": "On-Site Tech Support",
       "headline": "In-home help when you need it.",
       "icons": ["badge-check", "home", "wrench"],
-      "summary": "When the problem touches more than one device, account, or room, an in-person visit is often the fastest way to sort it out.",
-      "cta": "Book On-Site Support"
+      "summary": "Get in-person help with Wi-Fi, printers, new devices, account access, and other problems that are easier to solve on-site.",
+      "cta": "View On-Site Support"
     },
     {
       "id": "virus-removal",
-      "title": "Virus & Malware Removal",
+      "title": "Virus and Malware Removal",
       "headline": "Remove infections and secure your system.",
       "icons": ["shield-plus", "worm", "alert-triangle"],
-      "summary": "We clean up infected systems, pop-ups, browser hijacks, and suspicious behavior, then walk through the steps that help keep it from happening again.",
-      "cta": "Remove Malware"
+      "summary": "Remove viruses, pop-ups, browser hijackers, and other malware. We also help secure the computer and reduce the risk of another infection.",
+      "cta": "View Virus Removal"
     },
     {
       "id": "network-setup",
-      "title": "Wi-Fi & Network Setup",
+      "title": "Wi-Fi and Network Setup",
       "headline": "Reliable Wi-Fi and network setup for homes and small offices.",
       "icons": ["router", "ethernet-port", "house-plug"],
-      "summary": "Set up or straighten out routers, mesh kits, access points, and wired connections so the network is stable, fast, and easier to live with.",
-      "cta": "Set Up My Network"
+      "summary": "Set up or fix routers, mesh Wi-Fi, access points, and wired connections for a faster, more reliable home or small-office network.",
+      "cta": "View Network Setup"
     },
     {
       "id": "home-network-security",
-      "title": "Home Network Security & Wi-Fi Hardening",
+      "title": "Home Network and Wi-Fi Security",
       "headline": "Make your home Wi-Fi and connected devices safer without making them harder to use.",
       "icons": ["house-wifi", "router", "shield-check"],
-      "summary": "Safer settings, guest access, device separation, and fewer risky defaults for homes and small offices that want more than a basic router setup.",
-      "cta": "Secure My Network"
+      "summary": "Improve your home or small-office network with safer router settings, guest Wi-Fi, device separation, and fewer risky defaults.",
+      "cta": "View Network Security"
     },
     {
       "id": "scam-protection",
-      "title": "Scam & Fraud Protection",
+      "title": "Scam and Fraud Protection",
       "headline": "Practical help spotting scams and protecting yourself online.",
       "icons": ["presentation", "glasses", "shield-alert"],
-      "summary": "Calm, practical help after a scam scare or near miss, plus guidance on what to change so the same trick is less likely to work again.",
-      "cta": "Get Scam Protection"
+      "summary": "Get practical help after a scam, suspicious message, or near miss. We help secure affected accounts and show you how to recognize similar scams.",
+      "cta": "View Scam Protection"
     },
     {
       "id": "password-management",
-      "title": "Password Manager Setup & Account Safety",
+      "title": "Password Manager Setup and Account Security",
       "headline": "Set up a password manager and clean up risky login habits.",
       "icons": ["lock", "key-round", "book-lock"],
-      "summary": "Get a password manager set up the right way and clean up weak or reused logins without making everyday access harder.",
-      "cta": "Get Account Safety Help"
+      "summary": "Set up a password manager, replace weak or reused passwords, and improve account security without making daily sign-ins harder.",
+      "cta": "View Account Security"
     },
     {
       "id": "computer-repair",
       "title": "Computer Repair",
       "headline": "Help for slow, crashing, or non-booting computers.",
       "icons": ["pc-case", "monitor-smartphone", "wrench"],
-      "summary": "For slow, crashing, overheating, or non-booting computers, with honest repair guidance and a focus on protecting your files.",
-      "cta": "Get Computer Repair"
+      "summary": "Get help with a slow, crashing, overheating, or non-booting computer. We diagnose the problem and explain whether repair or replacement makes sense.",
+      "cta": "View Computer Repair"
     },
     {
       "id": "data-recovery",
-      "title": "Data Recovery & Backup Help",
+      "title": "Data Recovery and Backup Help",
       "headline": "Recover important files and stop future loss.",
       "icons": ["hard-drive", "clock", "file-check"],
-      "summary": "Help recovering deleted files or failing drives when possible, and building a backup plan that lowers the chance of going through it twice.",
-      "cta": "Get Data Recovery Help"
+      "summary": "Recover deleted files or data from a failing drive when possible. We can also set up a backup plan to reduce the risk of future data loss.",
+      "cta": "View Data Recovery"
     },
     {
       "id": "pc-upgrades",
-      "title": "Laptop & PC Speed Upgrades",
+      "title": "Laptop and PC Upgrades",
       "headline": "Speed up a computer that is still worth keeping.",
       "icons": ["hard-drive", "gauge", "bolt"],
-      "summary": "Worth keeping the computer? Upgrades like SSDs, RAM, batteries, and cleanup can make it feel usable again.",
-      "cta": "Get Upgrade Help"
+      "summary": "Speed up a computer that is still worth keeping with an SSD, more memory, a replacement battery, or a system cleanup.",
+      "cta": "View Computer Upgrades"
     },
     {
       "id": "software-troubleshooting",
-      "title": "Software Troubleshooting & Installs",
+      "title": "Software Troubleshooting and Installation",
       "headline": "Fix Windows and Mac software problems without a full wipe.",
       "icons": ["cpu", "settings", "terminal"],
-      "summary": "Fix messy installs, update failures, driver problems, login issues, and app crashes without jumping straight to a full reset.",
-      "cta": "Get Software Help"
+      "summary": "We troubleshoot failed updates, driver problems, sign-in issues, app crashes, and software installations before recommending a full reset.",
+      "cta": "View Software Support"
     },
     {
       "id": "smart-home-setup",
-      "title": "Smart Home Setup & Security",
+      "title": "Smart Home Setup and Security",
       "headline": "Set up cameras, doorbells, and smart devices with clearer privacy and fewer headaches.",
       "icons": ["house-wifi", "camera", "shield-check"],
-      "summary": "Set up cameras, doorbells, speakers, hubs, and routines so they are easier to use, more reliable, and less messy from a privacy and access standpoint.",
-      "cta": "Set Up My Smart Home"
+      "summary": "Set up cameras, doorbells, speakers, hubs, and other smart devices for reliable use, safer access, and better privacy.",
+      "cta": "View Smart Home Support"
     },
     {
       "id": "custom-solutions",
-      "title": "Custom Solutions",
+      "title": "Custom Technology Solutions",
       "headline": "Start with a consultation when the job does not fit a standard service page.",
       "icons": ["puzzle", "monitor-cog", "user"],
-      "summary": "Start with a consultation for projects that need planning before anyone starts buying gear or changing the setup.",
-      "cta": "Request Consultation"
+      "summary": "Start with a consultation for technology projects that need planning, equipment choices, or a custom setup.",
+      "cta": "View Custom Solutions"
     }
   ]
 }

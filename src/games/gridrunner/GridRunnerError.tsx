@@ -59,7 +59,7 @@ export class GridRunnerError extends Component<Props, State> {
             SYSTEM FAULT
           </h1>
           <p className="gr-font-mono text-center text-xs text-[#aabbcc]">
-            Something went wrong. Your save data is safe.
+            Something went wrong. Your saved progress may still be available.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export class GridRunnerError extends Component<Props, State> {
         </div>
 
         <p className="gr-font-mono text-center text-[10px] text-[#4a5568]">
-          If this keeps happening, please report the error above.
+          If this happens again, note the error above before clearing your save.
         </p>
       </section>
     );

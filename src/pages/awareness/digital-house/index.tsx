@@ -22,8 +22,8 @@ export default function DigitalHousePage() {
   return (
     <>
       <Meta
-        title="The Digital House | Defend I.T. Solutions"
-        description="Build a home network layout and see how everyday device decisions affect privacy, exposure, and recovery. An interactive simulator from Defend I.T. Solutions."
+        title="The Digital House: Home Network Security Game | Defend I.T. Solutions"
+        description="Build a safer home network and learn how network zones can limit unnecessary access between personal, guest, and smart devices."
         url={canonical}
         canonical={canonical}
       />
